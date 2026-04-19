@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-04-19T15:40:07.084047+00:00",
+  "params": {
+    "dedup_s": 60,
+    "cooldown_s": 300,
+    "min_distinct_for_event": 2
+  },
+  "summary": {
+    "n_total": 1,
+    "n_correlated": 0,
+    "n_singleton": 1,
+    "max_convergence": 1,
+    "by_severity": {
+      "singleton": 1
+    },
+    "by_asset": {
+      "SOL-BRL": 1
+    }
+  },
+  "events": [
+    {
+      "event_id": "evt_20260419_1326_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-04-19T13:26:26+00:00",
+      "closed_at": "2026-04-19T13:29:46+00:00",
+      "duration_s": 200,
+      "distinct_detectors": [
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 3,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 13:26 (divergence). 3 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.6099,
+          "threshold": 0.3,
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 433.05,
+            "local_mids": {
+              "Mercado Bitcoin": 427.895,
+              "Foxbit": 432.955
+            },
+            "avg_local": 430.42499999999995,
+            "gap_pct": 0.6098623453563472
+          },
+          "ts": "2026-04-19T13:26:26+00:00"
+        },
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.6144,
+          "threshold": 0.3,
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 433.15,
+            "local_mids": {
+              "Mercado Bitcoin": 427.895,
+              "Foxbit": 433.115
+            },
+            "avg_local": 430.505,
+            "gap_pct": 0.6143947224770866
+          },
+          "ts": "2026-04-19T13:28:05+00:00"
+        },
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.5131,
+          "threshold": 0.3,
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 432.45,
+            "local_mids": {
+              "Mercado Bitcoin": 427.895,
+              "Foxbit": 432.59
+            },
+            "avg_local": 430.24249999999995,
+            "gap_pct": 0.5130827382232204
+          },
+          "ts": "2026-04-19T13:29:46+00:00"
+        }
+      ]
+    }
+  ]
+}

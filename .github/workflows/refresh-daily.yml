@@ -1,0 +1,82 @@
+name: refresh-daily
+
+# Pipeline completo diário: OHLCV 12 meses, backtest, imprensa, correlator.
+# Roda às 03:00 UTC (00:00 BRT) para atualizar séries históricas e análises.
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch OHLCV 12m (Binance/MB/Foxbit/on-chain)
+        run: python3 scripts/fetch_data.py
+        continue-on-error: true
+
+      - name: Fetch CoinGecko (volume 30d por exchange)
+        run: python3 scripts/fetch_coingecko.py
+        continue-on-error: true
+
+      - name: Fetch TRON on-chain (USDT TRC-20)
+        run: python3 scripts/fetch_tron.py
+        continue-on-error: true
+
+      - name: Fetch funding perpétuos
+        run: python3 scripts/fetch_funding.py
+        continue-on-error: true
+
+      - name: Fetch orderbook consolidado
+        run: python3 scripts/fetch_orderbook.py
+        continue-on-error: true
+
+      - name: Fetch RSS imprensa BR
+        run: python3 scripts/news/fetcher.py
+        continue-on-error: true
+
+      - name: Detect anomalies (Z-score, divergence, ring-of-mules, stablecoin_flight)
+        run: python3 scripts/detect_anomalies.py
+
+      - name: Incident backtest (15 incidentes)
+        run: python3 scripts/incident_backtest.py
+        continue-on-error: true
+
+      - name: News correlator (alertas × manchetes)
+        run: python3 scripts/news/correlator.py
+        continue-on-error: true
+
+      - name: Rebuild dashboard
+        run: python3 scripts/build_dashboard.py
+
+      - name: Commit & push
+        run: |
+          git config user.name  "sentinel-br-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "sem mudanças — nada a commitar"
+          else
+            ts=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "refresh daily · $ts"
+            git push
+          fi

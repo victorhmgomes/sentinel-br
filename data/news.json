@@ -1,0 +1,2005 @@
+{
+  "summary": {
+    "n_items": 40,
+    "by_severity": {
+      "critical": 0,
+      "high": 2,
+      "medium": 24,
+      "low": 14,
+      "noise": 0
+    },
+    "with_watcher_corroboration": 24,
+    "top_sources": [
+      [
+        "G1 Política",
+        16
+      ],
+      [
+        "Folha Mercado",
+        9
+      ],
+      [
+        "Valor Investe",
+        7
+      ],
+      [
+        "G1 Economia",
+        3
+      ],
+      [
+        "Portal do Bitcoin",
+        2
+      ],
+      [
+        "Livecoins",
+        2
+      ]
+    ],
+    "generated_at": "2026-04-19T14:26:03+00:00",
+    "runtime_sec": 1.59
+  },
+  "items": [
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "SulAmérica obtém liminar e acusa de fraude clínica que trata de pessoas do espectro autista",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/painelsa/2026/04/sulamerica-obtem-liminar-e-acusa-de-fraude-clinica-que-trata-de-pessoas-do-espectro-autista.shtml",
+      "summary": "Em decisão liminar, a 3ª Vara Cível do Tatuapé, na zona leste de São Paulo, proibiu a Behave ABA - Clínica Multidisciplinar, especializada no atendimento de pessoas com TEA (Transtorno do Espectro Autista), de atender beneficiários dos planos de saúde da SulAmérica e autorizou a operadora a negar pedidos de reembolso por atendimentos prestados pela clínica. Também permitiu que pacientes sejam transferidos para a rede credenciada da operadora no prazo de 60 dias. Leia mais (04/18/2026 - 07h00)",
+      "ts_iso": "2026-04-18T10:00:00+00:00",
+      "hash": "360bffce9c2b92ca",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraude"
+        ],
+        "launder": [
+          "operadora"
+        ]
+      },
+      "_total": 4,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Ex-presidente do BRB pode tentar correr com delação no caso Master",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/adriana-fernandes/2026/04/ex-presidente-do-brb-pode-tentar-correr-com-delacao-no-caso-master.shtml",
+      "summary": "Preso na 4ª fase da operação Compliance Zero da Polícia Federal , Paulo Henrique Costa, o ex-presidente do BRB , pode agora ter incentivos para correr e fechar uma delação até mesmo antes de Daniel Vorcaro , dono do Master, que já assinou um acordo de confidencialidade para iniciar a colaboração. Leia mais (04/18/2026 - 00h03)",
+      "ts_iso": "2026-04-18T03:03:00+00:00",
+      "hash": "bae5c5b45c33dcf2",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 4,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "polícia federal",
+          "operação"
+        ]
+      },
+      "_total": 4,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 0,
+        "score": 8
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "CVM está protegendo o investidor? Dino amplia roteiro de audiência pública no STF",
+      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/04/17/cvm-esta-protegendo-o-investidordino-amplia-roteiro-de-audiencia-publica-no-stf.ghtml",
+      "summary": "O foco da disputa judicial sobre as taxas da Comissão de Valores Mobiliários (CVM) no Supremo Tribunal Federal (STF) mudou de patamar. Em um novo roteiro de perguntas anexado nesta semana à Ação Direta de Inconstitucionalidade (ADI) 7.791, o ministro Flávio Dino cobra explicações sobre se o contingenciamento de verbas pelo Tesouro está tirando a capacidade da autarquia de detectar fraudes e crimes financeiros antes que eles atinjam o investidor. O ministro agora questiona diretamente se a falta de verbas impede a CVM de detectar precocemente fraudes que utilizam fundos estruturados e operações",
+      "ts_iso": "2026-04-17T17:56:44+00:00",
+      "hash": "e6a9c3d1fbd7eb06",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "operações"
+        ]
+      },
+      "_total": 4,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Delação de empresário envolvido em escândalo do INSS opõe PF e PGR e ameaça acordo",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/pgr-resiste-a-delacao-apresentada-por-camisotti-a-pf-e-pede-suspensao-de-acordo-ao-stf.shtml",
+      "summary": "A PGR (Procuradoria-Geral da República) resiste em dar aval para o acordo de delação firmado entre o empresário Maurício Camisotti , preso na operação das fraudes do INSS (Instituto Nacional do Seguro Social), e a Polícia Federal . Leia mais (04/17/2026 - 13h00)",
+      "ts_iso": "2026-04-17T16:00:00+00:00",
+      "hash": "6bbfc907f4ec1ec5",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 6,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operação"
+        ]
+      },
+      "_total": 9,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 0,
+        "score": 7
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Veja foto do ex-presidente do BRB Paulo Henrique Costa em registro na Papuda",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/17/veja-foto-do-ex-presidente-do-brb-paulo-henrique-costa-em-registro-da-papuda.ghtml",
+      "summary": "O ex-presidente do Banco Regional de Brasília (BRB) Paulo Henrique Costa foi transferido no fim da tarde de quinta-feira (16) para o Complexo Penitenciário da Papuda, em Brasília. A imagem foi obtida com exclusividade pela TV Globo, do momento em que foi feito o registro dele na unidade prisional. Costa foi preso nessa quinta-feira (16), em nova fase da operação Compliance Zero da Polícia Federal. Inicialmente, o executivo foi levado à Superintendência da PF, onde passou por exame de corpo de delito. Quem é Paulo Henrique Costa, ex-presidente do BRB preso pela PF No fim da tarde, o ex-presiden",
+      "ts_iso": "2026-04-17T14:00:48+00:00",
+      "hash": "54fd8e5bdaa0c245",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 6,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operação"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Esquema do Master com imóveis para ex-BRB usava empresas de fachada e cunhado 'laranja' de advogado preso, aponta PF",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/17/esquema-do-master-com-imoveis-para-ex-brb-usava-empresas-de-fachada-e-cunhado-laranja-de-advogado-preso-aponta-pf.ghtml",
+      "summary": "Daniel Vorcaro, dono do Banco Master; Paulo Henrique Costa, e ex-presidente do BRB; e Daniel Monteiro, advogado do Banco Master Divulgação e Lúcio Bernardo Jr/Agência Brasília A Polícia Federal (PF) identificou a criação e o uso de um conjunto de empresas imobiliárias como eixo de um suposto esquema de ocultação patrimonial que envolve o ex-presidente do BRB Paulo Henrique Costa e o dono do Banco Master, Daniel Vorcaro. No núcleo dessa estrutura está Hamilton Edward Suaki, cunhado de Daniel Monteiro, operador jurídico de Vorcaro. Suaki aparece como diretor formal das companhias, que encobriria",
+      "ts_iso": "2026-04-17T10:48:50+00:00",
+      "hash": "ca928dc4ef6a989f",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 6,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operador"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 11,
+        "neg": 0,
+        "score": 11
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Advogado preso é sócio de fundos do Master e suspeito de pagar propina de Vorcaro a autoridades",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/advogado-preso-e-socio-de-fundos-do-master-e-suspeito-de-pagar-propina-de-vorcaro-a-autoridades.shtml",
+      "summary": "O advogado Daniel Monteiro, preso nesta quinta-feira (16) pela PF (Polícia Federal), é cotista de fundos do esquema de fraudes do Banco Master , revelam documentos da CVM (Comissão de Valores Mobiliários) obtidos pela Folha . Leia mais (04/17/2026 - 04h00)",
+      "ts_iso": "2026-04-17T07:00:00+00:00",
+      "hash": "048566fdbf3edeaa",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 8,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "Como policiais recuperam conversas e arquivos do celular e da nuvem de investigados",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/04/17/como-policiais-recuperam-conversas-e-arquivos-do-celular-e-da-nuvem-de-investigados.ghtml",
+      "summary": "Programas como Cellebrite UFED e Magnet Greykey são capazes de extrair muitas informações de celulares Altieres Rohr/G1 Policiais podem recuperar conversas e arquivos apagados de celulares de investigados por meio de análises em serviços na nuvem e de programas que extraem informações de aparelhos. A megaoperação de quarta-feira (15) que revelou um esquema suspeito de lavar R$ 1,6 bilhão começou com a análise de arquivos no iCloud. Ela permitiu cruzar informações como extratos, conversas e documentos financeiros, segundo a Polícia Federal. Em outra investigação, a PF identificou mensagens do d",
+      "ts_iso": "2026-04-17T06:00:34+00:00",
+      "hash": "49e54d7b4c6aa318",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 4
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "value": [
+          "r$ 1",
+          "bilhão"
+        ]
+      },
+      "_total": 9,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 0,
+        "score": 8
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "ICE diz à PF que Ramagem pode aguardar conclusão do processo de asilo nos EUA em liberdade",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/16/ice-diz-a-pf-que-ramagem-pode-aguardar-conclusao-do-processo-de-asilo-nos-eua-em-liberdade.ghtml",
+      "summary": "PF diz que aguarda informações sobre soltura de Ramagem O Serviço de Imigração e Controle de Aduanas (ICE) dos Estados Unidos disse à Polícia Federal (PF) que Alexandre Ramagem poderá aguardar em liberdade nos EUA a conclusão de um processo de pedido de asilo. Interlocutores da PF afirmaram que a mensagem do ICE foi repassada em uma reunião nesta quinta-feira (16). O encontro já estava marcada antes mesmo de Ramagem ser solto. O objetivo era discutir o caso e evitar que ele fosse libertado, o que acabou acontecendo antes do encontro. Ramagem foi preso na segunda-feira (13), em Orlando, na Flór",
+      "ts_iso": "2026-04-16T23:41:13+00:00",
+      "hash": "583c1b40f6f43a41",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 5,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 4,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "PF transfere ex-presidente do BRB preso no caso Master para a Papuda",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/pf-transfere-ex-presidente-do-brb-preso-no-caso-master-para-a-papuda.shtml",
+      "summary": "O ex-presidente do BRB (Banco de Brasília ) Paulo Henrique Costa, preso nesta quinta-feira (16) por envolvimento nas fraudes do Banco Master , foi transferido pela Polícia Federal para o Complexo Penitenciário da Papuda, em Brasília. O executivo é acusado de corrupção passiva e lavagem de dinheiro. Leia mais (04/16/2026 - 19h49)",
+      "ts_iso": "2026-04-16T22:49:00+00:00",
+      "hash": "e31053786326cf7a",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 9,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "lavagem",
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 12,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 11,
+        "neg": 0,
+        "score": 11
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "STF envia investigações de operações Rejeito e Intrafortis para Justiça Federal de MG",
+      "link": "https://g1.globo.com/mg/minas-gerais/noticia/2026/04/16/stf-envia-investigacoes-de-operacoes-rejeito-e-intrafortis-para-justica-federal-de-mg.ghtml",
+      "summary": "Mineração em Minas Gerais (imagem de arquivo) Reprodução/TV Globo O Supremo Tribunal Federal (STF) decidiu retirar da Corte as investigações das operações Rejeito e Intrafortis, determinando o envio dos autos à Justiça de primeiro grau. A decisão foi tomada pelo ministro Dias Toffoli após a Polícia Federal concluir que não há indícios de envolvimento do deputado federal Luiz Fernando Faria (União Brasil) em fraudes de licenças de mineração, exploração ilegal de minério e outros crimes. A competência do STF havia sido fixada inicialmente devido à suspeita de participação do parlamentar, que fig",
+      "ts_iso": "2026-04-16T21:41:49+00:00",
+      "hash": "f1ed5c4c95c13a61",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 4,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "polícia federal",
+          "operações"
+        ]
+      },
+      "_total": 7,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 0,
+        "score": 6
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Justiça autoriza pedido de cautelar da Oncoclínicas (ONCO3)",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/04/16/justica-autoriza-pedido-de-cautelar-da-oncoclinicas-onco3.ghtml",
+      "summary": "A Justiça deferiu pedido da Oncoclínicas de cautelar contra cobrança por 60 dias. A companhia encerrou o ano passado com uma dívida de R$ 3,3 bilhões e estourou o acordo de limite de endividamento, o que poderia antecipar o vencimento do passivo. No pedido de cautelar, a Oncoclínicas argumentou que, na última sexta-feira (10), foi deflagrada uma antecipação de vencimento de uma emissão de debêntures “desencadeando o vencimento antecipado cruzado de diversos instrumentos de dívida” e que tais medidas podem vir a paralisar as atividades da rede de tratamento de câncer. Leia a reportagem completa",
+      "ts_iso": "2026-04-16T21:27:38+00:00",
+      "hash": "030433ca43c23dc2",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 3,
+        "value": 4
+      },
+      "_hits": {
+        "launder": [
+          "deflagrada"
+        ],
+        "value": [
+          "r$ 3",
+          "bilhões"
+        ]
+      },
+      "_total": 7,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Ibaneis pediu argumentos para defender compra do Master, disse ex-presidente do BRB",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/ibaneis-pediu-argumentos-para-defender-compra-do-master-disse-ex-presidente-do-brb.shtml",
+      "summary": "Em conversas pelo WhatsApp, o ex-presidente do BRB (Banco de Brasília ) Paulo Henrique Costa, preso nesta quinta-feira (16) pela Polícia Federal, disse ao ex-banqueiro Daniel Vorcaro que Ibaneis Rocha ( MDB ), então governador do Distrito Federal , previu que a compra do Master pelo banco estatal de Brasília seria alvo de críticas e pediu argumentos para defender a operação. \"Estou trabalhando para lançar a operação amanhã ou, no mais tardar, na segunda-feira. O governador me pediu que preparasse um material para a argumentação dele, porque vamos receber críticas\", disse Costa a Vorcaro em men",
+      "ts_iso": "2026-04-16T16:53:00+00:00",
+      "hash": "cac7a067b8b8db25",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 4,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "polícia federal",
+          "operação"
+        ]
+      },
+      "_total": 4,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Condomínio de R$ 30 mil, spa e garagem cinematográfica: veja imóveis de luxo do ex-presidente do BRB",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/condominio-de-r-30-mil-spa-e-garagem-cinematografica-veja-imoveis-de-luxo-do-ex-presidente-do-brb.shtml",
+      "summary": "A lista de imóveis atribuídos pela operação da Polícia Federal ao ex-presidente do BRB (Banco de Brasília ) Paulo Henrique Costa como propina para aprovar compra de carteiras do Banco Master ajuda a entender não só a dimensão do esquema investigado , mas também o tipo de ativo escolhido para substituir transferências diretas de dinheiro: apartamentos de altíssimo padrão, em endereços restritos e com liquidez discreta. Leia mais (04/16/2026 - 13h18)",
+      "ts_iso": "2026-04-16T16:18:00+00:00",
+      "hash": "64b538f3789d71aa",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 4,
+        "value": 2
+      },
+      "_hits": {
+        "launder": [
+          "polícia federal",
+          "operação"
+        ],
+        "value": [
+          "r$ 3"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 12,
+        "neg": 0,
+        "score": 12
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "'Preciso dele feliz', diz Vorcaro sobre imóvel para ex-presidente do BRB",
+      "link": "https://g1.globo.com/politica/blog/andreia-sadi/post/2026/04/16/vorcaro-diretor-brb-mensagens.ghtml",
+      "summary": "'Valor que combinamos': as mensagens entre Vorcaro e ex-BRB preso A investigação da Polícia Federal (PF) que levou à prisão do ex-presidente do BRB Paulo Henrique Costa revela mensagens do dono do Banco Master, Daniel Vorcaro, sobre apartamentos que seriam oferecidos ao executivo para facilitar um esquema envolvendo o banco. Em uma das conversas, ao tratar de um imóvel, Vorcaro afirma a uma corretora: “Preciso dele feliz. Reverte isso aí”. Vorcaro procurou a profissional após o ex-diretor do BRB dizer que ficou decepcionado por não conseguir visitar um dos apartamentos que fazia parte do acord",
+      "ts_iso": "2026-04-16T15:14:13+00:00",
+      "hash": "043eef3e190935a4",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 2,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "crypto": [
+          "corretora"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 7,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 10,
+        "neg": 0,
+        "score": 10
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Perguntamos para 3 IAs como investir R$ 10 mil, veja quanto elas colocaram em criptomoedas",
+      "link": "https://portaldobitcoin.uol.com.br/perguntamos-para-3-ias-como-investir-r-10-mil-veja-quanto-elas-colocaram-em-criptomoedas/",
+      "summary": "Teste com IAs reforça que criptomoedas precisam fazer parte da carteira de qualquer investidor, não importa o perfil O post Perguntamos para 3 IAs como investir R$ 10 mil, veja quanto elas colocaram em criptomoedas apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-04-18T20:24:00+00:00",
+      "hash": "cc517162bee95625",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 5,
+        "launder": 0,
+        "value": 2
+      },
+      "_hits": {
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "carteira"
+        ],
+        "value": [
+          "r$ 1"
+        ]
+      },
+      "_total": 7,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Vorcaro já usava ciranda financeira ao comprar banco que virou o Master, mostra BC",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/vorcaro-ja-usava-ciranda-financeira-ao-comprar-banco-que-virou-o-master-mostra-bc.shtml",
+      "summary": "Daniel Vorcaro tentou comprar o Banco Máxima, instituição que deu origem ao Master , usando um embrião do esquema de ciranda financeira que hoje está sob investigação, mostra documento do Banco Central que propôs o veto à operação em fevereiro de 2019. A trama envolve a circulação de recursos entre empresas do próprio controlador, sem entrada real de recursos externos. Leia mais (04/18/2026 - 12h00)",
+      "ts_iso": "2026-04-18T15:00:00+00:00",
+      "hash": "dff7bb162dc8dd1e",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ],
+        "launder": [
+          "operação"
+        ]
+      },
+      "_total": 4,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Pesquisador brasileiro descobre esquema de falsificação de carteiras físicas da Ledger",
+      "link": "https://livecoins.com.br/pesquisador-brasileiro-descobre-esquema-de-falsificacao-de-carteiras-fisicas-da-ledger/",
+      "summary": "Um pesquisador de segurança brasileiro, identificado como Past_Computer2901 no Reddit, acredita ter descoberto um esquema de falsificação de carteiras físicas da Ledger. Além de roubar criptomoedas, o dispositivo também infecta os sistemas operacionais Android, Windows, macOS e iOS. A pesquisa foi republicada por diversos perfis em outras redes sociais, ganhando tração. Também nesta semana, outros [&#8230;] Fonte: Pesquisador brasileiro descobre esquema de falsificação de carteiras físicas da Ledger Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube ",
+      "ts_iso": "2026-04-17T16:44:19+00:00",
+      "hash": "6c7d021486ae0d18",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 4,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "launder": [
+          "operacionais"
+        ]
+      },
+      "_total": 5,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Brasil bate recorde e movimenta R$ 500 bilhões em criptomoedas em 2025",
+      "link": "https://portaldobitcoin.uol.com.br/brasil-bate-recorde-e-movimenta-r-500-bilhoes-em-criptomoedas-em-2025/",
+      "summary": "USDT concentrou quase dois terços de todo o volume declarado à Receita em um ano recorde para o mercado de criptomoedas brasileiro O post Brasil bate recorde e movimenta R$ 500 bilhões em criptomoedas em 2025 apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-04-17T14:28:44+00:00",
+      "hash": "c3fb50273a3b2445",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 7,
+        "launder": 0,
+        "value": 4
+      },
+      "_hits": {
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "usdt"
+        ],
+        "value": [
+          "r$ 5",
+          "bilhões"
+        ]
+      },
+      "_total": 11,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 0,
+        "score": 7
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "CVM promove evento sobre tecnologia blockchain no mercado nacional",
+      "link": "https://livecoins.com.br/cvm-promove-evento-sobre-tecnologia-blockchain-no-mercado-nacional/",
+      "summary": "A Comissão de Valores Mobiliários (CVM) realiza um encontro financeiro da iniciativa em parceria com a Fenasbac no próximo dia 7 de maio. O evento presencial ocorre na cidade do Rio de Janeiro para debater o futuro do mercado de capitais no país. Além disso, o foco das apresentações envolve a tecnologia blockchain (DLT) e [&#8230;] Fonte: CVM promove evento sobre tecnologia blockchain no mercado nacional Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-04-17T12:27:29+00:00",
+      "hash": "e879c870ce1d894c",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 3,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "crypto": [
+          "bitcoin",
+          "blockchain"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Relator publica novo parecer da PEC que possibilita ao Banco Central ter orçamento próprio",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/16/relator-publica-novo-parecer-da-pec-que-possibilita-ao-banco-central-ter-orcamento-proprio.ghtml",
+      "summary": "O senador Plínio Valério (PSDB-AM) publicou nesta quinta-feira (17) um novo relatório para uma proposta que garante autonomia orçamentária ao Banco Central (BC). Com a mudança, o BC não dependeria mais do orçamento da União. A proposta de emenda à Constituição (PEC) aguarda votação na Comissão de Constituição e Justiça (CCJ) do Senado Federal desde novembro de 2023. Ainda não há data para votação do texto na CCJ. O BC é um autarquia com autonomia financeira, técnica e operacional para atuar no controle da inflação. Para evitar pressões políticas, os mandatos do presidente e dos diretores do ór",
+      "ts_iso": "2026-04-16T22:02:02+00:00",
+      "hash": "d9e918e405ecb78a",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ],
+        "launder": [
+          "operacional"
+        ]
+      },
+      "_total": 4,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Governo Lula se reúne com gestão Trump em meio a negociações sobre investigação que inclui Pix",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/governo-lula-se-reune-com-gestao-trump-em-meio-a-negociacoes-sobre-investigacao-que-inclui-pix.shtml",
+      "summary": "Uma delegação do Brasil participou de reuniões em Washington com o governo Donald Trump sobre a investigação da Seção 301 , que vão desde queixas antigas dos americanos como as tarifas brasileiras sobre a importação de etanol até o Pix . Leia mais (04/16/2026 - 18h01)",
+      "ts_iso": "2026-04-16T21:01:00+00:00",
+      "hash": "d9bc3edcbc9c9a95",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "pix"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 4,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Brasil responde a questões da gestão Trump sobre PIX, etanol e meio ambiente; negociações seguem",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/16/brasil-responde-a-questoes-da-gestao-trump-sobre-pix-etanol-e-meio-ambiente-negociacoes-seguem.ghtml",
+      "summary": "O Ministério das Relações Exteriores informou nesta quinta-feira (16) que a delegação brasileira respondeu a todos os questionamentos feitos pelos auxiliares do presidente dos Estados Unidos, Donald Trump, relacionados à investigação comercial aberta contra o país. Foram dois dias de reuniões, e os representantes do governo brasileiro foram questionados sobre temas como PIX, etanol, propriedade intelectual e políticas ambientais relacionadas a desmatamento. Segundo relatos obtidos pela Globonews e pelo g1, as respostas foram técnicas e jurídicas. As negociações, conforme diplomatas, continuam.",
+      "ts_iso": "2026-04-16T20:18:10+00:00",
+      "hash": "88832daad7250e6d",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "pix"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 4,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "MoneyTimes Cripto",
+      "bucket": "cripto",
+      "title": "Thiago Sarandy é o novo diretor-geral da Binance no Brasil",
+      "link": "https://www.moneytimes.com.br/thiago-sarandy-e-o-novo-como-diretor-geral-da-binance-no-brasil-rens/",
+      "summary": "A Binance, a maior exchange de criptomoedas do mundo em volume negociado, anunciou nesta quinta-feira (16) a nomeação de Thiago Sarandy como diretor-geral da corretora para o Brasil. Nesta função, Sarandy liderará o 5º maior mercado de criptomoedas do mundo e um dos mercados prioritários da Binance em meio a um debate crescente sobre a [&#8230;]",
+      "ts_iso": "2026-04-16T15:00:00+00:00",
+      "hash": "cf56f1e3585bbc38",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 9,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "crypto": [
+          "criptomoedas",
+          "exchange",
+          "corretora",
+          "binance"
+        ]
+      },
+      "_total": 9,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Ex-presidente do BRB Paulo Henrique Costa é preso na 4ª fase da Operação Compliance Zero da PF",
+      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/04/16/ex-presidente-do-brb-paulo-henrique-costa-preso-na-4-fase-da-operao-compliance-zero-da-pf.ghtml",
+      "summary": "O ex-presidente do Banco de Brasília (BRB) Paulo Henrique Costa foi preso nesta quinta-feira (16) pela Polícia Federal (PF), na quarta fase da Operação Compliance Zero, segundo fontes. A operação apura o suposto esquema de fraudes financeiras do Banco Master, liquidado pelo Banco Central em novembro passado. Costa presidia o BRB quando o banco distrital tentou comprar o Banco Master no ano passado. O banco distrital teria comprado R$ 12,2 bilhões em carteiras fraudulentas do Master. Segundo comunicado da PF, a nova fase da Compliance Zero foi deflagrada para investigar esquema de lavagem de di",
+      "ts_iso": "2026-04-16T11:16:36+00:00",
+      "hash": "7459772ba9d40d83",
+      "_score": {
+        "attack": 3,
+        "pix": 2,
+        "crypto": 0,
+        "launder": 13,
+        "value": 4
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "launder": [
+          "lavagem",
+          "pf",
+          "polícia federal",
+          "operação",
+          "deflagrada"
+        ],
+        "value": [
+          "r$ 1",
+          "bilhões"
+        ]
+      },
+      "_total": 22,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 16,
+        "neg": 0,
+        "score": 16
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Gestão de Campos Neto foi alertada que 'um monstro estava sendo criado', diz Haddad",
+      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/04/15/gestao-de-campos-neto-foi-alertada-que-um-monstro-estava-sendo-criado-diz-haddad.ghtml",
+      "summary": "Ex-ministro da Fazenda e pré-candidato ao governo de São Paulo, Fernando Haddad (PT) afirmou hoje que o ex-presidente do Banco Central (BC) Roberto Campos Neto tem explicações a dar sobre o Banco Master e afirmou que o ex-dirigente ignorou alertas sobre a condução do banco de Daniel Vorcaro. \"[A gestão do Campos Neto] foi alertada que um monstro estava sendo criado em torno do esquema do Master\", afirmou Haddad. Para o ex-ministro, Campos Neto precisa prestar esclarecimentos em razão da gravidade do caso. \"Não é querer botar pecha em ninguém. Mas penso que o país, diante de uma fraude dessa pr",
+      "ts_iso": "2026-04-15T18:59:58+00:00",
+      "hash": "d0820a1fcce72969",
+      "_score": {
+        "attack": 3,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraude"
+        ],
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 6,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Prisão de ex-presidente do BRB levará às conexões políticas por trás da tentativa de venda do Master para banco público",
+      "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/04/16/prisao-de-ex-presidente-do-brb-levara-as-conexoes-politicas-por-tras-da-tentativa-de-venda-do-master-para-banco-publico.ghtml",
+      "summary": "Valdo Cruz: Prisão de ex-presidente do BRB mira conexões políticas da tentativa de venda do Master A Polícia Federal (PF) acredita que a prisão do ex-presidente do Banco de Brasília (BRB) Paulo Henrique Costa levará às conexões políticas por trás das operações fraudulentas do Master com o banco público e a tentativa de compra do banco de Daniel Vorcaro. Investigadores avaliam que as negociações entre as duas instituições financeiras foram precedidas de contatos de políticos ligados aos dois lados. Paulo Henrique Costa, preso nesta quinta-feira (16), começou sua carreira no sistema financeiro c",
+      "ts_iso": "2026-04-16T12:19:35+00:00",
+      "hash": "9c0c3f79fc8a106e",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 6,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operações"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 11,
+        "neg": 0,
+        "score": 11
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Master: PF aponta que planilhas, extratos e contratos 'artificiais' sustentavam ativos sem lastro",
+      "link": "https://g1.globo.com/politica/blog/andreia-sadi/post/2026/04/16/master-vorcaro-pf-documentos-artificiais-operacao-compliance.ghtml",
+      "summary": "A nova fase da Operação Compliance Zero, da Polícia Federal, aponta que materiais apreendidos e dados telemáticos indicam a existência de um esquema estruturado de produção massificada de documentos artificiais no Banco Master. Segundo o documento obtido pelo blog, foram identificados contratos, extratos, planilhas e procurações produzidos em série com o objetivo de dar aparência de regularidade a ativos que não teriam garantia real. Os investigadores também citam a existência de uma espécie de “linha de produção” dentro da instituição, voltada à criação e circulação desses documentos. Trecho ",
+      "ts_iso": "2026-04-16T12:06:34+00:00",
+      "hash": "32e13cb8e035236d",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 6,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operação"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 0,
+        "score": 7
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "'Fiz as contas para chegar no valor que combinamos': mensagens entre Vorcaro e ex-BRB apontam ajuste milionário por imóveis",
+      "link": "https://g1.globo.com/politica/blog/andreia-sadi/post/2026/04/16/trocas-de-mensagens-entre-vorcaro-e-ex-brb.ghtml",
+      "summary": "'Valor que combinamos': as mensagens entre Vorcaro e ex-BRB preso A investigação da Polícia Federal (PF) que resultou na prisão do ex-presidente do BRB, Paulo Henrique Costa, apontou que \"há fortes indícios\" de que ele e o dono do Banco Master, Daniel Vorcaro, \"ajustaram um valor milionário a título de corrupção\". 📱 Clique aqui para seguir o canal do g1 no WhatsApp As mensagens trocadas entre os dois, mostrando que imóveis milionários de luxo fariam parte de um suposto acerto, surpreenderam até investigadores com quem o blog conversou. Chamou atenção a naturalidade com que Vorcaro e Paulo Henr",
+      "ts_iso": "2026-04-16T12:04:39+00:00",
+      "hash": "e62804f111b0b067",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 5,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 10,
+        "neg": 0,
+        "score": 10
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Ex-presidente do BRB levava esposa para visitar apartamentos luxuosos oferecidos por Vorcaro",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/16/ex-presidente-do-brb-levava-esposa-para-visitar-apartamentos-oferecidos-por-vorcaro-diz-pf.ghtml",
+      "summary": "Entenda a relação entre o Banco BRB e o Banco Master O ex-presidente do Banco de Brasília (BRB), Paulo Henrique Costa, preso nesta quinta-feira (16) pela Polícia Federal (PF), levou a esposa para avaliar apartamentos que seriam oferecidos a ele pelo dono do Banco Master, Daniel Vorcaro, em troca de facilitar o esquema envolvendo o banco. A informação é relatada em trocas de mensagens entre Paulo Henrique e Vorcaro, registradas pela PF e reproduzidas na decisão do ministro do Supremo Tribunal Federal (STF) André Mendonça que autorizou a prisão nesta manhã. As investigações da Polícia Federal ap",
+      "ts_iso": "2026-04-16T12:03:34+00:00",
+      "hash": "b3ec0a53185a0e45",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 5,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 12,
+        "neg": 0,
+        "score": 12
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "PF terá reunião com EUA nesta quinta para saber motivos da soltura de Ramagem",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/16/pf-aguarda-informacoes-sobre-soltura-de-ramagem-ex-deputado-ficou-preso-por-2-dias-nos-eua.ghtml",
+      "summary": "PF diz que aguarda informações sobre soltura de Ramagem A Polícia Federal (PF) vai se reunir nesta quinta-feira (16) com representantes dos Estados Unidos para entender as condições que levaram à soltura do ex-deputado federal Alexandre Ramagem. O Brasil não foi formalmente informado da libertação, que ocorreu nessa quarta-feira (15). A reunião entre a Polícia Federal e autoridades do Serviço de Imigração e Controle de Aduanas (ICE) dos Estados Unidos já estava marcada, mesmo antes da informação de que Ramagem foi solto. O objetivo era discutir o caso e evitar que ele fosse libertado, o que ac",
+      "ts_iso": "2026-04-16T11:50:31+00:00",
+      "hash": "784032c339f51bb6",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 5,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 4,
+        "score": 3
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Expectativas sobre a guerra, 'prévia do PIB' e nova prisão no caso Master marcam o dia",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/bolsas-e-indices/noticia/2026/04/16/expectativas-sobre-a-guerra-previa-do-pib-e-nova-prisao-no-caso-master-marcam-o-dia.ghtml",
+      "summary": "Mais um dia começa com o mercado em compasso de espera para saber o que será da guerra no Oriente Médio. Há uma expectativa de um avanço em novas negociações entre Estados Unidos e Irã, mas sem sinais concretos de novidades nesse aspecto. Assim, os investidores aproveitam para acompanhar outros temas. Por aqui, o IBC-Br, indicador conhecido como a “prévia do PIB” é o principal destaque. O mercado monitora, ainda, a prisão de Paulo Henrique Costa, ex-presidente do BRB, na Operação Compliance Zero, que apura fraudes financeiras do Banco Master. Atualizações na guerra Ontem (15), a maioria do Sen",
+      "ts_iso": "2026-04-16T10:36:36+00:00",
+      "hash": "3639ad3513361521",
+      "_score": {
+        "attack": 3,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 1,
+        "value": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "operação"
+        ]
+      },
+      "_total": 4,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 4,
+        "score": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Operação Compliance Zero: ex-presidente do BRB, Paulo Henrique Costa é preso pela PF",
+      "link": "https://g1.globo.com/politica/blog/camila-bomfim/post/2026/04/16/ex-presidente-do-brb-paulo-henrique-costa-preso.ghtml",
+      "summary": "PF prende ex-presidente do BRB e apura recebimento de imóveis de R$ 146 milhões Nova fase da Operação Compliance Zero deflagrada pela Polícia Federal (PF) prendeu nesta quinta-feira (16) o ex-presidente do Banco de Brasília (BRB), Paulo Henrique Costa. O executivo é suspeito de não seguir práticas de governança e permitir negócios com o Banco Master sem lastro. Ele foi preso em Brasília, segundo informações obtidas pelo blog. De acordo com investigadores, Paulo Henrique Costa teria recebido pelo menos seis imóveis avaliados em R$ 146 milhões de Daniel Vorcaro, dono do Master, em troca de facil",
+      "ts_iso": "2026-04-16T09:27:19+00:00",
+      "hash": "32b1eda1ad499e5b",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 9,
+        "value": 3
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal",
+          "operação",
+          "deflagrada"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
+        ]
+      },
+      "_total": 12,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 14,
+        "neg": 0,
+        "score": 14
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Ex-presidente do Rioprevidência diz à PF que aportes de quase R$ 1 bilhão no Master foram sugeridos por ex-diretor",
+      "link": "https://g1.globo.com/politica/blog/octavio-guedes/post/2026/04/16/ex-presidente-do-rioprevidencia-diz-a-pf-que-aportes-de-quase-r-1-bilhao-no-master-foram-sugeridos-por-ex-diretor.ghtml",
+      "summary": "Ex-presidente do Rioprevidência atribui aportes de quase R$ 1 bilhão no Master a ex-diretor O ex-presidente do Rioprevidência Deivis Marcon Antunes disse, em depoimento à Polícia Federal (PF), que a proposta para o investimento de R$ 970 milhões em Letras Financeiras do Banco Master foi feita pelo então diretor de investimentos da autarquia, Euchério Lerner Rodrigues. Procurado pelo blog, Euchério não se manifestou até a última atualização deste post. 📱 Clique aqui para seguir o canal do g1 no WhatsApp Deivis negou, ainda, que sua indicação para presidência da autarquia tenha sido política. O ",
+      "ts_iso": "2026-04-16T08:00:37+00:00",
+      "hash": "29ab39186ecfe410",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 5
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões",
+          "bilhão"
+        ]
+      },
+      "_total": 10,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 10,
+        "neg": 0,
+        "score": 10
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Alexandre Ramagem deixa a prisão nos Estados Unidos",
+      "link": "https://g1.globo.com/mundo/noticia/2026/04/15/alexandre-ramagem-deixa-a-prisao-nos-estados-unidos.ghtml",
+      "summary": "Ramagem é solto nos Estados Unidos O ex-deputado federal Alexandre Ramagem (PL-RJ) deixou a prisão nos Estados Unidos nesta quarta-feira (15). Ramagem havia sido preso na segunda-feira (13), em Orlando, na Flórida, por questões migratórias, segundo a Polícia Federal (PF). No mesmo dia, ele foi levado a um centro de detenção no Condado de Orange, na Flórida, onde ficou em uma cela separada. Nesta quarta, o nome dele já não constava na lista de detidos do centro nem no sistema do Serviço de Imigração dos EUA (ICE, na sigla em inglês). A TV Globo apurou com a polícia local que ele foi liberado às",
+      "ts_iso": "2026-04-15T22:38:22+00:00",
+      "hash": "9f0be1e5db57ebe2",
+      "_score": {
+        "attack": 0,
+        "pix": 0,
+        "crypto": 0,
+        "launder": 5,
+        "value": 0
+      },
+      "_hits": {
+        "launder": [
+          "pf",
+          "polícia federal"
+        ]
+      },
+      "_total": 5,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 4,
+        "score": 1
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "No 5º mês seguido de crescimento, 'prévia do PIB' do Banco Central tem alta de 0,6% em fevereiro",
+      "link": "https://g1.globo.com/economia/noticia/2026/04/16/no-5o-mes-seguido-de-crescimento-previa-do-pib-do-banco-central-tem-alta-de-06percent-em-fevereiro.ghtml",
+      "summary": "O Índice de Atividade Econômica (IBC-Br), divulgado pelo Banco Central do Brasil (BC) nesta quinta-feira (16), mostrou expansão de 0,6% em fevereiro, na comparação com o mês anterior. O cálculo é feito após ajuste sazonal — ou seja, uma forma de comparar períodos diferentes. Essa foi a quinta alta mensal seguida do indicador, segundo dados revisados. Houve desaceleração na comparação com janeiro, quando o aumento foi de 0,86%. Veja abaixo o desempenho setor por setor em fevereiro: agropecuária: 0,2%; indústria: 1,2%; serviços: 0,3%. Veja os vídeos que estão em alta no g1 Ainda segundo o Banco ",
+      "ts_iso": "2026-04-16T12:08:19+00:00",
+      "hash": "688734f4ce7ade80",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 0
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "BC decreta liquidação extrajudicial da Cooperativa de Crédito, Poupança e Serviços Financeiros (Creditag)",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/04/16/bc-decreta-liquidao-extrajudicial-da-cooperativa-de-crdito-poupana-e-servios-financeiros-creditag.ghtml",
+      "summary": "O Banco Central do Brasil decretou nesta quinta-feira (16) a liquidação extrajudicial da Cooperativa de Crédito, Poupança e Serviços Financeiros (Creditag). Segundo o comunicado do BC, “trata-se de cooperativa de crédito independente de pequeno porte, enquadrada no segmento S5 da regulação prudencial”. De acordo como BC, em dezembro de 2025, a Creditag detinha aproximadamente 0,0000226% do ativo total do Sistema Financeiro Nacional (SFN). “A liquidação extrajudicial foi motivada pelo grave comprometimento da situação econômico-financeira da instituição, inclusive sujeitando a risco anormal os ",
+      "ts_iso": "2026-04-16T11:23:17+00:00",
+      "hash": "56339654debd3ab0",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 0
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "Banco Central decreta liquidação extrajudicial da cooperativa Creditag por crise financeira",
+      "link": "https://g1.globo.com/economia/noticia/2026/04/16/banco-central-liquidacao-extrajudicial-creditag.ghtml",
+      "summary": "Imagem de arquivo de prédio da cooperativa de crédito Creditag Creditag/Facebook/Reprodução O Banco Central do Brasil (BC) decretou nesta quinta-feira (16) a liquidação extrajudicial da Cooperativa de Crédito, Poupança e Serviços Financeiros (Creditag), após identificar um grave comprometimento de sua situação econômico-financeira. De acordo com a autoridade monetária, a decisão foi tomada diante do risco elevado aos credores quirografários — aqueles que não possuem garantias específicas para receber valores devidos. 🗒️Tem alguma sugestão de reportagem? Mande para o g1 A medida implica o encer",
+      "ts_iso": "2026-04-16T10:49:57+00:00",
+      "hash": "e273df79693c4914",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 0
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "BC discute aprimoramento das regras para captação de depósitos garantidos, diz diretor do BC",
+      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/04/15/bc-discute-aprimoramento-das-regras-para-captacao-de-depositos-garantidos-diz-diretor-do-bc.ghtml",
+      "summary": "O diretor de regulação do Banco Central (BC), Gilneu Vivan, afirmou que o regulador está discutindo o aprimoramento das regras para captação de depósitos garantidos. Vivan participou de evento promovido pela Associação Brasileira de Fintechs (ABFintechs) em Brasília. Segundo Vivan, parte da discussão das regras está relacionada a quanto uma instituição pode se alavancar com depósitos garantidos. Outra parte também tem relação com as regras de distribuição de ativos financeiros. Mudanças nas regras do Fundo Garantidor de Créditos (FGC) já estavam previstas na agenda de regulação apresentada pel",
+      "ts_iso": "2026-04-15T18:24:47+00:00",
+      "hash": "efbd7c21f8412e8c",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 0
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Em tom de brincadeira, Lula diz que vai conversar com Galípolo e afirma que juros podem cair se BC 'olhar para pessoas como ele'",
+      "link": "https://g1.globo.com/politica/noticia/2026/04/15/em-tom-de-brincadeira-lula-diz-vai-chamar-galipolo-e-que-se-bc-olhar-pessoas-como-ele-vai-baixar-taxa-de-juros.ghtml",
+      "summary": "O presidente Luiz Inácio Lula da Silva (PT) afirmou nesta quarta-feira (15), em tom de brincadeira, que vai chamar o presidente do Banco Central, Gabriel Galípolo, para conversar e criticou a taxa de juros. Lula afirmou também que, se o BC olhar para \"pessoas como ele\", que foi metalúrgico, vai baixar a taxa de juros (entenda mais abaixo). LEIA MAIS: Raio-X do Minha Casa, Minha Vida: veja como ficam as novas regras do programa O presidente comentava o fato de pessoas falarem que o governo só está preocupado com pessoas que estão enquadradas no programa CadÚnico. Nesse sentido, o presidente afi",
+      "ts_iso": "2026-04-15T14:10:32+00:00",
+      "hash": "ec5a194ee9cf555e",
+      "_score": {
+        "attack": 0,
+        "pix": 3,
+        "crypto": 0,
+        "launder": 0,
+        "value": 0
+      },
+      "_hits": {
+        "pix": [
+          "banco central",
+          "bc"
+        ]
+      },
+      "_total": 3,
+      "_severity": "low",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 0
+    }
+  ]
+}

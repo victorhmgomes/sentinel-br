@@ -1,0 +1,64 @@
+name: refresh-live
+
+# Atualiza orderbook, funding e alertas do watcher a cada 15 min.
+# Reconstroi o dashboard (index.html na raiz) e commita de volta no main.
+# GitHub Pages (Settings → Pages → Source: Deploy from a branch · main · /)
+# republica automaticamente a cada push.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-live
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch orderbook consolidado (6 venues BR + Binance)
+        run: python3 scripts/fetch_orderbook.py
+        continue-on-error: true
+
+      - name: Fetch funding perpétuos (Binance/Bybit/OKX)
+        run: python3 scripts/fetch_funding.py
+        continue-on-error: true
+
+      - name: Watcher single-shot (detectors + Telegram)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/watcher/run_once.py --min-severity medium --telegram-min-severity high
+        continue-on-error: true
+
+      - name: Rebuild dashboard
+        run: python3 scripts/build_dashboard.py
+
+      - name: Commit & push se houver mudança
+        run: |
+          git config user.name  "sentinel-br-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "sem mudanças — nada a commitar"
+          else
+            ts=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "refresh live · $ts"
+            git push
+          fi

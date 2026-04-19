@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-04-19T16:19:35+00:00",
+  "detector": "stablecoin_flight",
+  "note": "Calibra\u00e7\u00e3o provis\u00f3ria. Cen\u00e1rios sint\u00e9ticos derivados do mesmo snap baseline real, variando par\u00e2metros conforme docstring do detector. Resultado indica sanidade do detector e documenta thresholds atuais; n\u00e3o deve ser lido como FP/TP de produ\u00e7\u00e3o (sample=5, sem golden set de ataques reais com orderbook L2).",
+  "thresholds": {
+    "flight_risk_drop_pct": 0.5,
+    "flight_usdt_imbalance_min": 0.35,
+    "flight_usdt_decouple_pct": 0.3,
+    "flight_lookback_snaps": 3,
+    "flight_min_history": 4,
+    "flight_risk_drop_crit_pct": 1.5,
+    "flight_decouple_crit_pct": 0.8
+  },
+  "scenarios": [
+    {
+      "scenario": "attack_severo",
+      "kind": "attack",
+      "params": {
+        "risk_drop_pct_total": 2.0,
+        "usdt_imbalance": 0.55,
+        "decouple_pct": 1.2
+      },
+      "expected_fire": true,
+      "actual_fire": true,
+      "n_alerts": 1,
+      "outcome": "TP",
+      "alerts": [
+        {
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "asset": "USDT-BRL",
+          "value": 1.2,
+          "narrative": "Fuga para stablecoin: ativos de risco em queda m\u00e9dia -1.51% \u00b7 USDT-BRL bid-heavy (imbalance +0.55) \u00b7 pr\u00eamio USDT-BRL +1.20%. Padr\u00e3o de laundering p\u00f3s-hack \u2014 convers\u00e3o de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -1.5075,
+            "usdt_imbalance": 0.55,
+            "usdt_decouple_pct": 1.2,
+            "conds_met": 3,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -1.5075,
+              "ETH-BRL": -1.5075,
+              "SOL-BRL": -1.5075
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "attack_moderado",
+      "kind": "attack",
+      "params": {
+        "risk_drop_pct_total": 1.0,
+        "usdt_imbalance": 0.4,
+        "decouple_pct": 0.5
+      },
+      "expected_fire": true,
+      "actual_fire": true,
+      "n_alerts": 1,
+      "outcome": "TP",
+      "alerts": [
+        {
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "asset": "USDT-BRL",
+          "value": 0.5,
+          "narrative": "Fuga para stablecoin: ativos de risco em queda m\u00e9dia -0.75% \u00b7 USDT-BRL bid-heavy (imbalance +0.40) \u00b7 pr\u00eamio USDT-BRL +0.50%. Padr\u00e3o de laundering p\u00f3s-hack \u2014 convers\u00e3o de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -0.7519,
+            "usdt_imbalance": 0.4,
+            "usdt_decouple_pct": 0.5,
+            "conds_met": 3,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -0.7519,
+              "ETH-BRL": -0.7519,
+              "SOL-BRL": -0.7519
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "attack_borderline",
+      "kind": "attack",
+      "params": {
+        "risk_drop_pct_total": 0.6,
+        "usdt_imbalance": 0.36,
+        "decouple_pct": 0.31
+      },
+      "expected_fire": true,
+      "actual_fire": true,
+      "n_alerts": 1,
+      "outcome": "TP",
+      "alerts": [
+        {
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "asset": "USDT-BRL",
+          "value": 0.31,
+          "narrative": "Fuga para stablecoin: USDT-BRL bid-heavy (imbalance +0.36) \u00b7 pr\u00eamio USDT-BRL +0.31%. Padr\u00e3o de laundering p\u00f3s-hack \u2014 convers\u00e3o de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -0.4507,
+            "usdt_imbalance": 0.36,
+            "usdt_decouple_pct": 0.31,
+            "conds_met": 2,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -0.4507,
+              "ETH-BRL": -0.4507,
+              "SOL-BRL": -0.4507
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "clean_baseline",
+      "kind": "clean",
+      "params": {
+        "drift_pct": 0.05
+      },
+      "expected_fire": false,
+      "actual_fire": false,
+      "n_alerts": 0,
+      "outcome": "TN",
+      "alerts": []
+    },
+    {
+      "scenario": "clean_volatil",
+      "kind": "clean",
+      "params": {
+        "drift_pct": 0.2
+      },
+      "expected_fire": false,
+      "actual_fire": false,
+      "n_alerts": 0,
+      "outcome": "TN",
+      "alerts": []
+    }
+  ],
+  "summary": {
+    "n_scenarios": 5,
+    "tp": 3,
+    "fn": 0,
+    "fp": 0,
+    "tn": 2,
+    "tp_rate": 1.0,
+    "fp_rate": 0.0,
+    "f1": 1.0
+  }
+}
