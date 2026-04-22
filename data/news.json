@@ -1,9 +1,9 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
-      "high": 2,
+      "high": 4,
       "medium": 0,
       "low": 0,
       "noise": 0
@@ -11,16 +11,20 @@
     "with_watcher_corroboration": 0,
     "top_sources": [
       [
+        "Valor Investe",
+        2
+      ],
+      [
         "Portal do Bitcoin",
         1
       ],
       [
-        "Valor Investe",
+        "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-04-22T16:50:04+00:00",
-    "runtime_sec": 1.9
+    "generated_at": "2026-04-22T17:01:51+00:00",
+    "runtime_sec": 1.7
   },
   "items": [
     {
@@ -111,6 +115,96 @@
         "pos": 4,
         "neg": 0,
         "score": 4
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Banco Rendimento sofre ataque hacker nesta terça (21) e alerta clientes",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/banco-rendimento-sofre-ataque-hacker-nesta-terca-21-e-alerta-clientes.shtml",
+      "summary": "O Banco Rendimento, que atua nas áreas de câmbio e crédito, sofreu um ataque hacker nesta terça-feira (21). Informações de alguns clientes, em número não divulgado, podem ter sido acessadas, segundo a instituição. Leia mais (04/21/2026 - 21h44)",
+      "ts_iso": "2026-04-22T00:44:00+00:00",
+      "hash": "bdb5e70528993046",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "named_fi": [
+          "banco rendimento"
+        ]
+      },
+      "_total": 24,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Banco Rendimento é alvo de ataque hacker",
+      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/04/21/banco-rendimento-e-alvo-de-ataque.ghtml",
+      "summary": "O Banco Rendimento, que tem atuação nas áreas de câmbio e crédito, sofreu um incidente de segurança nesta terça-feira (21). Em nota enviada ao Valor Investe, o banco não informou o impacto do ataque e nem quais serviços foram afetados, mas confirmou que a instituição \"identificou e conteve um incidente de segurança cibernética ocorrido hoje pela manhã\". Segundo a nota, o incidente foi identificado em alguns canais de acesso aos clientes, o que impactou algumas contas. O banco informou que a equipe de segurança da informação e tecnologia agiu de forma imediata para \"isolar a ameaça e as medidas",
+      "ts_iso": "2026-04-21T17:47:26+00:00",
+      "hash": "36365f3e2a9ed594",
+      "_score": {
+        "cyber": 21,
+        "attack": 3,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker",
+          "incidente de segurança"
+        ],
+        "attack": [
+          "ataque",
+          "ameaça"
+        ],
+        "named_fi": [
+          "banco rendimento"
+        ]
+      },
+      "_total": 30,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2,
+        "named_fi_bump": 2
       },
       "_alerts": [],
       "_n_alerts": 0,

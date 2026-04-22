@@ -285,6 +285,16 @@ def score_item(item: dict) -> dict:
 
     # foco BR (usa texto original pra respeitar case-sensitive quando útil)
     brf = br_focus(text_raw)
+    # NAMED_FI propaga pra BR-focus: mencionar uma FI brasileira nomeada
+    # (Banco Rendimento, Sinqia, Pismo, C&M, MB, Foxbit, BTG, etc.) já é
+    # foco BR por definição, mesmo que o texto não diga "Brasil" ou "R$".
+    # Sem isso, matérias como "Banco Rendimento sofre ataque hacker" cujas
+    # manchetes não mencionam Brasil explicitamente caíam no filtro BR.
+    if score["named_fi"] >= 4:
+        bump = max(2, score["named_fi"] // 3)
+        brf = {"pos": brf["pos"] + bump, "neg": brf["neg"],
+               "score": (brf["pos"] + bump) - brf["neg"],
+               "named_fi_bump": bump}
 
     # --- Gating tightened (2026-04-22) ---
     # Queremos SÓ notícias de incidente cibernético contra FI brasileira
