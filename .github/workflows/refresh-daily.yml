@@ -55,9 +55,11 @@ jobs:
         timeout-minutes: 2
         continue-on-error: true
 
-      - name: Fetch RSS imprensa BR
-        run: python3 scripts/news/fetcher.py
-        timeout-minutes: 3
+      - name: Fetch RSS imprensa BR + classify + correlate
+        # news_watch.py é o pipeline completo (fetch → classify → correlate → persist).
+        # fetcher.py sozinho só imprime no stdout, não escreve data/news.json.
+        run: python3 scripts/news/news_watch.py
+        timeout-minutes: 4
         continue-on-error: true
 
       - name: Detect anomalies (Z-score, divergence, ring-of-mules, stablecoin_flight)
