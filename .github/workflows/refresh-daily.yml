@@ -32,26 +32,32 @@ jobs:
 
       - name: Fetch OHLCV 12m (Binance/MB/Foxbit/on-chain)
         run: python3 scripts/fetch_data.py
+        timeout-minutes: 8
         continue-on-error: true
 
       - name: Fetch CoinGecko (volume 30d por exchange)
         run: python3 scripts/fetch_coingecko.py
+        timeout-minutes: 4
         continue-on-error: true
 
       - name: Fetch TRON on-chain (USDT TRC-20)
         run: python3 scripts/fetch_tron.py
+        timeout-minutes: 3
         continue-on-error: true
 
       - name: Fetch funding perpétuos
         run: python3 scripts/fetch_funding.py
+        timeout-minutes: 2
         continue-on-error: true
 
       - name: Fetch orderbook consolidado
         run: python3 scripts/fetch_orderbook.py
+        timeout-minutes: 2
         continue-on-error: true
 
       - name: Fetch RSS imprensa BR
         run: python3 scripts/news/fetcher.py
+        timeout-minutes: 3
         continue-on-error: true
 
       - name: Detect anomalies (Z-score, divergence, ring-of-mules, stablecoin_flight)
