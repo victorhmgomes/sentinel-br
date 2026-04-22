@@ -1670,6 +1670,76 @@ const I18N = (function(){
     'motriz.cta.hc':              {pt:'→ Ver detecção HourlyCorr', en:'→ See HourlyCorr detection'},
     'motriz.cta.bt':              {pt:'→ Backtest completo (16 incidentes)', en:'→ Full backtest (16 incidents)'},
     'motriz.cta.news':            {pt:'→ Imprensa corrobora', en:'→ Press corroborates'},
+    // motriz narrativa dinâmica (montada em JS — usa placeholders)
+    'motriz.narr.signaled':       {pt:'Sentinel sinalizou em <b>{date}</b>',
+                                   en:'Sentinel flagged on <b>{date}</b>'},
+    'motriz.narr.peak':           {pt:'pico cross-venue às <b>{hrBRT}:00 BRT</b> ({hrUTC}Z) envolvendo <b>{venues} venues</b>, desvio <b>{ratio}×</b> vs baseline 14d',
+                                   en:'cross-venue peak at <b>{hrBRT}:00 BRT</b> ({hrUTC}Z) across <b>{venues} venues</b>, <b>{ratio}×</b> vs 14d baseline'},
+    'motriz.narr.metric':         {pt:'métrica: <code>{metric}</code>',
+                                   en:'metric: <code>{metric}</code>'},
+    'motriz.d0.sub.at':           {pt:'em {date}', en:'on {date}'},
+    'motriz.d0.sub.win':          {pt:'janela D-1', en:'D-1 window'},
+    'motriz.pm3.sub':             {pt:'{cr} críticos · {hi} altos',
+                                   en:'{cr} critical · {hi} high'},
+    'motriz.venues.sub':          {pt:'cross-venue · 1h', en:'cross-venue · 1h'},
+    // semaforo (3 cards)
+    'sem.c1.title':               {pt:'Risco · últimos 7 dias', en:'Risk · last 7 days'},
+    'sem.c1.quiet':               {pt:'Tranquilo', en:'Quiet'},
+    'sem.c1.sig.one':             {pt:'1 sinal', en:'1 signal'},
+    'sem.c1.sig.many':            {pt:'{n} sinais', en:'{n} signals'},
+    'sem.c1.none':                {pt:'Nenhuma atipicidade detectada nas exchanges monitoradas nos últimos 7 dias.',
+                                   en:'No atypical activity detected on the monitored exchanges over the last 7 days.'},
+    'sem.c1.green.one':           {pt:'<b>{n}</b> sinal de baixa intensidade — comportamento dentro do esperado.',
+                                   en:'<b>{n}</b> low-intensity signal — behavior within expected range.'},
+    'sem.c1.green.many':          {pt:'<b>{n}</b> sinais de baixa intensidade — comportamento dentro do esperado.',
+                                   en:'<b>{n}</b> low-intensity signals — behavior within expected range.'},
+    'sem.c1.yellow':              {pt:'<b>{n}</b> sinais de média intensidade — vigilância recomendada.',
+                                   en:'<b>{n}</b> medium-intensity signals — monitoring recommended.'},
+    'sem.c1.yellow.hi':           {pt:'<b>{n}</b> sinais de média intensidade ({hi} de alto desvio) — vigilância recomendada.',
+                                   en:'<b>{n}</b> medium-intensity signals ({hi} high-deviation) — monitoring recommended.'},
+    'sem.c1.red':                 {pt:'<b>{n}</b> sinais, sendo <b>{cr} críticos</b> — investigação ativa.',
+                                   en:'<b>{n}</b> signals, with <b>{cr} critical</b> — active investigation.'},
+    'sem.c1.red.hi':              {pt:'<b>{n}</b> sinais, sendo <b>{cr} críticos</b> e {hi} altos — investigação ativa.',
+                                   en:'<b>{n}</b> signals, with <b>{cr} critical</b> and {hi} high — active investigation.'},
+    'sem.c2.title':               {pt:'Coordenação · últimos 30 dias', en:'Coordination · last 30 days'},
+    'sem.c2.none':                {pt:'Sem coordenação', en:'No coordination'},
+    'sem.c2.one':                 {pt:'1 dia', en:'1 day'},
+    'sem.c2.many':                {pt:'{n} dias', en:'{n} days'},
+    'sem.c2.desc.none':           {pt:'Nenhum dia com 3+ corretoras brasileiras estourando juntas — padrão esperado.',
+                                   en:'No day with 3+ Brazilian exchanges spiking together — expected pattern.'},
+    'sem.c2.desc.one':            {pt:'<b>1 dia</b> com múltiplas corretoras BR atípicas no mesmo dia — investigar antes de descartar.',
+                                   en:'<b>1 day</b> with multiple atypical BR exchanges on the same day — investigate before dismissing.'},
+    'sem.c2.desc.many':           {pt:'<b>{n} dias</b> com 3+ corretoras BR atípicas em conjunto — padrão de frota de mulas.',
+                                   en:'<b>{n} days</b> with 3+ atypical BR exchanges acting together — mule-fleet pattern.'},
+    'sem.c3.title':               {pt:'Cobertura histórica', en:'Historical coverage'},
+    'sem.c3.rate':                {pt:'{pct}% de acerto', en:'{pct}% hit rate'},
+    'sem.c3.desc':                {pt:'Em {total} incidentes bancários conhecidos dos últimos 12 meses, <b>{hit}</b> deixaram rastro detectável em janela de ±3 dias.',
+                                   en:'Out of {total} known bank incidents in the last 12 months, <b>{hit}</b> left a detectable trace within a ±3-day window.'},
+    // lead headline (dinâmica — build gera textContent de lead-hits)
+    'lead.hits.fmt':              {pt:'{hit} de {total}', en:'{hit} of {total}'},
+    // hc hero (último alerta)
+    'hc.latest.label':            {pt:'último alerta', en:'last alert'},
+    'hc.peak.label':              {pt:'pico', en:'peak'},
+    'hc.peak.baseline':           {pt:'baseline', en:'baseline'},
+    'hc.venues.label':            {pt:'venues corroboradores', en:'corroborating venues'},
+    'hc.kpi.flagdays':            {pt:'Dias-flag', en:'Flag days'},
+    'hc.kpi.crit':                {pt:'Críticos', en:'Critical'},
+    'hc.kpi.maxv':                {pt:'Máx venues num dia', en:'Max venues in a day'},
+    'hc.kpi.maxratio':            {pt:'Maior ratio observado', en:'Largest observed ratio'},
+    // incidents backtest
+    'inc.kpi.tested':             {pt:'Incidentes testados', en:'Incidents tested'},
+    'inc.kpi.tested.sub':         {pt:'datas fornecidas pelo analista', en:'dates provided by the analyst'},
+    'inc.kpi.any':                {pt:'Hit · qualquer alerta ±3d', en:'Hit · any alert ±3d'},
+    'inc.kpi.high':               {pt:'Hit · HIGH+ ±3d', en:'Hit · HIGH+ ±3d'},
+    'inc.kpi.brusdt':             {pt:'Hit · BR∩USDT ±3d', en:'Hit · BR∩USDT ±3d'},
+    'inc.kpi.random':             {pt:'aleatório esperado: ~{v}', en:'random baseline: ~{v}'},
+    'inc.kpi.random.target':      {pt:'aleatório esperado: ~{v} · indicador-alvo', en:'random baseline: ~{v} · target indicator'},
+    'inc.noalert':                {pt:'— sem alerta em ±3d', en:'— no alert in ±3d'},
+    // ring of mules KPIs
+    'ring.kpi.flagdays':          {pt:'Dias-flag (12m)', en:'Flag days (12m)'},
+    'ring.kpi.baserate':          {pt:'Base rate', en:'Base rate'},
+    'ring.kpi.sevcrit':           {pt:'Sev critical', en:'Sev critical'},
+    'ring.kpi.trigger':           {pt:'Gatilho', en:'Trigger'},
     // hourly-corr panel
     'hc.title':                   {pt:'HourlyCorr · detecção intraday cross-venue', en:'HourlyCorr · intraday cross-venue detection'},
     'hc.sub':                     {pt:'baseline por hora-do-dia · 14 ocorrências · corroboração entre venues BR',
@@ -2029,31 +2099,15 @@ const I18N = (function(){
   const REV = {};
   for (const k of Object.keys(D)) REV[D[k].pt] = D[k].en;
   // tradução "solta" por frase (PT→EN) para uso em renderers dinâmicos
+  // IMPORTANTE: evite chaves curtas que possam casar substring em palavras
+  // não-alvo (' dia' casa 'nenhum dia', 'médio' casa 'banco médio', etc).
+  // Renderers dinâmicos devem usar i18n keys explícitas sempre que possível.
   const PHRASES = {
-    // severidades usadas em badges dinâmicos
-    'crítico': 'critical',
-    'alto':    'high',
-    'médio':   'medium',
-    'baixo':   'low',
-    // tipos de cenário no flight backtest
-    'ataque':   'attack',
-    'limpo':    'clean',
-    'dispara':  'fires',
-    'disparou': 'fired',
-    'silêncio': 'silent',
-    // event-card chips/labels
+    // event-card chips/labels (fragmentos longos, seguros)
     ' sinais convergentes · ': ' convergent signals · ',
     'Sinal isolado · ':        'Isolated signal · ',
     ' alerta(s) bruto(s) · duração ': ' raw alert(s) · duration ',
     ' · sev máx ': ' · max sev ',
-    // semaforo valores
-    'Tranquilo':       'Quiet',
-    'sinais':          'signals',
-    ' sinais':         ' signals',
-    'Sem coordenação': 'No coordination',
-    ' dias':           ' days',
-    ' dia':            ' day',
-    ' de acerto':      ' hit rate',
     // press empty filter
     'Nenhum item bate com o filtro «': 'No item matches filter «',
     // events empty
@@ -2062,26 +2116,17 @@ const I18N = (function(){
     // stale/degraded counters on book
     ' degradadas · ':  ' degraded · ',
     ' stale':          ' stale',
-    // health categories (may appear inline)
-    'BR':    'BR',
-    'GLOBAL':'GLOBAL',
-    // book pressure labels
+    // book pressure labels (strings específicas)
     'equilibrado':      'balanced',
     'sem dado':         'no data',
     'compra +':         'buy +',
     'venda +':          'sell +',
-    'pp':               'pp',
-    'total':            'total',
     ' venues BR':       ' BR venues',
     // ring hits
     ' séries': ' series',
-    // calib flag
-    'redesign': 'redesign',
     // incidents backtest
     '— sem alerta em ±3d': '— no alert in ±3d',
     // VWAP
-    'BUY (ask)':  'BUY (ask)',
-    'SELL (bid)': 'SELL (bid)',
     'parcial':    'partial',
     // press corroboration phrasing
     ' alerta do watcher':  ' watcher alert',
@@ -2089,9 +2134,26 @@ const I18N = (function(){
     'na janela −6h / +72h': 'window −6h / +72h',
     '0 alertas':            '0 alerts',
     'sem corroboração técnica': 'no technical corroboration',
-    // press severity labels (lowercase, used by SEV_LABEL)
-    // already mapped above
+    'venues corroboradores': 'corroborating venues',
+    // scenario labels (flight backtest) — strings estáveis
+    'cenário limpo':    'clean scenario',
+    'cenário de ataque':'attack scenario',
+    // full-string severity labels (usado em contextos onde aparece isolado)
+    '__SEV_CRIT__': 'critical',
+    '__SEV_HIGH__': 'high',
+    '__SEV_MED__':  'medium',
+    '__SEV_LOW__':  'low',
   };
+  // map de severidade para badges/labels (usado via I18N.sev())
+  const SEV_MAP = {
+    'crítico': 'critical', 'alto': 'high', 'médio': 'medium', 'baixo': 'low',
+    'critical':'critical', 'high':'high',  'medium':'medium', 'low':'low',
+  };
+  function sev(label){
+    if (lang === 'pt' || !label) return label;
+    const k = String(label).toLowerCase();
+    return SEV_MAP[k] || label;
+  }
   function t(pt){
     if (lang === 'pt' || pt == null) return pt;
     if (Object.prototype.hasOwnProperty.call(REV, pt)) return REV[pt];
@@ -2110,7 +2172,31 @@ const I18N = (function(){
     return out;
   }
 
-  return { get lang(){return lang}, setLang, apply, t, tMany, walkAndTranslate, D, H };
+  // t(key) usable from dynamic renderers
+  function tKey(key){
+    const e = D[key];
+    if (!e) return key;
+    return e[lang] ?? e.pt;
+  }
+  function tKeyHtml(key){
+    // fallback: se não houver em H, tenta em D (muitos templates com HTML
+    // simples — <b>/<code> — vivem em D)
+    const e = H[key] || D[key];
+    if (!e) return key;
+    return e[lang] ?? e.pt;
+  }
+  // template com substituição {var}
+  function tTpl(key, vars){
+    let s = tKey(key);
+    if (vars) for (const k of Object.keys(vars)) s = s.split('{'+k+'}').join(vars[k]);
+    return s;
+  }
+  function tTplHtml(key, vars){
+    let s = tKeyHtml(key);
+    if (vars) for (const k of Object.keys(vars)) s = s.split('{'+k+'}').join(vars[k]);
+    return s;
+  }
+  return { get lang(){return lang}, setLang, apply, t, tMany, tKey, tKeyHtml, tTpl, tTplHtml, sev, walkAndTranslate, D, H };
 })();
 window.I18N = I18N;
 
@@ -2157,9 +2243,24 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
 (function(){
   const inc = DATA.incidents?.summary;
   if (!inc) return;
-  document.getElementById('lead-hits').textContent     = `${inc.n_hit_any_pm3} de ${inc.n_total}`;
-  document.getElementById('lead-hit-rate').textContent = inc.n_hit_any_pm3;
-  document.getElementById('lead-hit-total').textContent = inc.n_total;
+  function paint(){
+    // lead-hits fica dentro de data-i18n-html="lead.headline", que é re-escrito
+    // pelo apply() no langchange. Precisamos re-popular após cada troca.
+    const el = document.getElementById('lead-hits');
+    if (el) {
+      el.textContent = I18N.tTpl('lead.hits.fmt', {
+        hit: inc.n_hit_any_pm3,
+        total: inc.n_total,
+      });
+    }
+    const rEl = document.getElementById('lead-hit-rate');
+    if (rEl) rEl.textContent = inc.n_hit_any_pm3;
+    const tEl = document.getElementById('lead-hit-total');
+    if (tEl) tEl.textContent = inc.n_total;
+  }
+  paint();
+  // apply() redesenha innerHTML de data-i18n-html em cada troca → re-pintar
+  document.addEventListener('langchange', paint);
 })();
 
 // ========== Binance em evidência (streaming) ==========
@@ -2658,50 +2759,80 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
   const ring30 = (DATA.ring_of_mules?.days||[]).filter(r => r.date > c30);
 
   // Card 1 — Sinais de cash-out últimos 7 dias
-  // Verde 0-2, amarelo 3-7, vermelho 8+
   const a7 = last7.length;
   const a7crit = last7.filter(a=>a.severity==='critical').length;
   const a7high = last7.filter(a=>a.severity==='high').length;
   let c1color = a7 >= 8 ? 'red' : a7 >= 3 ? 'yellow' : 'green';
   if (a7crit >= 1) c1color = 'red';
-  const c1value = a7 === 0 ? 'Tranquilo' : (a7 + ' sinais');
-  let c1explain;
-  if (a7 === 0) c1explain = 'Nenhuma atipicidade detectada nas exchanges monitoradas nos últimos 7 dias.';
-  else if (c1color === 'green') c1explain = `<b>${a7}</b> sinal${a7>1?'s':''} de baixa intensidade — comportamento dentro do esperado.`;
-  else if (c1color === 'yellow') c1explain = `<b>${a7}</b> sinais de média intensidade${a7high?` (${a7high} de alto desvio)`:''} — vigilância recomendada.`;
-  else c1explain = `<b>${a7}</b> sinais, sendo <b>${a7crit} crítico${a7crit>1?'s':''}</b>${a7high?` e ${a7high} alto${a7high>1?'s':''}`:''} — investigação ativa.`;
 
   // Card 2 — Movimentação coordenada (ring) últimos 30 dias
   const r30 = ring30.length;
   let c2color = r30 >= 2 ? 'red' : r30 === 1 ? 'yellow' : 'green';
-  const c2value = r30 === 0 ? 'Sem coordenação' : (r30 + ' dia' + (r30>1?'s':''));
-  let c2explain;
-  if (r30 === 0) c2explain = 'Nenhum dia com 3+ corretoras brasileiras estourando juntas — padrão esperado.';
-  else if (r30 === 1) c2explain = `<b>1 dia</b> com múltiplas corretoras BR atípicas no mesmo dia — investigar antes de descartar.`;
-  else c2explain = `<b>${r30} dias</b> com 3+ corretoras BR atípicas em conjunto — padrão de frota de mulas.`;
 
-  // Card 3 — Cobertura histórica (sempre verde no protótipo)
+  // Card 3 — Cobertura histórica
   const inc = DATA.incidents?.summary || {n_hit_any_pm3:0, n_total:1};
   const rate = (inc.n_hit_any_pm3/inc.n_total*100).toFixed(0);
   const c3color = rate >= 80 ? 'green' : rate >= 50 ? 'yellow' : 'red';
-  const c3value = `${rate}% de acerto`;
-  const c3explain = `Em ${inc.n_total} incidentes bancários conhecidos dos últimos 12 meses, <b>${inc.n_hit_any_pm3}</b> deixaram rastro detectável em janela de ±3 dias.`;
 
-  const cards = [
-    {title:'Risco · últimos 7 dias',     icon:'!',  color:c1color, value:c1value, explain:c1explain},
-    {title:'Coordenação · últimos 30 dias', icon:'⚭', color:c2color, value:c2value, explain:c2explain},
-    {title:'Cobertura histórica',        icon:'✓',  color:c3color, value:c3value, explain:c3explain},
-  ];
-  wrap.innerHTML = cards.map(c => `
-    <div class="sem-card ${c.color}">
-      <div class="sem-light ${c.color}">${c.icon}</div>
-      <div class="sem-body">
-        <div class="sem-label">${c.title}</div>
-        <div class="sem-value">${c.value}</div>
-        <div class="sem-explain">${c.explain}</div>
+  function render(){
+    // Card 1 value + explain
+    let c1value;
+    if (a7 === 0) c1value = I18N.tKey('sem.c1.quiet');
+    else if (a7 === 1) c1value = I18N.tKey('sem.c1.sig.one');
+    else c1value = I18N.tTpl('sem.c1.sig.many', {n: a7});
+
+    let c1explain;
+    if (a7 === 0) c1explain = I18N.tKey('sem.c1.none');
+    else if (c1color === 'green') {
+      c1explain = (a7 === 1)
+        ? I18N.tTplHtml('sem.c1.green.one', {n: a7})
+        : I18N.tTplHtml('sem.c1.green.many', {n: a7});
+    } else if (c1color === 'yellow') {
+      c1explain = a7high
+        ? I18N.tTplHtml('sem.c1.yellow.hi', {n: a7, hi: a7high})
+        : I18N.tTplHtml('sem.c1.yellow', {n: a7});
+    } else {
+      c1explain = a7high
+        ? I18N.tTplHtml('sem.c1.red.hi', {n: a7, cr: a7crit, hi: a7high})
+        : I18N.tTplHtml('sem.c1.red', {n: a7, cr: a7crit});
+    }
+
+    // Card 2 value + explain
+    let c2value;
+    if (r30 === 0) c2value = I18N.tKey('sem.c2.none');
+    else if (r30 === 1) c2value = I18N.tKey('sem.c2.one');
+    else c2value = I18N.tTpl('sem.c2.many', {n: r30});
+
+    let c2explain;
+    if (r30 === 0) c2explain = I18N.tKey('sem.c2.desc.none');
+    else if (r30 === 1) c2explain = I18N.tKeyHtml('sem.c2.desc.one');
+    else c2explain = I18N.tTplHtml('sem.c2.desc.many', {n: r30});
+
+    // Card 3
+    const c3value = I18N.tTpl('sem.c3.rate', {pct: rate});
+    const c3explain = I18N.tTplHtml('sem.c3.desc', {
+      total: inc.n_total, hit: inc.n_hit_any_pm3
+    });
+
+    const cards = [
+      {title: I18N.tKey('sem.c1.title'), icon:'!', color:c1color, value:c1value, explain:c1explain},
+      {title: I18N.tKey('sem.c2.title'), icon:'⚭', color:c2color, value:c2value, explain:c2explain},
+      {title: I18N.tKey('sem.c3.title'), icon:'✓', color:c3color, value:c3value, explain:c3explain},
+    ];
+    wrap.innerHTML = cards.map(c => `
+      <div class="sem-card ${c.color}">
+        <div class="sem-light ${c.color}">${c.icon}</div>
+        <div class="sem-body">
+          <div class="sem-label">${c.title}</div>
+          <div class="sem-value">${c.value}</div>
+          <div class="sem-explain">${c.explain}</div>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `).join('');
+  }
+
+  render();
+  document.addEventListener('langchange', render);
 })();
 
 // ========== Caso Motriz — hero do incidente mais recente ==========
@@ -2713,53 +2844,71 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
   const m = sorted[sorted.length-1];
   if (!m) return;
 
+  // Dados computados uma vez
   const sev = (m.top_alert && m.top_alert.severity) || 'high';
-  const badge = document.getElementById('motriz-badge');
-  if (badge) {
-    badge.textContent = sev.toUpperCase();
-    badge.className = 'sev ' + sev;
-    badge.style.fontSize = '12px';
-    badge.style.letterSpacing = '1px';
-  }
-
-  const dEl = document.getElementById('motriz-date');
-  if (dEl) dEl.textContent = `${m.label || ''} · ${m.date || ''}`.trim();
-
-  const nEl = document.getElementById('motriz-name');
-  if (nEl) nEl.textContent = m.name || '—';
-
-  // corpo: narrativa curta — usa top_alert pra justificar
   const ta = m.top_alert || {};
   const hh = (ta.hot_hours && ta.hot_hours[0]) || null;
   const venues = hh ? (hh.venues || []).length : 0;
   const ratio  = hh ? hh.top_ratio : null;
   const hrUTC  = hh ? hh.hour_utc : null;
   const hrBRT  = hrUTC != null ? ((hrUTC - 3 + 24) % 24) : null;
+  const c = m.counts || {};
+  // Nome em EN opcional (fallback pro PT)
+  const name_pt = m.name || '—';
+  const name_en = m.name_en || name_pt;
 
-  const body = document.getElementById('motriz-body');
-  if (body) {
-    const parts = [];
-    if (ta.date) parts.push(`Sentinel sinalizou em <b>${ta.date}</b>`);
-    if (venues && ratio)
-      parts.push(`pico cross-venue às <b>${String(hrBRT).padStart(2,'0')}:00 BRT</b> (${hrUTC}Z) envolvendo <b>${venues} venues</b>, desvio <b>${Number(ratio).toFixed(1)}×</b> vs baseline 14d`);
-    if (ta.metric) parts.push(`métrica: <code>${ta.metric}</code>`);
-    body.innerHTML = parts.length ? (parts.join(' · ') + '.') : '';
+  function render(){
+    const L = I18N.lang;
+    const badge = document.getElementById('motriz-badge');
+    if (badge) {
+      badge.textContent = sev.toUpperCase();
+      badge.className = 'sev ' + sev;
+      badge.style.fontSize = '12px';
+      badge.style.letterSpacing = '1px';
+    }
+
+    const dEl = document.getElementById('motriz-date');
+    if (dEl) dEl.textContent = `${m.label || ''} · ${m.date || ''}`.trim();
+
+    const nEl = document.getElementById('motriz-name');
+    if (nEl) nEl.textContent = L === 'en' ? name_en : name_pt;
+
+    const body = document.getElementById('motriz-body');
+    if (body) {
+      const parts = [];
+      if (ta.date) parts.push(I18N.tTplHtml('motriz.narr.signaled', {date: ta.date}));
+      if (venues && ratio) {
+        parts.push(I18N.tTplHtml('motriz.narr.peak', {
+          hrBRT: String(hrBRT).padStart(2,'0'),
+          hrUTC: hrUTC,
+          venues: venues,
+          ratio: Number(ratio).toFixed(1),
+        }));
+      }
+      if (ta.metric) parts.push(I18N.tTplHtml('motriz.narr.metric', {metric: ta.metric}));
+      body.innerHTML = parts.length ? (parts.join(' · ') + '.') : '';
+    }
+
+    const setText = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+    // d0
+    setText('motriz-d0', (c.d0 != null ? c.d0 : (ta.date ? '1' : '—')));
+    setText('motriz-d0-sub', ta.date
+      ? I18N.tTpl('motriz.d0.sub.at', {date: ta.date})
+      : I18N.tKey('motriz.d0.sub.win')
+    );
+    // ±3d
+    setText('motriz-pm3', c.pm3 != null ? c.pm3 : '—');
+    const hi = c.pm3_hi || 0, cr = c.pm3_cr || 0;
+    setText('motriz-pm3-sub', I18N.tTpl('motriz.pm3.sub', {cr, hi}));
+    // venues
+    setText('motriz-venues', venues || '—');
+    setText('motriz-venues-sub', I18N.tKey('motriz.venues.sub'));
+    // ratio
+    setText('motriz-ratio', ratio != null ? `${Number(ratio).toFixed(1)}×` : '—');
   }
 
-  // KPIs
-  const c = m.counts || {};
-  const setText = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
-  // d0: alerta do dia do Sentinel (ou D-1)
-  setText('motriz-d0', (c.d0 != null ? c.d0 : (ta.date ? '1' : '—')));
-  setText('motriz-d0-sub', ta.date ? `em ${ta.date}` : 'janela D-1');
-  // ±3d: total e hi/cr
-  setText('motriz-pm3', c.pm3 != null ? c.pm3 : '—');
-  const hi = c.pm3_hi || 0, cr = c.pm3_cr || 0;
-  setText('motriz-pm3-sub', `${cr} críticos · ${hi} altos`);
-  // venues
-  setText('motriz-venues', venues || '—');
-  // ratio
-  setText('motriz-ratio', ratio != null ? `${Number(ratio).toFixed(1)}×` : '—');
+  render();
+  document.addEventListener('langchange', render);
 })();
 
 // ========== main chart — BRL por venue brasileira (empilhado) ==========
@@ -3304,40 +3453,54 @@ renderAlerts();
   const s = inc.summary;
   const b = inc.random_window_pm3;
   const expected = (p) => (p * s.n_total).toFixed(1);
-  const wrap = document.getElementById('inc-summary');
-  wrap.innerHTML = `
-    <div class="kpi"><div class="l">Incidentes testados</div><div class="v">${s.n_total}</div><div class="s">datas fornecidas pelo analista</div></div>
-    <div class="kpi"><div class="l">Hit · qualquer alerta ±3d</div><div class="v">${s.n_hit_any_pm3}/${s.n_total}</div><div class="s">aleatório esperado: ~${expected(b.any)}</div></div>
-    <div class="kpi high"><div class="l">Hit · HIGH+ ±3d</div><div class="v">${s.n_hit_high_pm3}/${s.n_total}</div><div class="s">aleatório esperado: ~${expected(b.high_plus)}</div></div>
-    <div class="kpi crit"><div class="l">Hit · BR∩USDT ±3d</div><div class="v">${s.n_hit_br_usdt_pm3}/${s.n_total}</div><div class="s">aleatório esperado: ~${expected(b.br_usdt)} · indicador-alvo</div></div>
-  `;
 
-  const tb = document.querySelector('#tbl-incidents tbody');
-  inc.items.forEach(it => {
-    const c = it.counts;
-    const top = it.top_alert;
-    const topText = top
-      ? `${top.date} · ${top.source} / ${top.asset} · ${top.metric.replace(/_/g,' ')} · z=${top.value}`
-      : '<span style="color:var(--muted)">— sem alerta em ±3d</span>';
-    const tr = document.createElement('tr');
-    const highlightBR = c.pm3_br_usdt > 0;
-    if (c.pm3_cr > 0) tr.className = 'stale-row';
-    else if (c.pm3_hi > 0) tr.className = 'degraded-row';
-    tr.innerHTML = `
-      <td><b>${it.label}</b><br><span class="badge" style="margin-top:2px">${it.name.length>40? it.name.slice(0,40)+'…' : it.name}</span></td>
-      <td>${it.date}</td>
-      <td>${c.d0}</td>
-      <td>${c.pm3}</td>
-      <td>${c.pm3_cr}</td>
-      <td>${c.pm3_hi}</td>
-      <td>${c.pm3_br}</td>
-      <td>${c.pm3_usdt}</td>
-      <td style="color:${highlightBR?'var(--ok)':'var(--muted)'};font-weight:${highlightBR?'600':'400'}">${c.pm3_br_usdt}</td>
-      <td style="font-family:var(--mono);font-size:11.5px">${topText}</td>
-      <td>${top? '<span class="sev '+top.severity+'">'+top.severity+'</span>' : '—'}</td>
+  function renderSummary(){
+    const wrap = document.getElementById('inc-summary');
+    wrap.innerHTML = `
+      <div class="kpi"><div class="l">${I18N.tKey('inc.kpi.tested')}</div><div class="v">${s.n_total}</div><div class="s">${I18N.tKey('inc.kpi.tested.sub')}</div></div>
+      <div class="kpi"><div class="l">${I18N.tKey('inc.kpi.any')}</div><div class="v">${s.n_hit_any_pm3}/${s.n_total}</div><div class="s">${I18N.tTpl('inc.kpi.random', {v: expected(b.any)})}</div></div>
+      <div class="kpi high"><div class="l">${I18N.tKey('inc.kpi.high')}</div><div class="v">${s.n_hit_high_pm3}/${s.n_total}</div><div class="s">${I18N.tTpl('inc.kpi.random', {v: expected(b.high_plus)})}</div></div>
+      <div class="kpi crit"><div class="l">${I18N.tKey('inc.kpi.brusdt')}</div><div class="v">${s.n_hit_br_usdt_pm3}/${s.n_total}</div><div class="s">${I18N.tTpl('inc.kpi.random.target', {v: expected(b.br_usdt)})}</div></div>
     `;
-    tb.appendChild(tr);
-  });
+  }
+
+  function renderTable(){
+    const tb = document.querySelector('#tbl-incidents tbody');
+    if (!tb) return;
+    tb.innerHTML = '';
+    const L = I18N.lang;
+    inc.items.forEach(it => {
+      const c = it.counts;
+      const top = it.top_alert;
+      const topText = top
+        ? `${top.date} · ${top.source} / ${top.asset} · ${top.metric.replace(/_/g,' ')} · z=${top.value}`
+        : `<span style="color:var(--muted)">${I18N.tKey('inc.noalert')}</span>`;
+      const tr = document.createElement('tr');
+      const highlightBR = c.pm3_br_usdt > 0;
+      if (c.pm3_cr > 0) tr.className = 'stale-row';
+      else if (c.pm3_hi > 0) tr.className = 'degraded-row';
+      const nameDisplay = L === 'en' ? (it.name_en || it.name) : it.name;
+      const nameTrunc = nameDisplay.length > 40 ? nameDisplay.slice(0,40)+'…' : nameDisplay;
+      tr.innerHTML = `
+        <td><b>${it.label}</b><br><span class="badge" style="margin-top:2px">${nameTrunc}</span></td>
+        <td>${it.date}</td>
+        <td>${c.d0}</td>
+        <td>${c.pm3}</td>
+        <td>${c.pm3_cr}</td>
+        <td>${c.pm3_hi}</td>
+        <td>${c.pm3_br}</td>
+        <td>${c.pm3_usdt}</td>
+        <td style="color:${highlightBR?'var(--ok)':'var(--muted)'};font-weight:${highlightBR?'600':'400'}">${c.pm3_br_usdt}</td>
+        <td style="font-family:var(--mono);font-size:11.5px">${topText}</td>
+        <td>${top? '<span class="sev '+top.severity+'">'+top.severity+'</span>' : '—'}</td>
+      `;
+      tb.appendChild(tr);
+    });
+  }
+
+  renderSummary();
+  renderTable();
+  document.addEventListener('langchange', () => { renderSummary(); renderTable(); });
 })();
 
 // (marcadores de incidentes agora são aplicados via incidentsMarkerPlugin
@@ -3405,12 +3568,16 @@ renderAlerts();
   if (!r) return;
   const meta = document.getElementById('ring-meta');
   const severitySum = r.days.reduce((m,d)=>{m[d.severity]=(m[d.severity]||0)+1; return m;},{});
-  meta.innerHTML = `
-    <div class="box"><div class="l">Dias-flag (12m)</div><div class="v">${r.n_days}</div></div>
-    <div class="box"><div class="l">Base rate</div><div class="v">${r.base_rate}%</div></div>
-    <div class="box"><div class="l">Sev critical</div><div class="v crit">${severitySum.critical||0}</div></div>
-    <div class="box"><div class="l">Gatilho</div><div class="v" style="font-size:14px;font-weight:500">${r.threshold}</div></div>
-  `;
+  function renderRingMeta(){
+    meta.innerHTML = `
+      <div class="box"><div class="l">${I18N.tKey('ring.kpi.flagdays')}</div><div class="v">${r.n_days}</div></div>
+      <div class="box"><div class="l">${I18N.tKey('ring.kpi.baserate')}</div><div class="v">${r.base_rate}%</div></div>
+      <div class="box"><div class="l">${I18N.tKey('ring.kpi.sevcrit')}</div><div class="v crit">${severitySum.critical||0}</div></div>
+      <div class="box"><div class="l">${I18N.tKey('ring.kpi.trigger')}</div><div class="v" style="font-size:14px;font-weight:500">${r.threshold}</div></div>
+    `;
+  }
+  renderRingMeta();
+  document.addEventListener('langchange', renderRingMeta);
   const tb = document.querySelector('#tbl-ring tbody');
   r.days.slice().reverse().forEach(d=>{
     const hitStr = d.hits.map(h=>`${h.venue.substring(0,3)}·${h.asset}(z${h.z})`).join('  ');
@@ -3455,15 +3622,20 @@ renderAlerts();
     (a.hot_hours||[]).forEach(h => { if (h.top_ratio > peakRatio) peakRatio = h.top_ratio; });
   });
   const th = HC.thresholds || {};
-  document.getElementById('hc-kpis').innerHTML = `
-    <div class="box"><div class="l">Dias-flag</div><div class="v">${hcAlerts.length}</div></div>
-    <div class="box"><div class="l">Críticos</div><div class="v ${nCrit>0?'crit':''}">${nCrit}</div></div>
-    <div class="box"><div class="l">Máx venues num dia</div><div class="v">${maxVenues}</div></div>
-    <div class="box"><div class="l">Maior ratio observado</div><div class="v">${peakRatio.toFixed(1)}×</div></div>
-  `;
+  function renderHcKpis(){
+    document.getElementById('hc-kpis').innerHTML = `
+      <div class="box"><div class="l">${I18N.tKey('hc.kpi.flagdays')}</div><div class="v">${hcAlerts.length}</div></div>
+      <div class="box"><div class="l">${I18N.tKey('hc.kpi.crit')}</div><div class="v ${nCrit>0?'crit':''}">${nCrit}</div></div>
+      <div class="box"><div class="l">${I18N.tKey('hc.kpi.maxv')}</div><div class="v">${maxVenues}</div></div>
+      <div class="box"><div class="l">${I18N.tKey('hc.kpi.maxratio')}</div><div class="v">${peakRatio.toFixed(1)}×</div></div>
+    `;
+  }
+  renderHcKpis();
+  document.addEventListener('langchange', renderHcKpis);
 
-  // Hero card: alerta mais recente
-  if (latest) {
+  // Hero card: alerta mais recente (re-renderiza no langchange)
+  function renderHcHero(){
+    if (!latest) return;
     const peak = (latest.hot_hours||[]).slice().sort((a,b)=>b.n_venues-a.n_venues || b.top_ratio-a.top_ratio)[0];
     const peakH = peak ? `${String(peak.hour_utc).padStart(2,'0')}:00 UTC (${String((peak.hour_utc - 3 + 24) % 24).padStart(2,'0')}:00 BRT)` : '—';
     const peakR = peak ? `${peak.top_ratio.toFixed(2)}×` : '—';
@@ -3472,23 +3644,29 @@ renderAlerts();
     const bg = latest.severity === 'critical' ? 'linear-gradient(135deg,#2a0f16,#3b1624)' :
                latest.severity === 'high'     ? 'linear-gradient(135deg,#2a1f0a,#3b2d12)' :
                                                 'linear-gradient(135deg,#0f1f2a,#162d3b)';
+    const lblLatest  = I18N.tKey('hc.latest.label');
+    const lblPeak    = I18N.tKey('hc.peak.label');
+    const lblBase    = I18N.tKey('hc.peak.baseline');
+    const lblVenues  = I18N.tKey('hc.venues.label');
     document.getElementById('hc-hero').innerHTML = `
       <div style="background:${bg};border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:18px;align-items:center">
         <div style="flex:0 0 auto">
-          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">último alerta</div>
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">${lblLatest}</div>
           <div style="font-size:22px;font-weight:700;margin-top:2px">${latest.date} · <span class="sev ${sevCls}">${sevCls.toUpperCase()}</span></div>
         </div>
         <div style="flex:1;min-width:180px">
-          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">pico</div>
-          <div style="font-size:16px;font-weight:600;margin-top:2px">${peakH} &nbsp;·&nbsp; <span style="color:${peakRatio>=10?'#ff4a6b':peakRatio>=5?'#ff9c3a':'#fde35c'}">${peakR}</span> baseline</div>
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">${lblPeak}</div>
+          <div style="font-size:16px;font-weight:600;margin-top:2px">${peakH} &nbsp;·&nbsp; <span style="color:${peakRatio>=10?'#ff4a6b':peakRatio>=5?'#ff9c3a':'#fde35c'}">${peakR}</span> ${lblBase}</div>
         </div>
         <div style="flex:1 1 100%;min-width:200px">
-          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">venues corroboradores · ${latest.value || (latest.corroborating_venues||[]).length}</div>
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">${lblVenues} · ${latest.value || (latest.corroborating_venues||[]).length}</div>
           <div style="font-size:13px;margin-top:2px;font-family:var(--mono);color:#d4dae5">${venues}</div>
         </div>
       </div>
     `;
   }
+  renderHcHero();
+  document.addEventListener('langchange', renderHcHero);
 
   // Tabela
   const tb = document.querySelector('#tbl-hc tbody');
