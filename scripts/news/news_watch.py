@@ -26,6 +26,36 @@ from correlator import correlate, load_watcher_alerts, summarize
 ROOT = HERE.parent.parent  # cryptofraud/
 DATA = ROOT / "data"
 ALERTS_DIR = DATA / "alerts"
+DASH_JSON  = DATA / "dashboard.json"
+
+
+def load_dashboard_alerts(path: Path) -> list[dict]:
+    """Normaliza alertas do dashboard.json pro schema esperado pelo correlator
+    (ts ISO, rule, venue). Esses alertas têm apenas `date` (YYYY-MM-DD) —
+    ancoramos em 12:00 UTC do dia pra janela ±h funcionar."""
+    if not path.exists():
+        return []
+    try:
+        d = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    raw = d.get("alerts", []) or []
+    out: list[dict] = []
+    for a in raw:
+        date = a.get("date") or a.get("ts")
+        if not date:
+            continue
+        # se já for ISO com hora, mantém; senão ancora em 12:00 UTC
+        ts = date if "T" in str(date) else f"{date}T12:00:00+00:00"
+        out.append({
+            "ts": ts,
+            "rule": a.get("metric") or a.get("rule"),
+            "severity": a.get("severity"),
+            "venue": a.get("source") or a.get("venue"),
+            "asset": a.get("asset"),
+            "narrative": a.get("narrative") or a.get("metric"),
+        })
+    return out
 
 
 def parse_args():
@@ -36,7 +66,8 @@ def parse_args():
                    help="foco BR mínimo; 0=neutro, 1=exige ≥1 sinal BR líquido, 2=mais estrito")
     p.add_argument("--limit", type=int, default=80,
                    help="máx itens a persistir (default 80)")
-    p.add_argument("--back-hours", type=int, default=6)
+    p.add_argument("--back-hours", type=int, default=72,
+                   help="janela atrás: quantas horas antes da notícia procurar alertas")
     p.add_argument("--forward-hours", type=int, default=72)
     p.add_argument("--out", default=str(DATA / "news.json"))
     return p.parse_args()
@@ -57,8 +88,11 @@ def main():
           file=sys.stderr)
 
     print("→ loading watcher alerts...", file=sys.stderr)
-    alerts = load_watcher_alerts(ALERTS_DIR) if ALERTS_DIR.exists() else []
-    print(f"  {len(alerts)} alertas carregados", file=sys.stderr)
+    live_alerts = load_watcher_alerts(ALERTS_DIR) if ALERTS_DIR.exists() else []
+    dash_alerts = load_dashboard_alerts(DASH_JSON)
+    alerts = live_alerts + dash_alerts
+    print(f"  {len(live_alerts)} watcher (live) + {len(dash_alerts)} dashboard.json = {len(alerts)} alertas",
+          file=sys.stderr)
 
     print("→ correlating...", file=sys.stderr)
     corr = correlate(relevant, alerts,

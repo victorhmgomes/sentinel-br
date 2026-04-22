@@ -8,7 +8,7 @@
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Folha Mercado",
@@ -23,8 +23,8 @@
         1
       ]
     ],
-    "generated_at": "2026-04-22T17:27:44+00:00",
-    "runtime_sec": 2.27
+    "generated_at": "2026-04-22T21:45:58+00:00",
+    "runtime_sec": 2.13
   },
   "items": [
     {
@@ -73,9 +73,58 @@
         "score": 2,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-04-22T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 6,
+      "_corroboration_score": 5
     },
     {
       "source": "Valor Investe",
@@ -125,9 +174,58 @@
         "score": 2,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-04-22T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 6,
+      "_corroboration_score": 5
     },
     {
       "source": "Portal do Bitcoin",
@@ -176,9 +274,58 @@
         "neg": 0,
         "score": 3
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-04-19T13:26:26+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:28:05+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-19T13:29:46+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-04-22T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 6,
+      "_corroboration_score": 5
     }
   ]
 }
