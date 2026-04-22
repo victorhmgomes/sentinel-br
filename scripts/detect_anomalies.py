@@ -15,11 +15,13 @@ Indicadores calculados:
  8. On-chain: hashrate Z-score (sanidade, não é fraude)
 """
 from __future__ import annotations
-import json, math, statistics, datetime as dt
+import json, math, statistics, sys, datetime as dt
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Permite importar hourly_detector sem precisar rodar do diretório scripts/
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 RAW  = ROOT / "data" / "raw.json"
 OUT  = ROOT / "data" / "dashboard.json"
 
@@ -321,6 +323,18 @@ def main():
     # Base rate para interpretação: % de dias de 12m que disparam
     base_rate = (len(ring_days) / len(all_br_dates)) if all_br_dates else 0
 
+    # ---------- HourlyCorr: volume 1h corroborado cross-venue ----------
+    # Granularidade horária sobre Binance BRL + MB + Foxbit (30d × 24h).
+    # Detecta pré-posição tipo 20/04/26 que baseline diário miss.
+    try:
+        from hourly_detector import build_hourly_corr_alerts
+        hourly_alerts, hourly_summary = build_hourly_corr_alerts()
+        alerts.extend(hourly_alerts)
+        print(f"[hourly_corr] {len(hourly_alerts)} alertas cross-venue (horário)")
+    except Exception as e:
+        print(f"[hourly_corr] skip: {e}")
+        hourly_alerts, hourly_summary = [], {"enabled": False, "reason": str(e)}
+
     # ---------- Ensemble severity: detectores co-acionando mesmo dia/venue ----------
     # Provider benchmark (20/04/26 MB): stablecoin_flight (medium) sozinho.
     # O provider vizinho disparou 3/8 agentes (Stablecoin + SingleExch +
@@ -330,7 +344,7 @@ def main():
     # já é critical, preserva. ring_of_mules e ensemble são excluídos
     # do agrupamento (já são composites).
     SEV_RANK = {"medium": 2, "high": 3, "critical": 4}
-    COMPOSITE_METRICS = {"ring_of_mules", "ensemble"}
+    COMPOSITE_METRICS = {"ring_of_mules", "ensemble", "hourly_corr"}
     by_day_source: dict[tuple[str,str], list[dict]] = defaultdict(list)
     for a in alerts:
         if a.get("metric") in COMPOSITE_METRICS:
@@ -439,6 +453,7 @@ def main():
             "threshold":  "≥2 metrics distintos mesma (date,source) → high; ≥3 → critical",
             "description": "Agrega detectores que disparam no mesmo dia/venue para escalar severidade por corroboração.",
         },
+        "hourly_corr": hourly_summary,
         "onchain_btc": {
             "hashrates": oc.get("hashrates", []),
             "difficulty": oc.get("difficulty", []),
@@ -475,6 +490,9 @@ def main():
             {"id": "ensemble", "name": "Ensemble severity (corroboração cruzada)",
              "desc": "Agrega detectores independentes que disparam na mesma (data, exchange). Se 2+ metrics distintos corroboram, classifica como high; 3+ como critical. Inspirado no voting de agentes do benchmark externo (Stablecoin + SingleExch + HourlyCorr = 3/8 = HIGH). Reduz falso-negativo de detector solo em regime ambíguo.",
              "trigger": "≥2 metrics distintos mesma (date,source) → high; ≥3 → critical"},
+            {"id": "hourly_corr", "name": "HourlyCorr (intraday cross-venue)",
+             "desc": "Granularidade horária sobre Binance BRL + Mercado Bitcoin + Foxbit. Para cada (venue, par), compara volume da hora contra a mediana da mesma hora-do-dia nos últimos 14d. Se 3+ venues distintos acionam ratio ≥3 na mesma hora UTC, emite alerta cross-venue — pega pré-posição pre-ataque que o baseline diário suaviza.",
+             "trigger": "ratio ≥3 em ≥3 venues distintos na mesma (date, hour_utc); 4+ combos ou ratio ≥10 → critical"},
             {"id": "tron_outflow", "name": "Saída de TRC-20 USDT (roadmap on-chain)",
              "desc": "Soma diária de saídas USDT de hot-wallets de exchange na rede TRON. Cash-out BR pós-PIX rota majoritária via TRC-20. Correlação cruzada com pico USDT-BRL local em ±24h.",
              "trigger": "outflow Z≥2 e correlação com pico USDT-BRL ≥ 0.6"},

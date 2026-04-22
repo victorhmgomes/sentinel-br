@@ -35,6 +35,11 @@ jobs:
         timeout-minutes: 8
         continue-on-error: true
 
+      - name: Fetch OHLCV 1h 30d (Binance/MB/Foxbit BR — intraday)
+        run: python3 scripts/fetch_hourly.py
+        timeout-minutes: 4
+        continue-on-error: true
+
       - name: Fetch CoinGecko (volume 30d por exchange)
         run: python3 scripts/fetch_coingecko.py
         timeout-minutes: 4

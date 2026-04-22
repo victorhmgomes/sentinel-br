@@ -71,12 +71,14 @@ def main():
             "pm3_usdt": sum(1 for a in w3 if a["asset"] in USDT),
             "pm3_br_usdt": sum(1 for a in w3 if a["source"] in BR and a["asset"] in USDT),
         }
-        # top alert no ±3d (prioriza BR+USDT+severidade+z)
+        # top alert no ±3d (prioriza composite BR cross-venue + BR+USDT+severidade+z)
         sev_rank = {"critical":3, "high":2, "medium":1}
+        COMPOSITE_BR = {"hourly_corr", "ensemble", "ring_of_mules"}  # sinais fortes
         w3_ranked = sorted(w3, key=lambda a: (
-            int(a["source"] in BR),
-            int(a["asset"] in USDT),
+            # composites BR sobem junto com BR tradicional; severidade pesa logo depois
+            int(a["source"] in BR or a.get("metric") in COMPOSITE_BR),
             sev_rank.get(a["severity"], 0),
+            int(a["asset"] in USDT),
             abs(a.get("value", 0)) if isinstance(a.get("value"), (int, float)) else 0,
         ), reverse=True)
         top = w3_ranked[0] if w3_ranked else None

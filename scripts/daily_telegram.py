@@ -69,6 +69,7 @@ def to_sink_format(a: dict) -> dict:
         "price_volume_divergence": f"Volume Z={val} sem movimento de preço — possível wash-trade.",
         "ring_of_mules":     f"{val} séries BR acionando simultaneamente — frota de mulas.",
         "ensemble":          f"{val} detectores corroborando — corroboração cruzada.",
+        "hourly_corr":       f"{val} venues BR disparando volume ≥3× baseline 1h — intraday cross-venue.",
     }
     narr = narr_map.get(metric, f"{metric} = {val}")
 
@@ -77,6 +78,15 @@ def to_sink_format(a: dict) -> dict:
     ctx  = {"value": val, "tags": ",".join(tags[:4])}
     if corr:
         ctx["signals"] = ",".join(corr)
+    # hourly_corr: incluir horas quentes no contexto
+    hot_hours = a.get("hot_hours")
+    if hot_hours:
+        peak = max(hot_hours, key=lambda h: h.get("n_venues", 0))
+        ctx["peak_hour_utc"] = f"{peak['hour_utc']:02d}Z"
+        ctx["peak_ratio"]    = peak.get("top_ratio")
+    corr_venues = a.get("corroborating_venues")
+    if corr_venues:
+        ctx["venues"] = ",".join(corr_venues[:4])
 
     return {
         "ts":       f"{date}T00:00:00Z",
