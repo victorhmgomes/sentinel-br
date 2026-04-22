@@ -1,14 +1,20 @@
 """
 classifier.py — scoring keyword-based de itens de imprensa.
 
-Foco explícito: hacking, incidentes cibernéticos, PLD/CFT (prevenção à lavagem
-de dinheiro e combate ao financiamento do terrorismo). Notícias que são
-puramente sobre "crypto" ou "PIX" sem o ângulo de ataque/lavagem são
-classificadas como noise e não aparecem na seção "Imprensa corrobora".
+Foco explícito: INCIDENTES CIBERNÉTICOS contra instituições financeiras
+brasileiras (tipo Sinqia, C&M Software, Banco Rendimento, HSBC, BTG).
+Notícias políticas, judiciais, regulatórias genéricas, fofoca corporativa
+ou fraudes sem vínculo cyber são classificadas como `noise`.
 
-Cada item recebe score por categoria (attack, launder, cft, pix, crypto, value).
-Severidade final exige `attack OR launder OR cft` — pix/crypto entram só como
-*contexto* que escala a severidade, nunca como sinal único.
+Gating (tightened 2026-04-22):
+  Severidade >= medium REQUER um sinal CYBER_HARD (hack/invasão/ransomware/
+  malware/ciberataque/vazamento de dados/incidente cibernético/exploit/etc).
+  Fraude/golpe/desvio puros SEM sinal cyber explícito NÃO qualificam.
+  Exceção: fraude + nome de FI brasileira (Sinqia/Pismo/C&M/Rendimento...)
+  pode escalar pra medium se o contexto for financeiro-cyber.
+
+Cada item recebe score por categoria (cyber, attack, launder, cft, pix,
+crypto, value, political_noise). A severidade final pondera tudo.
 """
 from __future__ import annotations
 import re
@@ -16,24 +22,40 @@ from typing import Iterable
 
 # --- dicionários de termos ---
 # peso do termo, sentence-insensitive
+
+# CYBER_HARD: termos strictly cyber — gate obrigatório pra sev >= medium.
+# Peso alto porque cada hit é sinal forte.
+CYBER_HARD = {
+    r"\bhack\w*\b": 5, r"\bhacker\w*\b": 5,
+    r"\binvas[aãoõ]\w*\b": 5,          # invasão, invadir, invadiram
+    r"\bransomware\b": 6, r"\bmalware\b": 5, r"\bphishing\b": 5,
+    r"\bciberat\w+\b": 6, r"\bcibercrim\w+\b": 6, r"\bciberseguran\w+\b": 3,
+    r"\bataque cibern\w+\b": 6, r"\bataque hacker\b": 6,
+    r"\bataques? de hackers?\b": 5,
+    r"\bexploit\w*\b": 5, r"\bzero-?day\b": 6, r"\bbackdoor\b": 5,
+    r"\bbreach\b": 5, r"\bdata\s+breach\b": 6,
+    r"\bincidente de seguran\w+\b": 5, r"\bincidente cibern\w+\b": 6,
+    r"\bvazamento de dados\b": 5, r"\bvaz\w+ dados pessoais\b": 4,
+    r"\bsequestro de dados\b": 6,
+    r"\bddos\b": 4, r"\bnegação de serviço\b": 4,
+    r"\bsistema comprometido\b": 4, r"\bsistemas comprometidos\b": 4,
+    r"\bintrusão\w*\b": 4,
+    r"\bapt\s*\d*\b": 3,                # APT groups
+    r"\bmalicioso\w*\b": 2, r"\bsupply[- ]chain\b": 3,
+}
+# ATTACK: sinais de crime financeiro gerais (fraude, golpe, desvio) — SEM
+# sinal cyber puro, NÃO qualificam. Servem pra escalar severidade quando
+# coexistem com CYBER_HARD ou com um alvo financeiro nomeado.
 ATTACK = {
-    # Ataque/hacking direto
-    r"\bataque\b": 3, r"\bataques\b": 3,
-    r"\bhack\w*\b": 4, r"\binvas\w*\b": 4,
-    r"\bransomware\b": 5, r"\bmalware\b": 4, r"\bphishing\b": 4,
-    r"\bciberat\w+\b": 5, r"\bcibercrim\w+\b": 5, r"\bciberseguran\w+\b": 3,
-    r"\bexploit\w*\b": 4, r"\bzero-?day\b": 5, r"\bbackdoor\b": 4,
-    r"\bbreach\b": 4, r"\bdata\s+breach\b": 5,
-    # Vazamento / incidente
-    r"\bincidente de seguran\w+\b": 4, r"\bincidente cibern\w+\b": 5,
-    r"\bvazamento\b": 3, r"\bvazou\b": 3, r"\bvazaram\b": 3,
-    r"\bvazamento de dados\b": 4,
-    # Roubo / desvio / fraude
+    r"\bataque\b": 2, r"\bataques\b": 2,  # diluído — "ataque" genérico é fraco
     r"\bfraude\b": 3, r"\bfraudes\b": 3, r"\bfraudul\w+\b": 3,
     r"\bgolpe\b": 2, r"\bgolpes\b": 2,
-    r"\bdesvi\w+\b": 3,   # desvio, desviados
-    r"\broubo\b": 3, r"\broubado\w*\b": 3, r"\bfurto\b": 2,
-    r"\bextors\w+\b": 3, r"\bsequestro de dados\b": 5,
+    r"\bdesvi\w+\b": 3,
+    r"\broubo\b": 2, r"\broubado\w*\b": 2, r"\bfurto\b": 2,
+    r"\bextors\w+\b": 3,
+    r"\bvazamento\b": 2, r"\bvazou\b": 2, r"\bvazaram\b": 2,
+    # cyber-adjacent soft
+    r"\bameaça\w*\b": 1, r"\balerta\s+ciber\w*\b": 2,
 }
 PIX = {
     r"\bPIX\b": 3,
@@ -95,13 +117,77 @@ VALUE = {
     r"\bUS\$\s*\d": 1,
 }
 
+# NAMED_FI: instituições financeiras BR conhecidas ou providers de core banking
+# que são alvos potenciais de incidente cyber. Se aparecer junto com ATTACK
+# (fraude/golpe), vira "medium" mesmo sem CYBER_HARD (o caso "R$ 50M desviados
+# do Banco Rendimento" que não diz 'hack' mas é claramente cyber).
+NAMED_FI = {
+    # Providers/core banking/processadores — foco principal
+    r"\bSinqia\b": 6, r"\bPismo\b": 5, r"\bC&M Software\b": 6,
+    r"\bDileta\b": 5, r"\bEvertec\b": 4, r"\bTSys\b": 3,
+    # Bancos BR (alvos típicos de ataque)
+    r"\bBanco Rendimento\b": 6,     # "rendimento" sozinho é genérico (juros) → não matcha
+    r"\bHSBC\b": 5, r"\bBTG\b": 5, r"\bBTG Pactual\b": 5,
+    r"\bBRB\b": 4, r"\bBanco de Brasília\b": 4,
+    r"\bIta[uú]\b": 3, r"\bBradesco\b": 3, r"\bSantander\b": 3,
+    r"\bBanco do Brasil\b": 3, r"\bCaixa\b": 3,
+    r"\bBanco Master\b": 4, r"\bMaster\b": 2,
+    r"\bNubank\b": 4, r"\bPicPay\b": 4, r"\bC6\b": 4,
+    r"\bInter\b": 3, r"\bOriginal\b": 2, r"\bSafra\b": 3,
+    r"\bMercado Pago\b": 4, r"\bStone\b": 3, r"\bPagBank\b": 3,
+    r"\bPagSeguro\b": 3, r"\bCielo\b": 3, r"\bRede\b": 2,
+    r"\bXP\b": 2, r"\bBanco do Nordeste\b": 3, r"\bBanrisul\b": 3,
+    # Exchanges BR
+    r"\bMercado Bitcoin\b": 4, r"\bFoxbit\b": 4,
+    r"\bNovaDAX\b": 3, r"\bBitso\b": 3, r"\bBinance\s+Brasil\b": 3,
+    # Fintechs de crédito
+    r"\bBrasil Cash\b": 4, r"\bPefisa\b": 3, r"\bAsa\b": 2,
+    # Instituições de pagamento/financeiras genéricas se ligadas a cyber
+    r"\bgateway\s+PIX\b": 3, r"\bprovedor.*core\s+banking\b": 5,
+    r"\bfintech.*cr[eé]dito\b": 3,
+}
+
+# POLITICAL_NOISE: penaliza notícias que são política/judicial/fofoca
+# corporativa. Se o peso político é alto e o cyber_hard é zero,
+# a notícia é rebaixada pra noise mesmo com launder/fraude hits.
+POLITICAL_NOISE = {
+    r"\bSTF\b": 3, r"\bSupremo Tribunal\b": 3,
+    r"\bcomiss[ãa]o\s+(parlamentar|mista|especial)\b": 2,
+    r"\baudi[êe]ncia\s+p[uú]blica\b": 2,
+    r"\bCVM\s+est[aá]\b": 2,             # análise regulatória genérica
+    r"\bprocesso\s+de\s+asilo\b": 3,
+    r"\bex-presidente\s+do\b": 3,        # "ex-presidente do BRB" etc
+    r"\bpris[ãa]o\s+de\s+ex\b": 3,
+    r"\bpris[ãa]o\s+preventiva\b": 2,
+    r"\bPapuda\b": 4,                    # presídio = política
+    r"\bempresas\s+de\s+fachada\b": 3,
+    r"\bconex[õo]es\s+pol[ií]ticas\b": 4,
+    r"\bescritorial?\b|\bgabinete\s+\b": 2,
+    r"\bdelegad[oa]\b": 2, r"\bRamagem\b": 4,
+    r"\bVorcaro\b": 3,                   # caso BRB/Master: fofoca corp
+    r"\bCOPOM\b": 2, r"\bSelic\b": 2,
+    r"\bBNDES\b": 2,
+    r"\bimpeachment\b": 4,
+    r"\bCongresso\s+Nacional\b": 2,
+    r"\b(PT|PL|PSDB|PSL|MDB|Novo|PSOL|Republicanos)\b": 2,  # siglas partidárias
+    r"\baudi[êe]ncia\s+de\s+cust[oó]dia\b": 3,
+    r"\bemenda\s+constitucional\b": 3,
+    r"\brelator[íi]a\b|\bvoto\s+do\s+relator\b": 2,
+    r"\boperação\s+(lava\s+jato|zelot[eo]s|greenfield)\b": 2,  # old ops
+    r"\bfoto\s+do\b": 3,                 # "Veja foto" = gossip
+    r"\bdiz\s+[Aa]\s+PF\b": 2,           # discourse fluff
+}
+
 CATS: dict[str, dict] = {
+    "cyber":   CYBER_HARD,
     "attack":  ATTACK,
     "launder": LAUNDER,
     "cft":     CFT,
     "pix":     PIX,
     "crypto":  CRYPTO,
     "value":   VALUE,
+    "named_fi":      NAMED_FI,
+    "political_noise": POLITICAL_NOISE,
 }
 
 # compila uma vez
@@ -200,38 +286,74 @@ def score_item(item: dict) -> dict:
     # foco BR (usa texto original pra respeitar case-sensitive quando útil)
     brf = br_focus(text_raw)
 
-    # severidade: foco em hack/incidente/PLD-CFT.
-    # Notícias puramente "crypto" ou puramente "PIX" (sem ataque nem lavagem
-    # nem CFT) caem em noise e NÃO entram na seção "Imprensa corrobora".
-    # pix/crypto entram só como CONTEXTO que escala a severidade.
-    has_attack = score["attack"] >= 3
-    has_laund  = score["launder"]>= 3
-    has_cft    = score["cft"]    >= 3
-    has_pix    = score["pix"]    >= 2
-    has_crypto = score["crypto"] >= 2
-    has_context = has_pix or has_crypto
-    has_core    = has_attack or has_laund or has_cft
+    # --- Gating tightened (2026-04-22) ---
+    # Queremos SÓ notícias de incidente cibernético contra FI brasileira
+    # (tipo Sinqia/C&M Software, Banco Rendimento/BTG/HSBC, Mercado Bitcoin).
+    # Fraude genérica sem cyber e lavagem sem ataque ficam em noise.
+    # Cyber term sozinho (ex.: "invasão") sem contexto financeiro/digital
+    # também NÃO qualifica — "invasão de pneus" não é cyber.
+    cyber_score    = score["cyber"]
+    strong_cyber   = cyber_score >= 6    # ciberataque/ransomware/incidente cibern (auto)
+    weak_cyber     = cyber_score >= 4    # hack/invasão solo — precisa contexto
+    has_attack     = score["attack"]     >= 3
+    has_laund      = score["launder"]    >= 4
+    has_laund_soft = score["launder"]    >= 2
+    has_cft        = score["cft"]        >= 4
+    has_pix        = score["pix"]        >= 2
+    has_crypto     = score["crypto"]     >= 2
+    has_named_fi   = score["named_fi"]   >= 4
+    pol_noise      = score["political_noise"]
+
+    has_context    = has_pix or has_crypto
+
+    # Cyber efetivo: strong passa sozinho; weak exige contexto (FI nomeada,
+    # cripto/PIX, ou lavagem). Caso contrário "invasão de pneus", "ataque
+    # ao governo", "hackers políticos" vazam pra noise.
+    has_cyber = strong_cyber or (
+        weak_cyber and (has_named_fi or has_context or has_laund_soft)
+    )
+
+    # "core": gate principal pra severidade >= medium.
+    has_core = (
+        has_cyber
+        or (has_attack and has_named_fi and (has_context or has_laund_soft))
+        or has_cft
+    )
 
     sev = "noise"
     if not has_core:
-        # sem ângulo de hack/lavagem/CFT -> não é o tipo de notícia que queremos
         sev = "noise"
-    elif has_attack and has_laund:
-        # hack + lavagem => criticidade máxima
-        sev = "critical"
-    elif (has_attack or has_laund or has_cft) and has_context:
-        # hack/lavagem/CFT com menção a PIX ou cripto => high (exatamente o fit)
-        sev = "high"
-    elif has_attack or has_laund or has_cft:
-        # hack/lavagem/CFT sem contexto cripto/PIX — ainda relevante, medium
-        sev = "medium"
+    elif has_cyber and has_laund:
+        sev = "critical"                          # cyber + lavagem = critical
+    elif has_cyber and (has_context or has_named_fi):
+        sev = "high"                              # cyber + cripto/PIX/FI = high
+    elif has_cyber:
+        sev = "medium"                            # cyber sozinho = medium
+    elif has_attack and has_named_fi:
+        # fraude/desvio + FI brasileira nomeada = medium mesmo sem hack explícito
+        # (caso "R$ 50M desviados do Banco Rendimento" sem palavra 'hack')
+        sev = "high" if has_context else "medium"
+    elif has_laund or has_cft:
+        sev = "medium"                            # lavagem/CFT fortes sem cyber
+
+    # Penalidade política: se a notícia tem muito peso político/judicial e
+    # ZERO cyber explícito, rebaixa. Pega "STF envia investigações",
+    # "prisão de ex-presidente", "Vorcaro", "Ramagem", etc.
+    if pol_noise >= 4 and not has_cyber:
+        sev_order = ["noise","low","medium","high","critical"]
+        idx = sev_order.index(sev)
+        sev = sev_order[max(0, idx - 2)]
+    elif pol_noise >= 3 and not has_cyber:
+        sev_order = ["noise","low","medium","high","critical"]
+        idx = sev_order.index(sev)
+        sev = sev_order[max(0, idx - 1)]
 
     # se a notícia tem foco estrangeiro (neg>>pos) e nenhum marcador BR forte,
     # rebaixa. Evita "Rússia", "Bitfinex", "Argentina", etc poluindo.
     if brf["score"] < -1 and brf["pos"] < 3:
         sev_order = ["noise","low","medium","high","critical"]
         idx = sev_order.index(sev)
-        sev = sev_order[max(0, idx - 2)]   # rebaixa 2 níveis (high→low, medium→noise)
+        sev = sev_order[max(0, idx - 2)]
 
     item = dict(item)
     item["_score"] = score
@@ -268,15 +390,38 @@ def top_relevant(items: Iterable[dict], min_sev: str = "medium",
 
 
 if __name__ == "__main__":
-    # smoke test
+    # smoke test — deve filtrar ruído político e manter cyber-real
     sample = [
-        {"title": "Polícia Federal deflagra operação contra lavagem via USDT",
-         "summary": "O grupo usava corretoras para converter reais em stablecoins."},
-        {"title": "BC anuncia nova taxa de juros",
-         "summary": "Comitê manteve a Selic inalterada."},
+        # POSITIVOS — devem entrar como medium/high/critical
         {"title": "Hackers invadem fintech ligada ao PIX e desviam R$ 420 milhões",
-         "summary": "Valores foram convertidos em bitcoin e stablecoins segundo investigação."},
+         "summary": "Valores foram convertidos em bitcoin e stablecoins."},
+        {"title": "Banco Rendimento sofre ciberataque e perde R$ 50 milhões",
+         "summary": "Invasão atingiu sistemas de câmbio na madrugada."},
+        {"title": "Ataque hacker atinge provedor Sinqia e afeta 3 bancos brasileiros",
+         "summary": "Incidente de segurança causou indisponibilidade no PIX."},
+        {"title": "Ransomware atinge Mercado Bitcoin e paralisa saques de USDT",
+         "summary": "Exchange confirma vazamento de dados e sequestro de sistemas."},
+        # NOISE (política/judicial/regulatório/fofoca) — devem cair pra noise
+        {"title": "STF envia investigações de operações Rejeito e Intrafortis para MG",
+         "summary": "Ministro Moraes redistribuiu processos ao juízo federal."},
+        {"title": "Prisão de ex-presidente do BRB levará a conexões políticas",
+         "summary": "Paulo Henrique Costa está na Papuda. Vorcaro comentou."},
+        {"title": "CVM está protegendo o investidor? Dino amplia audiência pública",
+         "summary": "Relatoria aguarda manifestação dos reguladores."},
+        {"title": "Como policiais recuperam conversas do celular e da nuvem",
+         "summary": "Técnicas de extração forense em investigações."},
+        {"title": "BC anuncia nova taxa de juros",
+         "summary": "COPOM manteve a Selic inalterada."},
+        # BORDERLINE — fraude sem cyber, sem FI nomeada = noise
+        {"title": "Polícia Federal deflagra operação contra lavagem via USDT",
+         "summary": "Grupo convertia reais em stablecoins."},
     ]
+    print(f"{'sev':<10s} {'pol':>3s} {'cyb':>3s} {'att':>3s} {'fi':>3s}  title")
     for s in classify_all(sample):
-        print(f"[{s['_severity']:<8s}] total={s['_total']:2d}  {s['title']}")
-        print(f"   hits: {s['_hits']}")
+        sc = s["_score"]
+        print(f"[{s['_severity']:<8s}] "
+              f"{sc.get('political_noise',0):>3d} "
+              f"{sc.get('cyber',0):>3d} "
+              f"{sc.get('attack',0):>3d} "
+              f"{sc.get('named_fi',0):>3d}  "
+              f"{s['title'][:80]}")

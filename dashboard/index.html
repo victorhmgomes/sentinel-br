@@ -1109,6 +1109,35 @@ body.mode-executive .tech-only{display:none !important}
     </p>
   </section>
 
+  <section class="panel" id="hourly-panel">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="hc.title">HourlyCorr · volume 1h anormal cross-venue</h2>
+        <small id="hc-meta" data-i18n="hc.sub">3+ exchanges BR disparando volume ≥3× a mediana da mesma hora-do-dia (baseline rolling 14d) na mesma janela horária · intraday pré-posicionamento</small>
+      </div>
+    </div>
+    <div class="ring-meta" id="hc-kpis"></div>
+
+    <div id="hc-hero" style="margin:0 0 16px"></div>
+
+    <div class="tbl-wrap" style="max-height:380px">
+      <table id="tbl-hc">
+        <thead><tr>
+          <th data-i18n="hc.th.date">Data</th>
+          <th data-i18n="hc.th.sev">Severidade</th>
+          <th data-i18n="hc.th.nv"># venues</th>
+          <th data-i18n="hc.th.peak">Hora de pico</th>
+          <th data-i18n="hc.th.ratio">Ratio pico</th>
+          <th data-i18n="hc.th.venues">Venues corroboradores</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="hc.foot">
+      <b>Por que serve para fraude:</b> ataques de pré-posicionamento tipicamente compram USDT/BTC em múltiplas exchanges na mesma janela horária (&lt;1h) antes do cash-out via PIX. Baseline diário não pega — às 3h da manhã o volume é sempre baixo, comparar contra "dia inteiro" dilui. <b>Baseline por hora-do-dia</b> (mediana das últimas 14 ocorrências da mesma hora) detecta picos intraday respeitando sazonalidade. Corroboração cruzada (3+ venues distintos na mesma hora) reduz falsos positivos de ruído idiossincrático. <b>Gatilho:</b> ratio ≥3× em ≥3 venues BR distintos → <i>high</i>. Com ≥4 combos (venue:par) ou ratio ≥10× → <i>critical</i>.
+    </p>
+  </section>
+
   <section class="panel" id="tron-panel">
     <div class="panel-title">
       <div>
@@ -3249,6 +3278,91 @@ renderAlerts();
       <td style="text-align:right">${d.max_z.toFixed(2)}</td>
       <td><span class="sev ${d.severity}">${d.severity}</span></td>
       <td style="font-family:var(--mono);font-size:11.5px;color:var(--muted)">${hitStr}</td>
+    `;
+    tb.appendChild(tr);
+  });
+})();
+
+// ========== HourlyCorr · cross-venue intraday ==========
+(function(){
+  const HC = DATA.hourly_corr;
+  const hcAlerts = (DATA.alerts || []).filter(a => a && a.metric === 'hourly_corr');
+  const panel = document.getElementById('hourly-panel');
+  if (!HC || !HC.enabled || !hcAlerts.length) {
+    if (panel) {
+      const kpi = document.getElementById('hc-kpis');
+      kpi.innerHTML = `<div class="box" style="grid-column:1/-1"><div class="l">Estado</div><div class="v">sem alertas HourlyCorr detectados no período</div></div>`;
+      return;
+    }
+    return;
+  }
+
+  // KPIs
+  const sevOrder = {medium:1, high:2, critical:3};
+  const today = (HC.generated_at || '').slice(0,10);
+  const sorted = hcAlerts.slice().sort((a,b)=>a.date<b.date?1:-1);
+  const latest = sorted[0];
+  const nCrit = hcAlerts.filter(a=>a.severity==='critical').length;
+  const nHigh = hcAlerts.filter(a=>a.severity==='high').length;
+  const maxVenues = Math.max(...hcAlerts.map(a=>a.value||0));
+  let peakRatio = 0;
+  hcAlerts.forEach(a=>{
+    (a.hot_hours||[]).forEach(h => { if (h.top_ratio > peakRatio) peakRatio = h.top_ratio; });
+  });
+  const th = HC.thresholds || {};
+  document.getElementById('hc-kpis').innerHTML = `
+    <div class="box"><div class="l">Dias-flag</div><div class="v">${hcAlerts.length}</div></div>
+    <div class="box"><div class="l">Críticos</div><div class="v ${nCrit>0?'crit':''}">${nCrit}</div></div>
+    <div class="box"><div class="l">Máx venues num dia</div><div class="v">${maxVenues}</div></div>
+    <div class="box"><div class="l">Maior ratio observado</div><div class="v">${peakRatio.toFixed(1)}×</div></div>
+  `;
+
+  // Hero card: alerta mais recente
+  if (latest) {
+    const peak = (latest.hot_hours||[]).slice().sort((a,b)=>b.n_venues-a.n_venues || b.top_ratio-a.top_ratio)[0];
+    const peakH = peak ? `${String(peak.hour_utc).padStart(2,'0')}:00 UTC (${String((peak.hour_utc - 3 + 24) % 24).padStart(2,'0')}:00 BRT)` : '—';
+    const peakR = peak ? `${peak.top_ratio.toFixed(2)}×` : '—';
+    const venues = (latest.corroborating_venues||[]).slice(0,6).join(' · ') || '—';
+    const sevCls = latest.severity; // critical|high|medium
+    const bg = latest.severity === 'critical' ? 'linear-gradient(135deg,#2a0f16,#3b1624)' :
+               latest.severity === 'high'     ? 'linear-gradient(135deg,#2a1f0a,#3b2d12)' :
+                                                'linear-gradient(135deg,#0f1f2a,#162d3b)';
+    document.getElementById('hc-hero').innerHTML = `
+      <div style="background:${bg};border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:18px;align-items:center">
+        <div style="flex:0 0 auto">
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">último alerta</div>
+          <div style="font-size:22px;font-weight:700;margin-top:2px">${latest.date} · <span class="sev ${sevCls}">${sevCls.toUpperCase()}</span></div>
+        </div>
+        <div style="flex:1;min-width:180px">
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">pico</div>
+          <div style="font-size:16px;font-weight:600;margin-top:2px">${peakH} &nbsp;·&nbsp; <span style="color:${peakRatio>=10?'#ff4a6b':peakRatio>=5?'#ff9c3a':'#fde35c'}">${peakR}</span> baseline</div>
+        </div>
+        <div style="flex:1 1 100%;min-width:200px">
+          <div style="color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase">venues corroboradores · ${latest.value || (latest.corroborating_venues||[]).length}</div>
+          <div style="font-size:13px;margin-top:2px;font-family:var(--mono);color:#d4dae5">${venues}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Tabela
+  const tb = document.querySelector('#tbl-hc tbody');
+  sorted.forEach(a => {
+    const hot = (a.hot_hours||[]).slice().sort((x,y)=>y.n_venues-x.n_venues || y.top_ratio-x.top_ratio);
+    const peak = hot[0];
+    const peakCell = peak ? `${String(peak.hour_utc).padStart(2,'0')}Z <span style="color:var(--muted);font-size:11px">(${String((peak.hour_utc - 3 + 24) % 24).padStart(2,'0')} BRT)</span>` : '—';
+    const ratioCell = peak ? `${peak.top_ratio.toFixed(2)}×` : '—';
+    const venuesCell = (a.corroborating_venues||[]).slice(0,6).join('  ') || '—';
+    const tr = document.createElement('tr');
+    if (a.severity === 'critical') tr.className = 'stale-row';
+    else if (a.severity === 'high') tr.className = 'degraded-row';
+    tr.innerHTML = `
+      <td>${a.date}</td>
+      <td><span class="sev ${a.severity}">${a.severity}</span></td>
+      <td><b>${a.value}</b></td>
+      <td>${peakCell}</td>
+      <td style="text-align:right;color:${peak && peak.top_ratio>=10?'#ff4a6b':peak && peak.top_ratio>=5?'#ff9c3a':'inherit'};font-weight:600">${ratioCell}</td>
+      <td style="font-family:var(--mono);font-size:11.5px;color:var(--muted)">${venuesCell}</td>
     `;
     tb.appendChild(tr);
   });
