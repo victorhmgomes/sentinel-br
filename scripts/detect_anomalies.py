@@ -16,6 +16,7 @@ Indicadores calculados:
 """
 from __future__ import annotations
 import json, math, statistics, datetime as dt
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -320,6 +321,60 @@ def main():
     # Base rate para interpretação: % de dias de 12m que disparam
     base_rate = (len(ring_days) / len(all_br_dates)) if all_br_dates else 0
 
+    # ---------- Ensemble severity: detectores co-acionando mesmo dia/venue ----------
+    # Provider benchmark (20/04/26 MB): stablecoin_flight (medium) sozinho.
+    # O provider vizinho disparou 3/8 agentes (Stablecoin + SingleExch +
+    # HourlyCorr) e classificou HIGH. Mesmo sem os agentes faltando, nós
+    # podemos escalar por corroboração: 2+ metrics distintos na mesma
+    # (date, source) → high; 3+ → critical. Se algum dos signals original
+    # já é critical, preserva. ring_of_mules e ensemble são excluídos
+    # do agrupamento (já são composites).
+    SEV_RANK = {"medium": 2, "high": 3, "critical": 4}
+    COMPOSITE_METRICS = {"ring_of_mules", "ensemble"}
+    by_day_source: dict[tuple[str,str], list[dict]] = defaultdict(list)
+    for a in alerts:
+        if a.get("metric") in COMPOSITE_METRICS:
+            continue
+        by_day_source[(a["date"], a["source"])].append(a)
+
+    ensemble_alerts = []
+    ensemble_days: list[dict] = []  # para KPI / heatmap
+    for (d, src), group in by_day_source.items():
+        metrics_fired = sorted({a["metric"] for a in group})
+        if len(metrics_fired) < 2:
+            continue
+        n = len(metrics_fired)
+        max_individual = max((SEV_RANK.get(a["severity"], 0) for a in group), default=0)
+        # escalada por corroboração
+        if n >= 3 or max_individual >= SEV_RANK["critical"]:
+            e_sev = "critical"
+        else:
+            e_sev = "high"
+        top_abs = max(
+            (abs(a["value"]) if isinstance(a.get("value"), (int, float)) else 0)
+            for a in group
+        )
+        ensemble_alerts.append({
+            "date": d, "source": src, "asset": "multi",
+            "metric": "ensemble",
+            "value": n,  # quantidade de metrics distintos corroborando
+            "severity": e_sev,
+            "price": None, "volume": None,
+            "tags": ["ensemble", "composite", f"{n}signals"] +
+                    (["BR"] if src in BR_VENUE_SET else []),
+            "corroborating_metrics": metrics_fired,
+            "top_zscore": round(top_abs, 2),
+        })
+        ensemble_days.append({
+            "date": d, "source": src,
+            "n_signals": n, "severity": e_sev,
+            "metrics": metrics_fired,
+            "top_zscore": round(top_abs, 2),
+        })
+
+    alerts.extend(ensemble_alerts)
+    ensemble_days.sort(key=lambda x: (x["date"], x["source"]))
+
     # ---------- KPIs headline ----------
     last_30 = sorted(set(a["date"] for a in alerts))[-30:] if alerts else []
     total_alerts = len(alerts)
@@ -378,6 +433,12 @@ def main():
             "threshold": "≥3 séries BR com Z≥2 no mesmo dia",
             "venues":    sorted(BR_VENUE_SET),
         },
+        "ensemble": {
+            "days":       ensemble_days,
+            "n_days":     len(ensemble_days),
+            "threshold":  "≥2 metrics distintos mesma (date,source) → high; ≥3 → critical",
+            "description": "Agrega detectores que disparam no mesmo dia/venue para escalar severidade por corroboração.",
+        },
         "onchain_btc": {
             "hashrates": oc.get("hashrates", []),
             "difficulty": oc.get("difficulty", []),
@@ -411,6 +472,9 @@ def main():
             {"id": "ring_of_mules", "name": "Ring of mules (BR multi-venue)",
              "desc": "Dia em que 3 ou mais séries BR (Mercado Bitcoin + Foxbit + Binance BRL, qualquer ativo) acionam Z≥2 simultaneamente. Indica frota de mulas operando em paralelo em vários VASPs no mesmo evento. Quando NovaDAX, Bitso BR, BitPreço e Ripio Trade expuserem klines públicos, entram automaticamente.",
              "trigger": "≥3 séries BR com Z≥2 no mesmo dia"},
+            {"id": "ensemble", "name": "Ensemble severity (corroboração cruzada)",
+             "desc": "Agrega detectores independentes que disparam na mesma (data, exchange). Se 2+ metrics distintos corroboram, classifica como high; 3+ como critical. Inspirado no voting de agentes do benchmark externo (Stablecoin + SingleExch + HourlyCorr = 3/8 = HIGH). Reduz falso-negativo de detector solo em regime ambíguo.",
+             "trigger": "≥2 metrics distintos mesma (date,source) → high; ≥3 → critical"},
             {"id": "tron_outflow", "name": "Saída de TRC-20 USDT (roadmap on-chain)",
              "desc": "Soma diária de saídas USDT de hot-wallets de exchange na rede TRON. Cash-out BR pós-PIX rota majoritária via TRC-20. Correlação cruzada com pico USDT-BRL local em ±24h.",
              "trigger": "outflow Z≥2 e correlação com pico USDT-BRL ≥ 0.6"},

@@ -24,6 +24,7 @@ INCIDENTS = [
     {"date": "2026-03-22", "label": "#11", "name": "Incidente em banco de grande porte — R$ 100M"},
     {"date": "2026-04-17", "label": "#12a","name": "Incidente em instituição de pagamento — R$ 20M"},
     {"date": "2026-04-18", "label": "#12b","name": "Continuação do incidente em IP — R$ 20M"},
+    {"date": "2026-04-21", "label": "#13", "name": "Ataque cibernético a banco médio de câmbio/crédito — R$ ~50M"},
 ]
 
 def main():

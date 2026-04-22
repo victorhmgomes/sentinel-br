@@ -65,12 +65,21 @@ jobs:
       - name: Detect anomalies (Z-score, divergence, ring-of-mules, stablecoin_flight)
         run: python3 scripts/detect_anomalies.py
 
-      - name: Incident backtest (15 incidentes)
+      - name: Incident backtest (16 incidentes)
         run: python3 scripts/incident_backtest.py
         continue-on-error: true
 
       - name: News correlator (alertas × manchetes)
         run: python3 scripts/news/correlator.py
+        continue-on-error: true
+
+      - name: Daily Telegram digest (severity ≥ high hoje)
+        # só dispara se TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID estiverem nos secrets
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/daily_telegram.py --min-sev high --days 1
+        timeout-minutes: 2
         continue-on-error: true
 
       - name: Rebuild dashboard
