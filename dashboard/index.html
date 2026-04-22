@@ -410,6 +410,31 @@ tr.degraded-row{background:rgba(224,184,74,.03)}
 .mode-btn.lang-btn .lang-globe{font-size:13px;opacity:.85;margin-right:2px}
 /* em modo executivo, esconde tudo marcado .tech-only */
 body.mode-executive .tech-only{display:none !important}
+
+/* Section divider — separa blocos lógicos (Topo / Mercado / Fraude / Metodologia).
+   Visual deliberadamente minimalista pra não competir com os painéis. */
+.section-divider{
+  margin:32px 0 14px;
+  padding:0;
+  border:0;
+}
+.section-divider-inner{
+  display:flex;align-items:baseline;gap:14px;
+  padding:12px 0 10px;
+  border-bottom:1px solid var(--border);
+}
+.section-divider h2{
+  margin:0;font-size:12px;letter-spacing:2.2px;text-transform:uppercase;
+  color:var(--muted);font-weight:700;
+}
+.section-divider small{
+  color:#6f7785;font-size:11.5px;line-height:1.45;
+}
+@media (max-width:640px){
+  .section-divider{margin:24px 0 10px}
+  .section-divider-inner{flex-direction:column;gap:4px;padding:8px 0 6px}
+  .section-divider small{font-size:11px}
+}
 @media (max-width:640px){
   .mode-btn.glossary-btn{margin-left:0}
   .mode-bar{padding:10px 14px}
@@ -766,9 +791,39 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
   </section>
-
   <section class="semaforo" id="semaforo"></section>
-
+  <section class="panel highlight" id="motriz-hero" style="margin-bottom:18px">
+    <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px">
+      <h3 style="margin:0" data-i18n="motriz.title">Caso motriz</h3>
+      <span id="motriz-badge" class="sev critical" style="font-size:12px;letter-spacing:1px">—</span>
+      <span id="motriz-date" style="color:var(--muted);font-family:var(--mono);font-size:13px">—</span>
+    </div>
+    <h2 id="motriz-name" style="margin:0 0 8px;font-size:22px;line-height:1.3">—</h2>
+    <div id="motriz-body" style="color:#c5cbd6;line-height:1.55;font-size:14px;margin-bottom:14px"></div>
+    <div class="sinqia-meta" id="motriz-meta">
+      <div class="box"><div class="l" data-i18n="motriz.k.d0">Alerta Sentinel · D-1</div><div class="v" id="motriz-d0">—</div><div class="l" style="margin-top:4px" id="motriz-d0-sub">—</div></div>
+      <div class="box"><div class="l" data-i18n="motriz.k.pm3">Alertas ±3 dias</div><div class="v" id="motriz-pm3">—</div><div class="l" style="margin-top:4px" id="motriz-pm3-sub">—</div></div>
+      <div class="box"><div class="l" data-i18n="motriz.k.venues">Venues corroborando</div><div class="v" id="motriz-venues">—</div><div class="l" style="margin-top:4px" id="motriz-venues-sub">cross-venue · 1h</div></div>
+      <div class="box"><div class="l" data-i18n="motriz.k.ratio">Desvio observado</div><div class="v" id="motriz-ratio">—</div><div class="l" style="margin-top:4px" id="motriz-ratio-sub">vs baseline 14d</div></div>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px">
+      <a href="#hourly-panel" style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.hc">→ Ver detecção HourlyCorr</a>
+      <a href="#incidentes"   style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.bt">→ Backtest completo (16 incidentes)</a>
+      <a href="#press-panel"  style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.news">→ Imprensa corrobora</a>
+    </div>
+  </section>
+  <section class="kpis" id="kpi-detail">
+    <div class="kpi"><div class="l" data-i18n="kpi.total">Alertas · 12 meses</div><div class="v" id="kpi-total">—</div><div class="s" data-i18n="kpi.total.s">total de sinalizações geradas</div></div>
+    <div class="kpi crit"><div class="l" data-i18n="kpi.crit">Severidade alta</div><div class="v" id="kpi-crit">—</div><div class="s" data-i18n-html="kpi.crit.s">desvio &gt; 4× sobre normal — prioridade 1</div></div>
+    <div class="kpi high"><div class="l" data-i18n="kpi.high">Severidade média</div><div class="v" id="kpi-high">—</div><div class="s" data-i18n-html="kpi.high.s">desvio &gt; 3× sobre normal — revisar em 24h</div></div>
+    <div class="kpi med"><div class="l" data-i18n="kpi.med">Atenção</div><div class="v" id="kpi-med">—</div><div class="s" data-i18n-html="kpi.med.s">desvio &gt; 2× sobre normal — triagem</div></div>
+  </section>
+  <section class="section-divider" id="div-mercado">
+    <div class="section-divider-inner">
+      <h2 data-i18n="div-mercado.title">Mercado agora</h2>
+      <small data-i18n="div-mercado.sub">Dados ao vivo: livro, volume, ranking de exchanges, cash-out rail e imprensa</small>
+    </div>
+  </section>
   <section class="panel binance-hero" id="binance-hero" style="margin-bottom:18px">
     <div class="panel-title">
       <div>
@@ -816,168 +871,6 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
   </section>
-
-  <section class="panel press-hero" id="press-hero" style="margin-bottom:18px">
-    <div class="panel-title">
-      <div>
-        <h2><span data-i18n="press.title">Imprensa corrobora</span> <small id="press-badge" class="press-badge" data-i18n="press.badge">último ciclo</small></h2>
-        <small id="press-meta" data-i18n-html="press.meta">foco: <b>hacking, incidentes cibernéticos, PLD/CFT</b> · agregador de RSS BR · 13 fontes · notícias puramente de preço ou política PIX são descartadas · pipeline: <code>scripts/news/news_watch.py</code></small>
-      </div>
-      <div class="press-filter-bar" id="press-filter-bar">
-        <small data-i18n="press.filter.label">filtro:</small>
-        <span class="chip active" data-press-filter="all" data-i18n="press.filter.all">todas</span>
-        <span class="chip"        data-press-filter="critical" data-i18n="press.filter.critical">crítico</span>
-        <span class="chip"        data-press-filter="high" data-i18n="press.filter.high">alto</span>
-        <span class="chip"        data-press-filter="medium" data-i18n="press.filter.medium">médio</span>
-        <span class="chip"        data-press-filter="corroborated" data-i18n="press.filter.corr">com corroboração</span>
-      </div>
-    </div>
-
-    <div class="press-kpis">
-      <div class="press-kpi"><div class="l" data-i18n="press.kpi.total">Itens relevantes</div><div class="v" id="press-kpi-total">__PRESS_TOTAL__</div></div>
-      <div class="press-kpi high"><div class="l" data-i18n="press.kpi.high">Alto / Crítico</div><div class="v" id="press-kpi-high">__PRESS_HIGH__</div></div>
-      <div class="press-kpi med"><div class="l" data-i18n="press.kpi.med">Médio</div><div class="v" id="press-kpi-med">__PRESS_MED__</div></div>
-      <div class="press-kpi corr"><div class="l" data-i18n="press.kpi.corr">Corroboração watcher</div><div class="v" id="press-kpi-corr">__PRESS_CORR__</div></div>
-    </div>
-
-    <div class="press-list" id="press-list">
-      <div class="press-empty" data-i18n-html="press.empty.html">Sem itens classificados. Rode <code>python3 scripts/news/news_watch.py</code> para popular.</div>
-    </div>
-  </section>
-
-  <section class="panel calib-hero tech-only" id="calib-hero" style="margin-bottom:18px">
-    <div class="panel-title">
-      <div>
-        <h2><span data-i18n="calib.title">Calibração &amp; FP/FN</span> <small id="calib-badge" class="calib-badge" data-i18n="calib.badge">backtest rigoroso</small></h2>
-        <small id="calib-meta" data-i18n-html="calib.meta">6 detectores · grid de perturbação × sweep de threshold · pipeline: <code>scripts/backtest/run_backtest.py</code></small>
-      </div>
-    </div>
-
-    <div class="calib-kpis">
-      <div class="calib-kpi"><div class="l" data-i18n="calib.kpi.n">Baselines</div><div class="v" id="calib-kpi-n">—</div></div>
-      <div class="calib-kpi"><div class="l" data-i18n="calib.kpi.fp">Alvo FP</div><div class="v" id="calib-kpi-fp">—</div></div>
-      <div class="calib-kpi ok"><div class="l" data-i18n="calib.kpi.ok">Detectores calibráveis</div><div class="v" id="calib-kpi-ok">—</div></div>
-      <div class="calib-kpi bad"><div class="l" data-i18n="calib.kpi.bad">Precisam redesign</div><div class="v" id="calib-kpi-bad">—</div></div>
-    </div>
-
-    <div style="overflow-x:auto">
-      <table class="calib-table" id="calib-table">
-        <thead>
-          <tr>
-            <th data-i18n="calib.th.det">Detector</th>
-            <th class="num" data-i18n="calib.th.fpnow">FP atual</th>
-            <th class="num hide-s" data-i18n="calib.th.fprec">FP recomend.</th>
-            <th class="num" data-i18n="calib.th.thr">Threshold</th>
-            <th class="num hide-s" data-i18n="calib.th.tp">TP</th>
-            <th class="num hide-s" data-i18n="calib.th.f1">F1</th>
-            <th data-i18n="calib.th.reason">Justificativa</th>
-          </tr>
-        </thead>
-        <tbody id="calib-tbody">
-          <tr><td colspan="7" class="press-empty" style="border:0" data-i18n-html="calib.empty">Sem calibração. Rode <code>python3 scripts/backtest/run_backtest.py --collect 20</code>.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="calib-note" data-i18n-html="calib.method"><b>Metodologia.</b> N snapshots reais são coletados do orderbook ao vivo (Binance/MB/Foxbit). FP é medido leave-one-out: cada snap vira o "agora" com os demais como histórico. TP é medido injetando 6 assinaturas sintéticas (spread, depth drop, price burst, divergência, pré-spike local, descolamento USDT-BRL) em intensidades crescentes. Para cada threshold do grid: precisão = TP/(TP+FP), recall = TP/total_de_ataques, F1 = média harmônica. A recomendação pega o menor threshold com FP ≤ alvo, maximizando recall sem inflar falso-positivo.</div>
-
-    <div class="flight-subcard" id="flight-subcard" style="margin-top:22px;padding:16px;border:1px solid var(--border);border-radius:10px;background:rgba(95,180,255,0.035)">
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between">
-        <div>
-          <h3 style="margin:0 0 2px;font-size:15px" data-i18n="flight.sub.title">stablecoin_flight · calibração provisória</h3>
-          <small style="color:var(--muted)" data-i18n-html="flight.sub.body">Detector de <i>conjunção</i> (2+/3 condições em ~3 snaps): ativos de risco caindo · USDT-BRL bid-heavy · USDT-BRL decouple. Cenários sintéticos derivados de snap real — <b>sample=<span id="flight-n">__FLIGHT_N__</span></b>, sanity check.</small>
-        </div>
-        <span class="calib-badge" data-i18n="flight.badge" style="background:rgba(95,180,255,0.18);color:#9cc6ff;border-color:rgba(95,180,255,0.35)">provisório · sintético</span>
-      </div>
-      <div class="calib-kpis" style="margin-top:12px">
-        <div class="calib-kpi ok"><div class="l" data-i18n="flight.kpi.tpr">Recall (TP/attacks)</div><div class="v" id="flight-tpr">__FLIGHT_TPR__</div></div>
-        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.fpr">FP rate (FP/cleans)</div><div class="v" id="flight-fpr">__FLIGHT_FPR__</div></div>
-        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.f1">F1</div><div class="v" id="flight-f1">__FLIGHT_F1__</div></div>
-        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.n">Cenários</div><div class="v" id="flight-nsc">__FLIGHT_N__</div></div>
-      </div>
-      <div class="tbl-wrap" style="margin-top:12px;max-height:260px">
-        <table id="tbl-flight" style="width:100%">
-          <thead><tr>
-            <th data-i18n="flight.th.sc">Cenário</th><th data-i18n="flight.th.kind">Tipo</th><th data-i18n="flight.th.exp">Esperado</th><th data-i18n="flight.th.fire">Disparou?</th>
-            <th class="num" data-i18n="flight.th.nal">#alerts</th><th data-i18n="flight.th.out">Outcome</th><th data-i18n="flight.th.sev">Severidade top</th>
-          </tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <p style="color:var(--muted);font-size:12px;margin:12px 0 0;line-height:1.55" data-i18n-html="flight.limits"><b>Limitações honestas.</b> Cenários sintéticos derivados do mesmo snap real variando 3 parâmetros (queda coordenada, imbalance USDT-BRL, decouple). Sem golden set de ataques reais com orderbook L2 sub-segundo, esses números validam a <i>lógica</i> (o detector dispara quando deve e cala quando não deve) mas não projetam FP/TP de produção. Próximo passo: capturar livro L2 em 5 min ao redor de incidentes conhecidos (Sinqia/HSBC, BTG 22/03) pra calibração definitiva.</p>
-    </div>
-  </section>
-
-  <section class="panel events-hero" id="events-hero" style="margin-bottom:18px">
-    <div class="panel-title">
-      <div>
-        <h2 data-i18n="events.title">Eventos correlacionados <small class="events-badge" data-i18n="events.badge">super-alertas do watcher</small></h2>
-        <small id="events-meta" data-i18n-html="events.meta">
-          correlator agrega alertas isolados dos 6 detectores em eventos por ativo ·
-          pipeline: <code>scripts/watcher/run_correlator.py</code>
-        </small>
-      </div>
-    </div>
-
-    <div class="events-kpis">
-      <div class="events-kpi"><div class="l" data-i18n="events.kpi.total">Eventos totais</div><div class="v" id="events-kpi-total">__EV_TOTAL__</div></div>
-      <div class="events-kpi warn"><div class="l" data-i18n="events.kpi.corr">Correlacionados</div><div class="v" id="events-kpi-corr">__EV_CORR__</div></div>
-      <div class="events-kpi crit"><div class="l" data-i18n="events.kpi.crit">Críticos</div><div class="v" id="events-kpi-crit">__EV_CRIT__</div></div>
-      <div class="events-kpi ok"><div class="l" data-i18n="events.kpi.maxconv">Convergência máx</div><div class="v" id="events-kpi-maxconv">__EV_MAXCONV__</div></div>
-    </div>
-
-    <div class="events-filters" id="events-filters">
-      <span class="chip active" data-ef="all" data-i18n="events.filt.all">Todos</span>
-      <span class="chip" data-ef="correlated" data-i18n="events.filt.corr">Só correlacionados</span>
-      <span class="chip" data-ef="critical" data-i18n="events.filt.crit">Críticos</span>
-      <span class="chip" data-ef="high" data-i18n="events.filt.high">Alta</span>
-    </div>
-
-    <div class="events-list" id="events-list">
-      <div class="events-empty" data-i18n-html="events.empty">
-        Sem eventos. Rode <code>python3 scripts/watcher/run_correlator.py</code> após o watcher acumular alertas.
-      </div>
-    </div>
-
-    <div class="events-note" data-i18n-html="events.note">
-      <b>Como funciona.</b> Cada detector dispara alertas isolados. O correlator
-      agrupa alertas do <i>mesmo ativo</i> em janela deslizante (fecha o evento após
-      cooldown sem alerta novo). Dentro do evento, repetições do mesmo detector são
-      dedupadas. A severidade final escala com a convergência: 2 detectores →
-      <span class="sev medium">medium</span>, 3 → <span class="sev high">high</span>,
-      4+ → <span class="sev critical">critical</span>. A intuição: quando múltiplos
-      sinais independentes concordam, a probabilidade de FP cai drasticamente.
-    </div>
-  </section>
-
-  <section class="panel highlight" id="motriz-hero" style="margin-bottom:18px">
-    <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px">
-      <h3 style="margin:0" data-i18n="motriz.title">Caso motriz</h3>
-      <span id="motriz-badge" class="sev critical" style="font-size:12px;letter-spacing:1px">—</span>
-      <span id="motriz-date" style="color:var(--muted);font-family:var(--mono);font-size:13px">—</span>
-    </div>
-    <h2 id="motriz-name" style="margin:0 0 8px;font-size:22px;line-height:1.3">—</h2>
-    <div id="motriz-body" style="color:#c5cbd6;line-height:1.55;font-size:14px;margin-bottom:14px"></div>
-    <div class="sinqia-meta" id="motriz-meta">
-      <div class="box"><div class="l" data-i18n="motriz.k.d0">Alerta Sentinel · D-1</div><div class="v" id="motriz-d0">—</div><div class="l" style="margin-top:4px" id="motriz-d0-sub">—</div></div>
-      <div class="box"><div class="l" data-i18n="motriz.k.pm3">Alertas ±3 dias</div><div class="v" id="motriz-pm3">—</div><div class="l" style="margin-top:4px" id="motriz-pm3-sub">—</div></div>
-      <div class="box"><div class="l" data-i18n="motriz.k.venues">Venues corroborando</div><div class="v" id="motriz-venues">—</div><div class="l" style="margin-top:4px" id="motriz-venues-sub">cross-venue · 1h</div></div>
-      <div class="box"><div class="l" data-i18n="motriz.k.ratio">Desvio observado</div><div class="v" id="motriz-ratio">—</div><div class="l" style="margin-top:4px" id="motriz-ratio-sub">vs baseline 14d</div></div>
-    </div>
-    <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px">
-      <a href="#hourly-panel" style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.hc">→ Ver detecção HourlyCorr</a>
-      <a href="#incidentes"   style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.bt">→ Backtest completo (16 incidentes)</a>
-      <a href="#press-panel"  style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.news">→ Imprensa corrobora</a>
-    </div>
-  </section>
-
-  <section class="kpis" id="kpi-detail">
-    <div class="kpi"><div class="l" data-i18n="kpi.total">Alertas · 12 meses</div><div class="v" id="kpi-total">—</div><div class="s" data-i18n="kpi.total.s">total de sinalizações geradas</div></div>
-    <div class="kpi crit"><div class="l" data-i18n="kpi.crit">Severidade alta</div><div class="v" id="kpi-crit">—</div><div class="s" data-i18n-html="kpi.crit.s">desvio &gt; 4× sobre normal — prioridade 1</div></div>
-    <div class="kpi high"><div class="l" data-i18n="kpi.high">Severidade média</div><div class="v" id="kpi-high">—</div><div class="s" data-i18n-html="kpi.high.s">desvio &gt; 3× sobre normal — revisar em 24h</div></div>
-    <div class="kpi med"><div class="l" data-i18n="kpi.med">Atenção</div><div class="v" id="kpi-med">—</div><div class="s" data-i18n-html="kpi.med.s">desvio &gt; 2× sobre normal — triagem</div></div>
-  </section>
-
   <section class="panel" id="livro-consolidado">
     <div class="panel-title">
       <div>
@@ -1047,21 +940,6 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
   </section>
-
-  <section class="panel">
-    <div class="panel-title">
-      <div>
-        <h2 data-i18n="main.title">Volume diário BRL · venues brasileiras · indicador primário</h2>
-        <small data-i18n="main.sub">Barras empilhadas MB + Foxbit + Binance BRL · bolhas = alerta Z ≥ 2 · linhas tracejadas = incidentes</small>
-      </div>
-      <div class="controls" id="asset-controls"></div>
-    </div>
-    <div class="chart-wrap tall"><canvas id="chart-main"></canvas></div>
-    <p style="color:var(--muted);font-size:12.5px;margin-top:10px;line-height:1.55" data-i18n-html="main.foot">
-      <b>Por que BRL?</b> Fraudes brasileiras fazem cash-out nas venues BR (PIX → conta-laranja → exchange BR → saída cripto). O volume em BRL por venue é o sinal mais direto. USD em venues globais entra apenas como referência macro (Binance BTCUSDT como eixo global).
-    </p>
-  </section>
-
   <section class="panel">
     <div class="panel-title">
       <div>
@@ -1087,103 +965,6 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
   </section>
-
-  <section class="grid-2">
-    <div class="panel">
-      <div class="panel-title"><h2 data-i18n="flight.title">Fuga para stablecoin (USDT/BTC)</h2><small data-i18n="flight.sub">Proxy de layering pós-incidente</small></div>
-      <div class="chart-wrap"><canvas id="chart-flight"></canvas></div>
-      <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="flight.foot">
-        <b>O que é:</b> razão diária <code>vol(USDT-BRL) / vol(BTC-BRL)</code> no Mercado Bitcoin (maior liquidez de USDT-BRL no país). <b>Por que importa:</b> fraudador prefere USDT porque preserva valor durante o <i>layering</i>. Um pico inédito dessa razão = rotação massiva para stablecoin (clássico pós-incidente). Foxbit e NovaDAX podem ser adicionados como validação cruzada — se os 3 venues subirem juntos, é sinal sistêmico; se só MB sobe, é idiossincrático do venue.
-      </p>
-    </div>
-    <div class="panel">
-      <div class="panel-title"><h2 data-i18n="prem.title">Premium BR vs. global</h2><small>(BTC-BRL)/(BTCUSDT × USDT-BRL) − 1</small></div>
-      <div class="chart-wrap"><canvas id="chart-premium"></canvas></div>
-      <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="prem.foot">
-        <b>O que é:</b> preço BRL efetivo / preço global sintético. <b>Por que importa:</b> R$350M forçados no book BR deslocam o preço doméstico do <i>fair value</i> global. Arb bots fecham em segundos, então um prêmio persistente acima de 1% em base diária é <b>pressão estrutural</b>. Premium negativo sinaliza venda forçada (distressed flow, p.ex. congelamento de conta).
-      </p>
-    </div>
-  </section>
-
-  <section class="panel">
-    <div class="panel-title"><h2 data-i18n="conc.title">Concentração BR: MB × Foxbit</h2><small data-i18n="conc.sub">Participação no volume BTC spot diário</small></div>
-    <div class="chart-wrap"><canvas id="chart-conc"></canvas></div>
-    <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="conc.foot">
-      <b>O que é:</b> fatia diária de MB vs. Foxbit no volume BTC-BRL. <b>Por que importa:</b> quedas abruptas na fatia dominante sugerem dispersão do cash-out entre venues para fugir da monitoração de um único VASP. Típico em fases de <i>smurfing</i> entre múltiplas corretoras brasileiras.
-    </p>
-  </section>
-
-  <section class="panel tech-only" id="heatmap-panel">
-    <div class="panel-title">
-      <div>
-        <h2 data-i18n="hm.title">Heatmap Z-score · ativo × venue × dia</h2>
-        <small data-i18n="hm.sub">365 dias × 12 séries · cor por severidade do alerta diário (estilo contribution graph)</small>
-      </div>
-    </div>
-    <div class="hm-wrap"><div id="heatmap"></div></div>
-    <div class="hm-legend">
-      <span><span class="sw" style="background:#1a1f2c"></span><span data-i18n="hm.lg.none">sem alerta</span></span>
-      <span><span class="sw" style="background:#22324c"></span>Z &lt; 2</span>
-      <span><span class="sw" style="background:#e0b84a"></span>medium (2 ≤ Z &lt; 3)</span>
-      <span><span class="sw" style="background:#ff9c3a"></span>high (3 ≤ Z &lt; 4)</span>
-      <span><span class="sw" style="background:#ff4a6b"></span>critical (Z ≥ 4)</span>
-    </div>
-    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="hm.foot">
-      <b>Como ler:</b> cada linha é um par (venue × ativo); cada coluna é um dia. Linhas com pontos vermelhos verticalmente alinhados indicam dias em que <b>múltiplas séries estouraram juntas</b> — sinal sistêmico (ring-of-mules, ver painel abaixo). Pontos verticalmente isolados em uma única linha indicam ruído idiossincrático do venue.
-    </p>
-  </section>
-
-  <section class="panel" id="ring-panel">
-    <div class="panel-title">
-      <div>
-        <h2 data-i18n="ring.title">Ring of mules · 3+ venues BR no mesmo dia</h2>
-        <small data-i18n="ring.sub">conjunção de alertas em Mercado Bitcoin + Foxbit + Binance BRL (qualquer ativo) · NovaDAX/Bitso BR/BitPreço/Ripio entram quando expuserem klines públicos</small>
-      </div>
-    </div>
-    <div class="ring-meta" id="ring-meta"></div>
-    <div class="tbl-wrap" style="max-height:380px">
-      <table id="tbl-ring">
-        <thead><tr>
-          <th data-i18n="ring.th.date">Data</th><th data-i18n="ring.th.nvenues"># venues × ativos</th><th data-i18n="ring.th.zmax">Z máx</th>
-          <th data-i18n="ring.th.sev">Severidade ring</th><th data-i18n="ring.th.det">Detalhes</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="ring.foot">
-      <b>Por que serve para fraude:</b> uma frota de mulas tipicamente opera em 2+ exchanges para diluir o ticket por VASP e fugir de limites. Quando 3+ séries BR disparam Z≥2 no mesmo dia, a probabilidade de ser ruído individual cai drasticamente. <b>Base rate</b> aqui é a referência: dias-flag / dias totais. Em produção (intra-day + co-depósito on-chain) esse base rate cai 5–10× e vira alerta de alta confiança.
-    </p>
-  </section>
-
-  <section class="panel" id="hourly-panel">
-    <div class="panel-title">
-      <div>
-        <h2 data-i18n="hc.title">HourlyCorr · volume 1h anormal cross-venue</h2>
-        <small id="hc-meta" data-i18n="hc.sub">3+ exchanges BR disparando volume ≥3× a mediana da mesma hora-do-dia (baseline rolling 14d) na mesma janela horária · intraday pré-posicionamento</small>
-      </div>
-    </div>
-    <div class="ring-meta" id="hc-kpis"></div>
-
-    <div id="hc-hero" style="margin:0 0 16px"></div>
-
-    <div class="tbl-wrap" style="max-height:380px">
-      <table id="tbl-hc">
-        <thead><tr>
-          <th data-i18n="hc.th.date">Data</th>
-          <th data-i18n="hc.th.sev">Severidade</th>
-          <th data-i18n="hc.th.nv"># venues</th>
-          <th data-i18n="hc.th.peak">Hora de pico</th>
-          <th data-i18n="hc.th.ratio">Ratio pico</th>
-          <th data-i18n="hc.th.venues">Venues corroboradores</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="hc.foot">
-      <b>Por que serve para fraude:</b> ataques de pré-posicionamento tipicamente compram USDT/BTC em múltiplas exchanges na mesma janela horária (&lt;1h) antes do cash-out via PIX. Baseline diário não pega — às 3h da manhã o volume é sempre baixo, comparar contra "dia inteiro" dilui. <b>Baseline por hora-do-dia</b> (mediana das últimas 14 ocorrências da mesma hora) detecta picos intraday respeitando sazonalidade. Corroboração cruzada (3+ venues distintos na mesma hora) reduz falsos positivos de ruído idiossincrático. <b>Gatilho:</b> ratio ≥3× em ≥3 venues BR distintos → <i>high</i>. Com ≥4 combos (venue:par) ou ratio ≥10× → <i>critical</i>.
-    </p>
-  </section>
-
   <section class="panel" id="tron-panel">
     <div class="panel-title">
       <div>
@@ -1220,7 +1001,143 @@ body.mode-executive .tech-only{display:none !important}
       <b>Por que TRON:</b> USDT TRC-20 é a rail dominante de cash-out cripto no Brasil — taxas &lt; US$ 1, confirmação ~3s, listada em todas as corretoras BR. <b>O que falta para ser indicador de fraude:</b> rastreio de outflow diário por hot-wallet de exchange BR (MB / Foxbit / NovaDAX) com correlação cruzada entre <code>pico USDT-BRL local × outflow on-chain TRON ±24h</code>. O scaffolding está aqui (top holders + série diária); o próximo passo é puxar o histórico de transferências por wallet e construir séries de fluxo (esforço médio: ~1 sprint de engenharia).
     </p>
   </section>
+  <section class="panel press-hero" id="press-hero" style="margin-bottom:18px">
+    <div class="panel-title">
+      <div>
+        <h2><span data-i18n="press.title">Imprensa corrobora</span> <small id="press-badge" class="press-badge" data-i18n="press.badge">último ciclo</small></h2>
+        <small id="press-meta" data-i18n-html="press.meta">foco: <b>hacking, incidentes cibernéticos, PLD/CFT</b> · agregador de RSS BR · 13 fontes · notícias puramente de preço ou política PIX são descartadas · pipeline: <code>scripts/news/news_watch.py</code></small>
+      </div>
+      <div class="press-filter-bar" id="press-filter-bar">
+        <small data-i18n="press.filter.label">filtro:</small>
+        <span class="chip active" data-press-filter="all" data-i18n="press.filter.all">todas</span>
+        <span class="chip"        data-press-filter="critical" data-i18n="press.filter.critical">crítico</span>
+        <span class="chip"        data-press-filter="high" data-i18n="press.filter.high">alto</span>
+        <span class="chip"        data-press-filter="medium" data-i18n="press.filter.medium">médio</span>
+        <span class="chip"        data-press-filter="corroborated" data-i18n="press.filter.corr">com corroboração</span>
+      </div>
+    </div>
 
+    <div class="press-kpis">
+      <div class="press-kpi"><div class="l" data-i18n="press.kpi.total">Itens relevantes</div><div class="v" id="press-kpi-total">__PRESS_TOTAL__</div></div>
+      <div class="press-kpi high"><div class="l" data-i18n="press.kpi.high">Alto / Crítico</div><div class="v" id="press-kpi-high">__PRESS_HIGH__</div></div>
+      <div class="press-kpi med"><div class="l" data-i18n="press.kpi.med">Médio</div><div class="v" id="press-kpi-med">__PRESS_MED__</div></div>
+      <div class="press-kpi corr"><div class="l" data-i18n="press.kpi.corr">Corroboração watcher</div><div class="v" id="press-kpi-corr">__PRESS_CORR__</div></div>
+    </div>
+
+    <div class="press-list" id="press-list">
+      <div class="press-empty" data-i18n-html="press.empty.html">Sem itens classificados. Rode <code>python3 scripts/news/news_watch.py</code> para popular.</div>
+    </div>
+  </section>
+  <section class="section-divider" id="div-fraude">
+    <div class="section-divider-inner">
+      <h2 data-i18n="div-fraude.title">Dados de fraude</h2>
+      <small data-i18n="div-fraude.sub">Indicadores e detectores: volume diário, concentração, fuga para stable, heatmap, ring-of-mules, hourly-corr, funding, eventos, backtest e timeline</small>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="main.title">Volume diário BRL · venues brasileiras · indicador primário</h2>
+        <small data-i18n="main.sub">Barras empilhadas MB + Foxbit + Binance BRL · bolhas = alerta Z ≥ 2 · linhas tracejadas = incidentes</small>
+      </div>
+      <div class="controls" id="asset-controls"></div>
+    </div>
+    <div class="chart-wrap tall"><canvas id="chart-main"></canvas></div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:10px;line-height:1.55" data-i18n-html="main.foot">
+      <b>Por que BRL?</b> Fraudes brasileiras fazem cash-out nas venues BR (PIX → conta-laranja → exchange BR → saída cripto). O volume em BRL por venue é o sinal mais direto. USD em venues globais entra apenas como referência macro (Binance BTCUSDT como eixo global).
+    </p>
+  </section>
+  <section class="panel">
+    <div class="panel-title"><h2 data-i18n="conc.title">Concentração BR: MB × Foxbit</h2><small data-i18n="conc.sub">Participação no volume BTC spot diário</small></div>
+    <div class="chart-wrap"><canvas id="chart-conc"></canvas></div>
+    <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="conc.foot">
+      <b>O que é:</b> fatia diária de MB vs. Foxbit no volume BTC-BRL. <b>Por que importa:</b> quedas abruptas na fatia dominante sugerem dispersão do cash-out entre venues para fugir da monitoração de um único VASP. Típico em fases de <i>smurfing</i> entre múltiplas corretoras brasileiras.
+    </p>
+  </section>
+  <section class="grid-2">
+    <div class="panel">
+      <div class="panel-title"><h2 data-i18n="flight.title">Fuga para stablecoin (USDT/BTC)</h2><small data-i18n="flight.sub">Proxy de layering pós-incidente</small></div>
+      <div class="chart-wrap"><canvas id="chart-flight"></canvas></div>
+      <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="flight.foot">
+        <b>O que é:</b> razão diária <code>vol(USDT-BRL) / vol(BTC-BRL)</code> no Mercado Bitcoin (maior liquidez de USDT-BRL no país). <b>Por que importa:</b> fraudador prefere USDT porque preserva valor durante o <i>layering</i>. Um pico inédito dessa razão = rotação massiva para stablecoin (clássico pós-incidente). Foxbit e NovaDAX podem ser adicionados como validação cruzada — se os 3 venues subirem juntos, é sinal sistêmico; se só MB sobe, é idiossincrático do venue.
+      </p>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><h2 data-i18n="prem.title">Premium BR vs. global</h2><small>(BTC-BRL)/(BTCUSDT × USDT-BRL) − 1</small></div>
+      <div class="chart-wrap"><canvas id="chart-premium"></canvas></div>
+      <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="prem.foot">
+        <b>O que é:</b> preço BRL efetivo / preço global sintético. <b>Por que importa:</b> R$350M forçados no book BR deslocam o preço doméstico do <i>fair value</i> global. Arb bots fecham em segundos, então um prêmio persistente acima de 1% em base diária é <b>pressão estrutural</b>. Premium negativo sinaliza venda forçada (distressed flow, p.ex. congelamento de conta).
+      </p>
+    </div>
+  </section>
+  <section class="panel tech-only" id="heatmap-panel">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="hm.title">Heatmap Z-score · ativo × venue × dia</h2>
+        <small data-i18n="hm.sub">365 dias × 12 séries · cor por severidade do alerta diário (estilo contribution graph)</small>
+      </div>
+    </div>
+    <div class="hm-wrap"><div id="heatmap"></div></div>
+    <div class="hm-legend">
+      <span><span class="sw" style="background:#1a1f2c"></span><span data-i18n="hm.lg.none">sem alerta</span></span>
+      <span><span class="sw" style="background:#22324c"></span>Z &lt; 2</span>
+      <span><span class="sw" style="background:#e0b84a"></span>medium (2 ≤ Z &lt; 3)</span>
+      <span><span class="sw" style="background:#ff9c3a"></span>high (3 ≤ Z &lt; 4)</span>
+      <span><span class="sw" style="background:#ff4a6b"></span>critical (Z ≥ 4)</span>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="hm.foot">
+      <b>Como ler:</b> cada linha é um par (venue × ativo); cada coluna é um dia. Linhas com pontos vermelhos verticalmente alinhados indicam dias em que <b>múltiplas séries estouraram juntas</b> — sinal sistêmico (ring-of-mules, ver painel abaixo). Pontos verticalmente isolados em uma única linha indicam ruído idiossincrático do venue.
+    </p>
+  </section>
+  <section class="panel" id="ring-panel">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="ring.title">Ring of mules · 3+ venues BR no mesmo dia</h2>
+        <small data-i18n="ring.sub">conjunção de alertas em Mercado Bitcoin + Foxbit + Binance BRL (qualquer ativo) · NovaDAX/Bitso BR/BitPreço/Ripio entram quando expuserem klines públicos</small>
+      </div>
+    </div>
+    <div class="ring-meta" id="ring-meta"></div>
+    <div class="tbl-wrap" style="max-height:380px">
+      <table id="tbl-ring">
+        <thead><tr>
+          <th data-i18n="ring.th.date">Data</th><th data-i18n="ring.th.nvenues"># venues × ativos</th><th data-i18n="ring.th.zmax">Z máx</th>
+          <th data-i18n="ring.th.sev">Severidade ring</th><th data-i18n="ring.th.det">Detalhes</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="ring.foot">
+      <b>Por que serve para fraude:</b> uma frota de mulas tipicamente opera em 2+ exchanges para diluir o ticket por VASP e fugir de limites. Quando 3+ séries BR disparam Z≥2 no mesmo dia, a probabilidade de ser ruído individual cai drasticamente. <b>Base rate</b> aqui é a referência: dias-flag / dias totais. Em produção (intra-day + co-depósito on-chain) esse base rate cai 5–10× e vira alerta de alta confiança.
+    </p>
+  </section>
+  <section class="panel" id="hourly-panel">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="hc.title">HourlyCorr · volume 1h anormal cross-venue</h2>
+        <small id="hc-meta" data-i18n="hc.sub">3+ exchanges BR disparando volume ≥3× a mediana da mesma hora-do-dia (baseline rolling 14d) na mesma janela horária · intraday pré-posicionamento</small>
+      </div>
+    </div>
+    <div class="ring-meta" id="hc-kpis"></div>
+
+    <div id="hc-hero" style="margin:0 0 16px"></div>
+
+    <div class="tbl-wrap" style="max-height:380px">
+      <table id="tbl-hc">
+        <thead><tr>
+          <th data-i18n="hc.th.date">Data</th>
+          <th data-i18n="hc.th.sev">Severidade</th>
+          <th data-i18n="hc.th.nv"># venues</th>
+          <th data-i18n="hc.th.peak">Hora de pico</th>
+          <th data-i18n="hc.th.ratio">Ratio pico</th>
+          <th data-i18n="hc.th.venues">Venues corroboradores</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:12px;line-height:1.55" data-i18n-html="hc.foot">
+      <b>Por que serve para fraude:</b> ataques de pré-posicionamento tipicamente compram USDT/BTC em múltiplas exchanges na mesma janela horária (&lt;1h) antes do cash-out via PIX. Baseline diário não pega — às 3h da manhã o volume é sempre baixo, comparar contra "dia inteiro" dilui. <b>Baseline por hora-do-dia</b> (mediana das últimas 14 ocorrências da mesma hora) detecta picos intraday respeitando sazonalidade. Corroboração cruzada (3+ venues distintos na mesma hora) reduz falsos positivos de ruído idiossincrático. <b>Gatilho:</b> ratio ≥3× em ≥3 venues BR distintos → <i>high</i>. Com ≥4 combos (venue:par) ou ratio ≥10× → <i>critical</i>.
+    </p>
+  </section>
   <section class="panel tech-only" id="funding-panel">
     <div class="panel-title">
       <div>
@@ -1237,7 +1154,47 @@ body.mode-executive .tech-only{display:none !important}
       <b>O que é:</b> taxa periódica (a cada 8h) que longs pagam a shorts (ou vice-versa) para manter o perpétuo perto do spot. <b>Sinal anti-fraude:</b> funding fortemente negativo de forma persistente sinaliza pressão vendedora estrutural — clássico em cash-out forçado pós-incidente, ou hedge defensivo de uma exchange/desk grande que recebeu fluxo suspeito. Um funding negativo isolado é ruído; combine com pico de volume USDT-BRL no MB para alta convicção.
     </p>
   </section>
+  <section class="panel events-hero" id="events-hero" style="margin-bottom:18px">
+    <div class="panel-title">
+      <div>
+        <h2 data-i18n="events.title">Eventos correlacionados <small class="events-badge" data-i18n="events.badge">super-alertas do watcher</small></h2>
+        <small id="events-meta" data-i18n-html="events.meta">
+          correlator agrega alertas isolados dos 6 detectores em eventos por ativo ·
+          pipeline: <code>scripts/watcher/run_correlator.py</code>
+        </small>
+      </div>
+    </div>
 
+    <div class="events-kpis">
+      <div class="events-kpi"><div class="l" data-i18n="events.kpi.total">Eventos totais</div><div class="v" id="events-kpi-total">__EV_TOTAL__</div></div>
+      <div class="events-kpi warn"><div class="l" data-i18n="events.kpi.corr">Correlacionados</div><div class="v" id="events-kpi-corr">__EV_CORR__</div></div>
+      <div class="events-kpi crit"><div class="l" data-i18n="events.kpi.crit">Críticos</div><div class="v" id="events-kpi-crit">__EV_CRIT__</div></div>
+      <div class="events-kpi ok"><div class="l" data-i18n="events.kpi.maxconv">Convergência máx</div><div class="v" id="events-kpi-maxconv">__EV_MAXCONV__</div></div>
+    </div>
+
+    <div class="events-filters" id="events-filters">
+      <span class="chip active" data-ef="all" data-i18n="events.filt.all">Todos</span>
+      <span class="chip" data-ef="correlated" data-i18n="events.filt.corr">Só correlacionados</span>
+      <span class="chip" data-ef="critical" data-i18n="events.filt.crit">Críticos</span>
+      <span class="chip" data-ef="high" data-i18n="events.filt.high">Alta</span>
+    </div>
+
+    <div class="events-list" id="events-list">
+      <div class="events-empty" data-i18n-html="events.empty">
+        Sem eventos. Rode <code>python3 scripts/watcher/run_correlator.py</code> após o watcher acumular alertas.
+      </div>
+    </div>
+
+    <div class="events-note" data-i18n-html="events.note">
+      <b>Como funciona.</b> Cada detector dispara alertas isolados. O correlator
+      agrupa alertas do <i>mesmo ativo</i> em janela deslizante (fecha o evento após
+      cooldown sem alerta novo). Dentro do evento, repetições do mesmo detector são
+      dedupadas. A severidade final escala com a convergência: 2 detectores →
+      <span class="sev medium">medium</span>, 3 → <span class="sev high">high</span>,
+      4+ → <span class="sev critical">critical</span>. A intuição: quando múltiplos
+      sinais independentes concordam, a probabilidade de FP cai drasticamente.
+    </div>
+  </section>
   <section class="panel" id="incidentes">
     <div class="panel-title">
       <div>
@@ -1260,7 +1217,6 @@ body.mode-executive .tech-only{display:none !important}
       <b>Leitura honesta:</b> com granularidade diária, o base rate de alertas é alto (35% dos dias têm pelo menos 1 alerta). Isso faz com que "ter alerta em ±3d" seja pouco discriminativo — janela aleatória já teria 95% de hit. O indicador <b>BR+USDT</b> (venue brasileiro em stablecoin) é mais restritivo (base rate 17%, janela aleatória 73%) e é onde os picos mais relevantes aparecem. Em produção, intra-day (5min) + orderbook L2 + conjunção de indicadores colapsam esse base rate drasticamente.
     </p>
   </section>
-
   <section class="panel">
     <div class="panel-title">
       <div>
@@ -1295,7 +1251,74 @@ body.mode-executive .tech-only{display:none !important}
       </table>
     </div>
   </section>
+  <section class="section-divider" id="div-metodo">
+    <div class="section-divider-inner">
+      <h2 data-i18n="div-metodo.title">Metodologia</h2>
+      <small data-i18n="div-metodo.sub">Calibração, FP/FN e roadmap dos detectores</small>
+    </div>
+  </section>
+  <section class="panel calib-hero tech-only" id="calib-hero" style="margin-bottom:18px">
+    <div class="panel-title">
+      <div>
+        <h2><span data-i18n="calib.title">Calibração &amp; FP/FN</span> <small id="calib-badge" class="calib-badge" data-i18n="calib.badge">backtest rigoroso</small></h2>
+        <small id="calib-meta" data-i18n-html="calib.meta">6 detectores · grid de perturbação × sweep de threshold · pipeline: <code>scripts/backtest/run_backtest.py</code></small>
+      </div>
+    </div>
 
+    <div class="calib-kpis">
+      <div class="calib-kpi"><div class="l" data-i18n="calib.kpi.n">Baselines</div><div class="v" id="calib-kpi-n">—</div></div>
+      <div class="calib-kpi"><div class="l" data-i18n="calib.kpi.fp">Alvo FP</div><div class="v" id="calib-kpi-fp">—</div></div>
+      <div class="calib-kpi ok"><div class="l" data-i18n="calib.kpi.ok">Detectores calibráveis</div><div class="v" id="calib-kpi-ok">—</div></div>
+      <div class="calib-kpi bad"><div class="l" data-i18n="calib.kpi.bad">Precisam redesign</div><div class="v" id="calib-kpi-bad">—</div></div>
+    </div>
+
+    <div style="overflow-x:auto">
+      <table class="calib-table" id="calib-table">
+        <thead>
+          <tr>
+            <th data-i18n="calib.th.det">Detector</th>
+            <th class="num" data-i18n="calib.th.fpnow">FP atual</th>
+            <th class="num hide-s" data-i18n="calib.th.fprec">FP recomend.</th>
+            <th class="num" data-i18n="calib.th.thr">Threshold</th>
+            <th class="num hide-s" data-i18n="calib.th.tp">TP</th>
+            <th class="num hide-s" data-i18n="calib.th.f1">F1</th>
+            <th data-i18n="calib.th.reason">Justificativa</th>
+          </tr>
+        </thead>
+        <tbody id="calib-tbody">
+          <tr><td colspan="7" class="press-empty" style="border:0" data-i18n-html="calib.empty">Sem calibração. Rode <code>python3 scripts/backtest/run_backtest.py --collect 20</code>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="calib-note" data-i18n-html="calib.method"><b>Metodologia.</b> N snapshots reais são coletados do orderbook ao vivo (Binance/MB/Foxbit). FP é medido leave-one-out: cada snap vira o "agora" com os demais como histórico. TP é medido injetando 6 assinaturas sintéticas (spread, depth drop, price burst, divergência, pré-spike local, descolamento USDT-BRL) em intensidades crescentes. Para cada threshold do grid: precisão = TP/(TP+FP), recall = TP/total_de_ataques, F1 = média harmônica. A recomendação pega o menor threshold com FP ≤ alvo, maximizando recall sem inflar falso-positivo.</div>
+
+    <div class="flight-subcard" id="flight-subcard" style="margin-top:22px;padding:16px;border:1px solid var(--border);border-radius:10px;background:rgba(95,180,255,0.035)">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between">
+        <div>
+          <h3 style="margin:0 0 2px;font-size:15px" data-i18n="flight.sub.title">stablecoin_flight · validação por cenários</h3>
+          <small style="color:var(--muted)" data-i18n-html="flight.sub.body">Detector de <i>conjunção</i> (2+/3 condições em ~3 snaps): ativos de risco caindo · USDT-BRL bid-heavy · USDT-BRL decouple. Abaixo, a <b>lógica</b> do detector é validada em <b><span id="flight-n">__FLIGHT_N__</span> cenários construídos</b> (sem golden set de ataques reais com orderbook L2 · ver <i>Limitações</i> no rodapé).</small>
+        </div>
+        <span class="calib-badge" data-i18n="flight.badge" style="background:rgba(95,180,255,0.18);color:#9cc6ff;border-color:rgba(95,180,255,0.35)">validação lógica</span>
+      </div>
+      <div class="calib-kpis" style="margin-top:12px">
+        <div class="calib-kpi ok"><div class="l" data-i18n="flight.kpi.tpr">Recall (TP/attacks)</div><div class="v" id="flight-tpr">__FLIGHT_TPR__</div></div>
+        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.fpr">FP rate (FP/cleans)</div><div class="v" id="flight-fpr">__FLIGHT_FPR__</div></div>
+        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.f1">F1</div><div class="v" id="flight-f1">__FLIGHT_F1__</div></div>
+        <div class="calib-kpi"><div class="l" data-i18n="flight.kpi.n">Cenários</div><div class="v" id="flight-nsc">__FLIGHT_N__</div></div>
+      </div>
+      <div class="tbl-wrap" style="margin-top:12px;max-height:260px">
+        <table id="tbl-flight" style="width:100%">
+          <thead><tr>
+            <th data-i18n="flight.th.sc">Cenário</th><th data-i18n="flight.th.kind">Tipo</th><th data-i18n="flight.th.exp">Esperado</th><th data-i18n="flight.th.fire">Disparou?</th>
+            <th class="num" data-i18n="flight.th.nal">#alerts</th><th data-i18n="flight.th.out">Outcome</th><th data-i18n="flight.th.sev">Severidade top</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p style="color:var(--muted);font-size:12px;margin:12px 0 0;line-height:1.55" data-i18n-html="flight.limits"><b>Limitações honestas.</b> Cenários sintéticos derivados do mesmo snap real variando 3 parâmetros (queda coordenada, imbalance USDT-BRL, decouple). Sem golden set de ataques reais com orderbook L2 sub-segundo, esses números validam a <i>lógica</i> (o detector dispara quando deve e cala quando não deve) mas não projetam FP/TP de produção. Próximo passo: capturar livro L2 em 5 min ao redor de incidentes conhecidos (Sinqia/HSBC, BTG 22/03) pra calibração definitiva.</p>
+    </div>
+  </section>
   <section class="panel tech-only">
     <div class="panel-title"><h2 data-i18n="ind.title">Indicadores &amp; metodologia</h2><small data-i18n="ind.sub">Ativos em produção + roadmap</small></div>
     <div class="grid-3" id="indicators"></div>
@@ -1628,6 +1651,37 @@ const I18N = (function(){
     'tl.chip.med':                {pt:'médio', en:'medium'},
     'tl.chip.allex':              {pt:'todas exchanges', en:'all exchanges'},
     'tl.chip.allassets':          {pt:'todos ativos', en:'all assets'},
+    // section dividers
+    'div-mercado.title':          {pt:'Mercado agora', en:'Market now'},
+    'div-mercado.sub':            {pt:'Dados ao vivo: livro, volume, ranking de exchanges, cash-out rail e imprensa',
+                                   en:'Live data: orderbook, volume, exchange ranking, cash-out rail and press'},
+    'div-fraude.title':           {pt:'Dados de fraude', en:'Fraud signals'},
+    'div-fraude.sub':             {pt:'Indicadores e detectores: volume diário, concentração, fuga para stable, heatmap, ring-of-mules, hourly-corr, funding, eventos, backtest e timeline',
+                                   en:'Indicators and detectors: daily volume, concentration, stablecoin flight, heatmap, ring-of-mules, hourly-corr, funding, events, backtest and timeline'},
+    'div-metodo.title':           {pt:'Metodologia', en:'Methodology'},
+    'div-metodo.sub':             {pt:'Calibração, FP/FN e roadmap dos detectores',
+                                   en:'Calibration, FP/FN and detector roadmap'},
+    // caso motriz hero
+    'motriz.title':               {pt:'Caso motriz', en:'Driving case'},
+    'motriz.k.d0':                {pt:'Alerta Sentinel · D-1', en:'Sentinel alert · D-1'},
+    'motriz.k.pm3':               {pt:'Alertas ±3 dias', en:'Alerts ±3 days'},
+    'motriz.k.venues':            {pt:'Venues corroborando', en:'Corroborating venues'},
+    'motriz.k.ratio':             {pt:'Desvio observado', en:'Observed deviation'},
+    'motriz.cta.hc':              {pt:'→ Ver detecção HourlyCorr', en:'→ See HourlyCorr detection'},
+    'motriz.cta.bt':              {pt:'→ Backtest completo (16 incidentes)', en:'→ Full backtest (16 incidents)'},
+    'motriz.cta.news':            {pt:'→ Imprensa corrobora', en:'→ Press corroborates'},
+    // hourly-corr panel
+    'hc.title':                   {pt:'HourlyCorr · detecção intraday cross-venue', en:'HourlyCorr · intraday cross-venue detection'},
+    'hc.sub':                     {pt:'baseline por hora-do-dia · 14 ocorrências · corroboração entre venues BR',
+                                   en:'hour-of-day baseline · 14 occurrences · BR venue corroboration'},
+    'hc.th.date':                 {pt:'Data', en:'Date'},
+    'hc.th.sev':                  {pt:'Severidade', en:'Severity'},
+    'hc.th.peak':                 {pt:'Hora pico (UTC)', en:'Peak hour (UTC)'},
+    'hc.th.nv':                   {pt:'# venues', en:'# venues'},
+    'hc.th.ratio':                {pt:'Ratio pico', en:'Peak ratio'},
+    'hc.th.venues':               {pt:'Venues corroboradores', en:'Corroborating venues'},
+    'hc.foot':                    {pt:'<b>Por que serve para fraude:</b> ataques de pré-posicionamento tipicamente compram USDT/BTC em múltiplas exchanges na mesma janela horária (&lt;1h) antes do cash-out via PIX. Baseline diário não pega — às 3h da manhã o volume é sempre baixo, comparar contra "dia inteiro" dilui. <b>Baseline por hora-do-dia</b> (mediana das últimas 14 ocorrências da mesma hora) detecta picos intraday respeitando sazonalidade. Corroboração cruzada (3+ venues distintos na mesma hora) reduz falsos positivos de ruído idiossincrático. <b>Gatilho:</b> ratio ≥3× em ≥3 venues BR distintos → <i>high</i>. Com ≥4 combos (venue:par) ou ratio ≥10× → <i>critical</i>.',
+                                   en:'<b>Why this helps fraud detection:</b> pre-positioning attacks typically buy USDT/BTC across multiple exchanges within the same hourly window (&lt;1h) before cashing out via PIX. Daily baselines miss it — at 3 AM volume is always low, comparing against "the whole day" dilutes the signal. <b>Hour-of-day baseline</b> (median of the last 14 occurrences of the same hour) detects intraday peaks while respecting seasonality. Cross-venue corroboration (3+ distinct venues in the same hour) reduces false positives from idiosyncratic noise. <b>Trigger:</b> ratio ≥3× across ≥3 distinct BR venues → <i>high</i>. With ≥4 combos (venue:pair) or ratio ≥10× → <i>critical</i>.'},
     // indicators
     'indic.title':                {pt:'Indicadores & metodologia', en:'Indicators & methodology'},
     'indic.sub':                  {pt:'Ativos em produção + roadmap', en:'In production + roadmap'},
@@ -1645,8 +1699,8 @@ const I18N = (function(){
     'th.volume':                  {pt:'Volume', en:'Volume'},
     'th.tags':                    {pt:'Tags', en:'Tags'},
     // calib subcard / flight
-    'flight.sub.title':           {pt:'stablecoin_flight · calibração provisória', en:'stablecoin_flight · provisional calibration'},
-    'flight.badge':                {pt:'provisório · sintético', en:'provisional · synthetic'},
+    'flight.sub.title':           {pt:'stablecoin_flight · validação por cenários', en:'stablecoin_flight · scenario validation'},
+    'flight.badge':                {pt:'validação lógica', en:'logic validation'},
     'flight.kpi.tpr':             {pt:'Recall (TP/attacks)', en:'Recall (TP/attacks)'},
     'flight.kpi.fpr':             {pt:'FP rate (FP/cleans)', en:'FP rate (FP/cleans)'},
     'flight.kpi.f1':              {pt:'F1', en:'F1'},
@@ -1786,8 +1840,8 @@ const I18N = (function(){
       en: '<b>Methodology.</b> N real snapshots are collected from the live orderbook (Binance/MB/Foxbit). FP is measured leave-one-out: each snap becomes the "now" with the others as history. TP is measured by injecting 6 synthetic signatures (spread, depth drop, price burst, divergence, local pre-spike, USDT-BRL decouple) at increasing intensities. For each grid threshold: precision = TP/(TP+FP), recall = TP/total_attacks, F1 = harmonic mean. The recommended threshold is the smallest one with FP ≤ target, maximising recall without inflating false positives.',
     },
     'flight.sub.body': {
-      pt: 'Detector de <i>conjunção</i> (2+/3 condições em ~3 snaps): ativos de risco caindo · USDT-BRL bid-heavy · USDT-BRL decouple. Cenários sintéticos derivados de snap real — <b>sample=<span id="flight-n">__FLIGHT_N__</span></b>, sanity check.',
-      en: '<i>Conjunction</i> detector (2+/3 conditions over ~3 snaps): risk assets falling · USDT-BRL bid-heavy · USDT-BRL decouple. Synthetic scenarios derived from a real snap — <b>sample=<span id="flight-n">__FLIGHT_N__</span></b>, sanity check.',
+      pt: 'Detector de <i>conjunção</i> (2+/3 condições em ~3 snaps): ativos de risco caindo · USDT-BRL bid-heavy · USDT-BRL decouple. Abaixo, a <b>lógica</b> do detector é validada em <b><span id="flight-n">__FLIGHT_N__</span> cenários construídos</b> (sem golden set de ataques reais com orderbook L2 · ver <i>Limitações</i> no rodapé).',
+      en: '<i>Conjunction</i> detector (2+/3 conditions over ~3 snaps): risk assets falling · USDT-BRL bid-heavy · USDT-BRL decouple. Below, the detector <b>logic</b> is validated against <b><span id="flight-n">__FLIGHT_N__</span> constructed scenarios</b> (no golden set of real attacks with L2 orderbook · see <i>Limitations</i> in the footer).',
     },
     'flight.limits': {
       pt: '<b>Limitações honestas.</b> Cenários sintéticos derivados do mesmo snap real variando 3 parâmetros (queda coordenada, imbalance USDT-BRL, decouple). Sem golden set de ataques reais com orderbook L2 sub-segundo, esses números validam a <i>lógica</i> (o detector dispara quando deve e cala quando não deve) mas não projetam FP/TP de produção. Próximo passo: capturar livro L2 em 5 min ao redor de incidentes conhecidos (Sinqia/HSBC, BTG 22/03) pra calibração definitiva.',

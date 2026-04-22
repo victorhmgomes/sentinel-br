@@ -1,125 +1,32 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
-      "high": 4,
-      "medium": 0,
+      "high": 2,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
     "with_watcher_corroboration": 0,
     "top_sources": [
       [
+        "Folha Mercado",
+        1
+      ],
+      [
         "Valor Investe",
-        2
+        1
       ],
       [
         "Portal do Bitcoin",
         1
-      ],
-      [
-        "Folha Mercado",
-        1
       ]
     ],
-    "generated_at": "2026-04-22T17:01:51+00:00",
-    "runtime_sec": 1.7
+    "generated_at": "2026-04-22T17:27:44+00:00",
+    "runtime_sec": 2.27
   },
   "items": [
-    {
-      "source": "Portal do Bitcoin",
-      "bucket": "cripto",
-      "title": "Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi",
-      "link": "https://portaldobitcoin.uol.com.br/ataque-de-r-17-milhoes-em-protocolo-da-sui-amplia-onda-de-hacks-defi/",
-      "summary": "Alvo foi o Volo, projeto DeFi da blockchain Sui que oferece cofres de investimento onde usuários depositam ativos para gerar rendimento O post Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-04-22T13:18:00+00:00",
-      "hash": "fcc3509cf3a4c429",
-      "_score": {
-        "cyber": 5,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 3,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacks"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "crypto": [
-          "bitcoin",
-          "blockchain"
-        ],
-        "value": [
-          "r$ 1",
-          "milhões"
-        ]
-      },
-      "_total": 13,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 0,
-        "score": 3
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Santander defende criação de fórum setorial para analisar incidentes como ataques hacker",
-      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/04/22/santander-defende-criacao-de-forum-setorial-para-analisar-incidentes-como-ataques-hacker.ghtml",
-      "summary": "Depois de uma série de incidentes cibernéticos sofridos pelo sistema financeiro nos últimos meses, participantes do setor e o regulador adotaram diversas providências para aumentar os controles. O Banco Central (BC) elevou níveis mínimos de capital para fintechs, fortaleceu políticas de cibersegurança e tem atuado mais fortemente sobre os elos intermediários do sistema. Ainda assim, é possível aumentar a cooperação e a transparência ao lidar com esse tipo de situação, diz Leandro Ferreira Granja , chefe de segurança da informação (CISO, na sigla em inglês) do Santander. Para o executivo, assim",
-      "ts_iso": "2026-04-22T11:41:11+00:00",
-      "hash": "14758d3cd04ffd9b",
-      "_score": {
-        "cyber": 13,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 3,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 3,
-        "political_noise": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "cibersegurança"
-        ],
-        "attack": [
-          "ataques"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "named_fi": [
-          "santander"
-        ]
-      },
-      "_total": 21,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
-    },
     {
       "source": "Folha Mercado",
       "bucket": "economia",
@@ -137,7 +44,9 @@
         "crypto": 0,
         "value": 0,
         "named_fi": 6,
-        "political_noise": 0
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 7
       },
       "_hits": {
         "cyber": [
@@ -150,9 +59,13 @@
         ],
         "named_fi": [
           "banco rendimento"
+        ],
+        "incident_verbs": [
+          "sofre ataque",
+          "alerta clientes"
         ]
       },
-      "_total": 24,
+      "_total": 31,
       "_severity": "high",
       "_br_focus": {
         "pos": 2,
@@ -181,7 +94,9 @@
         "crypto": 0,
         "value": 0,
         "named_fi": 6,
-        "political_noise": 0
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 7
       },
       "_hits": {
         "cyber": [
@@ -196,9 +111,13 @@
         ],
         "named_fi": [
           "banco rendimento"
+        ],
+        "incident_verbs": [
+          "sofreu um incidente",
+          "é alvo de"
         ]
       },
-      "_total": 30,
+      "_total": 37,
       "_severity": "high",
       "_br_focus": {
         "pos": 2,
@@ -209,6 +128,57 @@
       "_alerts": [],
       "_n_alerts": 0,
       "_corroboration_score": 2
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi",
+      "link": "https://portaldobitcoin.uol.com.br/ataque-de-r-17-milhoes-em-protocolo-da-sui-amplia-onda-de-hacks-defi/",
+      "summary": "Alvo foi o Volo, projeto DeFi da blockchain Sui que oferece cofres de investimento onde usuários depositam ativos para gerar rendimento O post Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-04-22T13:18:00+00:00",
+      "hash": "fcc3509cf3a4c429",
+      "_score": {
+        "cyber": 5,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 3,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hacks"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "blockchain"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 17 milh"
+        ]
+      },
+      "_total": 15,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
     }
   ]
 }

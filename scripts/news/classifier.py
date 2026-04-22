@@ -178,6 +178,63 @@ POLITICAL_NOISE = {
     r"\bdiz\s+[Aa]\s+PF\b": 2,           # discourse fluff
 }
 
+# COMMENTARY_NOISE: notícia de opinião/análise/meta-discussão sobre
+# cyber, não incidente concreto. "Santander defende criação de fórum pra
+# analisar ataques" tem hacker×2 no texto mas é CISO dando entrevista, não
+# é um ataque ao Santander. Sem isso, análises e op-eds vazam pra high.
+COMMENTARY_NOISE = {
+    r"\bdefende\s+(a\s+)?cria[çc][ãa]o\b": 4,
+    r"\bdefende\s+(o\s+)?uso\b": 3,
+    r"\bprop[õo]e\s+(a\s+)?cria[çc][ãa]o\b": 4,
+    r"\bf[óo]rum\s+setorial\b": 4,
+    r"\bf[óo]rum\s+para\s+analisar\b": 4,
+    r"\bmesa\s+redonda\b": 3,
+    r"\bpainel\s+sobre\b": 2,
+    r"\bdebate\s+sobre\b": 2,
+    r"\bseminários?\s+sobre\b": 2,
+    r"\bconfer[êe]ncia\s+sobre\b": 2,
+    r"\baumentar\s+a\s+coopera[çc][ãa]o\b": 3,
+    r"\bcoopera[çc][ãa]o\s+setorial\b": 3,
+    r"\bCISO\b": 3,
+    r"\bchefe\s+de\s+seguran[çc]a\s+da\s+informa[çc][ãa]o\b": 3,
+    r"\bdiretor\s+de\s+seguran[çc]a\b": 2,
+    r"\baumentar\s+controles\b": 2,
+    r"\beleva\s+n[ií]veis?\s+m[ií]nimos?\b": 2,
+    r"\bentrevista\s+exclusiva\b": 2,
+    r"\b(diz|afirma)\s+(que\s+)?o\b": 1,
+    r"\bopina[çc][ãa]o\b": 2,
+    r"\ban[áa]lise\s+(do\s+|da\s+)?mercado\b": 2,
+    r"\bpara\s+o\s+executivo\b": 2,
+    r"\bsegundo\s+o\s+(executivo|CISO|diretor|especialista)\b": 3,
+}
+
+# INCIDENT_VERBS: verbos/expressões que indicam INCIDENTE CONCRETO (não
+# comentário/análise). Presença de pelo menos um é requisito forte pra
+# severidade ≥ medium em tópicos de cyber. "Banco Rendimento SOFREU ataque"
+# qualifica; "Santander DEFENDE fórum para analisar ataques" não.
+INCIDENT_VERBS = {
+    r"\bsofr\w+\s+(um\s+|uma\s+)?ataque\b": 4,
+    r"\bsofr\w+\s+(um\s+|uma\s+)?invas[ãa]o\b": 4,
+    r"\bsofr\w+\s+(um\s+|uma\s+)?incidente\b": 3,
+    r"\b[eé]\s+alvo\s+de\b": 4,
+    r"\bfoi\s+alvo\b": 4,
+    r"\bser\s+alvo\s+de\b": 3,
+    r"\bteve\s+(seus?\s+)?(sistemas?|rede|dados?)\b": 3,
+    r"\batingiu\s+(o\s+|a\s+|os\s+|as\s+)?sistemas?\b": 3,
+    r"\bparalisou\s+(as\s+)?opera[çc][õo]es\b": 4,
+    r"\bdeixou\s+fora\s+do\s+ar\b": 3,
+    r"\binterrom\w+\s+(servi[çc]os?|opera[çc][õo]es)\b": 3,
+    r"\bfoi\s+(hackead|invadid|atacad)\w+\b": 4,
+    r"\bhouve\s+um\s+ataque\b": 3,
+    r"\bataque\s+a[o]?\s+\w+\s+(bank|banco|sistema|plataforma)\b": 3,
+    r"\balerta\s+clientes\b": 3,          # "Banco X alerta clientes sobre ataque"
+    r"\bconfirma\s+(o\s+|a\s+)?(ataque|incidente|invas[ãa]o)\b": 4,
+    r"\bvazamento\s+(de\s+dados|confirmado)\b": 4,
+    r"\bsequestro\s+de\s+dados\b": 4,
+    r"\broubo\s+de\s+(dados|R\$|US\$|fundos|cripto)\b": 3,
+    r"\bR\$\s*\d+[\d.,]*\s*(milh|milhões|bilh)": 2,   # valor concreto da perda
+}
+
 CATS: dict[str, dict] = {
     "cyber":   CYBER_HARD,
     "attack":  ATTACK,
@@ -186,8 +243,10 @@ CATS: dict[str, dict] = {
     "pix":     PIX,
     "crypto":  CRYPTO,
     "value":   VALUE,
-    "named_fi":      NAMED_FI,
+    "named_fi":        NAMED_FI,
     "political_noise": POLITICAL_NOISE,
+    "commentary":      COMMENTARY_NOISE,
+    "incident_verbs":  INCIDENT_VERBS,
 }
 
 # compila uma vez
@@ -313,6 +372,9 @@ def score_item(item: dict) -> dict:
     has_crypto     = score["crypto"]     >= 2
     has_named_fi   = score["named_fi"]   >= 4
     pol_noise      = score["political_noise"]
+    commentary     = score.get("commentary", 0)
+    incident_verb_score = score.get("incident_verbs", 0)
+    has_incident   = incident_verb_score >= 3   # pelo menos 1 verbo forte
 
     has_context    = has_pix or has_crypto
 
@@ -357,6 +419,29 @@ def score_item(item: dict) -> dict:
         sev_order = ["noise","low","medium","high","critical"]
         idx = sev_order.index(sev)
         sev = sev_order[max(0, idx - 1)]
+
+    # Penalidade COMENTÁRIO/OPINIÃO: notícia em que o peso vem de
+    # análise/opinião ao invés de fato concreto. "Santander defende criação
+    # de fórum para analisar ataques" tem cyber=13 mas é entrevista.
+    # Se commentary é alto E não há verbo de incidente, rebaixa 2 níveis.
+    if commentary >= 5 and not has_incident:
+        sev_order = ["noise","low","medium","high","critical"]
+        idx = sev_order.index(sev)
+        sev = sev_order[max(0, idx - 2)]
+    elif commentary >= 3 and not has_incident:
+        sev_order = ["noise","low","medium","high","critical"]
+        idx = sev_order.index(sev)
+        sev = sev_order[max(0, idx - 1)]
+
+    # Requisito de verbo de incidente: pra high/critical, o texto precisa
+    # conter pelo menos um verbo de incidente concreto ("sofreu ataque",
+    # "foi alvo de", "paralisou operações"). Caso contrário, cap em medium.
+    # Exceção: launder+cyber (rotina de PLD/CFT frequentemente não tem
+    # verbo de incidente) ou CFT puro.
+    if not has_incident and not has_laund and not has_cft:
+        sev_order = ["noise","low","medium","high","critical"]
+        if sev_order.index(sev) > sev_order.index("medium"):
+            sev = "medium"
 
     # se a notícia tem foco estrangeiro (neg>>pos) e nenhum marcador BR forte,
     # rebaixa. Evita "Rússia", "Bitfinex", "Argentina", etc poluindo.
