@@ -1,15 +1,19 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
-      "high": 2,
+      "high": 3,
       "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 4,
     "top_sources": [
+      [
+        "Tecmundo",
+        1
+      ],
       [
         "Folha Mercado",
         1
@@ -23,10 +27,84 @@
         1
       ]
     ],
-    "generated_at": "2026-04-22T21:45:58+00:00",
-    "runtime_sec": 2.13
+    "generated_at": "2026-04-23T05:30:32+00:00",
+    "runtime_sec": 3.97
   },
   "items": [
+    {
+      "source": "Tecmundo",
+      "bucket": "seguranca",
+      "title": "Banco Rendimento confirma ataque hacker e impacto a contas de clientes",
+      "link": "https://www.tecmundo.com.br/seguranca/412571-banco-rendimento-confirma-ataque-hacker-e-impacto-a-contas-de-clientes.htm",
+      "summary": "",
+      "ts_iso": "2026-04-22T22:15:00+00:00",
+      "hash": "ede210f2c06d0220",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "named_fi": [
+          "banco rendimento"
+        ],
+        "incident_verbs": [
+          "confirma ataque"
+        ]
+      },
+      "_total": 28,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-04-20T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-04-22T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 5
+    },
     {
       "source": "Folha Mercado",
       "bucket": "economia",
