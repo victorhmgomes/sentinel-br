@@ -1,79 +1,75 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
-      "high": 3,
-      "medium": 1,
+      "high": 2,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 4,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "Tecmundo",
-        1
-      ],
-      [
-        "Folha Mercado",
-        1
-      ],
-      [
         "Valor Investe",
-        1
-      ],
-      [
-        "Portal do Bitcoin",
-        1
+        2
       ]
     ],
-    "generated_at": "2026-04-23T05:30:32+00:00",
-    "runtime_sec": 3.97
+    "generated_at": "2026-04-24T05:35:26+00:00",
+    "runtime_sec": 3.78
   },
   "items": [
     {
-      "source": "Tecmundo",
-      "bucket": "seguranca",
-      "title": "Banco Rendimento confirma ataque hacker e impacto a contas de clientes",
-      "link": "https://www.tecmundo.com.br/seguranca/412571-banco-rendimento-confirma-ataque-hacker-e-impacto-a-contas-de-clientes.htm",
-      "summary": "",
-      "ts_iso": "2026-04-22T22:15:00+00:00",
-      "hash": "ede210f2c06d0220",
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "PF deflagra operação contra instituto de previdência municipal que investiu R$ 13 milhões em letras financeiras do Master",
+      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/04/23/pf-deflagra-operao-contra-instituto-de-previdncia-municipal-que-investiu-r-13-milhes-em-letras-financeiras-do-master.ghtml",
+      "summary": "A Polícia Federal deflagrou, nesta quinta-feira (23), a Operação Moral Hazard, para apurar possível prática de gestão temerária de recursos de Regime Próprio de Previdência Social (RPPS) dos servidores públicos municipais de Santo Antônio de Posse (SP). O Instituto de Previdência Municipal (Iprem) da cidade investiu cerca de R$ 13 milhões em letras financeiras (LF) do Banco Master, liquidado no ano passado pelo Banco Central e investigado por supostas fraudes financeiras. Policiais federais cumprem seis mandados de busca e apreensão nos municípios paulistas de Santo Antônio de Posse e de Mogi ",
+      "ts_iso": "2026-04-23T11:47:14+00:00",
+      "hash": "481d36d7f7a6824a",
       "_score": {
-        "cyber": 16,
-        "attack": 2,
-        "launder": 0,
+        "cyber": 0,
+        "attack": 3,
+        "launder": 8,
         "cft": 0,
-        "pix": 0,
+        "pix": 2,
         "crypto": 0,
-        "value": 0,
+        "value": 3,
         "named_fi": 6,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 4
+        "incident_verbs": 2
       },
       "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker"
-        ],
         "attack": [
-          "ataque"
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal",
+          "deflagra"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
         ],
         "named_fi": [
-          "banco rendimento"
+          "banco master",
+          "master"
         ],
         "incident_verbs": [
-          "confirma ataque"
+          "r$ 13 milh"
         ]
       },
-      "_total": 28,
+      "_total": 24,
       "_severity": "high",
       "_br_focus": {
-        "pos": 2,
+        "pos": 14,
         "neg": 0,
-        "score": 2,
+        "score": 14,
         "named_fi_bump": 2
       },
       "_alerts": [
@@ -103,105 +99,6 @@
         }
       ],
       "_n_alerts": 3,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Banco Rendimento sofre ataque hacker nesta terça (21) e alerta clientes",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/banco-rendimento-sofre-ataque-hacker-nesta-terca-21-e-alerta-clientes.shtml",
-      "summary": "O Banco Rendimento, que atua nas áreas de câmbio e crédito, sofreu um ataque hacker nesta terça-feira (21). Informações de alguns clientes, em número não divulgado, podem ter sido acessadas, segundo a instituição. Leia mais (04/21/2026 - 21h44)",
-      "ts_iso": "2026-04-22T00:44:00+00:00",
-      "hash": "bdb5e70528993046",
-      "_score": {
-        "cyber": 16,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 7
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "named_fi": [
-          "banco rendimento"
-        ],
-        "incident_verbs": [
-          "sofre ataque",
-          "alerta clientes"
-        ]
-      },
-      "_total": 31,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-19T13:26:26+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:28:05+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:29:46+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-04-22T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 6,
       "_corroboration_score": 5
     },
     {
@@ -251,106 +148,6 @@
         "neg": 0,
         "score": 2,
         "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-19T13:26:26+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:28:05+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:29:46+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-04-22T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 6,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Portal do Bitcoin",
-      "bucket": "cripto",
-      "title": "Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi",
-      "link": "https://portaldobitcoin.uol.com.br/ataque-de-r-17-milhoes-em-protocolo-da-sui-amplia-onda-de-hacks-defi/",
-      "summary": "Alvo foi o Volo, projeto DeFi da blockchain Sui que oferece cofres de investimento onde usuários depositam ativos para gerar rendimento O post Ataque de R$ 17 milhões em protocolo da Sui amplia onda de hacks DeFi apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-04-22T13:18:00+00:00",
-      "hash": "fcc3509cf3a4c429",
-      "_score": {
-        "cyber": 5,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 3,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "cyber": [
-          "hacks"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "crypto": [
-          "bitcoin",
-          "blockchain"
-        ],
-        "value": [
-          "r$ 1",
-          "milhões"
-        ],
-        "incident_verbs": [
-          "r$ 17 milh"
-        ]
-      },
-      "_total": 15,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 0,
-        "score": 3
       },
       "_alerts": [
         {
