@@ -1,26 +1,26 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
-      "high": 2,
+      "high": 1,
       "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
         "Valor Investe",
-        2
+        1
       ],
       [
         "Livecoins",
         1
       ]
     ],
-    "generated_at": "2026-04-25T05:12:08+00:00",
-    "runtime_sec": 3.44
+    "generated_at": "2026-04-26T05:39:50+00:00",
+    "runtime_sec": 4.07
   },
   "items": [
     {
@@ -103,107 +103,6 @@
         }
       ],
       "_n_alerts": 3,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Banco Rendimento é alvo de ataque hacker",
-      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/04/21/banco-rendimento-e-alvo-de-ataque.ghtml",
-      "summary": "O Banco Rendimento, que tem atuação nas áreas de câmbio e crédito, sofreu um incidente de segurança nesta terça-feira (21). Em nota enviada ao Valor Investe, o banco não informou o impacto do ataque e nem quais serviços foram afetados, mas confirmou que a instituição \"identificou e conteve um incidente de segurança cibernética ocorrido hoje pela manhã\". Segundo a nota, o incidente foi identificado em alguns canais de acesso aos clientes, o que impactou algumas contas. O banco informou que a equipe de segurança da informação e tecnologia agiu de forma imediata para \"isolar a ameaça e as medidas",
-      "ts_iso": "2026-04-21T17:47:26+00:00",
-      "hash": "36365f3e2a9ed594",
-      "_score": {
-        "cyber": 21,
-        "attack": 3,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 7
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker",
-          "incidente de segurança"
-        ],
-        "attack": [
-          "ataque",
-          "ameaça"
-        ],
-        "named_fi": [
-          "banco rendimento"
-        ],
-        "incident_verbs": [
-          "sofreu um incidente",
-          "é alvo de"
-        ]
-      },
-      "_total": 37,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-19T13:26:26+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.610% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:28:05+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.614% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-19T13:29:46+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Binance SOL-BRL está +0.513% acima da média MB+Foxbit. Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-04-22T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 6,
       "_corroboration_score": 5
     },
     {
