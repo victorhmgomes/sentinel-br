@@ -1,26 +1,26 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
-      "high": 1,
+      "high": 2,
       "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Valor Investe",
-        1
+        2
       ],
       [
         "Livecoins",
         1
       ]
     ],
-    "generated_at": "2026-04-26T05:39:50+00:00",
-    "runtime_sec": 4.07
+    "generated_at": "2026-04-27T05:54:22+00:00",
+    "runtime_sec": 3.87
   },
   "items": [
     {
@@ -106,6 +106,74 @@
       "_corroboration_score": 5
     },
     {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "BTG alerta clientes de contas internacionais sobre possível vazamento de dados",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/04/26/btg-alerta-clientes-de-contas-internacionais-sobre-possivel-vazamento-de-dados.ghtml",
+      "summary": "O BTG Pactual avisou seus clientes de contas internacionais que alguns dados pessoais podem ter sido vazados após ataque hacker contra a empresa parceira do banco nos Estados Unidos, a DriveWealth LLC. A informação foi publicada primeiramente pela coluna Capital, do jornal O Globo. O alerta foi feito por e-mail aos titulares das contas na noite da última sexta-feira (24), mas o ataque hacker ocorreu na última semana de março. Naquele mesmo mês, o BTG também foi vítima de ataque, no qual criminosos teriam desviado cerca de R$ 100 milhões, como mostrou o Valor. Segundo relatos, o banco teria con",
+      "ts_iso": "2026-04-26T22:46:39+00:00",
+      "hash": "810979cfd0f09ce4",
+      "_score": {
+        "cyber": 21,
+        "attack": 7,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 3,
+        "named_fi": 10,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 9
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker",
+          "vazamento de dados"
+        ],
+        "attack": [
+          "ataque",
+          "desviado",
+          "vazamento"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
+        ],
+        "named_fi": [
+          "btg",
+          "btg pactual"
+        ],
+        "incident_verbs": [
+          "alerta clientes",
+          "vazamento de dados",
+          "r$ 100 milh"
+        ]
+      },
+      "_total": 50,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 2,
+        "score": 7,
+        "named_fi_bump": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-04-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 3
+    },
+    {
       "source": "Livecoins",
       "bucket": "cripto",
       "title": "Obsidiam passa a integrar a ABcripto e reforça atuação no Brasil em meio ao avanço regulatório",
@@ -149,10 +217,18 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-04-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     }
   ]
 }
