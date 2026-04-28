@@ -1,84 +1,76 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
       "high": 2,
-      "medium": 1,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "Valor Investe",
-        2
+        "Tecmundo",
+        1
       ],
       [
-        "Livecoins",
+        "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-04-27T05:54:22+00:00",
-    "runtime_sec": 3.87
+    "generated_at": "2026-04-28T06:00:06+00:00",
+    "runtime_sec": 4.97
   },
   "items": [
     {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "PF deflagra operação contra instituto de previdência municipal que investiu R$ 13 milhões em letras financeiras do Master",
-      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/04/23/pf-deflagra-operao-contra-instituto-de-previdncia-municipal-que-investiu-r-13-milhes-em-letras-financeiras-do-master.ghtml",
-      "summary": "A Polícia Federal deflagrou, nesta quinta-feira (23), a Operação Moral Hazard, para apurar possível prática de gestão temerária de recursos de Regime Próprio de Previdência Social (RPPS) dos servidores públicos municipais de Santo Antônio de Posse (SP). O Instituto de Previdência Municipal (Iprem) da cidade investiu cerca de R$ 13 milhões em letras financeiras (LF) do Banco Master, liquidado no ano passado pelo Banco Central e investigado por supostas fraudes financeiras. Policiais federais cumprem seis mandados de busca e apreensão nos municípios paulistas de Santo Antônio de Posse e de Mogi ",
-      "ts_iso": "2026-04-23T11:47:14+00:00",
-      "hash": "481d36d7f7a6824a",
+      "source": "Tecmundo",
+      "bucket": "seguranca",
+      "title": "BTG Pactual alerta clientes internacionais sobre ataque cibernético e vazamento",
+      "link": "https://www.tecmundo.com.br/seguranca/412704-btg-pactual-alerta-clientes-internacionais-sobre-ataque-cibernetico-e-vazamento.htm",
+      "summary": "",
+      "ts_iso": "2026-04-27T21:42:28+00:00",
+      "hash": "d14e051a81355224",
       "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 8,
+        "cyber": 6,
+        "attack": 4,
+        "launder": 0,
         "cft": 0,
-        "pix": 2,
+        "pix": 0,
         "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
+        "value": 0,
+        "named_fi": 10,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 3
       },
       "_hits": {
+        "cyber": [
+          "ataque cibernético"
+        ],
         "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal",
-          "deflagra"
-        ],
-        "pix": [
-          "banco central"
-        ],
-        "value": [
-          "r$ 1",
-          "milhões"
+          "ataque",
+          "vazamento"
         ],
         "named_fi": [
-          "banco master",
-          "master"
+          "btg",
+          "btg pactual"
         ],
         "incident_verbs": [
-          "r$ 13 milh"
+          "alerta clientes"
         ]
       },
-      "_total": 24,
+      "_total": 23,
       "_severity": "high",
       "_br_focus": {
-        "pos": 14,
+        "pos": 6,
         "neg": 0,
-        "score": 14,
-        "named_fi_bump": 2
+        "score": 6,
+        "named_fi_bump": 3
       },
       "_alerts": [
         {
-          "ts": "2026-04-20T12:00:00+00:00",
+          "ts": "2026-04-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -86,15 +78,7 @@
           "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-04-20T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-04-22T12:00:00+00:00",
+          "ts": "2026-04-27T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -102,8 +86,8 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 5
+      "_n_alerts": 2,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -168,58 +152,9 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Obsidiam passa a integrar a ABcripto e reforça atuação no Brasil em meio ao avanço regulatório",
-      "link": "https://livecoins.com.br/obsidiam-passa-a-integrar-a-abcripto-e-reforca-atuacao-no-brasil-em-meio-ao-avanco-regulatorio/",
-      "summary": "A Associação Brasileira de Criptoeconomia (ABcripto) anunciou a entrada da Obsidiam como nova associada, em um momento decisivo para o mercado brasileiro, marcado pela implementação das regras para prestadoras de serviços de ativos virtuais (PSAVs). Com atuação na América Latina e experiência em diferentes jurisdições, a Obsidiam chega ao Brasil trazendo uma abordagem focada em [&#8230;] Fonte: Obsidiam passa a integrar a ABcripto e reforça atuação no Brasil em meio ao avanço regulatório Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-04-24T21:56:40+00:00",
-      "hash": "3330edd45cddd1b2",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 0,
-        "crypto": 2,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
-        ],
-        "crypto": [
-          "bitcoin"
-        ]
-      },
-      "_total": 6,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-22T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-04-26T12:00:00+00:00",
+          "ts": "2026-04-27T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -228,7 +163,7 @@
         }
       ],
       "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_corroboration_score": 4
     }
   ]
 }
