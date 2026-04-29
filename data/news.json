@@ -1,94 +1,24 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
-      "high": 2,
+      "high": 1,
       "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 1,
     "top_sources": [
-      [
-        "Tecmundo",
-        1
-      ],
       [
         "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-04-28T06:00:06+00:00",
-    "runtime_sec": 4.97
+    "generated_at": "2026-04-29T05:55:19+00:00",
+    "runtime_sec": 3.92
   },
   "items": [
-    {
-      "source": "Tecmundo",
-      "bucket": "seguranca",
-      "title": "BTG Pactual alerta clientes internacionais sobre ataque cibernético e vazamento",
-      "link": "https://www.tecmundo.com.br/seguranca/412704-btg-pactual-alerta-clientes-internacionais-sobre-ataque-cibernetico-e-vazamento.htm",
-      "summary": "",
-      "ts_iso": "2026-04-27T21:42:28+00:00",
-      "hash": "d14e051a81355224",
-      "_score": {
-        "cyber": 6,
-        "attack": 4,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 10,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 3
-      },
-      "_hits": {
-        "cyber": [
-          "ataque cibernético"
-        ],
-        "attack": [
-          "ataque",
-          "vazamento"
-        ],
-        "named_fi": [
-          "btg",
-          "btg pactual"
-        ],
-        "incident_verbs": [
-          "alerta clientes"
-        ]
-      },
-      "_total": 23,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 6,
-        "neg": 0,
-        "score": 6,
-        "named_fi_bump": 3
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-26T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-04-27T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 4
-    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
