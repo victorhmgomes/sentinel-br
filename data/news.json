@@ -1,135 +1,17 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 0,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
-    "top_sources": [
-      [
-        "Livecoins",
-        1
-      ],
-      [
-        "Valor Investe",
-        1
-      ]
-    ],
-    "generated_at": "2026-05-05T05:43:30+00:00",
-    "runtime_sec": 3.58
+    "with_watcher_corroboration": 0,
+    "top_sources": [],
+    "generated_at": "2026-05-06T05:57:55+00:00",
+    "runtime_sec": 3.14
   },
-  "items": [
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Hack4Freedom chega a São Paulo com US$ 5 mil em prêmios mesmo para quem não tem experiência com bitcoin",
-      "link": "https://livecoins.com.br/hack4freedom-chega-a-sao-paulo-com-us-5-mil-em-premios-mesmo-para-quem-nao-tem-experiencia-com-bitcoin/",
-      "summary": "A Vinteum, organização sem fins lucrativos dedicada ao desenvolvimento do Bitcoin na América Latina, será a principal patrocinadora e grande incentivadora da realização do Hack4Freedom 2026 em São Paulo. A edição brasileira acontece de 12 a 26 de julho e integra uma série internacional do hackathon, que também passa por Lagos, na Nigéria. O Hack4Freedom [&#8230;] Fonte: Hack4Freedom chega a São Paulo com US$ 5 mil em prêmios mesmo para quem não tem experiência com bitcoin Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-05-03T14:21:09+00:00",
-      "hash": "3a86445719685176",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 2,
-        "value": 1,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hack4freedom"
-        ],
-        "crypto": [
-          "bitcoin"
-        ],
-        "value": [
-          "us$ 5"
-        ]
-      },
-      "_total": 8,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 2,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "BC limita uso de ‘cripto de dólar’ em cartões de pagamento",
-      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/04/30/bc-limita-uso-de-cripto-de-dolar-em-cartoes-de-pagamento.ghtml",
-      "summary": "O Banco Central (BC) apertou as regras para o câmbio digital ao proibir o uso de criptomoedas — como as criptos de dólar — na liquidação internacional de empresas de eFX, modelo que sustenta serviços como Wise e Nomad. A vedação foi estabelecida pela Resolução BCB 561, publicada nesta quinta-feira (30), que determina que o pagamento ou recebimento entre o prestador de eFX e sua contraparte no exterior deve ocorrer exclusivamente por meio do sistema cambial tradicional ou por contas em reais de não residentes — “sendo vedado o uso de ativos virtuais”. Na prática, o BC fechou a porta para o uso ",
-      "ts_iso": "2026-04-30T23:29:38+00:00",
-      "hash": "b3ccbb7ea242f1d8",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 7,
-        "pix": 5,
-        "crypto": 4,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "resolução bcb 561",
-          "prestador de efx e sua contraparte no exterior deve ocorrer exclusivamente por meio do sistema cambial tradicional ou por contas em reais de não residentes — “sendo vedado o uso de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bcb",
-          "bc"
-        ],
-        "crypto": [
-          "cripto",
-          "criptomoedas"
-        ]
-      },
-      "_total": 16,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-04-29T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    }
-  ]
+  "items": []
 }
