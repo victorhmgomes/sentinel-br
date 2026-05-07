@@ -1,17 +1,141 @@
 {
   "summary": {
-    "n_items": 0,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 0,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
-    "top_sources": [],
-    "generated_at": "2026-05-06T05:57:55+00:00",
-    "runtime_sec": 3.14
+    "with_watcher_corroboration": 1,
+    "top_sources": [
+      [
+        "Livecoins",
+        1
+      ]
+    ],
+    "generated_at": "2026-05-07T06:10:38+00:00",
+    "runtime_sec": 4.0
   },
-  "items": []
+  "items": [
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Hacker usa código Morse para fazer agente autônomo de IA lhe enviar R$ 1 milhão em criptomoeda",
+      "link": "https://livecoins.com.br/hacker-usa-codigo-morse-para-fazer-agente-autonomo-de-ia-lhe-enviar-r-1-milhao-em-criptomoeda/",
+      "summary": "Um hacker conseguiu convencer um agente autônomo de IA a lhe enviar US$ 213 mil (R$ 1 milhão) em criptomoeda utilizando uma injeção de prompt por código Morse através do Grok, IA do X. O caso aconteceu na segunda-feira (4). O ataque mostra que ainda existem brechas nesses sistemas autônomos, preocupando investidores que buscam novas [&#8230;] Fonte: Hacker usa código Morse para fazer agente autônomo de IA lhe enviar R$ 1 milhão em criptomoeda Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-05-06T21:05:54+00:00",
+      "hash": "1cada569ae5f5979",
+      "_score": {
+        "cyber": 10,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 4,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoeda"
+        ],
+        "value": [
+          "r$ 1",
+          "milhão",
+          "us$ 2"
+        ],
+        "incident_verbs": [
+          "r$ 1 milh"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 2,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-05T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 8,
+      "_corroboration_score": 5
+    }
+  ]
 }
