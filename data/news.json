@@ -1,72 +1,80 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 4,
     "top_sources": [
       [
-        "Livecoins",
+        "G1 Política",
+        2
+      ],
+      [
+        "Agência Brasil Justiça",
+        1
+      ],
+      [
+        "Portal do Bitcoin",
         1
       ]
     ],
-    "generated_at": "2026-05-07T06:10:38+00:00",
-    "runtime_sec": 4.0
+    "generated_at": "2026-05-08T05:30:56+00:00",
+    "runtime_sec": 3.86
   },
   "items": [
     {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Hacker usa código Morse para fazer agente autônomo de IA lhe enviar R$ 1 milhão em criptomoeda",
-      "link": "https://livecoins.com.br/hacker-usa-codigo-morse-para-fazer-agente-autonomo-de-ia-lhe-enviar-r-1-milhao-em-criptomoeda/",
-      "summary": "Um hacker conseguiu convencer um agente autônomo de IA a lhe enviar US$ 213 mil (R$ 1 milhão) em criptomoeda utilizando uma injeção de prompt por código Morse através do Grok, IA do X. O caso aconteceu na segunda-feira (4). O ataque mostra que ainda existem brechas nesses sistemas autônomos, preocupando investidores que buscam novas [&#8230;] Fonte: Hacker usa código Morse para fazer agente autônomo de IA lhe enviar R$ 1 milhão em criptomoeda Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-05-06T21:05:54+00:00",
-      "hash": "1cada569ae5f5979",
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Quem é Ciro Nogueira, senador que está entre os alvos da nova fase da operação Compliance Zero",
+      "link": "https://g1.globo.com/politica/noticia/2026/05/07/quem-e-ciro-nogueira-senador-que-esta-entre-os-alvos-da-nova-fase-da-operacao-compliance-zero.ghtml",
+      "summary": "Ciro Nogueira é alvo de nova operação da PF O senador Ciro Nogueira é um dos alvos da nova fase da Operação Compliance Zero, que investiga fraudes financeiras ligadas ao Banco Master e deflagrada pela Polícia Federal na manhã desta quinta-feira (7). Presidente nacional do Progressistas (PP), ele foi ministro-chefe da Casa Civil no governo Jair Bolsonaro. LEIA TAMBÉM: Caso Master: PF deflagra nova fase da operação Compliance Zero; Ciro Nogueira está entre os alvos A decisão do ministro André Mendonça que autorizou medidas cautelares contra o senador Ciro Nogueira aponta que a Polícia Federal id",
+      "ts_iso": "2026-05-07T10:26:11+00:00",
+      "hash": "c268578b1e3a6e22",
       "_score": {
-        "cyber": 10,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
+        "cyber": 0,
+        "attack": 3,
+        "launder": 8,
+        "cft": 2,
         "pix": 0,
-        "crypto": 4,
-        "value": 4,
-        "named_fi": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 4
       },
       "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
         "attack": [
-          "ataque"
+          "fraudes"
         ],
-        "crypto": [
-          "bitcoin",
-          "criptomoeda"
+        "launder": [
+          "pf",
+          "polícia federal",
+          "deflagrada"
         ],
-        "value": [
-          "r$ 1",
-          "milhão",
-          "us$ 2"
+        "cft": [
+          "compliance"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
         ],
         "incident_verbs": [
-          "r$ 1 milh"
+          "é alvo de"
         ]
       },
-      "_total": 22,
+      "_total": 23,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 3,
-        "neg": 2,
-        "score": 1
+        "pos": 9,
+        "neg": 0,
+        "score": 9,
+        "named_fi_bump": 2
       },
       "_alerts": [
         {
@@ -132,10 +140,251 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 8,
+      "_n_alerts": 10,
       "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Moraes autoriza hacker de Araraquara a cumprir pena em regime aberto",
+      "link": "https://g1.globo.com/politica/noticia/2026/05/07/moraes-autoriza-hacker-de-araraquara-a-cumprir-pena-em-regime-aberto.ghtml",
+      "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), autorizou nesta quinta-feira (7) a progressão de regime do hacker Walter Delgatti Neto para o aberto. Conhecido como o \"hacker de Araraquara\", Delgatti cumpria pena em regime semiaberto após ser condenado por invasões a sistemas do Conselho Nacional de Justiça (CNJ). A decisão de Moraes atende a um pedido da defesa e contou com parecer favorável da Procuradoria-Geral da República (PGR). Walter Delgatti Neto foi condenado, ao lado da ex-deputada Carla Zambelli (PL-SP), em um processo que apurou a inserção de dados falsos e a inv",
+      "ts_iso": "2026-05-07T20:34:05+00:00",
+      "hash": "6e6bcb079cc4e715",
+      "_score": {
+        "cyber": 15,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 8,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "invasões"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal",
+          "pl"
+        ]
+      },
+      "_total": 23,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-05T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Agência Brasil Justiça",
+      "bucket": "policia",
+      "title": "Polícia Civil investiga suposto desvio milionário em agência do BRB",
+      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/policia-civil-investiga-suposto-desvio-milionario-em-agencia-do-brb",
+      "summary": "A Polícia Civil do Distrito Federal deflagrou, nesta quinta-feira (7), operação para aprofundar investigação sobre dois funcionários do Banco de Brasília (BRB) , um servidor público federal e empresários suspeitos de movimentar, irregularmente, cerca de R$ 15 milhões. Os alvos da Operação Insider, cujos nomes não foram divulgados à imprensa, são suspeitos de lavagem de dinheiro e corrupção. O BRB identificou e denunciou às autoridades financeiras e policiais as operações suspeitas ocorridas com o aval do gerente de uma de suas agências. Dezessete mandados judiciais de busca e apreensão estão s",
+      "ts_iso": "2026-05-07T18:39:00+00:00",
+      "hash": "4725917abad6d674",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 7,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 3,
+        "named_fi": 8,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "attack": [
+          "desvio"
+        ],
+        "launder": [
+          "lavagem",
+          "deflagrou"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília"
+        ],
+        "incident_verbs": [
+          "r$ 15 milh"
+        ]
+      },
+      "_total": 23,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-05T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "TrustedVolumes perde R$ 33 milhões em criptomoedas em hack",
+      "link": "https://portaldobitcoin.uol.com.br/trustedvolumes-perde-r-33-milhoes-em-criptomoedas-em-hack/",
+      "summary": "Servidor de liquidez usado por vários protocolos DeFi foi afetado pelo ataque hacker, mas o agregador de DEX 1inch disse que não foi impactado O post TrustedVolumes perde R$ 33 milhões em criptomoedas em hack apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-05-07T15:07:00+00:00",
+      "hash": "93fde7bfbb119a8d",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hack",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "value": [
+          "r$ 3",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 33 milh"
+        ]
+      },
+      "_total": 27,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-05T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
