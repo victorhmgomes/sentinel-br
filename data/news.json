@@ -12,19 +12,15 @@
     "top_sources": [
       [
         "G1 Política",
-        2
-      ],
-      [
-        "Agência Brasil Justiça",
-        1
+        3
       ],
       [
         "Portal do Bitcoin",
         1
       ]
     ],
-    "generated_at": "2026-05-08T05:30:56+00:00",
-    "runtime_sec": 3.86
+    "generated_at": "2026-05-09T05:48:51+00:00",
+    "runtime_sec": 3.49
   },
   "items": [
     {
@@ -231,98 +227,20 @@
       "_corroboration_score": 4
     },
     {
-      "source": "Agência Brasil Justiça",
-      "bucket": "policia",
-      "title": "Polícia Civil investiga suposto desvio milionário em agência do BRB",
-      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/policia-civil-investiga-suposto-desvio-milionario-em-agencia-do-brb",
-      "summary": "A Polícia Civil do Distrito Federal deflagrou, nesta quinta-feira (7), operação para aprofundar investigação sobre dois funcionários do Banco de Brasília (BRB) , um servidor público federal e empresários suspeitos de movimentar, irregularmente, cerca de R$ 15 milhões. Os alvos da Operação Insider, cujos nomes não foram divulgados à imprensa, são suspeitos de lavagem de dinheiro e corrupção. O BRB identificou e denunciou às autoridades financeiras e policiais as operações suspeitas ocorridas com o aval do gerente de uma de suas agências. Dezessete mandados judiciais de busca e apreensão estão s",
-      "ts_iso": "2026-05-07T18:39:00+00:00",
-      "hash": "4725917abad6d674",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 7,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 8,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "desvio"
-        ],
-        "launder": [
-          "lavagem",
-          "deflagrou"
-        ],
-        "value": [
-          "r$ 1",
-          "milhões"
-        ],
-        "named_fi": [
-          "brb",
-          "banco de brasília"
-        ],
-        "incident_verbs": [
-          "r$ 15 milh"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-05T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
-    },
-    {
       "source": "Portal do Bitcoin",
       "bucket": "cripto",
-      "title": "TrustedVolumes perde R$ 33 milhões em criptomoedas em hack",
-      "link": "https://portaldobitcoin.uol.com.br/trustedvolumes-perde-r-33-milhoes-em-criptomoedas-em-hack/",
-      "summary": "Servidor de liquidez usado por vários protocolos DeFi foi afetado pelo ataque hacker, mas o agregador de DEX 1inch disse que não foi impactado O post TrustedVolumes perde R$ 33 milhões em criptomoedas em hack apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-05-07T15:07:00+00:00",
-      "hash": "93fde7bfbb119a8d",
+      "title": "Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO",
+      "link": "https://portaldobitcoin.uol.com.br/arbitrum-libera-r-344-milhoes-para-pagar-vitimas-do-hack-da-kelp-dao/",
+      "summary": "Arbitrum DAO votou para liberar os fundos do exploit da Kelp, mas uma ordem judicial dos EUA colocou a transferência aprovada em risco legal O post Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-05-08T19:50:00+00:00",
+      "hash": "17d357690593d3b2",
       "_score": {
-        "cyber": 16,
-        "attack": 2,
+        "cyber": 10,
+        "attack": 0,
         "launder": 0,
         "cft": 0,
         "pix": 0,
-        "crypto": 4,
+        "crypto": 2,
         "value": 3,
         "named_fi": 0,
         "political_noise": 0,
@@ -332,40 +250,27 @@
       "_hits": {
         "cyber": [
           "hack",
-          "hacker",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
+          "exploit"
         ],
         "crypto": [
-          "bitcoin",
-          "criptomoedas"
+          "bitcoin"
         ],
         "value": [
           "r$ 3",
           "milhões"
         ],
         "incident_verbs": [
-          "r$ 33 milh"
+          "r$ 344 milh"
         ]
       },
-      "_total": 27,
+      "_total": 17,
       "_severity": "medium",
       "_br_focus": {
         "pos": 3,
-        "neg": 0,
-        "score": 3
+        "neg": 2,
+        "score": 1
       },
       "_alerts": [
-        {
-          "ts": "2026-05-05T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
         {
           "ts": "2026-05-06T12:00:00+00:00",
           "rule": "hourly_corr",
@@ -383,8 +288,67 @@
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
+      "_n_alerts": 2,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP após Moraes autorizar regime aberto",
+      "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/05/08/walter-delgatti-o-hacker-de-araraquara-deixa-prisao-no-interior-de-sp-apos-moraes-autorizar-regime-aberto.ghtml",
+      "summary": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP O detento Walter Delgatti Neto, conhecido como “hacker de Araraquara”, deixou a Penitenciária 2 de Potim no início da tarde desta sexta-feira (8), após o ministro do Supremo Tribunal Federal (STF), Alexandre de Moraes, autorizar a progressão dele para o regime aberto. O g1 apurou que Walter deixou o presídio por volta das 13h30. Um vídeo obtido pela reportagem mostra ele deixando a prisão - assista acima. Em nota, a Secretaria de Administração Penitenciária (SAP) confirmou que Delgatti deixou a Penitenciária II de Potim em",
+      "ts_iso": "2026-05-08T17:14:01+00:00",
+      "hash": "c06635da512518d8",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 6,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal"
+        ]
+      },
+      "_total": 16,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     }
   ]
 }
