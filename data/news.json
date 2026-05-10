@@ -19,10 +19,251 @@
         1
       ]
     ],
-    "generated_at": "2026-05-09T05:48:51+00:00",
-    "runtime_sec": 3.49
+    "generated_at": "2026-05-10T06:12:25+00:00",
+    "runtime_sec": 4.01
   },
   "items": [
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO",
+      "link": "https://portaldobitcoin.uol.com.br/arbitrum-libera-r-344-milhoes-para-pagar-vitimas-do-hack-da-kelp-dao/",
+      "summary": "Arbitrum DAO votou para liberar os fundos do exploit da Kelp, mas uma ordem judicial dos EUA colocou a transferência aprovada em risco legal O post Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-05-08T19:50:00+00:00",
+      "hash": "17d357690593d3b2",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hack",
+          "exploit"
+        ],
+        "crypto": [
+          "bitcoin"
+        ],
+        "value": [
+          "r$ 3",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 344 milh"
+        ]
+      },
+      "_total": 17,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 2,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 4,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP após Moraes autorizar regime aberto",
+      "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/05/08/walter-delgatti-o-hacker-de-araraquara-deixa-prisao-no-interior-de-sp-apos-moraes-autorizar-regime-aberto.ghtml",
+      "summary": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP O detento Walter Delgatti Neto, conhecido como “hacker de Araraquara”, deixou a Penitenciária 2 de Potim no início da tarde desta sexta-feira (8), após o ministro do Supremo Tribunal Federal (STF), Alexandre de Moraes, autorizar a progressão dele para o regime aberto. O g1 apurou que Walter deixou o presídio por volta das 13h30. Um vídeo obtido pela reportagem mostra ele deixando a prisão - assista acima. Em nota, a Secretaria de Administração Penitenciária (SAP) confirmou que Delgatti deixou a Penitenciária II de Potim em",
+      "ts_iso": "2026-05-08T17:14:01+00:00",
+      "hash": "c06635da512518d8",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 6,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal"
+        ]
+      },
+      "_total": 16,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 4,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Moraes autoriza hacker de Araraquara a cumprir pena em regime aberto",
+      "link": "https://g1.globo.com/politica/noticia/2026/05/07/moraes-autoriza-hacker-de-araraquara-a-cumprir-pena-em-regime-aberto.ghtml",
+      "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), autorizou nesta quinta-feira (7) a progressão de regime do hacker Walter Delgatti Neto para o aberto. Conhecido como o \"hacker de Araraquara\", Delgatti cumpria pena em regime semiaberto após ser condenado por invasões a sistemas do Conselho Nacional de Justiça (CNJ). A decisão de Moraes atende a um pedido da defesa e contou com parecer favorável da Procuradoria-Geral da República (PGR). Walter Delgatti Neto foi condenado, ao lado da ex-deputada Carla Zambelli (PL-SP), em um processo que apurou a inserção de dados falsos e a inv",
+      "ts_iso": "2026-05-07T20:34:05+00:00",
+      "hash": "6e6bcb079cc4e715",
+      "_score": {
+        "cyber": 15,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 8,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "invasões"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal",
+          "pl"
+        ]
+      },
+      "_total": 23,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-05T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 5,
+      "_corroboration_score": 5
+    },
     {
       "source": "G1 Política",
       "bucket": "policia",
@@ -152,203 +393,26 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 12,
       "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Moraes autoriza hacker de Araraquara a cumprir pena em regime aberto",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/07/moraes-autoriza-hacker-de-araraquara-a-cumprir-pena-em-regime-aberto.ghtml",
-      "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), autorizou nesta quinta-feira (7) a progressão de regime do hacker Walter Delgatti Neto para o aberto. Conhecido como o \"hacker de Araraquara\", Delgatti cumpria pena em regime semiaberto após ser condenado por invasões a sistemas do Conselho Nacional de Justiça (CNJ). A decisão de Moraes atende a um pedido da defesa e contou com parecer favorável da Procuradoria-Geral da República (PGR). Walter Delgatti Neto foi condenado, ao lado da ex-deputada Carla Zambelli (PL-SP), em um processo que apurou a inserção de dados falsos e a inv",
-      "ts_iso": "2026-05-07T20:34:05+00:00",
-      "hash": "6e6bcb079cc4e715",
-      "_score": {
-        "cyber": 15,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 8,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "invasões"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal",
-          "pl"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-05T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
-    },
-    {
-      "source": "Portal do Bitcoin",
-      "bucket": "cripto",
-      "title": "Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO",
-      "link": "https://portaldobitcoin.uol.com.br/arbitrum-libera-r-344-milhoes-para-pagar-vitimas-do-hack-da-kelp-dao/",
-      "summary": "Arbitrum DAO votou para liberar os fundos do exploit da Kelp, mas uma ordem judicial dos EUA colocou a transferência aprovada em risco legal O post Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-05-08T19:50:00+00:00",
-      "hash": "17d357690593d3b2",
-      "_score": {
-        "cyber": 10,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 2,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "cyber": [
-          "hack",
-          "exploit"
-        ],
-        "crypto": [
-          "bitcoin"
-        ],
-        "value": [
-          "r$ 3",
-          "milhões"
-        ],
-        "incident_verbs": [
-          "r$ 344 milh"
-        ]
-      },
-      "_total": 17,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 2,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP após Moraes autorizar regime aberto",
-      "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/05/08/walter-delgatti-o-hacker-de-araraquara-deixa-prisao-no-interior-de-sp-apos-moraes-autorizar-regime-aberto.ghtml",
-      "summary": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP O detento Walter Delgatti Neto, conhecido como “hacker de Araraquara”, deixou a Penitenciária 2 de Potim no início da tarde desta sexta-feira (8), após o ministro do Supremo Tribunal Federal (STF), Alexandre de Moraes, autorizar a progressão dele para o regime aberto. O g1 apurou que Walter deixou o presídio por volta das 13h30. Um vídeo obtido pela reportagem mostra ele deixando a prisão - assista acima. Em nota, a Secretaria de Administração Penitenciária (SAP) confirmou que Delgatti deixou a Penitenciária II de Potim em",
-      "ts_iso": "2026-05-08T17:14:01+00:00",
-      "hash": "c06635da512518d8",
-      "_score": {
-        "cyber": 10,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 6,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal"
-        ]
-      },
-      "_total": 16,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
     }
   ]
 }
