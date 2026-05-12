@@ -1,93 +1,86 @@
 {
   "summary": {
-    "n_items": 5,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 5,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 4,
     "top_sources": [
       [
         "G1 Política",
-        3
-      ],
-      [
-        "Portal do Bitcoin",
-        1
+        2
       ],
       [
         "Folha Mercado",
         1
+      ],
+      [
+        "Livecoins",
+        1
       ]
     ],
-    "generated_at": "2026-05-11T06:40:17+00:00",
-    "runtime_sec": 4.95
+    "generated_at": "2026-05-12T06:15:40+00:00",
+    "runtime_sec": 8.7
   },
   "items": [
     {
-      "source": "Portal do Bitcoin",
-      "bucket": "cripto",
-      "title": "Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO",
-      "link": "https://portaldobitcoin.uol.com.br/arbitrum-libera-r-344-milhoes-para-pagar-vitimas-do-hack-da-kelp-dao/",
-      "summary": "Arbitrum DAO votou para liberar os fundos do exploit da Kelp, mas uma ordem judicial dos EUA colocou a transferência aprovada em risco legal O post Arbitrum libera R$ 344 milhões para pagar vítimas do hack da Kelp DAO apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-05-08T19:50:00+00:00",
-      "hash": "17d357690593d3b2",
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Ataque coordenado por Vorcaro contra BC seguiu cartilha de agência, com contratos de R$ 8 milhões",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/ataque-coordenado-por-vorcaro-contra-bc-seguiu-cartilha-de-agencia-com-contratos-de-r-8-milhoes.shtml",
+      "summary": "Os ataques coordenados contra o BC (Banco Central) e o ex-diretor de Organização do Sistema Financeiro e de Resolução da autarquia, Renato Gomes, seguiram uma cartilha com instruções e direcionamentos elaborados pelo projeto de gestão de crise de Daniel Vorcaro , do Banco Master . Leia mais (05/10/2026 - 23h00)",
+      "ts_iso": "2026-05-11T02:00:00+00:00",
+      "hash": "92e92a562944fd27",
       "_score": {
-        "cyber": 10,
-        "attack": 0,
+        "cyber": 0,
+        "attack": 4,
         "launder": 0,
         "cft": 0,
-        "pix": 0,
-        "crypto": 2,
+        "pix": 3,
+        "crypto": 0,
         "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
+        "named_fi": 6,
+        "political_noise": 3,
         "commentary": 0,
         "incident_verbs": 2
       },
       "_hits": {
-        "cyber": [
-          "hack",
-          "exploit"
+        "attack": [
+          "ataque",
+          "ataques"
         ],
-        "crypto": [
-          "bitcoin"
+        "pix": [
+          "banco central",
+          "bc"
         ],
         "value": [
-          "r$ 3",
+          "r$ 8",
           "milhões"
         ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ],
         "incident_verbs": [
-          "r$ 344 milh"
+          "r$ 8 milh"
         ]
       },
-      "_total": 17,
+      "_total": 21,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 3,
-        "neg": 2,
-        "score": 1
+        "pos": 9,
+        "neg": 0,
+        "score": 9,
+        "named_fi_bump": 2
       },
       "_alerts": [
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
         {
           "ts": "2026-05-08T12:00:00+00:00",
           "rule": "volume_zscore",
@@ -103,9 +96,33 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 5,
       "_corroboration_score": 5
     },
     {
@@ -178,9 +195,33 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 7,
       "_corroboration_score": 5
     },
     {
@@ -263,71 +304,9 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 5,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Quem é Ciro Nogueira, senador que está entre os alvos da nova fase da operação Compliance Zero",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/07/quem-e-ciro-nogueira-senador-que-esta-entre-os-alvos-da-nova-fase-da-operacao-compliance-zero.ghtml",
-      "summary": "Ciro Nogueira é alvo de nova operação da PF O senador Ciro Nogueira é um dos alvos da nova fase da Operação Compliance Zero, que investiga fraudes financeiras ligadas ao Banco Master e deflagrada pela Polícia Federal na manhã desta quinta-feira (7). Presidente nacional do Progressistas (PP), ele foi ministro-chefe da Casa Civil no governo Jair Bolsonaro. LEIA TAMBÉM: Caso Master: PF deflagra nova fase da operação Compliance Zero; Ciro Nogueira está entre os alvos A decisão do ministro André Mendonça que autorizou medidas cautelares contra o senador Ciro Nogueira aponta que a Polícia Federal id",
-      "ts_iso": "2026-05-07T10:26:11+00:00",
-      "hash": "c268578b1e3a6e22",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 8,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "é alvo de"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "critical",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
         },
         {
-          "ts": "2026-05-04T12:00:00+00:00",
+          "ts": "2026-05-10T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -335,162 +314,82 @@
           "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
+          "ts": "2026-05-10T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-04T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-05T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
+          "asset": "XRP",
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 7,
       "_corroboration_score": 5
     },
     {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Ataque coordenado por Vorcaro contra BC seguiu cartilha de agência, com contratos de R$ 8 milhões",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/ataque-coordenado-por-vorcaro-contra-bc-seguiu-cartilha-de-agencia-com-contratos-de-r-8-milhoes.shtml",
-      "summary": "Os ataques coordenados contra o BC (Banco Central) e o ex-diretor de Organização do Sistema Financeiro e de Resolução da autarquia, Renato Gomes, seguiram uma cartilha com instruções e direcionamentos elaborados pelo projeto de gestão de crise de Daniel Vorcaro , do Banco Master . Leia mais (05/10/2026 - 23h00)",
-      "ts_iso": "2026-05-11T02:00:00+00:00",
-      "hash": "92e92a562944fd27",
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Solana aposta no HackaNation 2026 e leva premiação em USDT",
+      "link": "https://livecoins.com.br/solana-aposta-no-hackanation-2026-e-leva-premiacao-em-usdt/",
+      "summary": "O ecossistema Web3 brasileiro ganha cada vez mais relevância no cenário internacional — e o movimento da Solana no Brasil reforça esse posicionamento. Em 2026, o HackaNation, hackathon oficial do TokenNation, anuncia uma parceria estratégica com o Superteam Brasil, comunidade oficial de builders da Solana no país, para lançar trilhas exclusivas voltada ao desenvolvimento de [&#8230;] Fonte: Solana aposta no HackaNation 2026 e leva premiação em USDT Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-05-11T18:21:05+00:00",
+      "hash": "8a8c5458ede0ab53",
       "_score": {
-        "cyber": 0,
-        "attack": 4,
+        "cyber": 5,
+        "attack": 0,
         "launder": 0,
         "cft": 0,
-        "pix": 3,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
-        "political_noise": 3,
+        "pix": 0,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 0
       },
       "_hits": {
-        "attack": [
-          "ataque",
-          "ataques"
+        "cyber": [
+          "hackanation"
         ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "value": [
-          "r$ 8",
-          "milhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ],
-        "incident_verbs": [
-          "r$ 8 milh"
+        "crypto": [
+          "bitcoin",
+          "usdt"
         ]
       },
-      "_total": 21,
+      "_total": 10,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 9,
+        "pos": 4,
         "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
+        "score": 4
       },
       "_alerts": [
         {
-          "ts": "2026-05-08T12:00:00+00:00",
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
+          "venue": "Binance",
+          "asset": "XRP",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
