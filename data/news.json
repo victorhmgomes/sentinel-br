@@ -1,102 +1,78 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 4,
+      "high": 2,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 4,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
-        "G1 Política",
-        2
-      ],
-      [
-        "Folha Mercado",
+        "Valor Investe",
         1
       ],
       [
-        "Livecoins",
+        "G1 Economia",
+        1
+      ],
+      [
+        "G1 Política",
         1
       ]
     ],
-    "generated_at": "2026-05-12T06:15:40+00:00",
-    "runtime_sec": 8.7
+    "generated_at": "2026-05-13T06:27:06+00:00",
+    "runtime_sec": 4.13
   },
   "items": [
     {
-      "source": "Folha Mercado",
+      "source": "Valor Investe",
       "bucket": "economia",
-      "title": "Ataque coordenado por Vorcaro contra BC seguiu cartilha de agência, com contratos de R$ 8 milhões",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/ataque-coordenado-por-vorcaro-contra-bc-seguiu-cartilha-de-agencia-com-contratos-de-r-8-milhoes.shtml",
-      "summary": "Os ataques coordenados contra o BC (Banco Central) e o ex-diretor de Organização do Sistema Financeiro e de Resolução da autarquia, Renato Gomes, seguiram uma cartilha com instruções e direcionamentos elaborados pelo projeto de gestão de crise de Daniel Vorcaro , do Banco Master . Leia mais (05/10/2026 - 23h00)",
-      "ts_iso": "2026-05-11T02:00:00+00:00",
-      "hash": "92e92a562944fd27",
+      "title": "BC comunica 4º vazamento de dados vinculados a chaves Pix em 2026",
+      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/05/12/bc-comunica-4-vazamento-de-dados-vinculados-a-chaves-pix-em-2026.ghtml",
+      "summary": "O Banco Central (BC) comunicou nesta terça-feira a ocorrência de um incidente de segurança da Credifit Sociedade de Crédito Direto por “falhas pontuais” no sistema da instituição. Segundo a nota, ficaram vulneráveis dados pessoais vinculados a 46 chaves Pix de pessoas que têm contas na instituição. A autoridade monetária informou que não ficaram expostos dados sensíveis, como senhas, informações de movimentações ou saldos financeiros em contas transacionais, ou quaisquer outras informações sob sigilo bancário. O Banco Central disse que a ocorrência tem baixo impacto potencial para os usuários,",
+      "ts_iso": "2026-05-12T14:32:22+00:00",
+      "hash": "b3e501de92ca2a4c",
       "_score": {
-        "cyber": 0,
-        "attack": 4,
+        "cyber": 10,
+        "attack": 2,
         "launder": 0,
         "cft": 0,
-        "pix": 3,
+        "pix": 6,
         "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
-        "political_noise": 3,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 4
       },
       "_hits": {
+        "cyber": [
+          "incidente de segurança",
+          "vazamento de dados"
+        ],
         "attack": [
-          "ataque",
-          "ataques"
+          "vazamento"
         ],
         "pix": [
+          "pix",
           "banco central",
           "bc"
         ],
-        "value": [
-          "r$ 8",
-          "milhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ],
         "incident_verbs": [
-          "r$ 8 milh"
+          "vazamento de dados"
         ]
       },
-      "_total": 21,
-      "_severity": "medium",
+      "_total": 22,
+      "_severity": "high",
       "_br_focus": {
-        "pos": 9,
+        "pos": 5,
         "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
+        "score": 5
       },
       "_alerts": [
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
         {
           "ts": "2026-05-10T12:00:00+00:00",
           "rule": "hourly_corr",
@@ -120,9 +96,98 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 4,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "BC comunica vazamento de dados de 46 chaves PIX de clientes da Credifit Sociedade de Crédito",
+      "link": "https://g1.globo.com/economia/noticia/2026/05/12/bc-comunica-vazamento-de-dados-de-46-chaves-pix-de-pessoas-com-conta-na-credifit-sociedade-de-credito.ghtml",
+      "summary": "O Banco Central (BC) informou que ocorreu um incidente segurança com dados pessoais vinculados a chaves PIX de 46 pessoas com conta na Credifit Sociedade de Crédito, em razão de \"falhas pontuais em sistemas dessa instituição\". De acordo com comunicado do BC divulgado na última sexta-feira (9), não foram expostos dados sensíveis, tais como senhas, informações de movimentações ou saldos financeiros em contas transacionais, ou quaisquer outras informações sob sigilo bancário. \"As informações obtidas são de natureza cadastral, que não permitem movimentação de recursos, nem acesso às contas ou a ou",
+      "ts_iso": "2026-05-12T13:55:19+00:00",
+      "hash": "b0447c9b13c5d05e",
+      "_score": {
+        "cyber": 5,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 6,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "vazamento de dados"
+        ],
+        "attack": [
+          "vazamento"
+        ],
+        "pix": [
+          "pix",
+          "banco central",
+          "bc"
+        ],
+        "incident_verbs": [
+          "vazamento de dados"
+        ]
+      },
+      "_total": 17,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 4,
       "_corroboration_score": 5
     },
     {
@@ -219,177 +284,18 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 7,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Moraes autoriza hacker de Araraquara a cumprir pena em regime aberto",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/07/moraes-autoriza-hacker-de-araraquara-a-cumprir-pena-em-regime-aberto.ghtml",
-      "summary": "O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), autorizou nesta quinta-feira (7) a progressão de regime do hacker Walter Delgatti Neto para o aberto. Conhecido como o \"hacker de Araraquara\", Delgatti cumpria pena em regime semiaberto após ser condenado por invasões a sistemas do Conselho Nacional de Justiça (CNJ). A decisão de Moraes atende a um pedido da defesa e contou com parecer favorável da Procuradoria-Geral da República (PGR). Walter Delgatti Neto foi condenado, ao lado da ex-deputada Carla Zambelli (PL-SP), em um processo que apurou a inserção de dados falsos e a inv",
-      "ts_iso": "2026-05-07T20:34:05+00:00",
-      "hash": "6e6bcb079cc4e715",
-      "_score": {
-        "cyber": 15,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 8,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "invasões"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal",
-          "pl"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-05T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
+          "ts": "2026-05-11T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 8,
       "_corroboration_score": 5
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Solana aposta no HackaNation 2026 e leva premiação em USDT",
-      "link": "https://livecoins.com.br/solana-aposta-no-hackanation-2026-e-leva-premiacao-em-usdt/",
-      "summary": "O ecossistema Web3 brasileiro ganha cada vez mais relevância no cenário internacional — e o movimento da Solana no Brasil reforça esse posicionamento. Em 2026, o HackaNation, hackathon oficial do TokenNation, anuncia uma parceria estratégica com o Superteam Brasil, comunidade oficial de builders da Solana no país, para lançar trilhas exclusivas voltada ao desenvolvimento de [&#8230;] Fonte: Solana aposta no HackaNation 2026 e leva premiação em USDT Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-05-11T18:21:05+00:00",
-      "hash": "8a8c5458ede0ab53",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 5,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hackanation"
-        ],
-        "crypto": [
-          "bitcoin",
-          "usdt"
-        ]
-      },
-      "_total": 10,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
     }
   ]
 }
