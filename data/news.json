@@ -1,21 +1,17 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
       "high": 2,
-      "medium": 1,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
         "Valor Investe",
-        1
-      ],
-      [
-        "G1 Economia",
         1
       ],
       [
@@ -23,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-05-13T06:27:06+00:00",
-    "runtime_sec": 4.13
+    "generated_at": "2026-05-14T06:25:37+00:00",
+    "runtime_sec": 3.37
   },
   "items": [
     {
@@ -104,14 +100,22 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-12T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 5,
       "_corroboration_score": 5
     },
     {
-      "source": "G1 Economia",
-      "bucket": "economia",
+      "source": "G1 Política",
+      "bucket": "policia",
       "title": "BC comunica vazamento de dados de 46 chaves PIX de clientes da Credifit Sociedade de Crédito",
       "link": "https://g1.globo.com/economia/noticia/2026/05/12/bc-comunica-vazamento-de-dados-de-46-chaves-pix-de-pessoas-com-conta-na-credifit-sociedade-de-credito.ghtml",
       "summary": "O Banco Central (BC) informou que ocorreu um incidente segurança com dados pessoais vinculados a chaves PIX de 46 pessoas com conta na Credifit Sociedade de Crédito, em razão de \"falhas pontuais em sistemas dessa instituição\". De acordo com comunicado do BC divulgado na última sexta-feira (9), não foram expostos dados sensíveis, tais como senhas, informações de movimentações ou saldos financeiros em contas transacionais, ou quaisquer outras informações sob sigilo bancário. \"As informações obtidas são de natureza cadastral, que não permitem movimentação de recursos, nem acesso às contas ou a ou",
@@ -185,116 +189,17 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP após Moraes autorizar regime aberto",
-      "link": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2026/05/08/walter-delgatti-o-hacker-de-araraquara-deixa-prisao-no-interior-de-sp-apos-moraes-autorizar-regime-aberto.ghtml",
-      "summary": "Walter Delgatti, o hacker de Araraquara, deixa prisão no interior de SP O detento Walter Delgatti Neto, conhecido como “hacker de Araraquara”, deixou a Penitenciária 2 de Potim no início da tarde desta sexta-feira (8), após o ministro do Supremo Tribunal Federal (STF), Alexandre de Moraes, autorizar a progressão dele para o regime aberto. O g1 apurou que Walter deixou o presídio por volta das 13h30. Um vídeo obtido pela reportagem mostra ele deixando a prisão - assista acima. Em nota, a Secretaria de Administração Penitenciária (SAP) confirmou que Delgatti deixou a Penitenciária II de Potim em",
-      "ts_iso": "2026-05-08T17:14:01+00:00",
-      "hash": "c06635da512518d8",
-      "_score": {
-        "cyber": 10,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 6,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal"
-        ]
-      },
-      "_total": 16,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
+        },
         {
-          "ts": "2026-05-06T12:00:00+00:00",
+          "ts": "2026-05-12T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 8,
+      "_n_alerts": 5,
       "_corroboration_score": 5
     }
   ]
