@@ -1,14 +1,14 @@
 {
   "summary": {
-    "n_items": 9,
+    "n_items": 8,
     "by_severity": {
       "critical": 6,
-      "high": 2,
+      "high": 1,
       "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 9,
+    "with_watcher_corroboration": 8,
     "top_sources": [
       [
         "G1 Política",
@@ -19,16 +19,12 @@
         3
       ],
       [
-        "Valor Investe",
-        1
-      ],
-      [
         "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-05-15T06:34:38+00:00",
-    "runtime_sec": 3.65
+    "generated_at": "2026-05-16T05:55:02+00:00",
+    "runtime_sec": 3.73
   },
   "items": [
     {
@@ -122,9 +118,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 8,
       "_corroboration_score": 5
     },
     {
@@ -213,9 +233,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 8,
       "_corroboration_score": 5
     },
     {
@@ -307,9 +351,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 8,
       "_corroboration_score": 5
     },
     {
@@ -413,9 +481,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 10,
       "_corroboration_score": 5
     },
     {
@@ -517,9 +609,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 10,
       "_corroboration_score": 5
     },
     {
@@ -630,131 +746,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 7,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "BC comunica 4º vazamento de dados vinculados a chaves Pix em 2026",
-      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/05/12/bc-comunica-4-vazamento-de-dados-vinculados-a-chaves-pix-em-2026.ghtml",
-      "summary": "O Banco Central (BC) comunicou nesta terça-feira a ocorrência de um incidente de segurança da Credifit Sociedade de Crédito Direto por “falhas pontuais” no sistema da instituição. Segundo a nota, ficaram vulneráveis dados pessoais vinculados a 46 chaves Pix de pessoas que têm contas na instituição. A autoridade monetária informou que não ficaram expostos dados sensíveis, como senhas, informações de movimentações ou saldos financeiros em contas transacionais, ou quaisquer outras informações sob sigilo bancário. O Banco Central disse que a ocorrência tem baixo impacto potencial para os usuários,",
-      "ts_iso": "2026-05-12T14:32:22+00:00",
-      "hash": "b3e501de92ca2a4c",
-      "_score": {
-        "cyber": 10,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 6,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "incidente de segurança",
-          "vazamento de dados"
-        ],
-        "attack": [
-          "vazamento"
-        ],
-        "pix": [
-          "pix",
-          "banco central",
-          "bc"
-        ],
-        "incident_verbs": [
-          "vazamento de dados"
-        ]
-      },
-      "_total": 22,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-10T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-05-10T12:00:00+00:00",
+          "ts": "2026-05-14T12:00:00+00:00",
           "rule": "volume_zscore",
-          "severity": "medium",
+          "severity": "high",
           "venue": "Binance",
           "asset": "XRP",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
           "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
         },
         {
           "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 9,
+      "_n_alerts": 10,
       "_corroboration_score": 5
     },
     {
@@ -873,9 +891,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 9,
+      "_n_alerts": 12,
       "_corroboration_score": 5
     },
     {
@@ -969,9 +1011,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 8,
       "_corroboration_score": 5
     }
   ]
