@@ -1,327 +1,24 @@
 {
   "summary": {
-    "n_items": 8,
+    "n_items": 7,
     "by_severity": {
-      "critical": 6,
+      "critical": 4,
       "high": 0,
-      "medium": 2,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 8,
+    "with_watcher_corroboration": 7,
     "top_sources": [
       [
         "G1 Política",
-        6
-      ],
-      [
-        "Folha Mercado",
-        2
+        7
       ]
     ],
-    "generated_at": "2026-05-17T06:23:43+00:00",
-    "runtime_sec": 3.82
+    "generated_at": "2026-05-18T06:57:16+00:00",
+    "runtime_sec": 4.46
   },
   "items": [
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Fuga em jipe, hackers universitários e búfalos: veja trechos da investigação sobre o pai de Vorcaro",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/fuga-em-jipe-hackers-universitarios-e-bufalos-veja-trechos-da-investigacao-sobre-o-pai-de-vorcaro.shtml",
-      "summary": "A decisão do ministro do STF (Supremo Tribunal Federal) André Mendonça que embasou a nova fase da Operação Compliance Zero, deflagrada nesta quinta-feira (14) , detalha como funcionava a estrutura investigada pela Polícia Federal em torno do empresário Daniel Vorcaro , dono do Banco Master . Leia mais (05/14/2026 - 12h58)",
-      "ts_iso": "2026-05-14T15:58:00+00:00",
-      "hash": "3a0a403e1fb611b1",
-      "_score": {
-        "cyber": 10,
-        "attack": 0,
-        "launder": 6,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 9,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers"
-        ],
-        "launder": [
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal",
-          "vorcaro"
-        ]
-      },
-      "_total": 33,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 8,
-        "neg": 0,
-        "score": 8,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 12,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Líder de hackers de Vorcaro fugiu em jipe com computadores em março, aponta PF",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/lider-de-hackers-de-vorcaro-fugiu-em-jipe-com-computadores-em-marco-aponta-pf.shtml",
-      "summary": "O suspeito de liderar um braço de crimes digitais ligado ao Banco Master, o empresário David Henrique Alves foi encontrado pela Polícia Federal, no início de março, em um Range Rover de Luiz Phillipi Mourão, conhecido como o Sicário de Daniel Vorcaro. Leia mais (05/14/2026 - 12h47)",
-      "ts_iso": "2026-05-14T15:47:00+00:00",
-      "hash": "f52d9ab8608898d7",
-      "_score": {
-        "cyber": 10,
-        "attack": 0,
-        "launder": 5,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 24,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 12,
-      "_corroboration_score": 5
-    },
     {
       "source": "G1 Política",
       "bucket": "policia",
@@ -467,9 +164,17 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 13,
       "_corroboration_score": 5
     },
     {
@@ -629,9 +334,17 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 14,
+      "_n_alerts": 15,
       "_corroboration_score": 5
     },
     {
@@ -789,9 +502,17 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 14,
+      "_n_alerts": 15,
       "_corroboration_score": 5
     },
     {
@@ -958,9 +679,111 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 14,
+      "_n_alerts": 15,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Crimes financeiros: por que o Brasil não consegue impedi-los? - O Assunto #1721",
+      "link": "https://g1.globo.com/podcast/o-assunto/noticia/2026/05/18/crimes-financeiros-por-que-o-brasil-nao-consegue-impedi-los-o-assunto-1721.ghtml",
+      "summary": "Nos últimos meses, o noticiário brasileiro foi tomado por dois escândalos de fraudes financeira e tributária cujos prejuízos estão na casa das dezenas de bilhões de reais. O caso do Banco Master estourou depois de causar um rombo de R$ 12 bilhões para o BRB, banco estatal do Distrito Federal, de acordo com a Polícia Federal – e mostra ramificações da ação criminosa em diversas esferas de poder. Na última sexta-feira (15), a Operação Sem Refino revelou um esquema de fraudes fiscais, evasão de recursos públicos e favorecimento ilegal ligados ao grupo Refit que envolve até o ex-governador do Rio ",
+      "ts_iso": "2026-05-18T03:30:34+00:00",
+      "hash": "f7de6d34eb24162e",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 3,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 4,
+        "named_fi": 10,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "polícia federal"
+        ],
+        "value": [
+          "r$ 1",
+          "bilhões"
+        ],
+        "named_fi": [
+          "brb",
+          "banco master",
+          "master"
+        ],
+        "incident_verbs": [
+          "r$ 12 bilh"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 18,
+        "neg": 0,
+        "score": 18,
+        "named_fi_bump": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-15T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "high",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-05-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 5,
       "_corroboration_score": 5
     },
     {
@@ -968,7 +791,7 @@
       "bucket": "policia",
       "title": "Foragido de operação sobre o Master chega a SP após ser preso em Dubai",
       "link": "https://g1.globo.com/sp/sao-paulo/noticia/2026/05/16/foragido-de-operacao-sobre-o-master-chega-a-sp-apos-ser-preso-em-dubai.ghtml",
-      "summary": "Preso em Dubai, hacker que atuava em esquema de Vorcaro chega a São Paulo Um dos alvos da 6ª fase da Operação Compliance Zero, que estava foragido desde quinta-feira (14) e foi preso neste sábado (16) em Dubai, nos Emirados Árabes Unidos, chegou ao Aeroporto Internacional de São Paulo, em Guarulhos, nesta tarde, após ser deportado. Victor Lima Sedlmaier é suspeito de ser um dos integrantes do grupo \"Os Meninos\", que era \"especializado em ataques cibernéticos, invasões telemáticas, derrubada de perfis e monitoramento digital ilegal\" e atuava em benefício de Daniel Vorcaro, dono do extinto Banco",
+      "summary": "Preso em Dubai, hacker que atuava em esquema de Vorcaro chega a São Paulo Um dos alvos da 6ª fase da Operação Compliance Zero, que estava foragido desde quinta-feira (14) e foi preso neste sábado (16) em Dubai, nos Emirados Árabes Unidos, chegou ao Aeroporto Internacional de São Paulo, em Guarulhos, nesta tarde, após ser deportado. Victor Lima Sedleimar é suspeito de ser um dos integrantes do grupo \"Os Meninos\", que era \"especializado em ataques cibernéticos, invasões telemáticas, derrubada de perfis e monitoramento digital ilegal\" e atuava em benefício de Daniel Vorcaro, dono do extinto Banco",
       "ts_iso": "2026-05-16T21:29:42+00:00",
       "hash": "2ab28989f5319f98",
       "_score": {
@@ -1074,9 +897,17 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 8,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     },
     {
@@ -1193,9 +1024,17 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 8,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     }
   ]
