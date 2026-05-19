@@ -1,22 +1,30 @@
 {
   "summary": {
-    "n_items": 7,
+    "n_items": 5,
     "by_severity": {
-      "critical": 4,
+      "critical": 1,
       "high": 0,
-      "medium": 3,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 7,
+    "with_watcher_corroboration": 5,
     "top_sources": [
       [
         "G1 Política",
-        7
+        3
+      ],
+      [
+        "G1 Economia",
+        1
+      ],
+      [
+        "Agência Brasil Justiça",
+        1
       ]
     ],
-    "generated_at": "2026-05-18T06:57:16+00:00",
-    "runtime_sec": 4.46
+    "generated_at": "2026-05-19T06:49:13+00:00",
+    "runtime_sec": 3.43
   },
   "items": [
     {
@@ -178,523 +186,8 @@
       "_corroboration_score": 5
     },
     {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Quem são 'A Turma' e 'Os Meninos', grupos alvos da nova fase da Compliance Zero que intimidavam pessoas e invadiam sistemas",
-      "link": "https://g1.globo.com/politica/post/2026/05/14/quem-sao-a-turma-e-os-meninos-grupos-alvos-da-nova-fase-da-compliance-zero-que-intimidavam-pessoas-e-invadiam-sistemas.ghtml",
-      "summary": "Pai de Daniel Vorcaro foi preso pela Polícia Federal. A nova fase da operação Compliance Zero, deflagrada nesta quinta-feira (14) e que prendeu o pai do banqueiro Daniel Vorcaro, Henrique Vorcaro, mira os grupos conhecidos como \"A Turma\" e \"Os Meninos\", que eram núcleos operacionais da organização criminosa. As informações são da decisão do ministro André Mendonça, do Supremo Tribunal Federal (STF), que autorizou a operação. Os grupos eram responsáveis por crimes de intimidação, coerção, obtenção de informações sigilosas e invasões a dispositivos informáticos. Eles integravam a estrutura paral",
-      "ts_iso": "2026-05-14T11:15:07+00:00",
-      "hash": "5fb64b9b51e91866",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 6,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 9,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "invasões"
-        ],
-        "launder": [
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal",
-          "vorcaro"
-        ]
-      },
-      "_total": 22,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 15,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "6ª fase da Compliance Zero mira alvos ligados a Vorcaro que intimidavam pessoas e invadiam sistemas",
-      "link": "https://g1.globo.com/politica/blog/camila-bomfim/post/2026/05/14/6a-fase-da-compliance-zero-mira-alvos-ligados-a-vorcaro-que-intimidavam-pessoas-e-invadiam-sistemas.ghtml",
-      "summary": "6ª fase da Compliance Zero mira alvos ligados a Vorcaro que intimidavam pessoas A nova fase da operação Compliance Zero, deflagrada nesta quinta-feira (14) prendeu o pai de Daniel Vorcaro, Henrique Vorcaro, e pessoas ligadas às ações de Luiz Phillipi Mourão, sicário de Vorcaro. O foco da ação de hoje são dois núcleos que faziam ações violentas e invadiam sistemas a mando de Daniel Vorcaro, segundo as investigações. A PF chegou a suspeitos dos núcleos conhecidos como “A Turma” e “Os Meninos”, que cometiam crimes de intimidação, coerção, obtenção de informações sigilosas e invasões a dispositivo",
-      "ts_iso": "2026-05-14T10:26:54+00:00",
-      "hash": "1f69ce7c69bb8050",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 5,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "invasões"
-        ],
-        "launder": [
-          "pf",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 15,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 15,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Pai de Daniel Vorcaro é preso pela PF em nova fase da Operação Compliance Zero, que investiga caso Master",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/14/pai-de-daniel-vorcaro-e-preso.ghtml",
-      "summary": "Pai de Daniel Vorcaro é preso na sexta fase da operação que investiga Caso Master A Polícia Federal (PF) prendeu nesta quinta-feira (14) Henrique Vorcaro, pai do banqueiro Daniel Vorcaro — dono do Banco Master —, durante nova fase da Operação Compliance Zero, que investiga fraudes financeiras ligadas à instituição. Os alvos seriam integrantes de grupos criminosos conhecidos como \"A Turma\" e \"Os Meninos\", que, segundo a PF, integravam a estrutura paralela de vigilância e intimidação supostamente comandada pelo banqueiro e reuniam integrantes com \"perfil hacker\". Segundo os investigadores, Henri",
-      "ts_iso": "2026-05-14T10:13:34+00:00",
-      "hash": "06db1c32cf6a020d",
-      "_score": {
-        "cyber": 10,
-        "attack": 3,
-        "launder": 5,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 29,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 15,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
+      "source": "G1 Economia",
+      "bucket": "economia",
       "title": "Crimes financeiros: por que o Brasil não consegue impedi-los? - O Assunto #1721",
       "link": "https://g1.globo.com/podcast/o-assunto/noticia/2026/05/18/crimes-financeiros-por-que-o-brasil-nao-consegue-impedi-los-o-assunto-1721.ghtml",
       "summary": "Nos últimos meses, o noticiário brasileiro foi tomado por dois escândalos de fraudes financeira e tributária cujos prejuízos estão na casa das dezenas de bilhões de reais. O caso do Banco Master estourou depois de causar um rombo de R$ 12 bilhões para o BRB, banco estatal do Distrito Federal, de acordo com a Polícia Federal – e mostra ramificações da ação criminosa em diversas esferas de poder. Na última sexta-feira (15), a Operação Sem Refino revelou um esquema de fraudes fiscais, evasão de recursos públicos e favorecimento ilegal ligados ao grupo Refit que envolve até o ex-governador do Rio ",
@@ -1036,6 +529,74 @@
       ],
       "_n_alerts": 9,
       "_corroboration_score": 5
+    },
+    {
+      "source": "Agência Brasil Justiça",
+      "bucket": "policia",
+      "title": "Master: operação da PF contra fraude bilionária completa seis meses",
+      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/master-operacao-da-pf-contra-fraude-bilionaria-completa-seis-meses",
+      "summary": "A Operação Compliance Zero , da Polícia Federal (PF) , completa seis meses nesta segunda-feira (18). As seis fases executadas até 14 de maio trouxeram à luz o que pode ser a maior fraude contra o Sistema Financeiro Nacional já registrada no Brasil, causadora de potencial prejuízo de dezenas de bilhões de dólares. A operação também revelou a intrincada teia de relações que o principal alvo da apuração, o dono do Banco Master, Daniel Vorcaro, estabeleceu com políticos; criminosos e servidores públicos de alto escalão. Na lista, figuram diretores do Banco Central (BC) , órgão responsável por fisc",
+      "ts_iso": "2026-05-18T15:16:00+00:00",
+      "hash": "8fee54beb91d5bce",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 2,
+        "pix": 3,
+        "crypto": 0,
+        "value": 2,
+        "named_fi": 6,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraude"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "pix": [
+          "banco central",
+          "bc"
+        ],
+        "value": [
+          "bilhões"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 24,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 13,
+        "neg": 0,
+        "score": 13,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-16T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     }
   ]
 }
