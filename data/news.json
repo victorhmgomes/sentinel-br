@@ -1,193 +1,27 @@
 {
   "summary": {
-    "n_items": 5,
+    "n_items": 3,
     "by_severity": {
-      "critical": 1,
+      "critical": 0,
       "high": 0,
-      "medium": 4,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "G1 Política",
         3
-      ],
-      [
-        "G1 Economia",
-        1
-      ],
-      [
-        "Agência Brasil Justiça",
-        1
       ]
     ],
-    "generated_at": "2026-05-19T06:49:13+00:00",
-    "runtime_sec": 3.43
+    "generated_at": "2026-05-20T06:49:27+00:00",
+    "runtime_sec": 4.07
   },
   "items": [
     {
       "source": "G1 Política",
       "bucket": "policia",
-      "title": "Homem alvo de operação sobre o Master havia fugido com o carro de 'Sicário' de Vorcaro em março",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/14/homem-preso-em-operacao-sobre-o-master-havia-fugido-com-o-carro-de-sicario-de-vorcaro-em-marco.ghtml",
-      "summary": "PF aponta ligação de Vorcaro com o jogo do bicho Um dos alvos da Polícia Federal (PF) na 6ª fase da Operação Compliance Zero, nesta quinta-feira (14), é um homem que chegou a ser detido no início de março dirigindo o carro de Luiz Phillipi Machado de Moraes Mourão, o \"Sicário\" de Daniel Vorcaro que cometeu suicídio. David Henrique Alves, que está foragido, é apontado pela PF como líder do grupo \"Os Meninos\", \"especializado em ataques cibernéticos, invasões telemáticas, derrubada de perfis e monitoramento digital ilegal\". (CORREÇÃO: O g1 errou ao informar que David Henrique Alves foi preso na n",
-      "ts_iso": "2026-05-14T13:25:34+00:00",
-      "hash": "147e77c719692027",
-      "_score": {
-        "cyber": 5,
-        "attack": 2,
-        "launder": 5,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "invasões"
-        ],
-        "attack": [
-          "ataques"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 19,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 7,
-        "neg": 0,
-        "score": 7
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-12T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 13,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Economia",
-      "bucket": "economia",
       "title": "Crimes financeiros: por que o Brasil não consegue impedi-los? - O Assunto #1721",
       "link": "https://g1.globo.com/podcast/o-assunto/noticia/2026/05/18/crimes-financeiros-por-que-o-brasil-nao-consegue-impedi-los-o-assunto-1721.ghtml",
       "summary": "Nos últimos meses, o noticiário brasileiro foi tomado por dois escândalos de fraudes financeira e tributária cujos prejuízos estão na casa das dezenas de bilhões de reais. O caso do Banco Master estourou depois de causar um rombo de R$ 12 bilhões para o BRB, banco estatal do Distrito Federal, de acordo com a Polícia Federal – e mostra ramificações da ação criminosa em diversas esferas de poder. Na última sexta-feira (15), a Operação Sem Refino revelou um esquema de fraudes fiscais, evasão de recursos públicos e favorecimento ilegal ligados ao grupo Refit que envolve até o ex-governador do Rio ",
@@ -274,9 +108,41 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "medium",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     },
     {
@@ -398,9 +264,41 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "medium",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
         }
       ],
-      "_n_alerts": 9,
+      "_n_alerts": 13,
       "_corroboration_score": 5
     },
     {
@@ -525,78 +423,42 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 9,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Agência Brasil Justiça",
-      "bucket": "policia",
-      "title": "Master: operação da PF contra fraude bilionária completa seis meses",
-      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/master-operacao-da-pf-contra-fraude-bilionaria-completa-seis-meses",
-      "summary": "A Operação Compliance Zero , da Polícia Federal (PF) , completa seis meses nesta segunda-feira (18). As seis fases executadas até 14 de maio trouxeram à luz o que pode ser a maior fraude contra o Sistema Financeiro Nacional já registrada no Brasil, causadora de potencial prejuízo de dezenas de bilhões de dólares. A operação também revelou a intrincada teia de relações que o principal alvo da apuração, o dono do Banco Master, Daniel Vorcaro, estabeleceu com políticos; criminosos e servidores públicos de alto escalão. Na lista, figuram diretores do Banco Central (BC) , órgão responsável por fisc",
-      "ts_iso": "2026-05-18T15:16:00+00:00",
-      "hash": "8fee54beb91d5bce",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 5,
-        "cft": 2,
-        "pix": 3,
-        "crypto": 0,
-        "value": 2,
-        "named_fi": 6,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraude"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "value": [
-          "bilhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 24,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 13,
-        "neg": 0,
-        "score": 13,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
+        },
         {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-18T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "medium",
+          "venue": "BR multi-venue",
           "asset": "multi",
-          "narrative": "hourly_corr"
+          "narrative": "ring_of_mules"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 13,
+      "_corroboration_score": 5
     }
   ]
 }
