@@ -15,8 +15,8 @@
         3
       ]
     ],
-    "generated_at": "2026-05-20T06:49:27+00:00",
-    "runtime_sec": 4.07
+    "generated_at": "2026-05-21T06:54:16+00:00",
+    "runtime_sec": 3.47
   },
   "items": [
     {
@@ -140,9 +140,17 @@
           "venue": "BR multi-venue",
           "asset": "multi",
           "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-05-20T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 9,
+      "_n_alerts": 10,
       "_corroboration_score": 5
     },
     {
