@@ -1,114 +1,67 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 3,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 1,
     "top_sources": [
       [
-        "G1 Política",
-        3
+        "Folha Mercado",
+        1
       ]
     ],
-    "generated_at": "2026-05-21T06:54:16+00:00",
-    "runtime_sec": 3.47
+    "generated_at": "2026-05-22T06:50:00+00:00",
+    "runtime_sec": 3.02
   },
   "items": [
     {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Crimes financeiros: por que o Brasil não consegue impedi-los? - O Assunto #1721",
-      "link": "https://g1.globo.com/podcast/o-assunto/noticia/2026/05/18/crimes-financeiros-por-que-o-brasil-nao-consegue-impedi-los-o-assunto-1721.ghtml",
-      "summary": "Nos últimos meses, o noticiário brasileiro foi tomado por dois escândalos de fraudes financeira e tributária cujos prejuízos estão na casa das dezenas de bilhões de reais. O caso do Banco Master estourou depois de causar um rombo de R$ 12 bilhões para o BRB, banco estatal do Distrito Federal, de acordo com a Polícia Federal – e mostra ramificações da ação criminosa em diversas esferas de poder. Na última sexta-feira (15), a Operação Sem Refino revelou um esquema de fraudes fiscais, evasão de recursos públicos e favorecimento ilegal ligados ao grupo Refit que envolve até o ex-governador do Rio ",
-      "ts_iso": "2026-05-18T03:30:34+00:00",
-      "hash": "f7de6d34eb24162e",
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Governo perde prazo e suspeitos de ataque hacker de R$ 800 mi ficam livres na Espanha",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/05/governo-perde-prazo-e-suspeitos-de-ataque-hacker-de-r-800-mi-ficam-livres-na-espanha.shtml",
+      "summary": "Os suspeitos de articular o maior furto virtual já registrado no Brasil estão em liberdade provisória na Espanha desde 16 de janeiro porque o governo brasileiro não entregou documentos de extradição no prazo limite que venceu em 5 de janeiro. Leia mais (05/21/2026 - 04h00)",
+      "ts_iso": "2026-05-21T07:00:00+00:00",
+      "hash": "e8333aa12fea5333",
       "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 3,
+        "cyber": 16,
+        "attack": 4,
+        "launder": 0,
         "cft": 0,
         "pix": 0,
         "crypto": 0,
-        "value": 4,
-        "named_fi": 10,
+        "value": 2,
+        "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 0
       },
       "_hits": {
-        "attack": [
-          "fraudes"
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
         ],
-        "launder": [
-          "polícia federal"
+        "attack": [
+          "ataque",
+          "furto"
         ],
         "value": [
-          "r$ 1",
-          "bilhões"
-        ],
-        "named_fi": [
-          "brb",
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 12 bilh"
+          "r$ 8"
         ]
       },
       "_total": 22,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 18,
-        "neg": 0,
-        "score": 18,
-        "named_fi_bump": 3
+        "pos": 7,
+        "neg": 1,
+        "score": 6
       },
       "_alerts": [
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
         {
           "ts": "2026-05-18T12:00:00+00:00",
           "rule": "volume_zscore",
@@ -150,322 +103,7 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 10,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Foragido de operação sobre o Master chega a SP após ser preso em Dubai",
-      "link": "https://g1.globo.com/sp/sao-paulo/noticia/2026/05/16/foragido-de-operacao-sobre-o-master-chega-a-sp-apos-ser-preso-em-dubai.ghtml",
-      "summary": "Preso em Dubai, hacker que atuava em esquema de Vorcaro chega a São Paulo Um dos alvos da 6ª fase da Operação Compliance Zero, que estava foragido desde quinta-feira (14) e foi preso neste sábado (16) em Dubai, nos Emirados Árabes Unidos, chegou ao Aeroporto Internacional de São Paulo, em Guarulhos, nesta tarde, após ser deportado. Victor Lima Sedleimar é suspeito de ser um dos integrantes do grupo \"Os Meninos\", que era \"especializado em ataques cibernéticos, invasões telemáticas, derrubada de perfis e monitoramento digital ilegal\" e atuava em benefício de Daniel Vorcaro, dono do extinto Banco",
-      "ts_iso": "2026-05-16T21:29:42+00:00",
-      "hash": "2ab28989f5319f98",
-      "_score": {
-        "cyber": 15,
-        "attack": 2,
-        "launder": 0,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "invasões"
-        ],
-        "attack": [
-          "ataques"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 24,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 0,
-        "score": 3
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "medium",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        }
-      ],
-      "_n_alerts": 13,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Foragido de operação sobre o Master é preso em Dubai",
-      "link": "https://g1.globo.com/politica/noticia/2026/05/16/foragido-de-operacao-sobre-o-master-e-preso-em-dubai-informa-a-pf.ghtml",
-      "summary": "Hacker apontado como integrante de esquema de Vorcaro preso em Dubai chega a SP Um dos alvos da 6ª fase da Operação Compliance Zero, que estava foragido desde quinta-feira (14), foi preso neste sábado (16) em Dubai, nos Emirados Árabes Unidos. O investigado foi deportado e desembarcou no final da tarde no Aeroporto Internacional de Guarulhos, onde teve o mandado de prisão cumprido, segundo a Polícia Federal. Victor Lima Sedlmaier é suspeito de ser um dos integrantes do grupo \"Os Meninos\", que era \"especializado em ataques cibernéticos, invasões telemáticas, derrubada de perfis e monitoramento ",
-      "ts_iso": "2026-05-16T18:48:19+00:00",
-      "hash": "ae8572668a1c3573",
-      "_score": {
-        "cyber": 15,
-        "attack": 2,
-        "launder": 3,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "invasões"
-        ],
-        "attack": [
-          "ataques"
-        ],
-        "launder": [
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 27,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-05-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-18T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "medium",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        }
-      ],
-      "_n_alerts": 13,
+      "_n_alerts": 5,
       "_corroboration_score": 5
     }
   ]
