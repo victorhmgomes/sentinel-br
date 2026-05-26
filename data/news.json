@@ -1,17 +1,70 @@
 {
   "summary": {
-    "n_items": 0,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 0,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
-    "top_sources": [],
-    "generated_at": "2026-05-25T07:15:26+00:00",
-    "runtime_sec": 4.28
+    "with_watcher_corroboration": 1,
+    "top_sources": [
+      [
+        "Tecmundo",
+        1
+      ]
+    ],
+    "generated_at": "2026-05-26T06:47:31+00:00",
+    "runtime_sec": 4.34
   },
-  "items": []
+  "items": [
+    {
+      "source": "Tecmundo",
+      "bucket": "seguranca",
+      "title": "O script criminoso do 'Hacker Fantasma' preso no Brasil",
+      "link": "https://www.tecmundo.com.br/seguranca/413400-o-script-criminoso-do-hacker-fantasma-preso-no-brasil.htm",
+      "summary": "",
+      "ts_iso": "2026-05-25T22:03:29+00:00",
+      "hash": "a41077ab3eb7948b",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ]
+      },
+      "_total": 10,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-23T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    }
+  ]
 }
