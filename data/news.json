@@ -1,26 +1,26 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 3,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
         "G1 Política",
-        2
+        1
       ],
       [
-        "Agência Brasil Justiça",
+        "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-05-27T07:04:26+00:00",
-    "runtime_sec": 3.86
+    "generated_at": "2026-05-28T06:55:29+00:00",
+    "runtime_sec": 3.03
   },
   "items": [
     {
@@ -96,8 +96,8 @@
       "_corroboration_score": 3
     },
     {
-      "source": "G1 Política",
-      "bucket": "policia",
+      "source": "G1 Economia",
+      "bucket": "economia",
       "title": "Vazamento de dados do INSS atingiu 2,8 milhões de CPFs, diz Dataprev; 98% eram de falecidos",
       "link": "https://g1.globo.com/economia/noticia/2026/05/26/vazamento-de-dados-do-inss-atingiu-28-milhoes-de-cpfs-diz-dataprev-98percent-eram-de-falecidos.ghtml",
       "summary": "O vazamento de dados de segurados do Instituto Nacional do Seguro Social (INSS) atingiu 2,8 milhões de CPFs, informou nesta terça-feira (26) a Dataprev, empresa estatal de tecnologia responsável por gerenciamento de dados de aposentados e pensionistas. Desse total, 98% pertenciam a pessoas já falecidas. Um mesmo CPF foi consultado mais de uma vez. Além disso, cerca de 52 mil pessoas vivas tiveram a data de nascimento exposta durante o incidente de segurança ocorrido em abril. As informações foram divulgadas por Edmar dos Santos Ferreira Junior, representante da Dataprev na reunião desta terça-",
@@ -137,80 +137,6 @@
         "pos": 2,
         "neg": 0,
         "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "Agência Brasil Justiça",
-      "bucket": "policia",
-      "title": "Operação contra Castro mira aportes de R$ 3,6 bi em fundos do Master",
-      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/operacao-contra-castro-mira-aportes-de-r-36-bi-em-fundos-do-master",
-      "summary": "A oitava fase da Operação Compliance Zero foi deflagrada nesta terça-feira (26) pela Polícia Federal (PF) e investiga o envolvimento do ex-governador Cláudio Castro na aplicação irregular de R$ 3,6 bilhões da previdência dos servidores fluminenses em Letras de Crédito e fundos do Banco Master. O recurso aplicado tem origem na RioPrevidência , autarquia responsável por administrar os recursos do Regime Próprio de Previdência Social (RPPS), incluindo o pagamento de aposentadorias e benefícios a mais de 235 mil servidores ativos e inativos. Notícias relacionadas: PF investiga desvios na Rioprevid",
-      "ts_iso": "2026-05-26T14:59:00+00:00",
-      "hash": "18b9c1c0ea1504ed",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 8,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "desvios"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "value": [
-          "r$ 3",
-          "bilhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 3,6 bilh"
-        ]
-      },
-      "_total": 25,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 12,
-        "neg": 0,
-        "score": 12,
-        "named_fi_bump": 2
       },
       "_alerts": [
         {
