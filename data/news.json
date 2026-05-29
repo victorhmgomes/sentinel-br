@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-05-28T06:55:29+00:00",
-    "runtime_sec": 3.03
+    "generated_at": "2026-05-29T06:55:39+00:00",
+    "runtime_sec": 3.1
   },
   "items": [
     {
@@ -90,10 +90,18 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "G1 Economia",
@@ -154,10 +162,18 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
