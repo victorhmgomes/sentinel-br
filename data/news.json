@@ -11,158 +11,59 @@
     "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "G1 Política",
+        "G1 Economia",
         1
       ],
       [
-        "G1 Economia",
+        "MoneyTimes Cripto",
         1
       ]
     ],
-    "generated_at": "2026-05-29T06:55:39+00:00",
-    "runtime_sec": 3.1
+    "generated_at": "2026-05-30T06:24:33+00:00",
+    "runtime_sec": 4.52
   },
   "items": [
     {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Cláudio Castro e o dinheiro dos aposentados no Banco Master - O Assunto #1728",
-      "link": "https://g1.globo.com/podcast/o-assunto/noticia/2026/05/27/claudio-castro-e-o-dinheiro-dos-aposentados-no-banco-master-o-assunto-1728.ghtml",
-      "summary": "A oitava fase da operação Compliance Zero teve como alvo de um mandado de busca e apreensão o ex-governador do Rio de Janeiro Cláudio Castro, suspeito de integrar um esquema que aportou R$ 3,7 bilhões de recursos públicos em títulos podres do Banco Master. Essa foi a segunda vez em 11 dias que os agentes da Polícia Federal bateram na porta de Castro: primeiro na operação Sem Refino, que investiga a participação do ex-governador na fraude fiscal bilionária da refinaria Refit; agora, diante da suspeita de ter facilitado a transferência do dinheiro da Rioprevidência – fundo público que gere os re",
-      "ts_iso": "2026-05-27T03:30:33+00:00",
-      "hash": "89719593fc1a7114",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 3,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "fraude"
-        ],
-        "launder": [
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "value": [
-          "r$ 3",
-          "bilhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 3,7 bilh"
-        ]
-      },
-      "_total": 20,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 11,
-        "neg": 0,
-        "score": 11,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-28T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
-    },
-    {
       "source": "G1 Economia",
       "bucket": "economia",
-      "title": "Vazamento de dados do INSS atingiu 2,8 milhões de CPFs, diz Dataprev; 98% eram de falecidos",
-      "link": "https://g1.globo.com/economia/noticia/2026/05/26/vazamento-de-dados-do-inss-atingiu-28-milhoes-de-cpfs-diz-dataprev-98percent-eram-de-falecidos.ghtml",
-      "summary": "O vazamento de dados de segurados do Instituto Nacional do Seguro Social (INSS) atingiu 2,8 milhões de CPFs, informou nesta terça-feira (26) a Dataprev, empresa estatal de tecnologia responsável por gerenciamento de dados de aposentados e pensionistas. Desse total, 98% pertenciam a pessoas já falecidas. Um mesmo CPF foi consultado mais de uma vez. Além disso, cerca de 52 mil pessoas vivas tiveram a data de nascimento exposta durante o incidente de segurança ocorrido em abril. As informações foram divulgadas por Edmar dos Santos Ferreira Junior, representante da Dataprev na reunião desta terça-",
-      "ts_iso": "2026-05-26T19:47:06+00:00",
-      "hash": "790806d0aa8f0a3a",
+      "title": "BC vai exigir auditoria para autorizar empresas de criptoativos, como bitcoin",
+      "link": "https://g1.globo.com/economia/noticia/2026/05/29/bc-vai-exigir-auditoria-para-autorizar-empresas-de-criptoativos-como-bitcoin.ghtml",
+      "summary": "Representações de Ethereum e Bitcoin. Reuters O Banco Central informou nesta sexta-feira (29) que o processo de autorização para prestadoras de serviços de ativos virtuais passará a exigir, a partir de junho, a apresentação de um relatório emitido por auditoria independente registrada na Comissão de Valores Mobiliários (CVM). 🗒️Tem alguma sugestão de reportagem? Envie para o g1 De acordo com a autarquia, a análise passará a considerar “opinião técnica independente sobre os procedimentos adotados pelas empresas para identificar e prevenir operações suspeitas, especialmente aquelas relacionadas ",
+      "ts_iso": "2026-05-29T18:41:45+00:00",
+      "hash": "281fc93d984c12eb",
       "_score": {
-        "cyber": 10,
-        "attack": 2,
+        "cyber": 0,
+        "attack": 0,
         "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 1,
+        "cft": 4,
+        "pix": 3,
+        "crypto": 2,
+        "value": 0,
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 4
+        "incident_verbs": 0
       },
       "_hits": {
-        "cyber": [
-          "incidente de segurança",
-          "vazamento de dados"
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
         ],
-        "attack": [
-          "vazamento"
+        "pix": [
+          "banco central",
+          "bc"
         ],
-        "value": [
-          "milhões"
-        ],
-        "incident_verbs": [
-          "vazamento de dados"
+        "crypto": [
+          "bitcoin"
         ]
       },
-      "_total": 17,
+      "_total": 9,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 2,
+        "pos": 4,
         "neg": 0,
-        "score": 2
+        "score": 4
       },
       "_alerts": [
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
         {
           "ts": "2026-05-28T12:00:00+00:00",
           "rule": "hourly_corr",
@@ -170,10 +71,75 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
+      "_n_alerts": 2,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "MoneyTimes Cripto",
+      "bucket": "cripto",
+      "title": "Banco Central passa a exigir auditoria independente para autorizar empresas de criptoativos",
+      "link": "https://www.moneytimes.com.br/banco-central-passa-a-exigir-auditoria-independente-para-autorizar-empresas-de-criptoativos-rens/",
+      "summary": "O Banco Central informou nesta sexta-feira que o processo de autorização para prestadoras de serviços de ativos virtuais passará a exigir, a partir de junho, a apresentação de um relatório emitido por auditoria independente registrada na Comissão de Valores Mobiliários (CVM). De acordo com a autarquia, a análise passará a considerar “opinião técnica independente sobre [&#8230;]",
+      "ts_iso": "2026-05-29T18:34:25+00:00",
+      "hash": "6896b3321cc79a83",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     }
   ]
 }
