@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-06-01T08:34:40+00:00",
-    "runtime_sec": 3.35
+    "generated_at": "2026-06-02T07:24:56+00:00",
+    "runtime_sec": 4.58
   },
   "items": [
     {
@@ -87,10 +87,26 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-31T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-01T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
+      "_n_alerts": 5,
+      "_corroboration_score": 5
     },
     {
       "source": "MoneyTimes Cripto",
@@ -152,10 +168,26 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-31T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-01T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
+      "_n_alerts": 5,
+      "_corroboration_score": 5
     }
   ]
 }
