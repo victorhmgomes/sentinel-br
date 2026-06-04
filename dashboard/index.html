@@ -1867,6 +1867,8 @@ const I18N = (function(){
     'tl.th.tags':                 {pt:'Tags', en:'Tags'},
     // indicators + footer aliases
     'ind.title':                  {pt:'Indicadores & metodologia', en:'Indicators & methodology'},
+    'ind.trigger':                {pt:'gatilho', en:'trigger'},
+    'ind.badge.roadmap':          {pt:'roadmap', en:'roadmap'},
     'ind.sub':                    {pt:'Ativos em produção + roadmap', en:'In production + roadmap'},
     'foot.title':                 {pt:'Sobre o protótipo', en:'About the prototype'},
     'foot.refs':                  {pt:'Referências', en:'References'},
@@ -3837,18 +3839,28 @@ renderAlerts();
 // ========== indicadores ==========
 (function(){
   const wrap = document.getElementById('indicators');
-  DATA.indicators_doc.forEach(i=>{
-    const isRoadmap = /roadmap/.test(i.name.toLowerCase());
-    const div = document.createElement('div');
-    div.className = 'indicator' + (isRoadmap?' roadmap':'');
-    div.innerHTML = `
-      <div class="id">${i.id} ${isRoadmap?'<span class="badge">roadmap</span>':''}</div>
-      <div class="name">${i.name}</div>
-      <div class="desc">${i.desc}</div>
-      <div class="trigger">gatilho: ${i.trigger}</div>
-    `;
-    wrap.appendChild(div);
-  });
+  function render(){
+    const L = (window.I18N && window.I18N.lang) || 'pt';
+    wrap.innerHTML = '';
+    DATA.indicators_doc.forEach(i=>{
+      const name = (L === 'en' ? (i.name_en || i.name) : i.name);
+      const desc = (L === 'en' ? (i.desc_en || i.desc) : i.desc);
+      const trig = (L === 'en' ? (i.trigger_en || i.trigger) : i.trigger);
+      const isRoadmap = /roadmap/.test(name.toLowerCase());
+      const div = document.createElement('div');
+      div.className = 'indicator' + (isRoadmap?' roadmap':'');
+      const trigLabel = I18N.tKey('ind.trigger');
+      div.innerHTML = `
+        <div class="id">${i.id} ${isRoadmap?`<span class="badge">${I18N.tKey('ind.badge.roadmap')}</span>`:''}</div>
+        <div class="name">${name}</div>
+        <div class="desc">${desc}</div>
+        <div class="trigger">${trigLabel}: ${trig}</div>
+      `;
+      wrap.appendChild(div);
+    });
+  }
+  render();
+  document.addEventListener('langchange', render);
 })();
 
 // ========== i18n · final pass ==========
