@@ -41,6 +41,12 @@ INCIDENTS = [
         "name_en": "Continuation of payment-institution incident — R$ 20M"},
     {"date": "2026-04-21", "label": "#13", "name": "Ataque cibernético a banco médio de câmbio/crédito — R$ ~50M",
         "name_en": "Cyber attack on a mid-sized FX/credit bank — R$ ~50M"},
+    {"date": "2026-05-15", "label": "#14", "name": "Incidente em adquirente — R$ ~50M (dispersos 15-18/05)",
+        "name_en": "Incident at a card acquirer — R$ ~50M (dispersed 15-18 May)"},
+    {"date": "2026-05-16", "label": "#15", "name": "Incidente em instituição de pagamento — R$ ~5M",
+        "name_en": "Incident at a payment institution — R$ ~5M"},
+    {"date": "2026-05-19", "label": "#16", "name": "Incidente em instituição de pagamento — R$ ~5M",
+        "name_en": "Incident at a payment institution — R$ ~5M"},
 ]
 
 def main():

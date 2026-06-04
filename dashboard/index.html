@@ -808,7 +808,7 @@ body.mode-executive .tech-only{display:none !important}
     </div>
     <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px">
       <a href="#hourly-panel" style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.hc">→ Ver detecção HourlyCorr</a>
-      <a href="#incidentes"   style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.bt">→ Backtest completo (16 incidentes)</a>
+      <a href="#incidentes"   id="motriz-cta-bt" style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.bt">→ Backtest completo (16 incidentes)</a>
       <a href="#press-panel"  style="color:#7ab8ff;text-decoration:none;border:1px solid #2c4766;padding:6px 12px;border-radius:6px" data-i18n="motriz.cta.news">→ Imprensa corrobora</a>
     </div>
   </section>
@@ -1632,8 +1632,8 @@ const I18N = (function(){
     // incidents backtest
     'inc.title':                  {pt:'Backtest contra incidentes conhecidos',
                                     en:'Backtest against known incidents'},
-    'inc.meta':                   {pt:'16 incidentes · janela ±3 dias · comparação contra baseline aleatório',
-                                    en:'16 incidents · ±3-day window · compared against random baseline'},
+    'inc.meta':                   {pt:'{n} incidentes · janela ±3 dias · comparação contra baseline aleatório',
+                                    en:'{n} incidents · ±3-day window · compared against random baseline'},
     'inc.kpi.total':              {pt:'Incidentes testados', en:'Incidents tested'},
     'inc.kpi.total.s':            {pt:'datas fornecidas pelo analista', en:'dates provided by the analyst'},
     'inc.kpi.any':                {pt:'Hit · qualquer alerta ±3d', en:'Hit · any alert ±3d'},
@@ -1668,7 +1668,7 @@ const I18N = (function(){
     'motriz.k.venues':            {pt:'Venues corroborando', en:'Corroborating venues'},
     'motriz.k.ratio':             {pt:'Desvio observado', en:'Observed deviation'},
     'motriz.cta.hc':              {pt:'→ Ver detecção HourlyCorr', en:'→ See HourlyCorr detection'},
-    'motriz.cta.bt':              {pt:'→ Backtest completo (16 incidentes)', en:'→ Full backtest (16 incidents)'},
+    'motriz.cta.bt':              {pt:'→ Backtest completo ({n} incidentes)', en:'→ Full backtest ({n} incidents)'},
     'motriz.cta.news':            {pt:'→ Imprensa corrobora', en:'→ Press corroborates'},
     // motriz narrativa dinâmica (montada em JS — usa placeholders)
     'motriz.narr.signaled':       {pt:'Sentinel sinalizou em <b>{date}</b>',
@@ -3455,6 +3455,10 @@ renderAlerts();
   const expected = (p) => (p * s.n_total).toFixed(1);
 
   function renderSummary(){
+    const meta = document.getElementById('inc-meta');
+    if (meta) meta.textContent = I18N.tTpl('inc.meta', {n: s.n_total});
+    const cta = document.getElementById('motriz-cta-bt');
+    if (cta) cta.textContent = I18N.tTpl('motriz.cta.bt', {n: s.n_total});
     const wrap = document.getElementById('inc-summary');
     wrap.innerHTML = `
       <div class="kpi"><div class="l">${I18N.tKey('inc.kpi.tested')}</div><div class="v">${s.n_total}</div><div class="s">${I18N.tKey('inc.kpi.tested.sub')}</div></div>
