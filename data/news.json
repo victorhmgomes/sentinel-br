@@ -1,17 +1,120 @@
 {
   "summary": {
-    "n_items": 0,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 0,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
-    "top_sources": [],
-    "generated_at": "2026-06-04T12:15:47+00:00",
-    "runtime_sec": 3.05
+    "with_watcher_corroboration": 1,
+    "top_sources": [
+      [
+        "MoneyTimes Cripto",
+        1
+      ]
+    ],
+    "generated_at": "2026-06-04T12:27:05+00:00",
+    "runtime_sec": 4.18
   },
-  "items": []
+  "items": [
+    {
+      "source": "MoneyTimes Cripto",
+      "bucket": "cripto",
+      "title": "Banco Central passa a exigir auditoria independente para autorizar empresas de criptoativos",
+      "link": "https://www.moneytimes.com.br/banco-central-passa-a-exigir-auditoria-independente-para-autorizar-empresas-de-criptoativos-rens/",
+      "summary": "O Banco Central informou nesta sexta-feira que o processo de autorização para prestadoras de serviços de ativos virtuais passará a exigir, a partir de junho, a apresentação de um relatório emitido por auditoria independente registrada na Comissão de Valores Mobiliários (CVM). De acordo com a autarquia, a análise passará a considerar “opinião técnica independente sobre [&#8230;]",
+      "ts_iso": "2026-05-29T18:34:25+00:00",
+      "hash": "6896b3321cc79a83",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-05-28T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-30T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-05-31T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-01T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-01T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-01T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 7,
+      "_corroboration_score": 5
+    }
+  ]
 }
