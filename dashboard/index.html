@@ -1203,6 +1203,16 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
     <div id="inc-summary" class="kpis" style="margin-bottom:16px"></div>
+    <div id="inc-holdout-wrap" style="margin-bottom:18px;border:1px solid var(--border);border-radius:8px;padding:12px 14px;background:rgba(122,184,255,.04)">
+      <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px">
+        <b style="color:var(--text);font-size:13.5px" data-i18n="inc.holdout.title">Validação out-of-sample</b>
+        <small id="inc-holdout-sub" style="color:var(--muted);font-size:12px">—</small>
+      </div>
+      <div id="inc-holdout" class="kpis"></div>
+      <p style="color:var(--muted);font-size:12px;margin-top:10px;line-height:1.55" data-i18n-html="inc.holdout.foot">
+        <b>Por que importa:</b> os detectores, thresholds e regras de ensemble foram calibrados sobre incidentes ocorridos antes do cutoff. Os incidentes ≥ cutoff nunca foram vistos durante calibração. Hit rate alto no holdout é evidência de que o sinal generaliza, não de overfit.
+      </p>
+    </div>
     <div class="tbl-wrap">
       <table id="tbl-incidents">
         <thead><tr>
@@ -1734,6 +1744,14 @@ const I18N = (function(){
     'inc.kpi.brusdt':             {pt:'Hit · BR∩USDT ±3d', en:'Hit · BR∩USDT ±3d'},
     'inc.kpi.random':             {pt:'aleatório esperado: ~{v}', en:'random baseline: ~{v}'},
     'inc.kpi.random.target':      {pt:'aleatório esperado: ~{v} · indicador-alvo', en:'random baseline: ~{v} · target indicator'},
+    'inc.holdout.title':          {pt:'Validação out-of-sample', en:'Out-of-sample validation'},
+    'inc.holdout.sub':             {pt:'cutoff {cutoff} · {h}/{t} incidentes nunca vistos durante calibração',
+                                    en:'cutoff {cutoff} · {h}/{t} incidents never seen during calibration'},
+    'inc.holdout.kpi.count':      {pt:'Incidentes em holdout', en:'Holdout incidents'},
+    'inc.holdout.kpi.count.sub':  {pt:'datas ≥ {cutoff}', en:'dates ≥ {cutoff}'},
+    'inc.holdout.kpi.vs':         {pt:'in-sample: {pct}%', en:'in-sample: {pct}%'},
+    'inc.holdout.foot':           {pt:'<b>Por que importa:</b> os detectores, thresholds e regras de ensemble foram calibrados sobre incidentes ocorridos antes do cutoff. Os incidentes ≥ cutoff nunca foram vistos durante calibração. Hit rate alto no holdout é evidência de que o sinal generaliza, não de overfit.',
+                                    en:'<b>Why this matters:</b> detectors, thresholds and ensemble rules were calibrated on incidents that occurred before the cutoff. Incidents ≥ cutoff were never seen during calibration. High hit rate on the holdout is evidence the signal generalises rather than overfits.'},
     'inc.noalert':                {pt:'— sem alerta em ±3d', en:'— no alert in ±3d'},
     // ring of mules KPIs
     'ring.kpi.flagdays':          {pt:'Dias-flag (12m)', en:'Flag days (12m)'},
@@ -3468,6 +3486,21 @@ renderAlerts();
       <div class="kpi high"><div class="l">${I18N.tKey('inc.kpi.high')}</div><div class="v">${s.n_hit_high_pm3}/${s.n_total}</div><div class="s">${I18N.tTpl('inc.kpi.random', {v: expected(b.high_plus)})}</div></div>
       <div class="kpi crit"><div class="l">${I18N.tKey('inc.kpi.brusdt')}</div><div class="v">${s.n_hit_br_usdt_pm3}/${s.n_total}</div><div class="s">${I18N.tTpl('inc.kpi.random.target', {v: expected(b.br_usdt)})}</div></div>
     `;
+    // ---- out-of-sample / holdout block ----
+    const h = inc.summary_holdout;
+    const i = inc.summary_in_sample;
+    const cutoff = inc.holdout_cutoff;
+    const hwrap = document.getElementById('inc-holdout');
+    const hsub  = document.getElementById('inc-holdout-sub');
+    if (hwrap && h && i && cutoff){
+      if (hsub) hsub.textContent = I18N.tTpl('inc.holdout.sub', {cutoff: cutoff, h: h.n_total, t: s.n_total});
+      hwrap.innerHTML = `
+        <div class="kpi"><div class="l">${I18N.tKey('inc.holdout.kpi.count')}</div><div class="v">${h.n_total}</div><div class="s">${I18N.tTpl('inc.holdout.kpi.count.sub', {cutoff: cutoff})}</div></div>
+        <div class="kpi"><div class="l">${I18N.tKey('inc.kpi.any')}</div><div class="v">${h.n_hit_any_pm3}/${h.n_total}</div><div class="s">${I18N.tTpl('inc.holdout.kpi.vs', {pct: (100*i.n_hit_any_pm3/Math.max(i.n_total,1)).toFixed(0)})}</div></div>
+        <div class="kpi high"><div class="l">${I18N.tKey('inc.kpi.high')}</div><div class="v">${h.n_hit_high_pm3}/${h.n_total}</div><div class="s">${I18N.tTpl('inc.holdout.kpi.vs', {pct: (100*i.n_hit_high_pm3/Math.max(i.n_total,1)).toFixed(0)})}</div></div>
+        <div class="kpi crit"><div class="l">${I18N.tKey('inc.kpi.brusdt')}</div><div class="v">${h.n_hit_br_usdt_pm3}/${h.n_total}</div><div class="s">${I18N.tTpl('inc.holdout.kpi.vs', {pct: (100*i.n_hit_br_usdt_pm3/Math.max(i.n_total,1)).toFixed(0)})}</div></div>
+      `;
+    }
   }
 
   function renderTable(){

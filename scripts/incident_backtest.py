@@ -111,22 +111,43 @@ def main():
             "alerts_in_pm3": w3_ranked[:8],
         })
 
+    # ---------- Out-of-sample / holdout split ----------
+    # HOLDOUT_DATE: incidentes em ou após esta data são tratados como
+    # "out-of-sample" — i.e., o sistema (detectores, thresholds, ensemble,
+    # ring-of-mules, hourly_corr) foi calibrado SEM nunca ter visto esses
+    # incidentes. Hit rate no holdout responde "se tivéssemos parado o
+    # desenvolvimento em D-1, o sistema teria capturado os incidentes
+    # subsequentes?". O cutoff atual cobre #13 (Rendimento, 21/04) e os
+    # 3 incidentes de maio (#14 adquirente, #15 IP, #16 IP).
+    HOLDOUT_DATE = "2026-04-21"
+
+    def summarize(items: list[dict]) -> dict:
+        return {
+            "n_total": len(items),
+            "n_hit_any_pm3":     sum(1 for x in items if x["counts"]["pm3"] > 0),
+            "n_hit_high_pm3":    sum(1 for x in items if x["counts"]["pm3_hi"] > 0),
+            "n_hit_critical_pm3":sum(1 for x in items if x["counts"]["pm3_cr"] > 0),
+            "n_hit_br_usdt_pm3": sum(1 for x in items if x["counts"]["pm3_br_usdt"] > 0),
+        }
+
+    in_sample = [x for x in out if x["date"] <  HOLDOUT_DATE]
+    holdout   = [x for x in out if x["date"] >= HOLDOUT_DATE]
+
     d["incidents"] = {
         "items": out,
         "baselines_daily": baselines,
         "random_window_pm3": {k: p_in_window(v, 7) for k, v in baselines.items()},
-        "summary": {
-            "n_total": len(out),
-            "n_hit_any_pm3":     sum(1 for x in out if x["counts"]["pm3"] > 0),
-            "n_hit_high_pm3":    sum(1 for x in out if x["counts"]["pm3_hi"] > 0),
-            "n_hit_critical_pm3":sum(1 for x in out if x["counts"]["pm3_cr"] > 0),
-            "n_hit_br_usdt_pm3": sum(1 for x in out if x["counts"]["pm3_br_usdt"] > 0),
-        },
+        "summary": summarize(out),
+        "holdout_cutoff": HOLDOUT_DATE,
+        "summary_in_sample": summarize(in_sample),
+        "summary_holdout":   summarize(holdout),
     }
 
     DASH.write_text(json.dumps(d, default=str))
     print(f"incidentes anexados ao dashboard.json — {len(out)} incidentes")
-    print(f"summary: {d['incidents']['summary']}")
+    print(f"summary total: {d['incidents']['summary']}")
+    print(f"summary in_sample (<{HOLDOUT_DATE}): {d['incidents']['summary_in_sample']}")
+    print(f"summary holdout (>={HOLDOUT_DATE}):  {d['incidents']['summary_holdout']}")
 
 
 if __name__ == "__main__":
