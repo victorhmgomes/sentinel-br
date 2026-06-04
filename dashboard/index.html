@@ -792,6 +792,22 @@ body.mode-executive .tech-only{display:none !important}
     </div>
   </section>
   <section class="semaforo" id="semaforo"></section>
+  <section class="panel" id="exec24h-hero" style="margin-bottom:18px;background:linear-gradient(180deg,rgba(122,184,255,.06),rgba(122,184,255,.02));border:1px solid var(--border)">
+    <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+      <h3 style="margin:0;font-size:18px" data-i18n="exec24h.title">Resumo · últimas 24 horas</h3>
+      <small id="exec24h-sub" style="color:var(--muted);font-size:12px" data-i18n="exec24h.sub">linguagem simples · sem números técnicos</small>
+    </div>
+    <div id="exec24h-body" style="display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start">
+      <div id="exec24h-light" style="font-size:48px;line-height:1;text-align:center;min-width:80px">—</div>
+      <div>
+        <div id="exec24h-status" style="font-size:17px;font-weight:600;margin-bottom:8px;color:var(--text)">—</div>
+        <ul id="exec24h-bullets" style="margin:0;padding-left:18px;line-height:1.7;color:var(--text);font-size:14px"></ul>
+        <div style="margin-top:12px;font-size:13px">
+          <a href="#motriz-hero" id="exec24h-cta" style="color:#7ab8ff;text-decoration:none" data-i18n="exec24h.cta">→ Ver caso motriz e detalhes técnicos</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="panel highlight" id="motriz-hero" style="margin-bottom:18px">
     <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px">
       <h3 style="margin:0" data-i18n="motriz.title">Caso motriz</h3>
@@ -1673,6 +1689,23 @@ const I18N = (function(){
                                    en:'Calibration, FP/FN and detector roadmap'},
     // caso motriz hero
     'motriz.title':               {pt:'Caso motriz', en:'Driving case'},
+    // exec 24h
+    'exec24h.title':              {pt:'Resumo · últimas 24 horas', en:'Snapshot · last 24 hours'},
+    'exec24h.sub':                {pt:'linguagem simples · sem números técnicos', en:'plain language · no jargon'},
+    'exec24h.cta':                {pt:'→ Ver caso motriz e detalhes técnicos', en:'→ See driving case and technical details'},
+    'exec24h.status.calm':        {pt:'Cenário tranquilo', en:'Quiet'},
+    'exec24h.status.watch':       {pt:'Atenção moderada', en:'Moderate attention'},
+    'exec24h.status.alert':       {pt:'Atenção elevada', en:'Elevated attention'},
+    'exec24h.bullet.alerts':      {pt:'<b>{n}</b> sinais atípicos detectados nas últimas 24h{sev}.',
+                                    en:'<b>{n}</b> atypical signals detected in the last 24h{sev}.'},
+    'exec24h.bullet.alerts.zero': {pt:'Nenhum sinal atípico nas últimas 24h — comportamento dentro do esperado.',
+                                    en:'No atypical signals in the last 24h — behaviour within expected range.'},
+    'exec24h.bullet.sev':         {pt:', incluindo <b>{c}</b> crítico(s)', en:', including <b>{c}</b> critical'},
+    'exec24h.bullet.venues':      {pt:'Corretoras envolvidas: <b>{v}</b>.', en:'Venues involved: <b>{v}</b>.'},
+    'exec24h.bullet.news':        {pt:'<b>{n}</b> notícia(s) da imprensa corroboraram sinais técnicos recentes.',
+                                    en:'<b>{n}</b> news article(s) corroborated recent technical signals.'},
+    'exec24h.bullet.news.zero':   {pt:'Sem corroboração na imprensa no período.', en:'No press corroboration in the period.'},
+    'exec24h.bullet.ring':        {pt:'<b>{n}</b> dia(s) com múltiplas corretoras BR sincronizadas.', en:'<b>{n}</b> day(s) with multiple BR venues moving in sync.'},
     'motriz.k.d0':                {pt:'Alerta Sentinel · D-1', en:'Sentinel alert · D-1'},
     'motriz.k.pm3':               {pt:'Alertas ±3 dias', en:'Alerts ±3 days'},
     'motriz.k.venues':            {pt:'Venues corroborando', en:'Corroborating venues'},
@@ -3462,6 +3495,93 @@ renderAlerts();
       wrap.appendChild(row);
     }
   })();
+})();
+
+// ========== resumo executivo · últimas 24h ==========
+(function(){
+  if (!DATA.alerts) return;
+  // janela de 7 dias para "últimas 24h" — datas em dashboard.json têm
+  // granularidade diária (sem hora), então "últimas 24h" na prática
+  // significa "últimos 1-2 dias com sinal". 7d cobre semana fluindo.
+  function lastNDates(n){
+    const dates = [...new Set((DATA.alerts||[]).map(a=>a.date).filter(Boolean))].sort();
+    return new Set(dates.slice(-Math.max(n,1)));
+  }
+  // tentamos 1 dia primeiro; se vazio sobe pra 3, depois 7
+  function pickWindow(){
+    for (const n of [1,2,3,7]){
+      const win = lastNDates(n);
+      const al = (DATA.alerts||[]).filter(a => win.has(a.date));
+      if (al.length || n===7) return {alerts: al, days: n, dates: [...win]};
+    }
+    return {alerts: [], days: 1, dates: []};
+  }
+  function recentNewsCorrobs(daysBack){
+    const items = (typeof NEWS !== 'undefined' && NEWS && NEWS.items) ? NEWS.items : [];
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - (daysBack||7));
+    return items.filter(x => {
+      const t = x.ts_iso ? new Date(x.ts_iso) : null;
+      const hasCorr = (x._n_alerts||0) > 0 || (x._corroboration_score||0) >= 3;
+      return hasCorr && (!t || t >= cutoff);
+    });
+  }
+  function ringDaysRecent(dates){
+    const r = (DATA.ring_of_mules || []).filter(x => dates.includes(x.date));
+    return r.length;
+  }
+  function render(){
+    const L = I18N.lang;
+    const w = pickWindow();
+    const nAlerts = w.alerts.length;
+    const crit = w.alerts.filter(a => a.severity === 'critical').length;
+    const high = w.alerts.filter(a => a.severity === 'high').length;
+    const venues = [...new Set(w.alerts.map(a => a.source).filter(s => s && s !== 'cross-venue' && s !== 'Arbitragem BR'))];
+    const news = recentNewsCorrobs(Math.max(w.days, 3));
+    const rings = ringDaysRecent(w.dates);
+
+    // semáforo: critical>0 ou ≥3 high → alerta; high>0 ou ≥3 alerts → atenção; senão tranquilo
+    let level, light, statusKey;
+    if (crit >= 1 || high >= 3) { level='alert'; light='🔴'; statusKey='exec24h.status.alert'; }
+    else if (high >= 1 || nAlerts >= 3) { level='watch'; light='🟡'; statusKey='exec24h.status.watch'; }
+    else { level='calm'; light='🟢'; statusKey='exec24h.status.calm'; }
+
+    document.getElementById('exec24h-light').textContent = light;
+    document.getElementById('exec24h-status').textContent = I18N.tKey(statusKey);
+
+    // sub: janela efetiva
+    const subEl = document.getElementById('exec24h-sub');
+    if (subEl){
+      const windowLabel = (w.days === 1)
+        ? (L==='en' ? 'last 24h' : 'últimas 24h')
+        : (L==='en' ? `last ${w.days} days` : `últimos ${w.days} dias`);
+      subEl.textContent = (L==='en' ? 'plain language · window: ' : 'linguagem simples · janela: ') + windowLabel;
+    }
+
+    const ul = document.getElementById('exec24h-bullets');
+    ul.innerHTML = '';
+    function li(html){ const e = document.createElement('li'); e.innerHTML = html; ul.appendChild(e); }
+
+    if (nAlerts === 0){
+      li(I18N.tKeyHtml('exec24h.bullet.alerts.zero'));
+    } else {
+      const sevSuffix = crit > 0 ? I18N.tTplHtml('exec24h.bullet.sev', {c: crit}) : '';
+      li(I18N.tTplHtml('exec24h.bullet.alerts', {n: nAlerts, sev: sevSuffix}));
+    }
+    if (venues.length){
+      li(I18N.tTplHtml('exec24h.bullet.venues', {v: venues.slice(0,4).join(', ')}));
+    }
+    if (news.length){
+      li(I18N.tTplHtml('exec24h.bullet.news', {n: news.length}));
+    } else {
+      li(I18N.tKeyHtml('exec24h.bullet.news.zero'));
+    }
+    if (rings > 0){
+      li(I18N.tTplHtml('exec24h.bullet.ring', {n: rings}));
+    }
+  }
+  render();
+  document.addEventListener('langchange', render);
 })();
 
 // ========== incidentes (backtest) ==========
