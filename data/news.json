@@ -15,8 +15,8 @@
         1
       ]
     ],
-    "generated_at": "2026-06-04T15:52:57+00:00",
-    "runtime_sec": 4.33
+    "generated_at": "2026-06-04T16:05:11+00:00",
+    "runtime_sec": 3.77
   },
   "items": [
     {
@@ -175,9 +175,25 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-04T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 15,
+      "_n_alerts": 17,
       "_corroboration_score": 5
     }
   ]
