@@ -11,29 +11,29 @@
     "with_watcher_corroboration": 1,
     "top_sources": [
       [
-        "MoneyTimes Cripto",
+        "Livecoins",
         1
       ]
     ],
-    "generated_at": "2026-06-04T12:27:05+00:00",
-    "runtime_sec": 4.18
+    "generated_at": "2026-06-04T15:52:57+00:00",
+    "runtime_sec": 4.33
   },
   "items": [
     {
-      "source": "MoneyTimes Cripto",
+      "source": "Livecoins",
       "bucket": "cripto",
-      "title": "Banco Central passa a exigir auditoria independente para autorizar empresas de criptoativos",
-      "link": "https://www.moneytimes.com.br/banco-central-passa-a-exigir-auditoria-independente-para-autorizar-empresas-de-criptoativos-rens/",
-      "summary": "O Banco Central informou nesta sexta-feira que o processo de autorização para prestadoras de serviços de ativos virtuais passará a exigir, a partir de junho, a apresentação de um relatório emitido por auditoria independente registrada na Comissão de Valores Mobiliários (CVM). De acordo com a autarquia, a análise passará a considerar “opinião técnica independente sobre [&#8230;]",
-      "ts_iso": "2026-05-29T18:34:25+00:00",
-      "hash": "6896b3321cc79a83",
+      "title": "HackaNation 2026 anuncia projetos vencedores durante encerramento do TokenNation, em São Paulo",
+      "link": "https://livecoins.com.br/hackanation-2026-anuncia-projetos-vencedores-durante-encerramento-do-tokennation-em-sao-paulo/",
+      "summary": "O HackaNation 2026, hackathon oficial do TokenNation, anunciou nesta segunda-feira, 2 de junho, os projetos vencedores de sua terceira edição durante o encerramento do evento, realizado no Parque Ibirapuera, em São Paulo. O anúncio foi realizado ao vivo no palco do evento, diante de uma audiência formada por desenvolvedores, empreendedores e lideranças do ecossistema de [&#8230;] Fonte: HackaNation 2026 anuncia projetos vencedores durante encerramento do TokenNation, em São Paulo Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-06-04T12:32:00+00:00",
+      "hash": "65918d63d6830078",
       "_score": {
-        "cyber": 0,
+        "cyber": 5,
         "attack": 0,
         "launder": 0,
-        "cft": 4,
-        "pix": 2,
-        "crypto": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
         "value": 0,
         "named_fi": 0,
         "political_noise": 0,
@@ -41,23 +41,47 @@
         "incident_verbs": 0
       },
       "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
+        "cyber": [
+          "hackanation"
         ],
-        "pix": [
-          "banco central"
+        "crypto": [
+          "bitcoin"
         ]
       },
-      "_total": 6,
+      "_total": 7,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 4,
+        "pos": 1,
         "neg": 0,
-        "score": 4
+        "score": 1
       },
       "_alerts": [
         {
-          "ts": "2026-05-28T12:00:00+00:00",
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -65,31 +89,63 @@
           "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-05-28T12:00:00+00:00",
+          "ts": "2026-06-02T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "high",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
           "venue": "Mercado Bitcoin",
           "asset": "ETH",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-05-30T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-05-31T12:00:00+00:00",
+          "ts": "2026-06-02T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
+          "venue": "Foxbit",
+          "asset": "ETH",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-01T12:00:00+00:00",
+          "ts": "2026-06-03T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -97,23 +153,31 @@
           "narrative": "hourly_corr"
         },
         {
-          "ts": "2026-06-01T12:00:00+00:00",
+          "ts": "2026-06-03T12:00:00+00:00",
           "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BNB",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-01T12:00:00+00:00",
+          "ts": "2026-06-03T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "ETH",
+          "venue": "Foxbit",
+          "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-04T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 15,
       "_corroboration_score": 5
     }
   ]
