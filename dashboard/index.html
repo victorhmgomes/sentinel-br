@@ -410,6 +410,8 @@ tr.degraded-row{background:rgba(224,184,74,.03)}
 .mode-btn.lang-btn .lang-globe{font-size:13px;opacity:.85;margin-right:2px}
 /* em modo executivo, esconde tudo marcado .tech-only */
 body.mode-executive .tech-only{display:none !important}
+/* em modo técnico, esconde os mini-cards que só servem ao leigo */
+body.mode-technical .exec-only{display:none !important}
 
 /* Section divider — separa blocos lógicos (Topo / Mercado / Fraude / Metodologia).
    Visual deliberadamente minimalista pra não competir com os painéis. */
@@ -981,7 +983,17 @@ body.mode-executive .tech-only{display:none !important}
       </div>
     </div>
   </section>
-  <section class="panel" id="tron-panel">
+  <section class="panel exec-only" id="tron-mini" style="padding:14px 18px;border-left:4px solid #6aa5ff">
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <div style="font-size:22px;line-height:1">🛤️</div>
+      <div style="flex:1;min-width:200px">
+        <div style="color:var(--text);font-size:13.5px;font-weight:600" data-i18n="tron.mini.title">USDT TRC-20 · rail dominante de cash-out BR</div>
+        <div style="color:var(--muted);font-size:12px;margin-top:2px" data-i18n="tron.mini.sub">365 dias de série on-chain monitorados · monitoramento contínuo</div>
+      </div>
+      <a href="#" id="tron-mini-cta" style="color:#7ab8ff;text-decoration:none;font-size:12.5px;border:1px solid #2c4766;padding:5px 10px;border-radius:5px" data-i18n="tron.mini.cta">→ Ver detalhes (modo técnico)</a>
+    </div>
+  </section>
+  <section class="panel tech-only" id="tron-panel">
     <div class="panel-title">
       <div>
         <h2 data-i18n="tron.title">TRON · USDT TRC-20 · rail dominante de cash-out BR</h2>
@@ -1063,14 +1075,14 @@ body.mode-executive .tech-only{display:none !important}
       <b>Por que BRL?</b> Fraudes brasileiras fazem cash-out nas venues BR (PIX → conta-laranja → exchange BR → saída cripto). O volume em BRL por venue é o sinal mais direto. USD em venues globais entra apenas como referência macro (Binance BTCUSDT como eixo global).
     </p>
   </section>
-  <section class="panel">
+  <section class="panel tech-only">
     <div class="panel-title"><h2 data-i18n="conc.title">Concentração BR: MB × Foxbit</h2><small data-i18n="conc.sub">Participação no volume BTC spot diário</small></div>
     <div class="chart-wrap"><canvas id="chart-conc"></canvas></div>
     <p style="color:var(--muted);font-size:12px;margin-top:8px;line-height:1.5" data-i18n-html="conc.foot">
       <b>O que é:</b> fatia diária de MB vs. Foxbit no volume BTC-BRL. <b>Por que importa:</b> quedas abruptas na fatia dominante sugerem dispersão do cash-out entre venues para fugir da monitoração de um único VASP. Típico em fases de <i>smurfing</i> entre múltiplas corretoras brasileiras.
     </p>
   </section>
-  <section class="grid-2">
+  <section class="grid-2 tech-only">
     <div class="panel">
       <div class="panel-title"><h2 data-i18n="flight.title">Fuga para stablecoin (USDT/BTC)</h2><small data-i18n="flight.sub">Proxy de layering pós-incidente</small></div>
       <div class="chart-wrap"><canvas id="chart-flight"></canvas></div>
@@ -1243,7 +1255,7 @@ body.mode-executive .tech-only{display:none !important}
       <b>Leitura honesta:</b> com granularidade diária, o base rate de alertas é alto (35% dos dias têm pelo menos 1 alerta). Isso faz com que "ter alerta em ±3d" seja pouco discriminativo — janela aleatória já teria 95% de hit. O indicador <b>BR+USDT</b> (venue brasileiro em stablecoin) é mais restritivo (base rate 17%, janela aleatória 73%) e é onde os picos mais relevantes aparecem. Em produção, intra-day (5min) + orderbook L2 + conjunção de indicadores colapsam esse base rate drasticamente.
     </p>
   </section>
-  <section class="panel">
+  <section class="panel tech-only">
     <div class="panel-title">
       <div>
         <h2 data-i18n="tl.title">Timeline de alertas</h2>
@@ -1407,6 +1419,23 @@ body.mode-executive .tech-only{display:none !important}
     if (e.target.id === 'glossary-overlay') closer();
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closer(); });
+
+  // CTAs que pedem pra mudar pro modo técnico (ex: "ver detalhes" no card TRON mini)
+  function switchToTechnical(){
+    const techBtn = document.querySelector('.mode-bar .mode-btn[data-mode="technical"]');
+    if (techBtn) techBtn.click();
+  }
+  document.querySelectorAll('[data-mode-switch="technical"]').forEach(el => {
+    el.addEventListener('click', e => { e.preventDefault(); switchToTechnical(); });
+  });
+  const tronCta = document.getElementById('tron-mini-cta');
+  if (tronCta) {
+    tronCta.addEventListener('click', e => {
+      e.preventDefault();
+      switchToTechnical();
+      setTimeout(() => document.getElementById('tron-panel')?.scrollIntoView({behavior:'smooth', block:'start'}), 100);
+    });
+  }
 })();
 
 // ========== i18n · PT (default) ↔ EN ==========
@@ -1640,6 +1669,11 @@ const I18N = (function(){
     // tron
     'tron.title':                 {pt:'TRON · USDT TRC-20 · rail dominante de cash-out BR',
                                     en:'TRON · USDT TRC-20 · dominant BR cash-out rail'},
+    'tron.mini.title':            {pt:'USDT TRC-20 · rail dominante de cash-out BR',
+                                    en:'USDT TRC-20 · dominant BR cash-out rail'},
+    'tron.mini.sub':              {pt:'365 dias de série on-chain monitorados · monitoramento contínuo',
+                                    en:'365 days of on-chain series monitored · continuous tracking'},
+    'tron.mini.cta':              {pt:'→ Ver detalhes (modo técnico)', en:'→ See details (technical mode)'},
     'tron.meta':                  {pt:'stats da rede + exchange hot-wallets · TronScan público',
                                     en:'network stats + exchange hot-wallets · public TronScan'},
     'tron.kpi.avg':               {pt:'Tx USDT · média/dia', en:'USDT tx · daily avg'},
@@ -1949,6 +1983,22 @@ const I18N = (function(){
     'press.empty.html': {
       pt: 'Sem itens classificados. Rode <code>python3 scripts/news/news_watch.py</code> para popular.',
       en: 'No classified items. Run <code>python3 scripts/news/news_watch.py</code> to populate.',
+    },
+    'press.empty.quiet.title': {
+      pt: 'Imprensa silenciosa no ciclo atual',
+      en: 'Press quiet in the current cycle',
+    },
+    'press.empty.quiet.body': {
+      pt: 'Nenhuma matéria de incidente cyber-bancário BR identificada na coleta mais recente. Isso é o estado <i>esperado</i> em períodos sem incidente público — não significa ausência de sinal técnico. O pipeline de detecção (alertas e backtest) continua ativo na seção abaixo.',
+      en: 'No BR cyber-banking incident article identified in the most recent crawl. This is the <i>expected</i> state during periods without a public incident — it does not mean absence of technical signal. The detection pipeline (alerts and backtest) remains active in the section below.',
+    },
+    'press.empty.quiet.meta': {
+      pt: 'última coleta {last} · 13 fontes RSS · filtro: cyber + foco BR',
+      en: 'last crawl {last} · 13 RSS sources · filter: cyber + BR focus',
+    },
+    'press.meta.quiet': {
+      pt: 'agregador de RSS BR · 13 fontes · <b>nenhum item matching no ciclo</b> · última coleta {last}',
+      en: 'BR RSS aggregator · 13 sources · <b>no matching items in this cycle</b> · last crawl {last}',
     },
     'calib.meta': {
       pt: '6 detectores · grid de perturbação × sweep de threshold · pipeline: <code>scripts/backtest/run_backtest.py</code>',
@@ -2479,8 +2529,28 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
     const raw = document.getElementById('NEWS').textContent.trim();
     payload = JSON.parse(raw);
   } catch(e){}
+
+  // ---- empty-state informativo ----
+  function renderEmptyQuiet(sum){
+    const last = sum && sum.generated_at ? sum.generated_at.slice(0,16).replace('T',' ') + ' UTC' : '—';
+    const meta = document.getElementById('press-meta');
+    if (meta) meta.innerHTML = I18N.tTplHtml('press.meta.quiet', {last: last});
+    // zera os KPIs visualmente
+    ['press-kpi-total','press-kpi-high','press-kpi-med','press-kpi-corr'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.textContent = '0';
+    });
+    root.innerHTML = `
+      <div class="press-empty" style="padding:28px 22px;text-align:left;border-style:solid;background:rgba(122,184,255,.03)">
+        <div style="font-size:22px;margin-bottom:10px">🟢</div>
+        <div style="color:var(--text);font-size:14.5px;font-weight:600;margin-bottom:6px">${I18N.tKey('press.empty.quiet.title')}</div>
+        <div style="color:var(--muted);font-size:12.5px;line-height:1.6;margin-bottom:10px">${I18N.tKey('press.empty.quiet.body')}</div>
+        <div style="color:var(--muted);font-size:11.5px;font-family:var(--mono)">${I18N.tTpl('press.empty.quiet.meta', {last: last})}</div>
+      </div>`;
+  }
+
   if (!payload || !Array.isArray(payload.items) || !payload.items.length) {
-    // mantém mensagem estática
+    renderEmptyQuiet(payload ? payload.summary : null);
+    document.addEventListener('langchange', () => renderEmptyQuiet(payload ? payload.summary : null));
     return;
   }
 
