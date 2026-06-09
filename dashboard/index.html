@@ -725,9 +725,9 @@ body.mode-technical .exec-only{display:none !important}
   <button class="mode-btn lang-btn" id="lang-toggle" type="button"
           title="Switch language · Alternar idioma" aria-label="Toggle language">
     <span class="lang-globe" aria-hidden="true">🌐</span>
-    <span class="lang-chip active" data-lang="pt">PT</span>
+    <span class="lang-chip" data-lang="pt">PT</span>
     <span class="lang-sep">|</span>
-    <span class="lang-chip" data-lang="en">EN</span>
+    <span class="lang-chip active" data-lang="en">EN</span>
   </button>
   <button class="mode-btn glossary-btn" data-mode="glossary" type="button"
           data-i18n="mode.glossary"
@@ -1289,7 +1289,7 @@ body.mode-technical .exec-only{display:none !important}
       </table>
     </div>
   </section>
-  <section class="section-divider tech-only" id="div-metodo">
+  <section class="section-divider" id="div-metodo">
     <div class="section-divider-inner">
       <h2 data-i18n="div-metodo.title">Metodologia</h2>
       <small data-i18n="div-metodo.sub">Calibração, FP/FN e roadmap dos detectores</small>
@@ -1357,7 +1357,7 @@ body.mode-technical .exec-only{display:none !important}
       <p style="color:var(--muted);font-size:12px;margin:12px 0 0;line-height:1.55" data-i18n-html="flight.limits"><b>Limitações honestas.</b> Cenários sintéticos derivados do mesmo snap real variando 3 parâmetros (queda coordenada, imbalance USDT-BRL, decouple). Sem golden set de ataques reais com orderbook L2 sub-segundo, esses números validam a <i>lógica</i> (o detector dispara quando deve e cala quando não deve) mas não projetam FP/TP de produção. Próximo passo: capturar livro L2 em 5 min ao redor de incidentes conhecidos (Sinqia/HSBC, BTG 22/03) pra calibração definitiva.</p>
     </div>
   </section>
-  <section class="panel tech-only">
+  <section class="panel">
     <div class="panel-title"><h2 data-i18n="ind.title">Indicadores &amp; metodologia</h2><small data-i18n="ind.sub">Ativos em produção + roadmap</small></div>
     <div class="grid-3" id="indicators"></div>
   </section>
@@ -2107,7 +2107,7 @@ const I18N = (function(){
   };
 
   // ---- estado ----
-  let lang = 'pt';
+  let lang = 'en';
   const ORIG_TEXT = new WeakMap();   // node → texto PT original (para reverter)
   const ORIG_HTML = new WeakMap();   // el → innerHTML PT original
   const ORIG_ATTR = new WeakMap();   // el → {attr: original}
