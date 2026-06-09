@@ -3597,8 +3597,8 @@ renderAlerts();
     });
   }
   function ringDaysRecent(dates){
-    const r = (DATA.ring_of_mules || []).filter(x => dates.includes(x.date));
-    return r.length;
+    const days = (DATA.ring_of_mules && DATA.ring_of_mules.days) || [];
+    return days.filter(x => dates.includes(x.date)).length;
   }
   function render(){
     const L = I18N.lang;
