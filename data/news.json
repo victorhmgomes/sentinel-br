@@ -1,22 +1,26 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 1,
-      "medium": 1,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Valor Investe",
         2
+      ],
+      [
+        "Livecoins",
+        1
       ]
     ],
-    "generated_at": "2026-06-16T08:46:07+00:00",
-    "runtime_sec": 3.93
+    "generated_at": "2026-06-17T08:28:45+00:00",
+    "runtime_sec": 3.72
   },
   "items": [
     {
@@ -64,8 +68,79 @@
         "neg": 0,
         "score": 5
       },
-      "_alerts": [],
-      "_n_alerts": 0,
+      "_alerts": [
+        {
+          "ts": "2026-06-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Polícia Civil determina bloqueio de R$ 12 milhões em criptoativos após invasão de sistemas do Detran no DF",
+      "link": "https://livecoins.com.br/policia-civil-determina-bloqueio-de-r-12-milhoes-em-criptoativos-apos-invasao-de-sistemas-do-detran-no-df/",
+      "summary": "A Polícia Civil do Distrito Federal (PCDF) deflagrou uma nova etapa de fiscalização contra fraudes cibernéticas nesta terça-feira (16), quando os agentes cumprem ordens judiciais de busca com o intuito de desarticular um grupo suspeito de adulterar dados públicos. A Delegacia Especial de Repressão aos Crimes Cibernéticos (DRCC) coordena as ações para interromper os acessos [&#8230;] Fonte: Polícia Civil determina bloqueio de R$ 12 milhões em criptoativos após invasão de sistemas do Detran no DF Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-06-16T16:23:48+00:00",
+      "hash": "f748678f2390188f",
+      "_score": {
+        "cyber": 5,
+        "attack": 3,
+        "launder": 3,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "deflagrou"
+        ],
+        "crypto": [
+          "bitcoin"
+        ],
+        "value": [
+          "r$ 1",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 12 milh"
+        ]
+      },
+      "_total": 18,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
       "_corroboration_score": 2
     },
     {
@@ -111,9 +186,18 @@
         "neg": 0,
         "score": 4
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-06-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     }
   ]
 }
