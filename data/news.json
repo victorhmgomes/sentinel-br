@@ -1,102 +1,40 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
-      "high": 1,
-      "medium": 2,
+      "high": 0,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 1,
     "top_sources": [
       [
-        "Valor Investe",
-        2
-      ],
-      [
-        "Livecoins",
+        "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-06-17T08:28:45+00:00",
-    "runtime_sec": 3.72
+    "generated_at": "2026-06-18T08:07:46+00:00",
+    "runtime_sec": 3.82
   },
   "items": [
     {
-      "source": "Valor Investe",
+      "source": "Folha Mercado",
       "bucket": "economia",
-      "title": "BC comunica vazamento de dados ligados à Polícia Civil do Maranhão",
-      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/06/12/bc-comunica-vazamento-de-dados-ligados-a-policia-civil-do-maranhao.ghtml",
-      "summary": "O Banco Central (BC) informou nesta sexta-feira (12) ocorrência de um incidente de segurança envolvendo acessos indevidos a um sistema operado pela Polícia Civil do Maranhão. Foram expostos dados cadastrais vinculados a 828 chaves Pix, em acessos registrados entre os dias 23 e 30 de abril de 2026. As informações acessadas são de natureza cadastral e incluem nome do usuário, CPF, instituição de relacionamento, número da agência, número da conta e a data de criação da chave Pix. Esses dados ficam armazenados no DICT, o diretório que reúne as informações das chaves Pix. Segundo o BC, não houve ex",
-      "ts_iso": "2026-06-12T19:28:17+00:00",
-      "hash": "8231d4e324bf9756",
+      "title": "Grupo de hackers diz ter invadido e roubado dados de dono do Ozempic e Wegovy",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/tec/2026/06/grupo-de-hackers-dizem-ter-invadido-e-roubado-dados-da-dono-do-ozempic-e-wegovy.shtml",
+      "summary": "Um grupo de extorsão cibernética afirmou na terça-feira (16) ter roubado mais de 1 terabyte (equivalente a 1 milhão de megabytes) de dados da gigante farmacêutica e disse que está vendendo partes dos dados obtidos na invasão após fracassar na tentativa de extorquir US$ 25 milhões (R$ 126,82 milhões) da empresa. Leia mais (06/17/2026 - 10h50)",
+      "ts_iso": "2026-06-17T13:50:00+00:00",
+      "hash": "58a3392e1f66621c",
       "_score": {
-        "cyber": 10,
-        "attack": 2,
+        "cyber": 15,
+        "attack": 5,
         "launder": 0,
         "cft": 0,
-        "pix": 6,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "incidente de segurança",
-          "vazamento de dados"
-        ],
-        "attack": [
-          "vazamento"
-        ],
-        "pix": [
-          "pix",
-          "banco central",
-          "bc"
-        ],
-        "incident_verbs": [
-          "vazamento de dados"
-        ]
-      },
-      "_total": 22,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Polícia Civil determina bloqueio de R$ 12 milhões em criptoativos após invasão de sistemas do Detran no DF",
-      "link": "https://livecoins.com.br/policia-civil-determina-bloqueio-de-r-12-milhoes-em-criptoativos-apos-invasao-de-sistemas-do-detran-no-df/",
-      "summary": "A Polícia Civil do Distrito Federal (PCDF) deflagrou uma nova etapa de fiscalização contra fraudes cibernéticas nesta terça-feira (16), quando os agentes cumprem ordens judiciais de busca com o intuito de desarticular um grupo suspeito de adulterar dados públicos. A Delegacia Especial de Repressão aos Crimes Cibernéticos (DRCC) coordena as ações para interromper os acessos [&#8230;] Fonte: Polícia Civil determina bloqueio de R$ 12 milhões em criptoativos após invasão de sistemas do Detran no DF Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-06-16T16:23:48+00:00",
-      "hash": "f748678f2390188f",
-      "_score": {
-        "cyber": 5,
-        "attack": 3,
-        "launder": 3,
-        "cft": 0,
         "pix": 0,
-        "crypto": 2,
-        "value": 3,
+        "crypto": 0,
+        "value": 4,
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
@@ -104,87 +42,29 @@
       },
       "_hits": {
         "cyber": [
+          "hackers",
+          "hackers",
           "invasão"
         ],
         "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "deflagrou"
-        ],
-        "crypto": [
-          "bitcoin"
+          "roubado",
+          "extorsão"
         ],
         "value": [
           "r$ 1",
-          "milhões"
+          "milhão",
+          "us$ 2"
         ],
         "incident_verbs": [
-          "r$ 12 milh"
+          "r$ 126,82 milh"
         ]
       },
-      "_total": 18,
+      "_total": 26,
       "_severity": "medium",
       "_br_focus": {
         "pos": 3,
-        "neg": 0,
-        "score": 3
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Regulação do BC aumenta pressão sobre empresas de cripto",
-      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/06/12/regulacao-do-bc-aumenta-pressao-sobre-empresas-de-cripto.ghtml",
-      "summary": "A nova regulação do Banco Central (BC) para prestadores de serviços de ativos virtuais já começou a redesenhar o mercado cripto no Brasil, com a aproximação do prazo para entrada dos pedidos de autorização. Empresas do setor revisam estruturas, recalculam custos e avaliam se terão fôlego para operar com licença própria ou se precisarão se associar a players maiores para continuar oferecendo serviços no país. O prazo final para aplicar para a licença termina no fim de outubro. Até lá, as companhias que atuam com intermediação, custódia, infraestrutura, tokenização ou outros serviços ligados a a",
-      "ts_iso": "2026-06-12T12:37:39+00:00",
-      "hash": "d07fd4af551056e2",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 1,
-        "cft": 4,
-        "pix": 3,
-        "crypto": 2,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "launder": [
-          "estruturas"
-        ],
-        "cft": [
-          "prestadores de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "crypto": [
-          "cripto"
-        ]
-      },
-      "_total": 10,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
+        "neg": 2,
+        "score": 1
       },
       "_alerts": [
         {
