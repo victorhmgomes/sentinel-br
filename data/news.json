@@ -1,70 +1,85 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 5,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 1,
+      "high": 1,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 5,
     "top_sources": [
+      [
+        "G1 Política",
+        3
+      ],
+      [
+        "G1 Economia",
+        1
+      ],
       [
         "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-06-18T08:07:46+00:00",
-    "runtime_sec": 3.82
+    "generated_at": "2026-06-19T08:32:14+00:00",
+    "runtime_sec": 3.69
   },
   "items": [
     {
-      "source": "Folha Mercado",
+      "source": "G1 Economia",
       "bucket": "economia",
-      "title": "Grupo de hackers diz ter invadido e roubado dados de dono do Ozempic e Wegovy",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/tec/2026/06/grupo-de-hackers-dizem-ter-invadido-e-roubado-dados-da-dono-do-ozempic-e-wegovy.shtml",
-      "summary": "Um grupo de extorsão cibernética afirmou na terça-feira (16) ter roubado mais de 1 terabyte (equivalente a 1 milhão de megabytes) de dados da gigante farmacêutica e disse que está vendendo partes dos dados obtidos na invasão após fracassar na tentativa de extorquir US$ 25 milhões (R$ 126,82 milhões) da empresa. Leia mais (06/17/2026 - 10h50)",
-      "ts_iso": "2026-06-17T13:50:00+00:00",
-      "hash": "58a3392e1f66621c",
+      "title": "Alvo da PF na Operação Compliance Zero: relembre a trajetória do Banco Pleno até a liquidação pelo BC",
+      "link": "https://g1.globo.com/economia/noticia/2026/06/18/banco-pleno-compliance-zero.ghtml",
+      "summary": "PF cumpre 18 mandados em nova fase da Compliance Zero A Polícia Federal (PF) deflagrou, nesta quinta-feira (18), a 9ª fase da Operação Compliance Zero, que apura um suposto esquema bilionário de fraudes, corrupção, lavagem de dinheiro e obstrução da Justiça ligado ao Banco Master. Entre os alvos estão o senador Jaques Wagner (PT-BA) e o banqueiro Augusto Ferreira Lima, dono do Banco Pleno, instituição que teve liquidação extrajudicial decretada pelo Banco Central em fevereiro deste ano. 🗒️Tem alguma sugestão de reportagem? Mande para o g1 A instituição pertencia ao grupo Banco Master e havia s",
+      "ts_iso": "2026-06-18T10:38:37+00:00",
+      "hash": "188e0fd9aee38375",
       "_score": {
-        "cyber": 15,
-        "attack": 5,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
+        "cyber": 0,
+        "attack": 3,
+        "launder": 12,
+        "cft": 2,
+        "pix": 3,
         "crypto": 0,
-        "value": 4,
-        "named_fi": 0,
-        "political_noise": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 2,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 0
       },
       "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers",
-          "invasão"
-        ],
         "attack": [
-          "roubado",
-          "extorsão"
+          "fraudes"
         ],
-        "value": [
-          "r$ 1",
-          "milhão",
-          "us$ 2"
+        "launder": [
+          "lavagem",
+          "pf",
+          "polícia federal",
+          "deflagrou"
         ],
-        "incident_verbs": [
-          "r$ 126,82 milh"
+        "cft": [
+          "compliance"
+        ],
+        "pix": [
+          "banco central",
+          "bc"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "pt"
         ]
       },
-      "_total": 26,
-      "_severity": "medium",
+      "_total": 28,
+      "_severity": "high",
       "_br_focus": {
-        "pos": 3,
-        "neg": 2,
-        "score": 1
+        "pos": 11,
+        "neg": 0,
+        "score": 11,
+        "named_fi_bump": 2
       },
       "_alerts": [
         {
@@ -74,6 +89,270 @@
           "venue": "Binance",
           "asset": "XRP",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Jaques Wagner tem nossa confiança e 'esclarecerá todos os fatos', diz presidente do PT",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/18/jaques-wagner-tem-nossa-confianca-e-esclarecera-todos-os-fatos-diz-presidente-do-pt.ghtml",
+      "summary": "PF diz que Jaques Wagner recebeu ‘vantagens econômicas indevidas’ O presidente nacional do Partido dos Trabalhadores (PT), Edinho Silva, saiu nesta quinta-feira (18) em defesa do líder do governo Lula no Senado, Jaques Wagner (PT-BA), e afirmou que o petista vai esclarecer os fatos após ser alvo da 9ª fase da Operação Compliance Zero, da Polícia Federal. A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que Jaques Wagner teria recebido uma série de vantagens indevidas em troca de atuação política no Congresso, como um apartamento em Salvador ",
+      "ts_iso": "2026-06-18T15:11:11+00:00",
+      "hash": "92a586e6f2a2b602",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 2,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "pt"
+        ]
+      },
+      "_total": 18,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Políticos repercutem operação da PF contra Jaques Wagner, líder do governo no Senado",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/18/politicos-repercutem-operacao-da-pf-contra-jaques-wagner-lider-do-governo-no-senado.ghtml",
+      "summary": "PF diz que Jaques Wagner recebeu ‘vantagens econômicas indevidas’ Parlamentares da oposição e da base governista, políticos e ministros do governo Lula repercutiram nesta quinta-feira (18) a operação da Polícia Federal contra Jaques Wagner (PT-BA), líder do governo no Senado. Jaques é alvo da 9ª fase da Operação Compliance Zero. A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que o parlamentar teria recebido uma série de vantagens indevidas em troca de atuação política no Congresso, como um apartamento em Salvador e R$ 3,5 milhões. A TV Glo",
+      "ts_iso": "2026-06-18T14:21:58+00:00",
+      "hash": "6fc79c2949e36f73",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 2,
+        "pix": 0,
+        "crypto": 0,
+        "value": 3,
+        "named_fi": 6,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "value": [
+          "r$ 3",
+          "milhões"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "pt"
+        ],
+        "incident_verbs": [
+          "r$ 3,5 milh"
+        ]
+      },
+      "_total": 23,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 12,
+        "neg": 0,
+        "score": 12,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "PF apreende 49 mil dólares em espécie em endereço ligado a Jaques Wagner em Brasília",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/18/pf-apreende-49-mil-dolares-em-especie-em-endereco-ligado-a-jaques-wagner-em-brasilia.ghtml",
+      "summary": "PF apreende US$ 49 mil durante nova fase da operação Compliance Zero em Brasília A Polícia Federal (PF) apreendeu US$ 49 mil dólares em espécie (valor correspondente a R$ 250 mil na cotação desta quinta), em um endereço em Brasília ligado ao senador Jaques Wagner (PT-BA), alvo da 9ª fase da Operação Compliance Zero, deflagrada nesta quinta-feira (18). 📱Favorite o g1 no Google e acompanhe as principais notícias do dia A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que o parlamentar teria recebido uma série de vantagens indevidas em troca de",
+      "ts_iso": "2026-06-18T13:48:04+00:00",
+      "hash": "884debfe77b749d5",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 8,
+        "cft": 2,
+        "pix": 0,
+        "crypto": 0,
+        "value": 3,
+        "named_fi": 6,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal",
+          "deflagrada"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "value": [
+          "r$ 2",
+          "us$ 4"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "pt"
+        ]
+      },
+      "_total": 24,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 13,
+        "neg": 2,
+        "score": 11,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Entenda a Operação Compliance Zero, que investiga fraudes envolvendo o Banco Master",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/06/entenda-a-operacao-compliance-zero-que-investiga-fraudes-envolvendo-o-banco-master.shtml",
+      "summary": "Deflagrada pela primeira vez em novembro de 2025, a operação Compliance Zero , da PF ( Polícia Federal ), apura um esquema bilionário de fraudes financeiras do Banco Master, que teria usado estruturas do mercado de capitais para desviar recursos e mascarar prejuízos. Leia mais (06/18/2026 - 10h18)",
+      "ts_iso": "2026-06-18T13:18:00+00:00",
+      "hash": "d073bcc2fdd6624d",
+      "_score": {
+        "cyber": 0,
+        "attack": 6,
+        "launder": 9,
+        "cft": 2,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes",
+          "desviar"
+        ],
+        "launder": [
+          "estruturas",
+          "pf",
+          "polícia federal",
+          "deflagrada"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ]
+      },
+      "_total": 23,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 0,
+        "score": 9,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
       "_n_alerts": 1,
