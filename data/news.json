@@ -1,21 +1,21 @@
 {
   "summary": {
-    "n_items": 5,
+    "n_items": 6,
     "by_severity": {
-      "critical": 0,
+      "critical": 1,
       "high": 1,
       "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 6,
     "top_sources": [
       [
         "G1 Política",
-        3
+        4
       ],
       [
-        "G1 Economia",
+        "Tecmundo",
         1
       ],
       [
@@ -23,13 +23,66 @@
         1
       ]
     ],
-    "generated_at": "2026-06-19T08:32:14+00:00",
-    "runtime_sec": 3.69
+    "generated_at": "2026-06-20T07:01:17+00:00",
+    "runtime_sec": 4.14
   },
   "items": [
     {
-      "source": "G1 Economia",
-      "bucket": "economia",
+      "source": "Tecmundo",
+      "bucket": "seguranca",
+      "title": "PF deflagra Operação Obadias 3:4 contra invasão de contas da Caixa em Sergipe",
+      "link": "https://www.tecmundo.com.br/seguranca/414024-pf-deflagra-operacao-obadias-34-contra-invasao-de-contas-da-caixa-em-sergipe.htm",
+      "summary": "",
+      "ts_iso": "2026-06-19T22:30:00+00:00",
+      "hash": "526ae9e6d816e657",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 5,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 3,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "pf",
+          "deflagra"
+        ],
+        "named_fi": [
+          "caixa"
+        ]
+      },
+      "_total": 13,
+      "_severity": "critical",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
       "title": "Alvo da PF na Operação Compliance Zero: relembre a trajetória do Banco Pleno até a liquidação pelo BC",
       "link": "https://g1.globo.com/economia/noticia/2026/06/18/banco-pleno-compliance-zero.ghtml",
       "summary": "PF cumpre 18 mandados em nova fase da Compliance Zero A Polícia Federal (PF) deflagrou, nesta quinta-feira (18), a 9ª fase da Operação Compliance Zero, que apura um suposto esquema bilionário de fraudes, corrupção, lavagem de dinheiro e obstrução da Justiça ligado ao Banco Master. Entre os alvos estão o senador Jaques Wagner (PT-BA) e o banqueiro Augusto Ferreira Lima, dono do Banco Pleno, instituição que teve liquidação extrajudicial decretada pelo Banco Central em fevereiro deste ano. 🗒️Tem alguma sugestão de reportagem? Mande para o g1 A instituição pertencia ao grupo Banco Master e havia s",
