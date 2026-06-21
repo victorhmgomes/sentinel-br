@@ -1,8 +1,8 @@
 {
   "summary": {
-    "n_items": 6,
+    "n_items": 7,
     "by_severity": {
-      "critical": 1,
+      "critical": 2,
       "high": 1,
       "medium": 4,
       "low": 0,
@@ -12,19 +12,19 @@
     "top_sources": [
       [
         "G1 Política",
-        4
+        5
       ],
       [
         "Tecmundo",
         1
       ],
       [
-        "Folha Mercado",
+        "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-06-20T07:01:17+00:00",
-    "runtime_sec": 4.14
+    "generated_at": "2026-06-21T08:00:27+00:00",
+    "runtime_sec": 3.58
   },
   "items": [
     {
@@ -154,6 +154,102 @@
       ],
       "_n_alerts": 2,
       "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "PF abre investigação preliminar para apurar alertas falsos enviados por sistema da Defesa Civil",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/20/pf-abre-investigacao-preliminar-para-apurar-alertas-extremos-enviados-por-sistema-da-defesa-civil.ghtml",
+      "summary": "A Polícia Federal abriu neste sábado (20) uma investigação preliminar para apurar o disparo de falsos alertas extremos por uma plataforma da Defesa Civil. Segundo a PF, o procedimento já está em curso. 🔎Uma investigação preliminar é o conjunto de atos e diligências iniciais realizados antes ou de forma preparatória à instauração formal de um inquérito policial. A plataforma de envios Defesa Civil Alerta sofreu uma invasão e foram disparadas notificações para celulares de pelo menos sete unidades da federação na madrugada deste sábado. Secretário diz que 10 alertas falsos foram disparados Por q",
+      "ts_iso": "2026-06-20T16:18:27+00:00",
+      "hash": "354bd9eeefeca50d",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 5,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "incident_verbs": [
+          "sofreu uma invasão"
+        ]
+      },
+      "_total": 14,
+      "_severity": "critical",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "ETs? Mistério? Susto com alerta extremo da Defesa Civil Nacional vira meme nas redes sociais",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/06/20/memes-alerta-extremo-defesa-civil.ghtml",
+      "summary": "Polícia Federal vai investigar alerta da Defesa Civil enviado de forma errada Moradores de ao menos sete cidades brasileiras receberam um alerta sonoro extremo da Defesa Civil entre a noite de sexta-feira (19) e a madrugada deste sábado (20). As mensagens tinham a palavra \"misantropia\", sem relação com uma situação real de risco. A Defesa Civil Nacional informou que a plataforma usada para o envio dos alertas foi retirada do ar à 1h30 deste sábado (20), depois de sofrer uma invasão. Segundo o órgão, o disparo foi feito remotamente por alguém sem autorização e pode ter sido resultado de um ataq",
+      "ts_iso": "2026-06-20T11:40:45+00:00",
+      "hash": "fcfbe6946b5f9a51",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 3,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "polícia federal"
+        ],
+        "incident_verbs": [
+          "sofrer uma invasão"
+        ]
+      },
+      "_total": 12,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     },
     {
       "source": "G1 Política",
@@ -335,67 +431,6 @@
         "pos": 13,
         "neg": 2,
         "score": 11,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Entenda a Operação Compliance Zero, que investiga fraudes envolvendo o Banco Master",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/06/entenda-a-operacao-compliance-zero-que-investiga-fraudes-envolvendo-o-banco-master.shtml",
-      "summary": "Deflagrada pela primeira vez em novembro de 2025, a operação Compliance Zero , da PF ( Polícia Federal ), apura um esquema bilionário de fraudes financeiras do Banco Master, que teria usado estruturas do mercado de capitais para desviar recursos e mascarar prejuízos. Leia mais (06/18/2026 - 10h18)",
-      "ts_iso": "2026-06-18T13:18:00+00:00",
-      "hash": "d073bcc2fdd6624d",
-      "_score": {
-        "cyber": 0,
-        "attack": 6,
-        "launder": 9,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraudes",
-          "desviar"
-        ],
-        "launder": [
-          "estruturas",
-          "pf",
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
         "named_fi_bump": 2
       },
       "_alerts": [
