@@ -8,24 +8,77 @@
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 6,
     "top_sources": [
       [
         "G1 Política",
-        4
+        5
       ],
       [
         "G1 Economia",
-        2
+        1
       ]
     ],
-    "generated_at": "2026-06-22T08:58:17+00:00",
-    "runtime_sec": 11.96
+    "generated_at": "2026-06-23T06:51:30+00:00",
+    "runtime_sec": 3.02
   },
   "items": [
     {
-      "source": "G1 Economia",
-      "bucket": "economia",
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "PF abre investigação preliminar para apurar alertas falsos enviados por sistema da Defesa Civil",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/20/pf-abre-investigacao-preliminar-para-apurar-alertas-extremos-enviados-por-sistema-da-defesa-civil.ghtml",
+      "summary": "A Polícia Federal abriu neste sábado (20) uma investigação preliminar para apurar o disparo de falsos alertas extremos por uma plataforma da Defesa Civil. Segundo a PF, o procedimento já está em curso. 🔎Uma investigação preliminar é o conjunto de atos e diligências iniciais realizados antes ou de forma preparatória à instauração formal de um inquérito policial. A plataforma de envios Defesa Civil Alerta sofreu uma invasão e foram disparadas notificações para celulares de pelo menos sete unidades da federação na madrugada deste sábado. Secretário diz que 10 alertas falsos foram disparados Por q",
+      "ts_iso": "2026-06-20T16:18:27+00:00",
+      "hash": "354bd9eeefeca50d",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 5,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "incident_verbs": [
+          "sofreu uma invasão"
+        ]
+      },
+      "_total": 14,
+      "_severity": "critical",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-22T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
       "title": "Alvo da PF na Operação Compliance Zero: relembre a trajetória do Banco Pleno até a liquidação pelo BC",
       "link": "https://g1.globo.com/economia/noticia/2026/06/18/banco-pleno-compliance-zero.ghtml",
       "summary": "PF cumpre 18 mandados em nova fase da Compliance Zero A Polícia Federal (PF) deflagrou, nesta quinta-feira (18), a 9ª fase da Operação Compliance Zero, que apura um suposto esquema bilionário de fraudes, corrupção, lavagem de dinheiro e obstrução da Justiça ligado ao Banco Master. Entre os alvos estão o senador Jaques Wagner (PT-BA) e o banqueiro Augusto Ferreira Lima, dono do Banco Pleno, instituição que teve liquidação extrajudicial decretada pelo Banco Central em fevereiro deste ano. 🗒️Tem alguma sugestão de reportagem? Mande para o g1 A instituição pertencia ao grupo Banco Master e havia s",
@@ -99,50 +152,6 @@
       "_corroboration_score": 4
     },
     {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "PF abre investigação preliminar para apurar alertas falsos enviados por sistema da Defesa Civil",
-      "link": "https://g1.globo.com/politica/noticia/2026/06/20/pf-abre-investigacao-preliminar-para-apurar-alertas-extremos-enviados-por-sistema-da-defesa-civil.ghtml",
-      "summary": "A Polícia Federal abriu neste sábado (20) uma investigação preliminar para apurar o disparo de falsos alertas extremos por uma plataforma da Defesa Civil. Segundo a PF, o procedimento já está em curso. 🔎Uma investigação preliminar é o conjunto de atos e diligências iniciais realizados antes ou de forma preparatória à instauração formal de um inquérito policial. A plataforma de envios Defesa Civil Alerta sofreu uma invasão e foram disparadas notificações para celulares de pelo menos sete unidades da federação na madrugada deste sábado. Secretário diz que 10 alertas falsos foram disparados Por q",
-      "ts_iso": "2026-06-20T16:18:27+00:00",
-      "hash": "354bd9eeefeca50d",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 5,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "invasão"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "incident_verbs": [
-          "sofreu uma invasão"
-        ]
-      },
-      "_total": 14,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 3
-    },
-    {
       "source": "G1 Economia",
       "bucket": "economia",
       "title": "ETs? Mistério? Susto com alerta extremo da Defesa Civil Nacional vira meme nas redes sociais",
@@ -189,10 +198,18 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-22T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     },
     {
       "source": "G1 Política",
