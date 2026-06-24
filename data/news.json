@@ -3,8 +3,8 @@
     "n_items": 6,
     "by_severity": {
       "critical": 1,
-      "high": 1,
-      "medium": 4,
+      "high": 0,
+      "medium": 5,
       "low": 0,
       "noise": 0
     },
@@ -12,15 +12,27 @@
     "top_sources": [
       [
         "G1 Política",
-        5
+        2
+      ],
+      [
+        "MoneyTimes",
+        1
+      ],
+      [
+        "Folha Mercado",
+        1
+      ],
+      [
+        "Livecoins",
+        1
       ],
       [
         "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-06-23T06:51:30+00:00",
-    "runtime_sec": 3.02
+    "generated_at": "2026-06-24T06:49:25+00:00",
+    "runtime_sec": 4.68
   },
   "items": [
     {
@@ -65,7 +77,15 @@
       },
       "_alerts": [
         {
-          "ts": "2026-06-22T12:00:00+00:00",
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
           "rule": "stablecoin_flight",
           "severity": "medium",
           "venue": "Mercado Bitcoin",
@@ -73,83 +93,192 @@
           "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 4
+      "_n_alerts": 2,
+      "_corroboration_score": 5
     },
     {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Alvo da PF na Operação Compliance Zero: relembre a trajetória do Banco Pleno até a liquidação pelo BC",
-      "link": "https://g1.globo.com/economia/noticia/2026/06/18/banco-pleno-compliance-zero.ghtml",
-      "summary": "PF cumpre 18 mandados em nova fase da Compliance Zero A Polícia Federal (PF) deflagrou, nesta quinta-feira (18), a 9ª fase da Operação Compliance Zero, que apura um suposto esquema bilionário de fraudes, corrupção, lavagem de dinheiro e obstrução da Justiça ligado ao Banco Master. Entre os alvos estão o senador Jaques Wagner (PT-BA) e o banqueiro Augusto Ferreira Lima, dono do Banco Pleno, instituição que teve liquidação extrajudicial decretada pelo Banco Central em fevereiro deste ano. 🗒️Tem alguma sugestão de reportagem? Mande para o g1 A instituição pertencia ao grupo Banco Master e havia s",
-      "ts_iso": "2026-06-18T10:38:37+00:00",
-      "hash": "188e0fd9aee38375",
+      "source": "MoneyTimes",
+      "bucket": "economia",
+      "title": "BC define regras para sucessão de administradores em corretoras, consórcios, SPSAV e IPS",
+      "link": "https://www.moneytimes.com.br/bc-define-regras-para-sucessao-de-administradores-em-corretoras-consorcios-spsav-e-ips/",
+      "summary": "O Banco Central definiu nesta terça-feira, 23, que as administradoras de consórcio, as sociedades corretoras de câmbio, as sociedades prestadoras de serviços de ativos virtuais (SPSAV) e as instituições de pagamento devem implementar e manter uma política de sucessão de administradores aplicável a cargos de alta administração da instituição. A obrigação também abrange as sociedades [&#8230;]",
+      "ts_iso": "2026-06-23T22:57:05+00:00",
+      "hash": "8540b359d0ff54d7",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 5,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central",
+          "bc",
+          "instituições de pagamento"
+        ]
+      },
+      "_total": 9,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "PF descreve esquema no Digimais, de Edir Macedo, similar ao do Banco Master; veja ponto a ponto",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/06/pf-descreve-esquema-no-digimais-de-edir-macedo-similar-ao-do-banco-master-veja-ponto-a-ponto.shtml",
+      "summary": "A Operação Miragem, deflagrada pela Polícia Federal nesta terça-feira (23), descreve um suposto esquema fraudulento no Digimais que se assemelha em diversos pontos ao modus operandi do Banco Master . Leia mais (06/23/2026 - 16h03)",
+      "ts_iso": "2026-06-23T19:03:00+00:00",
+      "hash": "25a31db3108bac46",
       "_score": {
         "cyber": 0,
         "attack": 3,
-        "launder": 12,
-        "cft": 2,
-        "pix": 3,
+        "launder": 8,
+        "cft": 0,
+        "pix": 0,
         "crypto": 0,
         "value": 0,
         "named_fi": 6,
-        "political_noise": 2,
+        "political_noise": 0,
         "commentary": 0,
         "incident_verbs": 0
       },
       "_hits": {
         "attack": [
-          "fraudes"
+          "fraudulento"
         ],
         "launder": [
-          "lavagem",
           "pf",
           "polícia federal",
-          "deflagrou"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
+          "deflagrada"
         ],
         "named_fi": [
           "banco master",
           "master"
-        ],
-        "political_noise": [
-          "pt"
         ]
       },
-      "_total": 28,
-      "_severity": "high",
+      "_total": 17,
+      "_severity": "medium",
       "_br_focus": {
-        "pos": 11,
+        "pos": 9,
         "neg": 0,
-        "score": 11,
+        "score": 9,
         "named_fi_bump": 2
       },
       "_alerts": [
         {
-          "ts": "2026-06-15T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-06-17T12:00:00+00:00",
+          "ts": "2026-06-23T12:00:00+00:00",
           "rule": "hourly_corr",
-          "severity": "high",
+          "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
       "_n_alerts": 2,
-      "_corroboration_score": 4
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Desenvolvedores recebem ofertas de compra por jogos publicados na Steam e comunidade teme uso para malware",
+      "link": "https://livecoins.com.br/desenvolvedores-recebem-ofertas-de-compra-por-jogos-publicados-na-steam-e-comunidade-teme-uso-para-malware/",
+      "summary": "Desenvolvedores de jogos publicados na Steam estão recebendo e-mails com propostas de compra pelos direitos de seus títulos. Nas redes sociais, a comunidade teme que a oferta não seja legítima, mas sim um plano para distribuir malware aos jogadores. Em setembro, por exemplo, um investidor de criptomoedas perdeu R$ 169 mil após baixar um jogo [&#8230;] Fonte: Desenvolvedores recebem ofertas de compra por jogos publicados na Steam e comunidade teme uso para malware Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-06-23T15:20:00+00:00",
+      "hash": "e0c7e1ef74edbe7d",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 2,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "malware"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "value": [
+          "r$ 1"
+        ]
+      },
+      "_total": 11,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     },
     {
       "source": "G1 Economia",
@@ -198,18 +327,10 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-22T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     },
     {
       "source": "G1 Política",
@@ -257,140 +378,6 @@
         "pos": 9,
         "neg": 0,
         "score": 9,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Políticos repercutem operação da PF contra Jaques Wagner, líder do governo no Senado",
-      "link": "https://g1.globo.com/politica/noticia/2026/06/18/politicos-repercutem-operacao-da-pf-contra-jaques-wagner-lider-do-governo-no-senado.ghtml",
-      "summary": "PF diz que Jaques Wagner recebeu ‘vantagens econômicas indevidas’ Parlamentares da oposição e da base governista, políticos e ministros do governo Lula repercutiram nesta quinta-feira (18) a operação da Polícia Federal contra Jaques Wagner (PT-BA), líder do governo no Senado. Jaques é alvo da 9ª fase da Operação Compliance Zero. A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que o parlamentar teria recebido uma série de vantagens indevidas em troca de atuação política no Congresso, como um apartamento em Salvador e R$ 3,5 milhões. A TV Glo",
-      "ts_iso": "2026-06-18T14:21:58+00:00",
-      "hash": "6fc79c2949e36f73",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 5,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
-        "political_noise": 2,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "value": [
-          "r$ 3",
-          "milhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "pt"
-        ],
-        "incident_verbs": [
-          "r$ 3,5 milh"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 12,
-        "neg": 0,
-        "score": 12,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "PF apreende 49 mil dólares em espécie em endereço ligado a Jaques Wagner em Brasília",
-      "link": "https://g1.globo.com/politica/noticia/2026/06/18/pf-apreende-49-mil-dolares-em-especie-em-endereco-ligado-a-jaques-wagner-em-brasilia.ghtml",
-      "summary": "PF apreende US$ 49 mil durante nova fase da operação Compliance Zero em Brasília A Polícia Federal (PF) apreendeu US$ 49 mil dólares em espécie (valor correspondente a R$ 250 mil na cotação desta quinta), em um endereço em Brasília ligado ao senador Jaques Wagner (PT-BA), alvo da 9ª fase da Operação Compliance Zero, deflagrada nesta quinta-feira (18). 📱Favorite o g1 no Google e acompanhe as principais notícias do dia A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que o parlamentar teria recebido uma série de vantagens indevidas em troca de",
-      "ts_iso": "2026-06-18T13:48:04+00:00",
-      "hash": "884debfe77b749d5",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 8,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
-        "political_noise": 2,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal",
-          "deflagrada"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "value": [
-          "r$ 2",
-          "us$ 4"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "pt"
-        ]
-      },
-      "_total": 24,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 13,
-        "neg": 2,
-        "score": 11,
         "named_fi_bump": 2
       },
       "_alerts": [
