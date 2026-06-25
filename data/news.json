@@ -1,21 +1,21 @@
 {
   "summary": {
-    "n_items": 6,
+    "n_items": 5,
     "by_severity": {
       "critical": 1,
       "high": 0,
-      "medium": 5,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 6,
+    "with_watcher_corroboration": 5,
     "top_sources": [
       [
         "G1 Política",
         2
       ],
       [
-        "MoneyTimes",
+        "Valor Investe",
         1
       ],
       [
@@ -23,16 +23,12 @@
         1
       ],
       [
-        "Livecoins",
-        1
-      ],
-      [
         "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-06-24T06:49:25+00:00",
-    "runtime_sec": 4.68
+    "generated_at": "2026-06-25T06:48:03+00:00",
+    "runtime_sec": 5.58
   },
   "items": [
     {
@@ -83,56 +79,57 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-23T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 5
+      "_n_alerts": 1,
+      "_corroboration_score": 4
     },
     {
-      "source": "MoneyTimes",
-      "bucket": "economia",
-      "title": "BC define regras para sucessão de administradores em corretoras, consórcios, SPSAV e IPS",
-      "link": "https://www.moneytimes.com.br/bc-define-regras-para-sucessao-de-administradores-em-corretoras-consorcios-spsav-e-ips/",
-      "summary": "O Banco Central definiu nesta terça-feira, 23, que as administradoras de consórcio, as sociedades corretoras de câmbio, as sociedades prestadoras de serviços de ativos virtuais (SPSAV) e as instituições de pagamento devem implementar e manter uma política de sucessão de administradores aplicável a cargos de alta administração da instituição. A obrigação também abrange as sociedades [&#8230;]",
-      "ts_iso": "2026-06-23T22:57:05+00:00",
-      "hash": "8540b359d0ff54d7",
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Jaques Wagner deixa liderança do governo no Senado após operação da PF",
+      "link": "https://g1.globo.com/politica/noticia/2026/06/24/jaques-wagner-pede-licenca-da-lideranca-do-governo-do-senado-apos-operacao-da-pf.ghtml",
+      "summary": "Jaques Wagner deixa liderança do governo no Senado O senador Jaques Wagner (PT-BA) deixou o cargo de líder do governo no Senado, dias após ser incluído na lista de alvos da 9ª fase da Compliance Zero, operação que investiga um esquema bilionário de fraudes financeiras envolvendo o Banco Master. Nesta quarta-feira (24), o presidente Luiz Inácio Lula da Silva (PT) se reuniu com o senador no Palácio da Alvorada. A conversa durou cerca de duas horas. Após o encontro, Wagner afirmou em uma publicação nas redes sociais que decidiu, em acordo com o presidente, se afastar da liderança no Senado. \"Acab",
+      "ts_iso": "2026-06-24T20:44:48+00:00",
+      "hash": "1ecbd8f46c9c9923",
       "_score": {
         "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 5,
+        "attack": 3,
+        "launder": 2,
+        "cft": 2,
+        "pix": 0,
         "crypto": 0,
         "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
+        "named_fi": 6,
+        "political_noise": 2,
         "commentary": 0,
         "incident_verbs": 0
       },
       "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
+        "attack": [
+          "fraudes"
         ],
-        "pix": [
-          "banco central",
-          "bc",
-          "instituições de pagamento"
+        "launder": [
+          "pf"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "pt"
         ]
       },
-      "_total": 9,
+      "_total": 15,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 2,
+        "pos": 6,
         "neg": 0,
-        "score": 2
+        "score": 6,
+        "named_fi_bump": 2
       },
       "_alerts": [
         {
@@ -142,18 +139,73 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-23T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "PF investiga fraudes no balanço do Digimais e vê semelhança com Master",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/06/24/pf-investiga-fraudes-no-balanco-do-digimais-e-ve-semelhanca-com-master.ghtml",
+      "summary": "A Polícia Federal (PF) deflagrou a operação Miragem para investigar suspeitas de crimes contra o Sistema Financeiro Nacional (SFN) envolvendo o banco Digimais, do bispo Edir Macedo. A instituição financeira já vinha na mira do Banco Central nos últimos anos e é acusada de usar o mesmo “modus operandi” do Master, inflando o balanço com ativos de difícil precificação para seguir captando depósitos e, assim, esconder o que seria uma situação de insolvência. O caso se soma aos escândalos do banco de Daniel Vorcaro e às dificuldades do Banco de Brasília (BRB) e mostra que o processo de “depuração” ",
+      "ts_iso": "2026-06-24T11:47:10+00:00",
+      "hash": "3a61ed89a39d2416",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 8,
+        "cft": 0,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 10,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal",
+          "deflagrou"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 26,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 16,
+        "neg": 0,
+        "score": 16,
+        "named_fi_bump": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-23T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     },
     {
       "source": "Folha Mercado",
@@ -206,79 +258,10 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-23T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Desenvolvedores recebem ofertas de compra por jogos publicados na Steam e comunidade teme uso para malware",
-      "link": "https://livecoins.com.br/desenvolvedores-recebem-ofertas-de-compra-por-jogos-publicados-na-steam-e-comunidade-teme-uso-para-malware/",
-      "summary": "Desenvolvedores de jogos publicados na Steam estão recebendo e-mails com propostas de compra pelos direitos de seus títulos. Nas redes sociais, a comunidade teme que a oferta não seja legítima, mas sim um plano para distribuir malware aos jogadores. Em setembro, por exemplo, um investidor de criptomoedas perdeu R$ 169 mil após baixar um jogo [&#8230;] Fonte: Desenvolvedores recebem ofertas de compra por jogos publicados na Steam e comunidade teme uso para malware Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-06-23T15:20:00+00:00",
-      "hash": "e0c7e1ef74edbe7d",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 4,
-        "value": 2,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "malware"
-        ],
-        "crypto": [
-          "bitcoin",
-          "criptomoedas"
-        ],
-        "value": [
-          "r$ 1"
-        ]
-      },
-      "_total": 11,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 0,
-        "score": 3
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-23T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-23T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     },
     {
       "source": "G1 Economia",
@@ -318,67 +301,6 @@
         "pos": 5,
         "neg": 0,
         "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Jaques Wagner tem nossa confiança e 'esclarecerá todos os fatos', diz presidente do PT",
-      "link": "https://g1.globo.com/politica/noticia/2026/06/18/jaques-wagner-tem-nossa-confianca-e-esclarecera-todos-os-fatos-diz-presidente-do-pt.ghtml",
-      "summary": "PF diz que Jaques Wagner recebeu ‘vantagens econômicas indevidas’ O presidente nacional do Partido dos Trabalhadores (PT), Edinho Silva, saiu nesta quinta-feira (18) em defesa do líder do governo Lula no Senado, Jaques Wagner (PT-BA), e afirmou que o petista vai esclarecer os fatos após ser alvo da 9ª fase da Operação Compliance Zero, da Polícia Federal. A investigação, que apura um esquema bilionário de fraudes e corrupção ligado ao Banco Master, aponta que Jaques Wagner teria recebido uma série de vantagens indevidas em troca de atuação política no Congresso, como um apartamento em Salvador ",
-      "ts_iso": "2026-06-18T15:11:11+00:00",
-      "hash": "92a586e6f2a2b602",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 5,
-        "cft": 2,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 2,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "cft": [
-          "compliance"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "pt"
-        ]
-      },
-      "_total": 18,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9,
-        "named_fi_bump": 2
       },
       "_alerts": [
         {
