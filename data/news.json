@@ -1,15 +1,23 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 5,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 2,
+      "high": 1,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 5,
     "top_sources": [
+      [
+        "Livecoins",
+        2
+      ],
+      [
+        "Folha Mercado",
+        1
+      ],
       [
         "G1 Política",
         1
@@ -19,10 +27,456 @@
         1
       ]
     ],
-    "generated_at": "2026-06-26T06:55:34+00:00",
-    "runtime_sec": 4.98
+    "generated_at": "2026-06-27T06:30:00+00:00",
+    "runtime_sec": 3.53
   },
   "items": [
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Banco Central liquida Sefer, distribuidora de títulos envolvida no caso Master",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/06/banco-central-liquida-sefer-distribuidora-de-titulos-envolvida-no-caso-master.shtml",
+      "summary": "O Banco Central decretou nesta sexta-feira (26) a liquidação extrajudicial da Sefer Investimentos, administradora de títulos financeiros em São Paulo . A distribuidora foi alvo da segunda fase da Operação Compliance Zero, que investiga as fraudes do caso do Banco Master . Leia mais (06/26/2026 - 09h03)",
+      "ts_iso": "2026-06-26T12:03:00+00:00",
+      "hash": "9a2a5d0fd22a15b8",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 0,
+        "cft": 2,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "attack": [
+          "fraudes"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "incident_verbs": [
+          "foi alvo"
+        ]
+      },
+      "_total": 17,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 7,
+        "neg": 0,
+        "score": 7,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 12,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "ZachXBT alerta que a corretora de criptomoedas AscendEX pode estar com problemas de liquidez",
+      "link": "https://livecoins.com.br/zachxbt-alerta-que-a-corretora-de-criptomoedas-ascendex-pode-estar-com-problemas-de-liquidez/",
+      "summary": "ZachXBT, famoso investigador on-chain independente, fez um alerta aos seus seguidores nesta sexta-feira (26) ao apontar que a corretora de criptomoedas AscendEX pode estar com problemas de liquidez. Anteriormente chamada de Bitmax, a corretora teria sido alvo de hackers norte-coreanos em 2021, com perdas chegando a US$ 78 milhões (R$ 400 milhões). Embora Zach tenha [&#8230;] Fonte: ZachXBT alerta que a corretora de criptomoedas AscendEX pode estar com problemas de liquidez Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-06-26T13:49:24+00:00",
+      "hash": "1fb664673732d29f",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 8,
+        "value": 4,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hackers",
+          "hackers"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "corretora",
+          "on-chain"
+        ],
+        "value": [
+          "r$ 4",
+          "milhões",
+          "us$ 7"
+        ],
+        "incident_verbs": [
+          "r$ 400 milh"
+        ]
+      },
+      "_total": 24,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 2,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 12,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Polícia Civil desarticula fraude no sistema PIX e bloqueia carteiras de criptomoedas",
+      "link": "https://livecoins.com.br/policia-civil-desarticula-fraude-no-sistema-pix-e-bloqueia-carteiras-de-criptomoedas/",
+      "summary": "A Polícia Civil do Distrito Federal (PCDF) deflagrou a Operação Rastro nesta última quinta-feira (25), quando os agentes desarticularam um grupo focado em fraudes cibernéticas e ocultação de dinheiro com criptomoedas. As autoridades investigam a exploração de uma falha de sistema em uma cooperativa de crédito nacional. O ataque dos cibercriminosos ocorreu no mês de [&#8230;] Fonte: Polícia Civil desarticula fraude no sistema PIX e bloqueia carteiras de criptomoedas Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-06-26T12:52:41+00:00",
+      "hash": "7c83e534baf18a90",
+      "_score": {
+        "cyber": 6,
+        "attack": 8,
+        "launder": 3,
+        "cft": 0,
+        "pix": 3,
+        "crypto": 4,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "cibercriminosos"
+        ],
+        "attack": [
+          "ataque",
+          "fraude",
+          "fraudes"
+        ],
+        "launder": [
+          "deflagrou"
+        ],
+        "pix": [
+          "pix"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ]
+      },
+      "_total": 24,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
+      },
+      "_alerts": [
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 12,
+      "_corroboration_score": 5
+    },
     {
       "source": "G1 Política",
       "bucket": "policia",
@@ -105,6 +559,70 @@
         },
         {
           "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -112,7 +630,7 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 13,
       "_corroboration_score": 5
     },
     {
@@ -200,6 +718,70 @@
         },
         {
           "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
@@ -207,7 +789,7 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 13,
       "_corroboration_score": 5
     }
   ]
