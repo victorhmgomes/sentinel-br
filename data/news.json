@@ -27,8 +27,8 @@
         1
       ]
     ],
-    "generated_at": "2026-06-27T06:30:00+00:00",
-    "runtime_sec": 3.53
+    "generated_at": "2026-06-28T07:02:46+00:00",
+    "runtime_sec": 4.33
   },
   "items": [
     {
@@ -169,14 +169,30 @@
         },
         {
           "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 14,
       "_corroboration_score": 5
     },
     {
@@ -318,14 +334,30 @@
         },
         {
           "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 14,
       "_corroboration_score": 5
     },
     {
@@ -467,14 +499,30 @@
         },
         {
           "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 14,
       "_corroboration_score": 5
     },
     {
@@ -623,14 +671,30 @@
         },
         {
           "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 13,
+      "_n_alerts": 15,
       "_corroboration_score": 5
     },
     {
@@ -782,14 +846,30 @@
         },
         {
           "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-06-26T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 13,
+      "_n_alerts": 15,
       "_corroboration_score": 5
     }
   ]
