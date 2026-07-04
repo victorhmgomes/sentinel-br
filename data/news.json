@@ -1,19 +1,15 @@
 {
   "summary": {
-    "n_items": 5,
+    "n_items": 3,
     "by_severity": {
-      "critical": 2,
+      "critical": 1,
       "high": 0,
-      "medium": 3,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 3,
     "top_sources": [
-      [
-        "Folha Mercado",
-        2
-      ],
       [
         "G1 Política",
         1
@@ -27,112 +23,10 @@
         1
       ]
     ],
-    "generated_at": "2026-07-03T06:32:06+00:00",
-    "runtime_sec": 3.84
+    "generated_at": "2026-07-04T06:19:11+00:00",
+    "runtime_sec": 4.21
   },
   "items": [
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Operação da PF mira golpes com sites falsos de serviços públicos e uso de IA",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/operacao-da-pf-mira-golpes-com-sites-falsos-de-servicos-publicos-e-uso-de-ia.shtml",
-      "summary": "A Polícia Federal deflagrou, nesta quarta-feira (1º), a Operação AD Phishing, com que investiga a veiculação de sites falsos que utilizam indevidamente a imagem do governo federal e de órgãos públicos para aplicar golpes. Leia mais (07/01/2026 - 08h11)",
-      "ts_iso": "2026-07-01T11:11:00+00:00",
-      "hash": "9742dcb57d734d01",
-      "_score": {
-        "cyber": 5,
-        "attack": 2,
-        "launder": 8,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "phishing"
-        ],
-        "attack": [
-          "golpes"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal",
-          "deflagrou"
-        ]
-      },
-      "_total": 15,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-29T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-06-29T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 7,
-      "_corroboration_score": 5
-    },
     {
       "source": "G1 Política",
       "bucket": "policia",
@@ -231,9 +125,25 @@
           "venue": "Binance BRL",
           "asset": "SOL",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     },
     {
@@ -312,9 +222,25 @@
           "venue": "Binance BRL",
           "asset": "SOL",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 7,
       "_corroboration_score": 5
     },
     {
@@ -414,51 +340,9 @@
           "venue": "Binance BRL",
           "asset": "SOL",
           "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 7,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "BC aperta regulação para prestadoras de serviços de ativos virtuais",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/bc-aperta-regulacao-para-prestadoras-de-servicos-de-ativos-virtuais.shtml",
-      "summary": "O Banco Central anunciou nesta quarta-feira (1º) um aperto na regulação de sociedades prestadoras de serviços de ativos virtuais, argumentando que busca assegurar a solidez das instituições, mitigar riscos ao sistema financeiro e promover convergência regulatória ao impor a essas entidades regras já aplicadas a outras instituições. Leia mais (07/01/2026 - 20h05)",
-      "ts_iso": "2026-07-01T23:05:00+00:00",
-      "hash": "c4e95c132bc77f4f",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 3,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais o banco central anunciou nesta quarta-feira (1º) um aperto na regulação de sociedades prestadoras de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ]
-      },
-      "_total": 7,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
+        },
         {
-          "ts": "2026-06-29T12:00:00+00:00",
+          "ts": "2026-07-02T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "high",
           "venue": "Foxbit",
@@ -466,47 +350,7 @@
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-29T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
+          "ts": "2026-07-02T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Binance BRL",
@@ -514,7 +358,7 @@
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     }
   ]
