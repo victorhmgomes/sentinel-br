@@ -1,46 +1,42 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 4,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Valor Investe",
         2
       ],
       [
-        "MoneyTimes Cripto",
-        1
-      ],
-      [
         "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-07-07T06:46:29+00:00",
-    "runtime_sec": 3.91
+    "generated_at": "2026-07-08T05:50:33+00:00",
+    "runtime_sec": 4.23
   },
   "items": [
     {
-      "source": "MoneyTimes Cripto",
-      "bucket": "cripto",
-      "title": "Banco Central aperta regulação para prestadoras de serviços de ativos virtuais (PSAVs); veja o que muda",
-      "link": "https://www.moneytimes.com.br/banco-central-aperta-regulacao-para-prestadoras-de-servicos-de-ativos-virtuais-psavs-veja-o-que-muda-rens/",
-      "summary": "O Banco Central anunciou nesta quarta-feira (30) um aperto na regulação de sociedades prestadoras de serviços de ativos virtuais, argumentando que busca assegurar a solidez das instituições, mitigar riscos ao sistema financeiro e promover convergência regulatória ao impor a essas entidades regras já aplicadas a outras instituições. Com a decisão, as sociedades prestadoras de serviços [&#8230;]",
-      "ts_iso": "2026-07-02T12:14:12+00:00",
-      "hash": "5120b030839f7db9",
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "BC estuda limitar acesso ao Pix por instituições mais vulneráveis a ataques cibernéticos",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/bc-estuda-limitar-acesso-ao-pix-a-instituicoes-mais-vulneraveis-a-ataques-ciberneticos.shtml",
+      "summary": "O Banco Central estuda aplicar restrições de acesso ao Pix a instituições que apresentarem fragilidade em requisitos de segurança cibernética. O órgão busca, com a adoção de medidas preventivas, reforçar a segurança do sistema financeiro após ataques hackers que provocaram desvios milionários de recursos desde o ano passado. Leia mais (07/06/2026 - 18h39)",
+      "ts_iso": "2026-07-06T21:39:00+00:00",
+      "hash": "1daa353a869b0bf2",
       "_score": {
-        "cyber": 0,
-        "attack": 0,
+        "cyber": 10,
+        "attack": 5,
         "launder": 0,
-        "cft": 4,
-        "pix": 2,
+        "cft": 0,
+        "pix": 6,
         "crypto": 0,
         "value": 0,
         "named_fi": 0,
@@ -49,23 +45,30 @@
         "incident_verbs": 0
       },
       "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais (psavs); veja o que muda o banco central anunciou nesta quarta-feira (30) um aperto na regulação de sociedades prestadoras de serviços de ativos virtuais"
+        "cyber": [
+          "hackers",
+          "hackers"
+        ],
+        "attack": [
+          "ataques",
+          "desvios"
         ],
         "pix": [
-          "banco central"
+          "pix",
+          "banco central",
+          "bc"
         ]
       },
-      "_total": 6,
+      "_total": 21,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 2,
+        "pos": 5,
         "neg": 0,
-        "score": 2
+        "score": 5
       },
       "_alerts": [
         {
-          "ts": "2026-06-30T12:00:00+00:00",
+          "ts": "2026-07-06T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "critical",
           "venue": "Foxbit",
@@ -73,63 +76,111 @@
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
+          "ts": "2026-07-06T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "high",
           "venue": "Foxbit",
-          "asset": "USDT",
+          "asset": "ETH",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "hourly_corr",
+          "ts": "2026-07-06T12:00:00+00:00",
+          "rule": "stablecoin_flight",
           "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         },
         {
-          "ts": "2026-07-01T12:00:00+00:00",
+          "ts": "2026-07-06T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-02T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
           "venue": "Foxbit",
-          "asset": "USDT",
+          "asset": "BTC",
           "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-02T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-03T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 8,
+      "_n_alerts": 4,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "BTG (BPAC11) não desistiu de comprar Digimais, de Edir Macedo, mas formato do negócio deve mudar",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/07/06/btg-bpac11-nao-desistiu-de-comprar-digimais-de-edir-macedo-mas-formato-do-negocio-deve-mudar.ghtml",
+      "summary": "O BTG Pactual (BPAC11) não desistiu totalmente de comprar o Digimais, do bispo Edir Macedo, mesmo após a operação da Polícia Federal Miragem, deflagrada no fim do mês passado que investiga possíveis casos de fraude na instituição. Segundo o Valor apurou, reuniões foram realizadas na semana passada entre os dois bancos, em negociações que contam ainda com a intermediação da Legend Capital. Como mostrou o Pipeline, site de negócios do Valor, outros bancos chegaram a acessar o dataroom montado pelo Digimais. Um deles é o Safra, mas que, segundo interlocutores, só deu uma olhada e já decidiu que n",
+      "ts_iso": "2026-07-06T19:06:56+00:00",
+      "hash": "19bd74c9024dcdd6",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 6,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 13,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraude"
+        ],
+        "launder": [
+          "polícia federal",
+          "deflagrada"
+        ],
+        "named_fi": [
+          "btg",
+          "btg pactual",
+          "safra"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 12,
+        "neg": 0,
+        "score": 12,
+        "named_fi_bump": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-07-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-06T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-06T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 4,
       "_corroboration_score": 5
     },
     {
@@ -257,100 +308,6 @@
       ],
       "_n_alerts": 10,
       "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "BC estuda limitar acesso ao Pix por instituições mais vulneráveis a ataques cibernéticos",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/bc-estuda-limitar-acesso-ao-pix-a-instituicoes-mais-vulneraveis-a-ataques-ciberneticos.shtml",
-      "summary": "O Banco Central estuda aplicar restrições de acesso ao Pix a instituições que apresentarem fragilidade em requisitos de segurança cibernética. O órgão busca, com a adoção de medidas preventivas, reforçar a segurança do sistema financeiro após ataques hackers que provocaram desvios milionários de recursos desde o ano passado. Leia mais (07/06/2026 - 18h39)",
-      "ts_iso": "2026-07-06T21:39:00+00:00",
-      "hash": "1daa353a869b0bf2",
-      "_score": {
-        "cyber": 10,
-        "attack": 5,
-        "launder": 0,
-        "cft": 0,
-        "pix": 6,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers"
-        ],
-        "attack": [
-          "ataques",
-          "desvios"
-        ],
-        "pix": [
-          "pix",
-          "banco central",
-          "bc"
-        ]
-      },
-      "_total": 21,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "BTG (BPAC11) não desistiu de comprar Digimais, de Edir Macedo, mas formato do negócio deve mudar",
-      "link": "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/07/06/btg-bpac11-nao-desistiu-de-comprar-digimais-de-edir-macedo-mas-formato-do-negocio-deve-mudar.ghtml",
-      "summary": "O BTG Pactual (BPAC11) não desistiu totalmente de comprar o Digimais, do bispo Edir Macedo, mesmo após a operação da Polícia Federal Miragem, deflagrada no fim do mês passado que investiga possíveis casos de fraude na instituição. Segundo o Valor apurou, reuniões foram realizadas na semana passada entre os dois bancos, em negociações que contam ainda com a intermediação da Legend Capital. Como mostrou o Pipeline, site de negócios do Valor, outros bancos chegaram a acessar o dataroom montado pelo Digimais. Um deles é o Safra, mas que, segundo interlocutores, só deu uma olhada e já decidiu que n",
-      "ts_iso": "2026-07-06T19:06:56+00:00",
-      "hash": "19bd74c9024dcdd6",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 6,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 13,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraude"
-        ],
-        "launder": [
-          "polícia federal",
-          "deflagrada"
-        ],
-        "named_fi": [
-          "btg",
-          "btg pactual",
-          "safra"
-        ]
-      },
-      "_total": 22,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 12,
-        "neg": 0,
-        "score": 12,
-        "named_fi_bump": 4
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
     }
   ]
 }
