@@ -1,43 +1,43 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 3,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "Valor Investe",
-        2
+        "MoneyTimes Cripto",
+        1
       ],
       [
-        "Folha Mercado",
+        "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-07-08T05:50:33+00:00",
-    "runtime_sec": 4.23
+    "generated_at": "2026-07-09T06:43:36+00:00",
+    "runtime_sec": 3.76
   },
   "items": [
     {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "BC estuda limitar acesso ao Pix por instituições mais vulneráveis a ataques cibernéticos",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/bc-estuda-limitar-acesso-ao-pix-a-instituicoes-mais-vulneraveis-a-ataques-ciberneticos.shtml",
-      "summary": "O Banco Central estuda aplicar restrições de acesso ao Pix a instituições que apresentarem fragilidade em requisitos de segurança cibernética. O órgão busca, com a adoção de medidas preventivas, reforçar a segurança do sistema financeiro após ataques hackers que provocaram desvios milionários de recursos desde o ano passado. Leia mais (07/06/2026 - 18h39)",
-      "ts_iso": "2026-07-06T21:39:00+00:00",
-      "hash": "1daa353a869b0bf2",
+      "source": "MoneyTimes Cripto",
+      "bucket": "cripto",
+      "title": "Banco Central aumenta fiscalização sobre criptomoedas e stablecoins; entenda como isso afeta o mercado brasileiro",
+      "link": "https://www.moneytimes.com.br/banco-central-aumenta-fiscalizacao-sobre-criptomoedas-e-stablecoins-entenda-como-isso-afeta-o-mercado-brasileiro-rens/",
+      "summary": "O Banco Central publicou a Resolução BCB nº 580/2026 no início deste mês e vem apertando o cerco contra o mercado de criptomoedas nos últimos tempos. A norma enquadra as prestadoras de serviços de ativos virtuais (PSAVs), como exchanges de criptoativos e plataformas de negociação de criptomoedas, na categoria de instituições classificadas como Tipo 3 [&#8230;]",
+      "ts_iso": "2026-07-07T16:32:45+00:00",
+      "hash": "884083a5ed588c57",
       "_score": {
-        "cyber": 10,
-        "attack": 5,
+        "cyber": 0,
+        "attack": 0,
         "launder": 0,
-        "cft": 0,
-        "pix": 6,
-        "crypto": 0,
+        "cft": 4,
+        "pix": 4,
+        "crypto": 5,
         "value": 0,
         "named_fi": 0,
         "political_noise": 0,
@@ -45,26 +45,24 @@
         "incident_verbs": 0
       },
       "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers"
-        ],
-        "attack": [
-          "ataques",
-          "desvios"
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
         ],
         "pix": [
-          "pix",
           "banco central",
-          "bc"
+          "bcb"
+        ],
+        "crypto": [
+          "criptomoedas",
+          "stablecoins"
         ]
       },
-      "_total": 21,
+      "_total": 13,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 5,
+        "pos": 6,
         "neg": 0,
-        "score": 5
+        "score": 6
       },
       "_alerts": [
         {
@@ -98,9 +96,65 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -178,135 +232,65 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Banco Central iguala exigências de plataforma cripto às de corretora",
-      "link": "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/07/02/banco-central-iguala-exigencias-de-plataforma-cripto-as-de-corretora.ghtml",
-      "summary": "As plataformas de criptoativos e sociedades prestadoras de serviços de ativos virtuais (SPSAV) em geral terão que se adequar ao arcabouço prudencial aplicado a outras instituições do sistema financeiro nacional (SFN) a partir de 1 de janeiro de 2027. Segundo norma do Banco Central (BC) editada nesta quarta, essas prestadoras de serviços passarão a observar um conjunto de exigências compatíveis com as exigências e regras de supervisão de corretoras e distribuidoras de valores. A nova regra não foi bem recebida pelas plataformas de ativos digitais, que não consideram trazer ao sistema financeiro",
-      "ts_iso": "2026-07-02T11:13:49+00:00",
-      "hash": "25fc560fa46e2d5e",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 3,
-        "crypto": 4,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "crypto": [
-          "cripto",
-          "corretora"
-        ]
-      },
-      "_total": 11,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-06-29T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-29T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-06-30T12:00:00+00:00",
+          "ts": "2026-07-07T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "critical",
-          "venue": "Foxbit",
+          "venue": "Mercado Bitcoin",
           "asset": "USDT",
           "narrative": "volume_zscore"
         },
         {
-          "ts": "2026-06-30T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
           "asset": "multi",
-          "narrative": "hourly_corr"
+          "narrative": "ring_of_mules"
         },
         {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-01T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-02T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-02T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-03T12:00:00+00:00",
+          "ts": "2026-07-07T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     }
   ]
