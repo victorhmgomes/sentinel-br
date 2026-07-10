@@ -1,15 +1,23 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 4,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 4,
     "top_sources": [
+      [
+        "G1 Política",
+        1
+      ],
+      [
+        "Agência Brasil Justiça",
+        1
+      ],
       [
         "MoneyTimes Cripto",
         1
@@ -19,10 +27,316 @@
         1
       ]
     ],
-    "generated_at": "2026-07-09T06:43:36+00:00",
-    "runtime_sec": 3.76
+    "generated_at": "2026-07-10T06:44:49+00:00",
+    "runtime_sec": 3.3
   },
   "items": [
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Esquema de Vorcaro atuava com 'intimidação de jornalistas' e 'campanhas de desinformação' para blindar gestão do Master, aponta PF",
+      "link": "https://g1.globo.com/politica/noticia/2026/07/09/vorcaro-esquema-master-intimidacao-desinformacao-pf.ghtml",
+      "summary": "PF faz operação contra publicitário ligado a Vorcaro Investigação da Polícia Federal (PF) aponta que o esquema de Daniel Vorcaro à frente do Banco Master incluía a \"intimidação de jornalistas\" e \"campanhas de desinformação\" para blindar a gestão fraudulenta à frente do banco. 📱Baixe o app do g1 para ver notícias em tempo real e de graça Operação realizada nesta quinta-feira (9) teve como um dos principais alvos o publicitário Thiago Miranda, ligado a Daniel Vorcaro. Miranda é suspeito de coordenar uma ação em redes sociais voltada a comprometer a credibilidade e a atuação do Banco Central, ind",
+      "ts_iso": "2026-07-09T20:24:26+00:00",
+      "hash": "1a03a8f5cac9ae19",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 0,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudulenta"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 19,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 11,
+        "neg": 0,
+        "score": 11,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 12,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Agência Brasil Justiça",
+      "bucket": "policia",
+      "title": "PF mira empresário suspeito de intimidar jornalistas no caso Master",
+      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/pf-mira-empresario-suspeito-de-intimidar-jornalistas-no-caso-master",
+      "summary": "A Polícia Federal (PF) deflagrou nesta quinta-feira (9) a 10ª fase da Operação Compliance Zero, que apura fraudes no Banco Master. Empresário Thiago Miranda é alvo da Operação Compliance Zero- Instagram/thiagomiranda__ O alvo desta fase é o empresário Thiago Miranda, acusado de ter ligação com o banqueiro Daniel Vorcaro e atuar para intimidar jornalistas e servidores do Banco Central pelas redes sociais. Notícias relacionadas: Operação prende presidente do Rio Metrópole por desvio de R$ 86,3 mi. Ex-prefeito de Belford Roxo permanecerá preso à disposição da Justiça. Juez Fachin defiende la sobe",
+      "ts_iso": "2026-07-09T19:40:00+00:00",
+      "hash": "c70fff161c9d46fa",
+      "_score": {
+        "cyber": 0,
+        "attack": 6,
+        "launder": 8,
+        "cft": 2,
+        "pix": 2,
+        "crypto": 0,
+        "value": 2,
+        "named_fi": 6,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudes",
+          "desvio"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal",
+          "deflagrou"
+        ],
+        "cft": [
+          "compliance"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "value": [
+          "r$ 8"
+        ],
+        "named_fi": [
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 29,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 14,
+        "neg": 0,
+        "score": 14,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-07T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 12,
+      "_corroboration_score": 5
+    },
     {
       "source": "MoneyTimes Cripto",
       "bucket": "cripto",
@@ -152,9 +466,49 @@
           "venue": "Binance BRL",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 11,
+      "_n_alerts": 16,
       "_corroboration_score": 5
     },
     {
@@ -288,9 +642,49 @@
           "venue": "Binance BRL",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-08T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 11,
+      "_n_alerts": 16,
       "_corroboration_score": 5
     }
   ]
