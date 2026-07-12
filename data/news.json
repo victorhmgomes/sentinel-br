@@ -1,18 +1,18 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 5,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 4,
+      "medium": 5,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 4,
+    "with_watcher_corroboration": 5,
     "top_sources": [
       [
         "G1 Política",
-        1
+        2
       ],
       [
         "Agência Brasil Justiça",
@@ -27,10 +27,90 @@
         1
       ]
     ],
-    "generated_at": "2026-07-11T05:40:18+00:00",
-    "runtime_sec": 4.11
+    "generated_at": "2026-07-12T05:57:25+00:00",
+    "runtime_sec": 4.59
   },
   "items": [
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Ministério diz que hacker que enviou alerta de Defesa Civil aprendeu a mandar alarme falso em curso do governo",
+      "link": "https://g1.globo.com/politica/noticia/2026/07/11/ministerio-diz-que-hacker-que-enviou-alerta-de-defesa-civil-aprendeu-a-mandar-alarme-falso-em-curso-do-governo.ghtml",
+      "summary": "O significado da palavra 'misantropia' O Ministério da Integração e do Desenvolvimento Regional enviou esta sexta (10) à Câmara dos Deputados explicações sobre a invasão ao sistema de alertas da Defesa Civil e disse que o hacker responsável pelo episódio aprendeu a mandar o alarme falso em um curso do governo. Um alerta sonoro classificado como extremo da Defesa Civil foi enviado a celulares de moradores de diversas cidades do Brasil entre a noite de 19 de junho e a madrugada do dia 20. As mensagens traziam a palavra \"misantropia\", ou variações dela, e não estavam relacionadas a nenhuma situaç",
+      "ts_iso": "2026-07-11T20:15:13+00:00",
+      "hash": "48d7618f74434c17",
+      "_score": {
+        "cyber": 15,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "invasão"
+        ]
+      },
+      "_total": 15,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-07-09T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-11T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 5,
+      "_corroboration_score": 5
+    },
     {
       "source": "G1 Política",
       "bucket": "policia",
@@ -183,9 +263,41 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-11T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 13,
+      "_n_alerts": 17,
       "_corroboration_score": 5
     },
     {
@@ -348,9 +460,41 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-11T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 13,
+      "_n_alerts": 17,
       "_corroboration_score": 5
     },
     {
@@ -530,9 +674,33 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-10T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 17,
+      "_n_alerts": 20,
       "_corroboration_score": 5
     },
     {
