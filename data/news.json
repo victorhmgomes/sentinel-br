@@ -27,8 +27,8 @@
         1
       ]
     ],
-    "generated_at": "2026-07-12T05:57:25+00:00",
-    "runtime_sec": 4.59
+    "generated_at": "2026-07-13T06:17:13+00:00",
+    "runtime_sec": 4.42
   },
   "items": [
     {
@@ -102,7 +102,7 @@
         {
           "ts": "2026-07-11T12:00:00+00:00",
           "rule": "stablecoin_flight",
-          "severity": "critical",
+          "severity": "medium",
           "venue": "Mercado Bitcoin",
           "asset": "USDT/BTC",
           "narrative": "stablecoin_flight"
@@ -291,7 +291,7 @@
         {
           "ts": "2026-07-11T12:00:00+00:00",
           "rule": "stablecoin_flight",
-          "severity": "critical",
+          "severity": "medium",
           "venue": "Mercado Bitcoin",
           "asset": "USDT/BTC",
           "narrative": "stablecoin_flight"
@@ -488,7 +488,7 @@
         {
           "ts": "2026-07-11T12:00:00+00:00",
           "rule": "stablecoin_flight",
-          "severity": "critical",
+          "severity": "medium",
           "venue": "Mercado Bitcoin",
           "asset": "USDT/BTC",
           "narrative": "stablecoin_flight"
