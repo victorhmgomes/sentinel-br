@@ -15,21 +15,21 @@
         1
       ]
     ],
-    "generated_at": "2026-07-15T05:30:22+00:00",
-    "runtime_sec": 4.96
+    "generated_at": "2026-07-16T05:39:44+00:00",
+    "runtime_sec": 3.62
   },
   "items": [
     {
       "source": "G1 Política",
       "bucket": "policia",
-      "title": "Ministério diz que hacker que enviou alerta de Defesa Civil aprendeu a mandar alarme falso em curso do governo",
-      "link": "https://g1.globo.com/politica/noticia/2026/07/11/ministerio-diz-que-hacker-que-enviou-alerta-de-defesa-civil-aprendeu-a-mandar-alarme-falso-em-curso-do-governo.ghtml",
-      "summary": "O significado da palavra 'misantropia' O Ministério da Integração e do Desenvolvimento Regional enviou esta sexta (10) à Câmara dos Deputados explicações sobre a invasão ao sistema de alertas da Defesa Civil e disse que o hacker responsável pelo episódio aprendeu a mandar o alarme falso em um curso do governo. Um alerta sonoro classificado como extremo da Defesa Civil foi enviado a celulares de moradores de diversas cidades do Brasil entre a noite de 19 de junho e a madrugada do dia 20. As mensagens traziam a palavra \"misantropia\", ou variações dela, e não estavam relacionadas a nenhuma situaç",
-      "ts_iso": "2026-07-11T20:15:13+00:00",
-      "hash": "48d7618f74434c17",
+      "title": "STM sofre ataque hacker e site está fora do ar há 2 semanas; incidente não afetou sistemas processuais",
+      "link": "https://g1.globo.com/politica/noticia/2026/07/15/stm-sofre-incidente-de-seguranca-cibernetica-e-portal-esta-fora-do-ar-ha-2-semanas.ghtml",
+      "summary": "Sede do Superior Tribunal Militar (STM) em Brasília Reprodução/Google Street View O Superior Tribunal Militar (STM) identificou um \"incidente de segurança cibernética\" em seu portal eletrônico há cerca de duas semanas, em 2 de julho. Segundo a Corte, o site foi retirado do ar temporariamente enquanto equipes técnicas trabalham na análise e recuperação dos sistemas. A falha atingiu apenas o site institucional, e não gerou prejuízos aos sistemas internos e no andamento processual do tribunal. De acordo com o STM, as equipes de tecnologia adotaram as medidas previstas nos protocolos de segurança,",
+      "ts_iso": "2026-07-15T14:19:00+00:00",
+      "hash": "5052a091d55c79ad",
       "_score": {
-        "cyber": 15,
-        "attack": 0,
+        "cyber": 21,
+        "attack": 2,
         "launder": 0,
         "cft": 0,
         "pix": 0,
@@ -38,63 +38,30 @@
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 0
+        "incident_verbs": 4
       },
       "_hits": {
         "cyber": [
           "hacker",
           "hacker",
-          "invasão"
+          "ataque hacker",
+          "incidente de segurança"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "incident_verbs": [
+          "sofre ataque"
         ]
       },
-      "_total": 15,
+      "_total": 27,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 2,
+        "pos": 1,
         "neg": 0,
-        "score": 2
+        "score": 1
       },
       "_alerts": [
-        {
-          "ts": "2026-07-09T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-10T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-11T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
         {
           "ts": "2026-07-13T12:00:00+00:00",
           "rule": "hourly_corr",
@@ -110,9 +77,25 @@
           "venue": "Foxbit",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 7,
+      "_n_alerts": 4,
       "_corroboration_score": 5
     }
   ]
