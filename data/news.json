@@ -1,10 +1,10 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
@@ -13,10 +13,18 @@
       [
         "G1 Política",
         1
+      ],
+      [
+        "Olhar Digital",
+        1
+      ],
+      [
+        "Valor Investe",
+        1
       ]
     ],
-    "generated_at": "2026-07-17T05:42:17+00:00",
-    "runtime_sec": 3.62
+    "generated_at": "2026-07-18T05:24:57+00:00",
+    "runtime_sec": 3.33
   },
   "items": [
     {
@@ -97,6 +105,86 @@
       ],
       "_n_alerts": 4,
       "_corroboration_score": 5
+    },
+    {
+      "source": "Olhar Digital",
+      "bucket": "seguranca",
+      "title": "Brasil é o 3º país mais atacado por ransomware; especialistas explicam o motivo",
+      "link": "https://olhardigital.com.br/2026/07/17/seguranca/brasil-e-o-3-pais-mais-atacado-por-ransomware-especialistas-explicam-o-motivo/",
+      "summary": "É a primeira vez que o país aparece entre os dez mais afetados desde o início da divulgação dos dados da plataforma, em janeiro O post Brasil é o 3º país mais atacado por ransomware; especialistas explicam o motivo apareceu primeiro em Olhar Digital .",
+      "ts_iso": "2026-07-18T01:59:22+00:00",
+      "hash": "4e9e4de747f2586a",
+      "_score": {
+        "cyber": 6,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "ransomware"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Super El Niño eleva risco de perdas para ações do setor elétrico, aponta Inter",
+      "link": "https://valorinveste.globo.com/mercados/renda-variavel/noticia/2026/07/17/super-el-nino-eleva-risco-de-perdas-para-acoes-do-setor-eletrico-aponta-inter.ghtml",
+      "summary": "A probabilidade de um novo El Niño está próxima de 100%, segundo alerta recente da NOAA, agência climática dos Estados Unidos, e o fenômeno pode voltar a pressionar o setor elétrico brasileiro, apontou relatório do Inter divulgado nesta semana. Estudos citados pelo banco indicam ainda a possibilidade de um \"Super El Niño\", de intensidade excepcional, que afetaria diretamente ações de empresas do setor elétrico. A previsão de secas prolongadas em algumas regiões deve diminuir reservatórios e encarecer o preço de curto prazo da energia, o PLD, referência do mercado à vista. O relatório lembrou q",
+      "ts_iso": "2026-07-17T15:56:47+00:00",
+      "hash": "bd346851943a9853",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 3,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "pld"
+        ],
+        "named_fi": [
+          "inter"
+        ],
+        "political_noise": [
+          "novo"
+        ]
+      },
+      "_total": 9,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 2,
+        "score": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
     }
   ]
 }
