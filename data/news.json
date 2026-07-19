@@ -1,21 +1,17 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 3,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
         "G1 Política",
-        1
-      ],
-      [
-        "Olhar Digital",
         1
       ],
       [
@@ -23,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-07-18T05:24:57+00:00",
-    "runtime_sec": 3.33
+    "generated_at": "2026-07-19T05:51:38+00:00",
+    "runtime_sec": 3.48
   },
   "items": [
     {
@@ -101,47 +97,18 @@
           "venue": "Foxbit",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 5,
       "_corroboration_score": 5
-    },
-    {
-      "source": "Olhar Digital",
-      "bucket": "seguranca",
-      "title": "Brasil é o 3º país mais atacado por ransomware; especialistas explicam o motivo",
-      "link": "https://olhardigital.com.br/2026/07/17/seguranca/brasil-e-o-3-pais-mais-atacado-por-ransomware-especialistas-explicam-o-motivo/",
-      "summary": "É a primeira vez que o país aparece entre os dez mais afetados desde o início da divulgação dos dados da plataforma, em janeiro O post Brasil é o 3º país mais atacado por ransomware; especialistas explicam o motivo apareceu primeiro em Olhar Digital .",
-      "ts_iso": "2026-07-18T01:59:22+00:00",
-      "hash": "4e9e4de747f2586a",
-      "_score": {
-        "cyber": 6,
-        "attack": 0,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "ransomware"
-        ]
-      },
-      "_total": 6,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
     },
     {
       "source": "Valor Investe",
@@ -182,9 +149,18 @@
         "neg": 2,
         "score": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-07-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     }
   ]
 }
