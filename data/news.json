@@ -1,115 +1,24 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 1,
     "top_sources": [
-      [
-        "G1 Política",
-        1
-      ],
       [
         "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-07-20T06:17:49+00:00",
-    "runtime_sec": 3.8
+    "generated_at": "2026-07-21T05:49:26+00:00",
+    "runtime_sec": 3.15
   },
   "items": [
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "STM sofre ataque hacker e site está fora do ar há 2 semanas; incidente não afetou sistemas processuais",
-      "link": "https://g1.globo.com/politica/noticia/2026/07/15/stm-sofre-incidente-de-seguranca-cibernetica-e-portal-esta-fora-do-ar-ha-2-semanas.ghtml",
-      "summary": "Sede do Superior Tribunal Militar (STM) em Brasília Reprodução/Google Street View O Superior Tribunal Militar (STM) identificou um \"incidente de segurança cibernética\" em seu portal eletrônico há cerca de duas semanas, em 2 de julho. Segundo a Corte, o site foi retirado do ar temporariamente enquanto equipes técnicas trabalham na análise e recuperação dos sistemas. A falha atingiu apenas o site institucional, e não gerou prejuízos aos sistemas internos e no andamento processual do tribunal. De acordo com o STM, as equipes de tecnologia adotaram as medidas previstas nos protocolos de segurança,",
-      "ts_iso": "2026-07-15T14:19:00+00:00",
-      "hash": "5052a091d55c79ad",
-      "_score": {
-        "cyber": 21,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker",
-          "incidente de segurança"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "incident_verbs": [
-          "sofre ataque"
-        ]
-      },
-      "_total": 27,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-07-13T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-13T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-14T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 5,
-      "_corroboration_score": 5
-    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
