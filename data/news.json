@@ -15,8 +15,8 @@
         1
       ]
     ],
-    "generated_at": "2026-07-25T05:42:09+00:00",
-    "runtime_sec": 3.67
+    "generated_at": "2026-07-26T06:02:50+00:00",
+    "runtime_sec": 5.04
   },
   "items": [
     {
@@ -75,10 +75,42 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-24T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-07-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-07-24T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        },
+        {
+          "ts": "2026-07-24T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 5,
+      "_corroboration_score": 5
     }
   ]
 }
