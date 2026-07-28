@@ -1,116 +1,17 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 0,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
-    "top_sources": [
-      [
-        "Agência Brasil Justiça",
-        1
-      ]
-    ],
-    "generated_at": "2026-07-27T06:29:13+00:00",
-    "runtime_sec": 4.15
+    "with_watcher_corroboration": 0,
+    "top_sources": [],
+    "generated_at": "2026-07-28T05:45:42+00:00",
+    "runtime_sec": 3.82
   },
-  "items": [
-    {
-      "source": "Agência Brasil Justiça",
-      "bucket": "policia",
-      "title": "Justiça do Rio determina bloqueio de contas do Banco Master",
-      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/justica-do-rio-determina-bloqueio-de-contas-do-banco-master",
-      "summary": "A Justiça do Rio determinou o bloqueio das contas do Banco Master , da Trustee Dismtribuidora de Títulos e Valores Mobiliáros LTDA., da Axor Asset LTDA., de Alexandre Marchesani Canata e de Felipe Mota Separovic Rodrigues, até o valor de R$ 135 milhões. A decisão dessa quinta-feira (23) decorre de pedido do próprio estado e do Fundo Único de Previdência Social do Estado do Rio de Janeiro ( Rioprevidência ). Notícias relacionadas: PF intima Jaques Wagner a depor sobre investigações do Banco Master. Mendonça prorroga inquérito que apura fraudes no Banco Master. PGE-RJ cobra Grupo Master por prej",
-      "ts_iso": "2026-07-24T10:08:00+00:00",
-      "hash": "d12b8b681a121bdc",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 2,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "fraudes"
-        ],
-        "launder": [
-          "pf"
-        ],
-        "value": [
-          "r$ 1",
-          "milhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 135 milh"
-        ]
-      },
-      "_total": 16,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 10,
-        "neg": 0,
-        "score": 10,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-07-21T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-24T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-07-24T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-07-24T12:00:00+00:00",
-          "rule": "ensemble",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "multi",
-          "narrative": "ensemble"
-        },
-        {
-          "ts": "2026-07-24T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        }
-      ],
-      "_n_alerts": 5,
-      "_corroboration_score": 5
-    }
-  ]
+  "items": []
 }
