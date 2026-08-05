@@ -8,15 +8,15 @@
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
+    "with_watcher_corroboration": 1,
     "top_sources": [
       [
         "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-08-04T05:46:00+00:00",
-    "runtime_sec": 4.12
+    "generated_at": "2026-08-05T05:45:49+00:00",
+    "runtime_sec": 5.57
   },
   "items": [
     {
@@ -69,9 +69,18 @@
         "score": 13,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-08-04T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     }
   ]
 }
