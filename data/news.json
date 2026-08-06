@@ -1,86 +1,17 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 0,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
-    "top_sources": [
-      [
-        "Folha Mercado",
-        1
-      ]
-    ],
-    "generated_at": "2026-08-05T05:45:49+00:00",
-    "runtime_sec": 5.57
+    "with_watcher_corroboration": 0,
+    "top_sources": [],
+    "generated_at": "2026-08-06T05:48:20+00:00",
+    "runtime_sec": 4.31
   },
-  "items": [
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "'Brasil precisa controlar o próprio destino em IA', diz sócio da Bicycle Capital",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/tec/2026/08/brasil-precisa-controlar-o-proprio-destino-em-ia-diz-socio-da-bicycle-capital.shtml",
-      "summary": "\"Aconteceu justamente no momento em que estamos apresentando esses argumentos.\" Shu Nyatta conhece bem o Brasil, onde na última década despejou mais de R$ 550 milhões em empresas de diversos portes, em uma lista que inclui Nubank , Gympass e PicPay. Fazia referência ao provável ataque hacker que disparou alertas da Defesa Civil , no mês passado, com a palavra \"misantropia\" . Leia mais (08/03/2026 - 10h00)",
-      "ts_iso": "2026-08-03T13:00:00+00:00",
-      "hash": "dadff13058b782f3",
-      "_score": {
-        "cyber": 16,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 8,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "value": [
-          "r$ 5",
-          "milhões"
-        ],
-        "named_fi": [
-          "nubank",
-          "picpay"
-        ],
-        "incident_verbs": [
-          "r$ 550 milh"
-        ]
-      },
-      "_total": 31,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 13,
-        "neg": 0,
-        "score": 13,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-04T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    }
-  ]
+  "items": []
 }
