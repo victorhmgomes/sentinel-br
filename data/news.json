@@ -1,89 +1,24 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 1,
     "top_sources": [
-      [
-        "Olhar Digital",
-        1
-      ],
       [
         "Agência Brasil Justiça",
         1
       ]
     ],
-    "generated_at": "2026-08-08T04:10:23+00:00",
-    "runtime_sec": 4.19
+    "generated_at": "2026-08-09T04:17:11+00:00",
+    "runtime_sec": 3.56
   },
   "items": [
-    {
-      "source": "Olhar Digital",
-      "bucket": "seguranca",
-      "title": "Quem responde por ataques hackers feitos por IAs? Saiba o que diz a lei brasileira",
-      "link": "https://olhardigital.com.br/2026/08/07/inteligencia-artificial/quem-responde-quando-ias-fazem-ataques-hackers-saiba-o-que-diz-a-lei-brasileira/",
-      "summary": "Casos envolvendo agentes de IA da OpenAI, Anthropic e Meta reacenderam o debate sobre responsabilidade jurídica. Especialista explica como a lei brasileira trata essas situações O post Quem responde por ataques hackers feitos por IAs? Saiba o que diz a lei brasileira apareceu primeiro em Olhar Digital .",
-      "ts_iso": "2026-08-07T21:28:18+00:00",
-      "hash": "bf0ad416144d2907",
-      "_score": {
-        "cyber": 10,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 2,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hackers",
-          "hackers"
-        ],
-        "attack": [
-          "ataques"
-        ],
-        "commentary": [
-          "debate sobre"
-        ]
-      },
-      "_total": 14,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-06T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-06T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
-    },
     {
       "source": "Agência Brasil Justiça",
       "bucket": "policia",
