@@ -8,15 +8,15 @@
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
+    "with_watcher_corroboration": 1,
     "top_sources": [
       [
         "MoneyTimes Cripto",
         1
       ]
     ],
-    "generated_at": "2026-08-12T04:46:47+00:00",
-    "runtime_sec": 3.98
+    "generated_at": "2026-08-13T04:50:19+00:00",
+    "runtime_sec": 4.1
   },
   "items": [
     {
@@ -63,9 +63,18 @@
         "neg": 2,
         "score": 4
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-08-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
     }
   ]
 }
