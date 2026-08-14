@@ -1,67 +1,198 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 1,
+      "high": 1,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
-        "MoneyTimes Cripto",
+        "Portal do Bitcoin",
+        2
+      ],
+      [
+        "Agência Brasil Justiça",
         1
       ]
     ],
-    "generated_at": "2026-08-13T04:50:19+00:00",
-    "runtime_sec": 4.1
+    "generated_at": "2026-08-14T04:47:19+00:00",
+    "runtime_sec": 3.38
   },
   "items": [
     {
-      "source": "MoneyTimes Cripto",
+      "source": "Portal do Bitcoin",
       "bucket": "cripto",
-      "title": "Banco Central endurece regras para criptoativos e exige retenção de 24 horas em transferências acima de US$ 10 mil",
-      "link": "https://www.moneytimes.com.br/banco-central-endurece-regras-para-criptoativos-e-exige-retencao-de-24-horas-em-transferencias-acima-de-r-10-mil-rens/",
-      "summary": "Banco Central do Brasil publicou a Resolução BCB nº 584, na última sexta-feira (7), ampliando as regras de prevenção a fraudes para o mercado de ativos virtuais com uma nova exigência para transferências de criptoativos: instituições financeiras, prestadores de serviços de ativos virtuais e instituições de pagamento terão de reter determinadas operações por pelo menos [&#8230;]",
-      "ts_iso": "2026-08-10T12:04:19+00:00",
-      "hash": "8a114dea17c3b566",
+      "title": "Vazamento de dados da Trezor afeta 13,6 mil clientes, incluindo brasileiros",
+      "link": "https://portaldobitcoin.uol.com.br/vazamento-de-dados-da-trezor-afeta-136-mil-clientes-incluindo-brasileiros/",
+      "summary": "A fabricante de carteiras de hardware afirma que seus dispositivos e backups estão intactos, mas o vazamento entrega dados valiosos de clientes O post Vazamento de dados da Trezor afeta 13,6 mil clientes, incluindo brasileiros apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-08-13T15:05:23+00:00",
+      "hash": "2e98371b12474dc8",
       "_score": {
-        "cyber": 0,
-        "attack": 3,
+        "cyber": 5,
+        "attack": 2,
         "launder": 0,
-        "cft": 4,
-        "pix": 6,
-        "crypto": 0,
-        "value": 1,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 0,
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 0
+        "incident_verbs": 4
       },
       "_hits": {
+        "cyber": [
+          "vazamento de dados"
+        ],
         "attack": [
-          "fraudes"
+          "vazamento"
         ],
-        "cft": [
-          "prestadores de serviços de ativos virtuais"
+        "crypto": [
+          "bitcoin"
         ],
-        "pix": [
-          "banco central",
-          "bcb",
-          "instituições de pagamento"
-        ],
-        "value": [
-          "us$ 1"
+        "incident_verbs": [
+          "vazamento de dados"
         ]
       },
-      "_total": 14,
+      "_total": 13,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "Agência Brasil Justiça",
+      "bucket": "policia",
+      "title": "Audiência no STF sobre empréstimo ao BRB termina sem avanços",
+      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/audiencia-no-stf-sobre-emprestimo-ao-brb-termina-sem-avancos",
+      "summary": "O ministro Luiz Fux, do Supremo Tribunal Federal (STF), realizou nesta quinta-feira (13) uma audiência de mediação para tentar destravar o empréstimo de R$ 6,6 bilhões que o Banco de Brasília (BRB) busca junto ao Fundo Garantidor de Crédito (FGC) para cobrir parte do rombo provocado pela compra de carteiras de crédito fraudulentas do Banco Master . A audiência terminou sem avanços, e as partes envolvidas no caso decidiram que as negociações vão continuar. Notícias relacionadas: TSE determina que filiação de Flávio ao PL seja restabelecida . TSE nega hackeamento após Flávio aparecer filiado ao ",
+      "ts_iso": "2026-08-13T22:44:00+00:00",
+      "hash": "3b13eda64a0ecc14",
+      "_score": {
+        "cyber": 5,
+        "attack": 3,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 4,
+        "named_fi": 14,
+        "political_noise": 8,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hackeamento"
+        ],
+        "attack": [
+          "fraudulentas"
+        ],
+        "value": [
+          "r$ 6",
+          "bilhões"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília",
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal",
+          "pl"
+        ],
+        "incident_verbs": [
+          "r$ 6,6 bilh"
+        ]
+      },
+      "_total": 36,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 6,
-        "neg": 2,
-        "score": 4
+        "pos": 14,
+        "neg": 0,
+        "score": 14,
+        "named_fi_bump": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Hacker rouba R$ 1 milhão em XRP após falha de software confundir depósitos falsos com reais",
+      "link": "https://portaldobitcoin.uol.com.br/hacker-rouba-r-1-milhao-em-xrp-apos-falha-de-software-confundir-depositos-falsos-com-reais/",
+      "summary": "Ataque à bridge que conecta a Tx Chain ao XRP Ledger resultou no roubo de cerca de 200 mil XRP, avaliados em R$ 1 milhão O post Hacker rouba R$ 1 milhão em XRP após falha de software confundir depósitos falsos com reais apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-08-13T13:10:00+00:00",
+      "hash": "f6fd9e13c0243e1e",
+      "_score": {
+        "cyber": 10,
+        "attack": 4,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ],
+        "attack": [
+          "ataque",
+          "roubo"
+        ],
+        "crypto": [
+          "bitcoin"
+        ],
+        "value": [
+          "r$ 1",
+          "milhão"
+        ],
+        "incident_verbs": [
+          "r$ 1 milh"
+        ]
+      },
+      "_total": 21,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 0,
+        "score": 3
       },
       "_alerts": [
         {
