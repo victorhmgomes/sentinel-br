@@ -1,10 +1,10 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 4,
     "by_severity": {
       "critical": 0,
       "high": 1,
-      "medium": 2,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
@@ -17,10 +17,14 @@
       [
         "Agência Brasil Justiça",
         1
+      ],
+      [
+        "Livecoins",
+        1
       ]
     ],
-    "generated_at": "2026-08-14T04:47:19+00:00",
-    "runtime_sec": 3.38
+    "generated_at": "2026-08-15T03:37:31+00:00",
+    "runtime_sec": 4.52
   },
   "items": [
     {
@@ -206,6 +210,54 @@
       ],
       "_n_alerts": 1,
       "_corroboration_score": 2
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Nova regra de 24 horas do Banco Central pode reduzir eficiência de pagamentos com stablecoins",
+      "link": "https://livecoins.com.br/nova-regra-de-24-horas-do-banco-central-pode-reduzir-eficiencia-de-pagamentos-com-stablecoins/",
+      "summary": "A norma altera a Resolução BCB nº 142/2021 e estende seus procedimentos e controles aos serviços de ativos virtuais prestados pelas instituições autorizadas a exercer essas atividades e pelas sociedades prestadoras de serviços de ativos virtuais (SPSAVs), alcançando também aquelas em fase de adequação regulatória. O principal efeito prático está no novo art. 2º-B. Transferências [&#8230;] Fonte: Nova regra de 24 horas do Banco Central pode reduzir eficiência de pagamentos com stablecoins Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-08-14T13:12:14+00:00",
+      "hash": "92ed579b0175d425",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 4,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadoras de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central",
+          "bcb"
+        ],
+        "crypto": [
+          "bitcoin",
+          "stablecoins"
+        ],
+        "political_noise": [
+          "novo"
+        ]
+      },
+      "_total": 15,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
     }
   ]
 }
