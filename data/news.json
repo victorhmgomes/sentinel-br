@@ -3,28 +3,28 @@
     "n_items": 4,
     "by_severity": {
       "critical": 0,
-      "high": 1,
-      "medium": 3,
+      "high": 2,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 4,
     "top_sources": [
       [
         "Portal do Bitcoin",
         2
       ],
       [
-        "Agência Brasil Justiça",
+        "Livecoins",
         1
       ],
       [
-        "Livecoins",
+        "Agência Brasil Justiça",
         1
       ]
     ],
-    "generated_at": "2026-08-15T03:37:31+00:00",
-    "runtime_sec": 4.52
+    "generated_at": "2026-08-16T03:46:47+00:00",
+    "runtime_sec": 3.02
   },
   "items": [
     {
@@ -77,6 +77,73 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-14T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 2,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Receita Federal da França sofre vazamento de dados de 678 mil contribuintes; comunidade cripto expressa preocupação",
+      "link": "https://livecoins.com.br/receita-federal-da-franca-sofre-vazamento-de-dados-de-678-mil-contribuintes-comunidade-cripto-expressa-preocupacao/",
+      "summary": "A Receita Federal da França confirmou nesta sexta-feira (14) um vazamento de dados de 678 mil pessoas físicas e jurídicas. Entre as informações vazadas estão renda, endereço, razão social das empresas, dentre outros. Conforme o país lidera o número de ataques físicos contra investidores de criptomoedas nos últimos anos, incluindo sequestros e invasões domiciliares, a [&#8230;] Fonte: Receita Federal da França sofre vazamento de dados de 678 mil contribuintes; comunidade cripto expressa preocupação Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-08-15T14:06:05+00:00",
+      "hash": "fdbfa9a0ad523b9d",
+      "_score": {
+        "cyber": 10,
+        "attack": 4,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 6,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "invasões",
+          "vazamento de dados"
+        ],
+        "attack": [
+          "ataques",
+          "vazamento"
+        ],
+        "crypto": [
+          "bitcoin",
+          "cripto",
+          "criptomoedas"
+        ],
+        "incident_verbs": [
+          "vazamento de dados"
+        ]
+      },
+      "_total": 24,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 1,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-14T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
       "_n_alerts": 1,
@@ -145,10 +212,18 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-14T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     },
     {
       "source": "Portal do Bitcoin",
@@ -206,58 +281,18 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-14T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Nova regra de 24 horas do Banco Central pode reduzir eficiência de pagamentos com stablecoins",
-      "link": "https://livecoins.com.br/nova-regra-de-24-horas-do-banco-central-pode-reduzir-eficiencia-de-pagamentos-com-stablecoins/",
-      "summary": "A norma altera a Resolução BCB nº 142/2021 e estende seus procedimentos e controles aos serviços de ativos virtuais prestados pelas instituições autorizadas a exercer essas atividades e pelas sociedades prestadoras de serviços de ativos virtuais (SPSAVs), alcançando também aquelas em fase de adequação regulatória. O principal efeito prático está no novo art. 2º-B. Transferências [&#8230;] Fonte: Nova regra de 24 horas do Banco Central pode reduzir eficiência de pagamentos com stablecoins Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-08-14T13:12:14+00:00",
-      "hash": "92ed579b0175d425",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 4,
-        "crypto": 5,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 2,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bcb"
-        ],
-        "crypto": [
-          "bitcoin",
-          "stablecoins"
-        ],
-        "political_noise": [
-          "novo"
-        ]
-      },
-      "_total": 15,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     }
   ]
 }
