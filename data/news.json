@@ -1,30 +1,22 @@
 {
   "summary": {
-    "n_items": 4,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
-      "high": 2,
-      "medium": 2,
+      "high": 1,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 4,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
         "Portal do Bitcoin",
         2
-      ],
-      [
-        "Livecoins",
-        1
-      ],
-      [
-        "Agência Brasil Justiça",
-        1
       ]
     ],
-    "generated_at": "2026-08-17T03:49:11+00:00",
-    "runtime_sec": 4.07
+    "generated_at": "2026-08-18T03:43:07+00:00",
+    "runtime_sec": 3.38
   },
   "items": [
     {
@@ -89,141 +81,6 @@
       ],
       "_n_alerts": 2,
       "_corroboration_score": 4
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Receita Federal da França sofre vazamento de dados de 678 mil contribuintes; comunidade cripto expressa preocupação",
-      "link": "https://livecoins.com.br/receita-federal-da-franca-sofre-vazamento-de-dados-de-678-mil-contribuintes-comunidade-cripto-expressa-preocupacao/",
-      "summary": "A Receita Federal da França confirmou nesta sexta-feira (14) um vazamento de dados de 678 mil pessoas físicas e jurídicas. Entre as informações vazadas estão renda, endereço, razão social das empresas, dentre outros. Conforme o país lidera o número de ataques físicos contra investidores de criptomoedas nos últimos anos, incluindo sequestros e invasões domiciliares, a [&#8230;] Fonte: Receita Federal da França sofre vazamento de dados de 678 mil contribuintes; comunidade cripto expressa preocupação Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-08-15T14:06:05+00:00",
-      "hash": "fdbfa9a0ad523b9d",
-      "_score": {
-        "cyber": 10,
-        "attack": 4,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 6,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "invasões",
-          "vazamento de dados"
-        ],
-        "attack": [
-          "ataques",
-          "vazamento"
-        ],
-        "crypto": [
-          "bitcoin",
-          "cripto",
-          "criptomoedas"
-        ],
-        "incident_verbs": [
-          "vazamento de dados"
-        ]
-      },
-      "_total": 24,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 1,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 1,
-      "_corroboration_score": 3
-    },
-    {
-      "source": "Agência Brasil Justiça",
-      "bucket": "policia",
-      "title": "Audiência no STF sobre empréstimo ao BRB termina sem avanços",
-      "link": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/audiencia-no-stf-sobre-emprestimo-ao-brb-termina-sem-avancos",
-      "summary": "O ministro Luiz Fux, do Supremo Tribunal Federal (STF), realizou nesta quinta-feira (13) uma audiência de mediação para tentar destravar o empréstimo de R$ 6,6 bilhões que o Banco de Brasília (BRB) busca junto ao Fundo Garantidor de Crédito (FGC) para cobrir parte do rombo provocado pela compra de carteiras de crédito fraudulentas do Banco Master . A audiência terminou sem avanços, e as partes envolvidas no caso decidiram que as negociações vão continuar. Notícias relacionadas: TSE determina que filiação de Flávio ao PL seja restabelecida . TSE nega hackeamento após Flávio aparecer filiado ao ",
-      "ts_iso": "2026-08-13T22:44:00+00:00",
-      "hash": "3b13eda64a0ecc14",
-      "_score": {
-        "cyber": 5,
-        "attack": 3,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 14,
-        "political_noise": 8,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "cyber": [
-          "hackeamento"
-        ],
-        "attack": [
-          "fraudulentas"
-        ],
-        "value": [
-          "r$ 6",
-          "bilhões"
-        ],
-        "named_fi": [
-          "brb",
-          "banco de brasília",
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal",
-          "pl"
-        ],
-        "incident_verbs": [
-          "r$ 6,6 bilh"
-        ]
-      },
-      "_total": 36,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 14,
-        "neg": 0,
-        "score": 14,
-        "named_fi_bump": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
     },
     {
       "source": "Portal do Bitcoin",
