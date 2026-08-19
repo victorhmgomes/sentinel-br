@@ -1,24 +1,130 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 1,
-      "medium": 1,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Portal do Bitcoin",
         2
+      ],
+      [
+        "Livecoins",
+        1
       ]
     ],
-    "generated_at": "2026-08-18T03:43:07+00:00",
-    "runtime_sec": 3.38
+    "generated_at": "2026-08-19T03:44:46+00:00",
+    "runtime_sec": 5.01
   },
   "items": [
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "OKX aponta tendências em regulação, infraestrutura institucional e pagamentos com IA",
+      "link": "https://livecoins.com.br/okx-aponta-tendencias-em-regulacao-infraestrutura-institucional-e-pagamentos-com-ia/",
+      "summary": "As exigências regulatórias do Banco Central do Brasil para Prestadores de Serviços de Ativos Virtuais (PSAVs) e a rápida evolução tecnológica do setor foram destaques nos debates em que a OKX, uma das maiores exchanges de criptomoedas do mundo, participou durante o Blockchain.RIO, nos dias 12 e 13 de agosto, no Expo Rio. A empresa [&#8230;] Fonte: OKX aponta tendências em regulação, infraestrutura institucional e pagamentos com IA Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-08-18T14:37:21+00:00",
+      "hash": "41c023643781aff1",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 2,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadores de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "blockchain"
+        ]
+      },
+      "_total": 11,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "critical",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-17T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 7,
+      "_corroboration_score": 5
+    },
     {
       "source": "Portal do Bitcoin",
       "bucket": "cripto",
