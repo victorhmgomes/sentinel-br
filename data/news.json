@@ -1,130 +1,24 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 1,
-      "medium": 2,
+      "medium": 0,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 1,
     "top_sources": [
       [
         "Portal do Bitcoin",
-        2
-      ],
-      [
-        "Livecoins",
         1
       ]
     ],
-    "generated_at": "2026-08-19T03:44:46+00:00",
-    "runtime_sec": 5.01
+    "generated_at": "2026-08-20T03:45:03+00:00",
+    "runtime_sec": 3.14
   },
   "items": [
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "OKX aponta tendências em regulação, infraestrutura institucional e pagamentos com IA",
-      "link": "https://livecoins.com.br/okx-aponta-tendencias-em-regulacao-infraestrutura-institucional-e-pagamentos-com-ia/",
-      "summary": "As exigências regulatórias do Banco Central do Brasil para Prestadores de Serviços de Ativos Virtuais (PSAVs) e a rápida evolução tecnológica do setor foram destaques nos debates em que a OKX, uma das maiores exchanges de criptomoedas do mundo, participou durante o Blockchain.RIO, nos dias 12 e 13 de agosto, no Expo Rio. A empresa [&#8230;] Fonte: OKX aponta tendências em regulação, infraestrutura institucional e pagamentos com IA Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-08-18T14:37:21+00:00",
-      "hash": "41c023643781aff1",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 2,
-        "crypto": 5,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadores de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central"
-        ],
-        "crypto": [
-          "bitcoin",
-          "criptomoedas",
-          "blockchain"
-        ]
-      },
-      "_total": 11,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 4,
-        "neg": 0,
-        "score": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "critical",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-17T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 7,
-      "_corroboration_score": 5
-    },
     {
       "source": "Portal do Bitcoin",
       "bucket": "cripto",
@@ -187,75 +81,6 @@
       ],
       "_n_alerts": 2,
       "_corroboration_score": 4
-    },
-    {
-      "source": "Portal do Bitcoin",
-      "bucket": "cripto",
-      "title": "Hacker rouba R$ 1 milhão em XRP após falha de software confundir depósitos falsos com reais",
-      "link": "https://portaldobitcoin.uol.com.br/hacker-rouba-r-1-milhao-em-xrp-apos-falha-de-software-confundir-depositos-falsos-com-reais/",
-      "summary": "Ataque à bridge que conecta a Tx Chain ao XRP Ledger resultou no roubo de cerca de 200 mil XRP, avaliados em R$ 1 milhão O post Hacker rouba R$ 1 milhão em XRP após falha de software confundir depósitos falsos com reais apareceu primeiro em Portal do Bitcoin .",
-      "ts_iso": "2026-08-13T13:10:00+00:00",
-      "hash": "f6fd9e13c0243e1e",
-      "_score": {
-        "cyber": 10,
-        "attack": 4,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 2,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
-        "attack": [
-          "ataque",
-          "roubo"
-        ],
-        "crypto": [
-          "bitcoin"
-        ],
-        "value": [
-          "r$ 1",
-          "milhão"
-        ],
-        "incident_verbs": [
-          "r$ 1 milh"
-        ]
-      },
-      "_total": 21,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 0,
-        "score": 3
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-14T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
     }
   ]
 }
