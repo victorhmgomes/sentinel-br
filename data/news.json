@@ -15,8 +15,8 @@
         2
       ]
     ],
-    "generated_at": "2026-08-25T03:47:19+00:00",
-    "runtime_sec": 3.42
+    "generated_at": "2026-08-26T03:52:54+00:00",
+    "runtime_sec": 10.16
   },
   "items": [
     {
@@ -245,9 +245,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 23,
+      "_n_alerts": 26,
       "_corroboration_score": 5
     },
     {
@@ -711,9 +735,25 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 52,
+      "_n_alerts": 54,
       "_corroboration_score": 5
     }
   ]
