@@ -1,24 +1,120 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Valor Investe",
-        2
+        3
       ]
     ],
-    "generated_at": "2026-08-26T03:52:54+00:00",
-    "runtime_sec": 10.16
+    "generated_at": "2026-08-27T13:48:26+00:00",
+    "runtime_sec": 11.23
   },
   "items": [
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Como uma fraude milionária deixou o Pix mais seguro?",
+      "link": "https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2026/08/26/como-uma-fraude-milionaria-deixou-o-pix-mais-seguro.ghtml",
+      "summary": "Pouco depois de um ano após um dos maiores ataques cibernéticos já registrados no sistema financeiro brasileiro, a fraude que abalou o Pix acabou tornando o próprio meio de pagamento instantâneo mais seguro. A avaliação foi compartilhada por especialistas ouvidos pelo Valor Investe durante a Febraban Tech, nesta quarta-feira (26). O episódio, ocorrido em julho de 2025, mostrou um ponto fraco na infraestrutura que conectava as instituições ao Banco Central, e forçou reguladores e empresas a subir a barra. Os criminosos exploraram uma vulnerabilidade da C&M Software, empresa que presta serviços ",
+      "ts_iso": "2026-08-26T20:44:28+00:00",
+      "hash": "2c77cb129d1f9400",
+      "_score": {
+        "cyber": 0,
+        "attack": 5,
+        "launder": 0,
+        "cft": 0,
+        "pix": 10,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 6,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "ataques",
+          "fraude"
+        ],
+        "pix": [
+          "pix",
+          "c&m software",
+          "banco central"
+        ],
+        "named_fi": [
+          "c&m software"
+        ]
+      },
+      "_total": 21,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 14,
+        "neg": 0,
+        "score": 14,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-24T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 6,
+      "_corroboration_score": 5
+    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
@@ -269,9 +365,33 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 26,
+      "_n_alerts": 29,
       "_corroboration_score": 5
     },
     {
