@@ -12,13 +12,108 @@
     "top_sources": [
       [
         "Valor Investe",
-        3
+        2
+      ],
+      [
+        "G1 Política",
+        1
       ]
     ],
-    "generated_at": "2026-08-27T13:48:26+00:00",
-    "runtime_sec": 11.23
+    "generated_at": "2026-08-28T14:55:00+00:00",
+    "runtime_sec": 4.66
   },
   "items": [
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Coaf aplica multas milionárias a empresas por falhas em regras contra lavagem de dinheiro",
+      "link": "https://g1.globo.com/politica/blog/camila-bomfim/post/2026/08/28/coaf-aplica-multas-milionarias-a-empresas-por-falhas-em-regras-contra-lavagem-de-dinheiro.ghtml",
+      "summary": "O Conselho de Controle de Atividades Financeiras (Coaf) multou a Stellantis Automóveis Brasil, antiga Fiat, em R$ 7,4 milhões por descumprir regras de prevenção à lavagem de dinheiro. A sanção foi aplicada após julgamento do plenário do órgão e publicada no Diário Oficial da União (DOU) desta sexta-feira (28). Segundo o Coaf, a multa atinge a empresa e seus administradores. A Stellantis é a mais recente montadora a ser punida pelo órgão. Nos últimos meses, o Coaf também aplicou multas à Toyota, superior a R$ 5 milhões, à Honda, de R$ 377 mil, e à Mercedes-Benz, de quase R$ 14 milhões. De acord",
+      "ts_iso": "2026-08-28T11:51:59+00:00",
+      "hash": "4ecec21e55e73bcc",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 12,
+        "cft": 7,
+        "pix": 0,
+        "crypto": 0,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "launder": [
+          "lavagem",
+          "coaf",
+          "coaf"
+        ],
+        "cft": [
+          "prevenção à lavagem",
+          "sanção"
+        ],
+        "value": [
+          "r$ 7",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 7,4 milh"
+        ]
+      },
+      "_total": 24,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 0,
+        "score": 8
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-27T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 5,
+      "_corroboration_score": 5
+    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
@@ -110,9 +205,17 @@
           "venue": "Mercado Bitcoin",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-27T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 6,
+      "_n_alerts": 7,
       "_corroboration_score": 5
     },
     {
@@ -392,488 +495,6 @@
         }
       ],
       "_n_alerts": 29,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Digitra.com encerra operação de cripto no Brasil e Foxbit recebe clientes",
-      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/08/21/digitracom-encerra-operacao-de-cripto-no-brasil-e-foxbit-recebe-clientes.ghtml",
-      "summary": "Mais um movimento de reorganização do mercado brasileiro de criptoativos: a Digitra.com anunciou o encerramento das operações de varejo de negociação e custódia de criptoativos no país e firmou uma parceria com a Foxbit, que passa a ser uma alternativa para os clientes que quiserem continuar investindo em cripto. A decisão da Digitra.com ocorre em meio à entrada em vigor das novas regras do Banco Central (BC) para as prestadoras de serviços de ativos virtuais (PSAVs). A empresa informou que, após avaliar as exigências regulatórias, decidiu não solicitar autorização ao BC para continuar atuando",
-      "ts_iso": "2026-08-21T18:24:31+00:00",
-      "hash": "b6261084778b35ff",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 3,
-        "crypto": 5,
-        "value": 0,
-        "named_fi": 4,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "crypto": [
-          "cripto",
-          "foxbit"
-        ],
-        "named_fi": [
-          "foxbit"
-        ]
-      },
-      "_total": 16,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 12,
-        "neg": 0,
-        "score": 12,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "critical",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-19T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "critical",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-20T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "critical",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "XRP",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-22T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-23T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-24T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-24T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 54,
       "_corroboration_score": 5
     }
   ]
