@@ -1,151 +1,24 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 2,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 1,
     "top_sources": [
-      [
-        "G1 Política",
-        1
-      ],
       [
         "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-08-31T09:21:16+00:00",
-    "runtime_sec": 11.88
+    "generated_at": "2026-09-01T08:19:18+00:00",
+    "runtime_sec": 4.56
   },
   "items": [
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "Coaf aplica multas milionárias a empresas por falhas em regras contra lavagem de dinheiro",
-      "link": "https://g1.globo.com/politica/blog/camila-bomfim/post/2026/08/28/coaf-aplica-multas-milionarias-a-empresas-por-falhas-em-regras-contra-lavagem-de-dinheiro.ghtml",
-      "summary": "O Conselho de Controle de Atividades Financeiras (Coaf) multou a Stellantis Automóveis Brasil, antiga Fiat, em R$ 7,4 milhões por descumprir regras de prevenção à lavagem de dinheiro. A sanção foi aplicada após julgamento do plenário do órgão e publicada no Diário Oficial da União (DOU) desta sexta-feira (28). Segundo o Coaf, a multa atinge a empresa e seus administradores. A Stellantis é a mais recente montadora a ser punida pelo órgão. Nos últimos meses, o Coaf também aplicou multas à Toyota, superior a R$ 5 milhões, à Honda, de R$ 377 mil, e à Mercedes-Benz, de quase R$ 14 milhões. De acord",
-      "ts_iso": "2026-08-28T11:51:59+00:00",
-      "hash": "4ecec21e55e73bcc",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 12,
-        "cft": 7,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "launder": [
-          "lavagem",
-          "coaf",
-          "coaf"
-        ],
-        "cft": [
-          "prevenção à lavagem",
-          "sanção"
-        ],
-        "value": [
-          "r$ 7",
-          "milhões"
-        ],
-        "incident_verbs": [
-          "r$ 7,4 milh"
-        ]
-      },
-      "_total": 24,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 8,
-        "neg": 0,
-        "score": 8
-      },
-      "_alerts": [
-        {
-          "ts": "2026-08-25T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-25T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-27T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-08-27T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-27T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-27T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-08-28T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        }
-      ],
-      "_n_alerts": 9,
-      "_corroboration_score": 5
-    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
