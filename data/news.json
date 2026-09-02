@@ -1,22 +1,26 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 3,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 3,
     "top_sources": [
+      [
+        "Livecoins",
+        2
+      ],
       [
         "Valor Investe",
         1
       ]
     ],
-    "generated_at": "2026-09-01T08:19:18+00:00",
-    "runtime_sec": 4.56
+    "generated_at": "2026-09-02T07:39:25+00:00",
+    "runtime_sec": 4.83
   },
   "items": [
     {
@@ -154,6 +158,155 @@
       ],
       "_n_alerts": 11,
       "_corroboration_score": 5
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Nova fase da regulação de criptoativos no Brasil exige que empresas provem que estão prontas para operar",
+      "link": "https://livecoins.com.br/nova-fase-da-regulacao-de-criptoativos-no-brasil-exige-que-empresas-provem-que-estao-prontas-para-operar/",
+      "summary": "O avanço da regulamentação dos prestadores de serviços de ativos virtuais (PSAVs), fez o mercado brasileiro entrar em uma etapa em que, para além da autorização para operar, as empresas precisam demonstrar que possuem infraestrutura, controles de segurança, monitoramento e procedimentos capazes de sustentar suas operações dentro de um ambiente regulado. Para Jason Jiang, Chief [&#8230;] Fonte: Nova fase da regulação de criptoativos no Brasil exige que empresas provem que estão prontas para operar Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-09-01T22:25:00+00:00",
+      "hash": "d2cfd919d5b7bcac",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 0,
+        "crypto": 2,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadores de serviços de ativos virtuais"
+        ],
+        "crypto": [
+          "bitcoin"
+        ]
+      },
+      "_total": 6,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Criptomoeda dispara 100% em 20 minutos e hacker leva R$ 30 milhões em Ethereum de roubo que teve pausa e reversão de blockchain",
+      "link": "https://livecoins.com.br/criptomoeda-dispara-100-em-20-minutos-e-hacker-leva-r-30-milhoes-em-ethereum-de-roubo-que-teve-pausa-e-reversao-de-blockchain/",
+      "summary": "Um ataque massivo de manipulação de preço contra a Tectonic, o maior protocolo de empréstimos da rede Cronos, resultou na drenagem de cerca de US$ 75 milhões no último domingo (30). O invasor inflou artificialmente a cotação do token TONIC em cerca de 100 vezes em um intervalo de apenas 20 minutos, utilizando a garantia [&#8230;] Fonte: Criptomoeda dispara 100% em 20 minutos e hacker leva R$ 30 milhões em Ethereum de roubo que teve pausa e reversão de blockchain Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-09-01T18:27:45+00:00",
+      "hash": "270494c14360bd3d",
+      "_score": {
+        "cyber": 15,
+        "attack": 4,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 5,
+        "value": 4,
+        "named_fi": 2,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "invasor"
+        ],
+        "attack": [
+          "ataque",
+          "roubo"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoeda",
+          "blockchain"
+        ],
+        "value": [
+          "r$ 3",
+          "milhões",
+          "us$ 7"
+        ],
+        "named_fi": [
+          "rede"
+        ],
+        "incident_verbs": [
+          "r$ 30 milh"
+        ]
+      },
+      "_total": 32,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 2,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-08-31T12:00:00+00:00",
+          "rule": "ensemble",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "multi",
+          "narrative": "ensemble"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
