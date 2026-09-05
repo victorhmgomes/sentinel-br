@@ -1,17 +1,142 @@
 {
   "summary": {
-    "n_items": 0,
+    "n_items": 2,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 0,
+      "high": 1,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
-    "top_sources": [],
-    "generated_at": "2026-09-04T07:44:01+00:00",
-    "runtime_sec": 6.63
+    "with_watcher_corroboration": 2,
+    "top_sources": [
+      [
+        "Livecoins",
+        1
+      ],
+      [
+        "G1 Política",
+        1
+      ]
+    ],
+    "generated_at": "2026-09-05T07:26:09+00:00",
+    "runtime_sec": 3.96
   },
-  "items": []
+  "items": [
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Trezor identifica mais 67 mil clientes afetados por novo vazamento de dados",
+      "link": "https://livecoins.com.br/trezor-identifica-mais-67-mil-clientes-afetados-por-novo-vazamento-de-dados/",
+      "summary": "A Trezor, famosa fabricante de carteiras de hardware para criptomoedas, revelou nesta sexta-feira (14) um novo vazamento de dados afetando 67 mil clientes que adquiriram seus dispositivos. Anteriormente, em agosto, a empresa havia revelado um vazamento de dados afetando 13.689 clientes, incluindo brasileiros e portugueses. Nas redes sociais, a Trezor respondeu a algumas perguntas de [&#8230;] Fonte: Trezor identifica mais 67 mil clientes afetados por novo vazamento de dados Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-09-04T19:02:27+00:00",
+      "hash": "9cba89a0b6fb9425",
+      "_score": {
+        "cyber": 5,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "vazamento de dados"
+        ],
+        "attack": [
+          "vazamento"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "political_noise": [
+          "novo"
+        ],
+        "incident_verbs": [
+          "vazamento de dados"
+        ]
+      },
+      "_total": 17,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-03T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 3
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Fachin precisa propor algum tipo de punição para Moraes e Mendonça, dizem interlocutores do presidente do STF",
+      "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/09/04/fachin-precisa-propor-algum-tipo-de-punicao-para-moraes-e-mendonca-dizem-interlocutores-do-presidente-do-stf.ghtml",
+      "summary": "Valdo: Aliados de Fachin cobram punição a 2 lados Aliados do presidente do Supremo Tribunal Federal (STF), Luiz Edson Fachin, defendem que ele leve ao plenário uma proposta que dê respostas aos dois protagonistas da \"crise Master\" na Corte. E não descartam nem mesmo a discussão de uma punição aos dois colegas. Tanto para André Mendonça como para Alexandre de Moraes. Mendonça deve ser advertido pelo que foi considerado uma invasão de prerrogativas da Polícia Federal e da Procuradoria-Geral da República quando o magistrado avançou sobre dados envolvendo o colega. Moraes porque precisa explicar s",
+      "ts_iso": "2026-09-04T14:10:18+00:00",
+      "hash": "cb7531138bf9d85d",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 3,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 2,
+        "political_noise": 6,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "polícia federal"
+        ],
+        "named_fi": [
+          "master"
+        ],
+        "political_noise": [
+          "stf",
+          "supremo tribunal"
+        ]
+      },
+      "_total": 16,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 0,
+        "score": 6
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-03T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 2
+    }
+  ]
 }
