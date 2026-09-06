@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-09-05T07:26:09+00:00",
-    "runtime_sec": 3.96
+    "generated_at": "2026-09-06T07:40:09+00:00",
+    "runtime_sec": 5.56
   },
   "items": [
     {
@@ -77,10 +77,18 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-04T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 3
+      "_n_alerts": 2,
+      "_corroboration_score": 4
     },
     {
       "source": "G1 Política",
@@ -133,10 +141,18 @@
           "venue": "Binance BRL",
           "asset": "BTC",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-04T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 1,
-      "_corroboration_score": 2
+      "_n_alerts": 2,
+      "_corroboration_score": 3
     }
   ]
 }
