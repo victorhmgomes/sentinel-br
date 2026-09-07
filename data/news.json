@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-09-06T07:40:09+00:00",
-    "runtime_sec": 5.56
+    "generated_at": "2026-09-07T07:57:27+00:00",
+    "runtime_sec": 3.02
   },
   "items": [
     {
@@ -85,10 +85,26 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-09-05T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-06T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 4
+      "_n_alerts": 4,
+      "_corroboration_score": 5
     },
     {
       "source": "G1 Política",
@@ -149,10 +165,26 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-09-05T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-06T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 4,
+      "_corroboration_score": 5
     }
   ]
 }
