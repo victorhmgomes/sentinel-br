@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-09-07T07:57:27+00:00",
-    "runtime_sec": 3.02
+    "generated_at": "2026-09-08T07:50:44+00:00",
+    "runtime_sec": 3.86
   },
   "items": [
     {
@@ -93,17 +93,9 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-06T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 4,
+      "_n_alerts": 3,
       "_corroboration_score": 5
     },
     {
@@ -173,18 +165,10 @@
           "venue": "Binance",
           "asset": "BNB",
           "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-06T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
