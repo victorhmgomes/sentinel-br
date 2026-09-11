@@ -1,233 +1,24 @@
 {
   "summary": {
-    "n_items": 5,
+    "n_items": 2,
     "by_severity": {
-      "critical": 1,
-      "high": 1,
-      "medium": 3,
+      "critical": 0,
+      "high": 0,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 5,
+    "with_watcher_corroboration": 2,
     "top_sources": [
-      [
-        "Livecoins",
-        2
-      ],
       [
         "Valor Investe",
         2
-      ],
-      [
-        "G1 Política",
-        1
       ]
     ],
-    "generated_at": "2026-09-10T07:53:16+00:00",
-    "runtime_sec": 3.84
+    "generated_at": "2026-09-11T07:49:12+00:00",
+    "runtime_sec": 3.79
   },
   "items": [
-    {
-      "source": "G1 Política",
-      "bucket": "policia",
-      "title": "AGU pede a Fachin suspensão do afastamento do diretor da PF e aponta invasão de prerrogativa de Lula",
-      "link": "https://g1.globo.com/politica/noticia/2026/09/08/agu-pede-a-fachin-suspensao-do-afastamento-de-andrei-rodrigues-e-aponta-invasao-de-prerrogativa-do-presidente.ghtml",
-      "summary": "AGU pede suspensão da decisão que afastou diretor-geral da Polícia Federal A Advocacia-Geral da União (AGU) pediu nesta terça-feira (8) ao presidente do Supremo Tribunal Federal (STF), ministro Edson Fachin, para contestar a decisão monocrática do ministro André Mendonça que determinou o afastamento preventivo do diretor-geral da Polícia Federal, Andrei Rodrigues. Na peça, assinada pelo advogado-geral da União, Jorge Messias, a AGU sustenta que há \"grave lesão à ordem pública e administrativa\". O órgão argumenta que o afastamento cautelar viola frontalmente a prerrogativa constitucional privat",
-      "ts_iso": "2026-09-08T21:58:00+00:00",
-      "hash": "55a88d07bbb2a93c",
-      "_score": {
-        "cyber": 5,
-        "attack": 0,
-        "launder": 5,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 6,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "invasão"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "political_noise": [
-          "stf",
-          "supremo tribunal"
-        ]
-      },
-      "_total": 16,
-      "_severity": "critical",
-      "_br_focus": {
-        "pos": 6,
-        "neg": 0,
-        "score": 6
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Stablecoin de BRL Depix não foi hackeado, mas sofre com a interrupção da rede Liquid e deixa brasileiros sem liquidez",
-      "link": "https://livecoins.com.br/stablecoin-de-brl-depix-nao-foi-hackeado-mas-sofre-com-a-interrupcao-da-rede-liquid-e-deixa-brasileiros-sem-liquidez/",
-      "summary": "Três dias após o ataque que roubou 4 mil bitcoins da reserva da rede Liquid no domingo (6), a rede segue travada para envios e recebimentos. Assim, muitos brasileiros começaram a se preocupar com o Depix, a primeira stablecoin de Real brasileiro emitida no ecossistema Liquid que, embora não tenha sido alvo dos hackers, segue [&#8230;] Fonte: Stablecoin de BRL Depix não foi hackeado, mas sofre com a interrupção da rede Liquid e deixa brasileiros sem liquidez Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-09-09T12:41:47+00:00",
-      "hash": "8b873b748c1940e5",
-      "_score": {
-        "cyber": 10,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 5,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "hackeado",
-          "hackers"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "crypto": [
-          "bitcoin",
-          "stablecoin"
-        ],
-        "named_fi": [
-          "rede"
-        ],
-        "incident_verbs": [
-          "foi hackeado"
-        ]
-      },
-      "_total": 23,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 4
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Ataque hacker contra banco brasileiro mirou criptomoedas e Pix, diz empresa de segurança",
-      "link": "https://livecoins.com.br/ataque-hacker-contra-banco-brasileiro-mirou-criptomoedas-e-pix-diz-empresa-de-seguranca/",
-      "summary": "Um grupo hacker executou uma invasão contra uma instituição financeira brasileira com foco em chaves de custódia de criptoativos e contas do Pix. A equipe de inteligência da empresa de cibersegurança CrowdStrike identificou a ação do grupo conhecido pelo codinome SLIM SPIDER em um relatório técnico. O invasor demonstrou conhecimento profundo das estruturas bancárias nacionais [&#8230;] Fonte: Ataque hacker contra banco brasileiro mirou criptomoedas e Pix, diz empresa de segurança Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-09-09T10:31:44+00:00",
-      "hash": "11798f2653842922",
-      "_score": {
-        "cyber": 24,
-        "attack": 2,
-        "launder": 1,
-        "cft": 0,
-        "pix": 3,
-        "crypto": 4,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "invasão",
-          "cibersegurança",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "launder": [
-          "estruturas"
-        ],
-        "pix": [
-          "pix"
-        ],
-        "crypto": [
-          "bitcoin",
-          "criptomoedas"
-        ]
-      },
-      "_total": 34,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 5,
-        "neg": 0,
-        "score": 5
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
-    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
@@ -293,10 +84,18 @@
           "venue": "Binance BRL",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-09T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -359,10 +158,18 @@
           "venue": "Binance BRL",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-09T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 2,
-      "_corroboration_score": 3
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
