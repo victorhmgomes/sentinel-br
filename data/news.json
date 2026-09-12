@@ -1,24 +1,81 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
-      "critical": 0,
+      "critical": 1,
       "high": 0,
       "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
         "Valor Investe",
         2
+      ],
+      [
+        "InfoMoney",
+        1
       ]
     ],
-    "generated_at": "2026-09-11T07:49:12+00:00",
-    "runtime_sec": 3.79
+    "generated_at": "2026-09-12T07:42:14+00:00",
+    "runtime_sec": 3.45
   },
   "items": [
+    {
+      "source": "InfoMoney",
+      "bucket": "economia",
+      "title": "Vorcaro usava login de servidores do MPF para acessar processos sigilosos, aponta PF",
+      "link": "https://www.infomoney.com.br/politica/vorcaro-usava-login-de-servidores-do-mpf-para-acessar-processos-sigilosos-aponta-pf/",
+      "summary": "Investigadores apontaram necessidade de aprofundar investigação para verificar se os servidores cederam seus seus dados para 'a turma' do banqueiro ou se as contas foram alvo de invasão cibernética The post Vorcaro usava login de servidores do MPF para acessar processos sigilosos, aponta PF appeared first on InfoMoney .",
+      "ts_iso": "2026-09-11T21:51:57+00:00",
+      "hash": "ff669969c41ecb8d",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 4,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "invasão"
+        ],
+        "launder": [
+          "mpf",
+          "pf"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 12,
+      "_severity": "critical",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 0,
+        "score": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-09T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        }
+      ],
+      "_n_alerts": 1,
+      "_corroboration_score": 4
+    },
     {
       "source": "Valor Investe",
       "bucket": "economia",
