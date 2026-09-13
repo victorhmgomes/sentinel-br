@@ -258,6 +258,21 @@ h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4
 .chip.active{border-color:var(--accent);color:var(--accent)}
 .chip:hover{border-color:var(--accent)}
 
+/* ---- mapa de incidentes (tela 1) ---- */
+.imap{padding:16px 18px 12px;border-color:var(--border)}
+.imap-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.imap-head h3{margin:0 0 3px;font-size:15px;letter-spacing:-.01em}
+.imap-head small{color:var(--muted);font-size:12px;font-family:var(--mono)}
+.imap-legend{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--muted);align-items:center}
+.imap-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.imap-legend i.hit{background:var(--ok)} .imap-legend i.miss{background:var(--bad,#ff4d6d)} .imap-legend i.oow{background:transparent;border:1.5px dashed var(--muted)}
+.imap-legend i.band{border-radius:2px;background:linear-gradient(90deg,#e3c15a,#ff7a4a,#ff4d6d)}
+.imap-wrap{width:100%} .imap-wrap svg{width:100%;height:auto;display:block;aspect-ratio:1000/300}
+.imap svg text{font-family:var(--mono)} .imap svg .lbl{font-size:10.5px;fill:var(--text)} .imap svg .ax{font-size:10px;fill:var(--muted)}
+.imap svg .bub{cursor:default;transition:opacity .15s} .imap svg .bub:hover{opacity:1 !important}
+.imap svg:hover .bub{opacity:.45}
+.imap-foot{color:var(--muted);font-size:12px;line-height:1.5;margin-top:8px}
+@media (max-width:640px){.imap-wrap svg{aspect-ratio:1000/380} .imap-legend{gap:10px}}
 .chart-wrap{position:relative;height:340px}
 .chart-wrap.small{height:260px}
 .chart-wrap.tall{height:420px}
@@ -792,6 +807,17 @@ body.mode-technical .exec-only{display:none !important}
         <div data-i18n="lead.hitcap" style="color:var(--muted);font-size:12px;margin-top:6px;font-family:var(--mono);letter-spacing:1.2px;text-transform:uppercase">INCIDENTES · HIT RATE</div>
       </div>
     </div>
+  </section>
+  <section class="panel imap" id="incident-map-panel">
+    <div class="imap-head">
+      <div>
+        <h3 data-i18n="map.title">Mapa dos incidentes · 12 meses</h3>
+        <small id="imap-sub">—</small>
+      </div>
+      <div class="imap-legend" id="imap-legend"></div>
+    </div>
+    <div class="imap-wrap"><svg id="incident-map" viewBox="0 0 1000 300" preserveAspectRatio="none" role="img"></svg></div>
+    <div class="imap-foot" data-i18n="map.foot">Cada bolha é um ataque conhecido ao sistema financeiro BR. Altura = valor divulgado (escala log); tamanho = quantos alertas o Sentinel emitiu em ±3 dias; a faixa inferior é a intensidade diária de alertas. Passe o mouse para detalhes.</div>
   </section>
   <section class="semaforo" id="semaforo"></section>
   <section class="panel" id="exec24h-hero" style="margin-bottom:18px;background:linear-gradient(180deg,rgba(122,184,255,.06),rgba(122,184,255,.02));border:1px solid var(--border)">
@@ -1737,6 +1763,23 @@ const I18N = (function(){
                                    en:'Calibration, FP/FN and detector roadmap'},
     // caso motriz hero
     'motriz.title':               {pt:'Caso motriz', en:'Driving case'},
+    // mapa de incidentes (tela 1)
+    'map.title':                  {pt:'Mapa dos incidentes · 12 meses', en:'Incident map · 12 months'},
+    'map.sub':                    {pt:'{known} ataques conhecidos · {tested} dentro da série de dados ({from} → {to}) · {hit} com sinal em ±3 dias',
+                                    en:'{known} known attacks · {tested} inside the data series ({from} → {to}) · {hit} with a signal within ±3 days'},
+    'map.foot':                   {pt:'Cada bolha é um ataque conhecido ao sistema financeiro BR. Altura = valor divulgado (escala log); tamanho = quantos alertas o Sentinel emitiu em ±3 dias; borda branca = houve alerta crítico; a faixa inferior é a intensidade diária de alertas. Passe o mouse para detalhes.',
+                                    en:'Each bubble is a known attack on the Brazilian financial system. Height = disclosed amount (log scale); size = how many Sentinel alerts fired within ±3 days; white ring = a critical alert fired; the bottom band is daily alert intensity. Hover for details.'},
+    'map.legend.hit':             {pt:'detectado ({n})', en:'detected ({n})'},
+    'map.legend.miss':            {pt:'sem sinal ({n})', en:'no signal ({n})'},
+    'map.legend.oow':             {pt:'anterior à série ({n})', en:'before data series ({n})'},
+    'map.legend.band':            {pt:'intensidade diária de alertas', en:'daily alert intensity'},
+    'map.y.nd':                   {pt:'valor n/d', en:'amount n/a'},
+    'map.nodata':                 {pt:'sem dados de mercado', en:'no market data'},
+    'map.tip.amount':             {pt:'Valor', en:'Amount'},
+    'map.tip.alerts':             {pt:'Alertas ±3d', en:'Alerts ±3d'},
+    'map.tip.hit':                {pt:'✓ detectado', en:'✓ detected'},
+    'map.tip.miss':               {pt:'✗ sem sinal na janela', en:'✗ no signal in window'},
+    'map.tip.oow':                {pt:'anterior à série de dados — não testável', en:'predates the data series — not testable'},
     // exec 24h
     'exec24h.title':              {pt:'Resumo · últimas 24 horas', en:'Snapshot · last 24 hours'},
     'exec24h.sub':                {pt:'linguagem simples · sem números técnicos', en:'plain language · no jargon'},
@@ -2361,6 +2404,91 @@ document.getElementById('kpi-total').textContent = DATA.kpis.total_alerts_12m;
 document.getElementById('kpi-crit').textContent  = DATA.kpis.alerts_by_severity.critical||0;
 document.getElementById('kpi-high').textContent  = DATA.kpis.alerts_by_severity.high||0;
 document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.medium||0;
+});
+
+// ========== mapa de incidentes (tela 1) ==========
+safe('mapa de incidentes', function(){
+  const svg = document.getElementById('incident-map');
+  const inc = DATA.incidents; if (!svg || !inc || !inc.items || !inc.items.length) return;
+  const items = inc.items, s = inc.summary || {};
+  const win = DATA.window || {};
+  const day = d => Math.round(new Date(d + 'T00:00:00Z').getTime() / 864e5);
+  const W = 1000, H = 300, ML = 50, MR = 14, MT = 30, BAND = 30, MB = 34 + BAND;
+  const x0 = Math.min(day(win.from || items[0].date), ...items.map(i => day(i.date))) - 6;
+  const x1 = day(win.to || items[items.length-1].date) + 6;
+  const X = d => ML + (day(d) - x0) / (x1 - x0) * (W - ML - MR);
+  const yTop = MT, yBot = H - MB, yND = yBot - 10;               // lane "valor n/d"
+  const ymin = Math.log10(0.4), ymax = Math.log10(1200);
+  const Y = m => yBot - 22 - (Math.log10(m) - ymin) / (ymax - ymin) * (yBot - 22 - yTop);
+  // intensidade diária (sev máx) pra faixa inferior
+  const sevRank = {medium:1, high:2, critical:3};
+  const byDay = {};
+  (DATA.alerts || []).forEach(a => { const r = sevRank[a.severity] || 0; if (r > (byDay[a.date] || 0)) byDay[a.date] = r; });
+  const bandCol = {1:'#e3c15a', 2:'#ff7a4a', 3:'#ff4d6d'};
+  const esc = t => String(t).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+
+  function render(){
+    const L = I18N.lang;
+    const fmtM = m => m == null ? I18N.tKey('map.y.nd') : (m >= 1000 ? (m/1000).toFixed(1).replace('.', L==='en'?'.':',') + ' bi' : (m < 1 ? (L==='en' ? m.toFixed(1) : m.toFixed(1).replace('.',',')) : String(m)) + ' mi');
+    let g = '';
+    // região sem dados (antes de window.from)
+    if (win.from && day(win.from) > x0) {
+      const xw = X(win.from);
+      g += `<rect x="${ML}" y="${yTop-14}" width="${(xw-ML).toFixed(1)}" height="${(yBot-yTop+14+BAND+8).toFixed(1)}" fill="rgba(255,255,255,.025)"/>`;
+      g += `<line x1="${xw.toFixed(1)}" y1="${yTop-14}" x2="${xw.toFixed(1)}" y2="${yBot+BAND+8}" stroke="var(--border)" stroke-dasharray="3 3"/>`;
+      g += `<text class="ax" x="${(ML+6)}" y="${yTop-2}">${esc(I18N.tKey('map.nodata'))}</text>`;
+    }
+    // grade Y (log)
+    [1, 10, 100, 1000].forEach(m => { const y = Y(m); g += `<line x1="${ML}" y1="${y.toFixed(1)}" x2="${W-MR}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1"/><text class="ax" x="${ML-6}" y="${(y+3.5).toFixed(1)}" text-anchor="end">${m>=1000?'1 bi':m+' mi'}</text>`; });
+    g += `<text class="ax" x="${ML-6}" y="${(yND+3.5).toFixed(1)}" text-anchor="end">${esc(I18N.tKey('map.y.nd'))}</text>`;
+    g += `<line x1="${ML}" y1="${yND}" x2="${W-MR}" y2="${yND}" stroke="var(--border)" stroke-dasharray="2 4"/>`;
+    // eixo X: meses
+    const first = new Date(x0 * 864e5), last = new Date(x1 * 864e5);
+    for (let d = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth()+1, 1)); d <= last; d.setUTCMonth(d.getUTCMonth()+1)) {
+      const iso = d.toISOString().slice(0,10); const x = X(iso);
+      const lab = d.toLocaleString(L==='en'?'en-US':'pt-BR', {month:'short', timeZone:'UTC'}).replace('.','');
+      g += `<line x1="${x.toFixed(1)}" y1="${yBot}" x2="${x.toFixed(1)}" y2="${yBot+4}" stroke="var(--muted)"/><text class="ax" x="${x.toFixed(1)}" y="${yBot+15}" text-anchor="middle">${lab}${d.getUTCMonth()===0?' '+d.getUTCFullYear():''}</text>`;
+    }
+    // faixa de intensidade diária
+    const bw = (W - ML - MR) / (x1 - x0);
+    const yB = yBot + 22;
+    for (let dd = x0; dd <= x1; dd++) {
+      const iso = new Date(dd * 864e5).toISOString().slice(0,10); const r = byDay[iso];
+      if (!r) continue;
+      const h = r === 1 ? 8 : r === 2 ? 16 : BAND - 4;
+      g += `<rect x="${(ML + (dd-x0)*bw).toFixed(2)}" y="${(yB + BAND - 4 - h).toFixed(1)}" width="${Math.max(bw-0.3,0.8).toFixed(2)}" height="${h}" fill="${bandCol[r]}" opacity=".85"/>`;
+    }
+    // bolhas (ordena por data; alterna label acima/abaixo quando vizinhos próximos)
+    const sorted = items.slice().sort((a,b) => a.date.localeCompare(b.date));
+    let lastLabX = -99, lastLabUp = false;
+    sorted.forEach(it => {
+      const c = it.counts || {}; const oow = it.in_window === false; const hit = !oow && c.pm3 > 0;
+      const x = X(it.date); const y = it.amount_brl_m != null ? Y(it.amount_brl_m) : yND;
+      const r = oow ? 6 : Math.min(18, 5 + 2.4 * Math.log2(1 + (c.pm3 || 0)));
+      const fill = oow ? 'none' : hit ? 'var(--ok)' : 'var(--bad,#ff4d6d)';
+      const stroke = oow ? 'var(--muted)' : (c.pm3_cr > 0 ? '#fff' : 'rgba(0,0,0,.35)');
+      const name = L==='en' ? (it.name_en || it.name) : it.name;
+      const tip = [`${it.label} · ${it.date}`, name, `${I18N.tKey('map.tip.amount')}: R$ ${fmtM(it.amount_brl_m)}`,
+        oow ? I18N.tKey('map.tip.oow') : `${I18N.tKey('map.tip.alerts')}: ${c.pm3} (${c.pm3_cr} crit · ${c.pm3_hi} high+)`,
+        oow ? '' : (hit ? I18N.tKey('map.tip.hit') : I18N.tKey('map.tip.miss'))].filter(Boolean).join('\n');
+      const up = !(Math.abs(x - lastLabX) < 26 && lastLabUp); lastLabX = x; lastLabUp = up;
+      const ly = up ? y - r - 5 : y + r + 12;
+      g += `<g class="bub" opacity=".92"><title>${esc(tip)}</title>`
+         + `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${fill}" fill-opacity="${oow?1:.82}" stroke="${stroke}" stroke-width="${oow?1.2:1.5}" ${oow?'stroke-dasharray="2 2"':''}/>`
+         + `<text class="lbl" x="${x.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" ${oow?'fill="var(--muted)"':''}>${esc(it.label)}</text></g>`;
+    });
+    svg.innerHTML = g;
+    // subtítulo + legenda
+    const sub = document.getElementById('imap-sub');
+    if (sub) sub.textContent = I18N.tTpl('map.sub', {known: s.n_known ?? items.length, tested: s.n_total ?? '', hit: s.n_hit_any_pm3 ?? '', from: win.from || '', to: win.to || ''});
+    const leg = document.getElementById('imap-legend');
+    const nHit = items.filter(i => i.in_window !== false && (i.counts||{}).pm3 > 0).length;
+    const nMiss = items.filter(i => i.in_window !== false && !((i.counts||{}).pm3 > 0)).length;
+    const nOow = items.filter(i => i.in_window === false).length;
+    if (leg) leg.innerHTML = `<span><i class="hit"></i>${esc(I18N.tTpl('map.legend.hit',{n:nHit}))}</span><span><i class="miss"></i>${esc(I18N.tTpl('map.legend.miss',{n:nMiss}))}</span><span><i class="oow"></i>${esc(I18N.tTpl('map.legend.oow',{n:nOow}))}</span><span><i class="band"></i>${esc(I18N.tKey('map.legend.band'))}</span>`;
+  }
+  render();
+  document.addEventListener('langchange', render);
 });
 
 // ========== manchete (hit rate dos incidentes) ==========

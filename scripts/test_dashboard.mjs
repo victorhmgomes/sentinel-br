@@ -97,6 +97,9 @@ ok(document.querySelectorAll('#inc-summary .kpi').length >= 3, '#inc-summary sem
 ok(document.querySelectorAll('#tbl-incidents tbody tr').length === (DATA.incidents?.items || []).length,
    '#tbl-incidents: linhas != incidentes');
 ok(/^\d+$/.test(document.getElementById('kpi-total').textContent.trim()), '#kpi-total não numérico');
+const nBub = document.querySelectorAll('#incident-map .bub').length;
+ok(nBub === (DATA.incidents?.items || []).length && nBub > 0, `#incident-map: ${nBub} bolhas (esperado ${(DATA.incidents?.items||[]).length})`);
+ok(document.querySelectorAll('#imap-legend span').length === 4, '#imap-legend não pintada');
 
 // ---- 4. manchete ----
 const lead = document.getElementById('lead-hits');
