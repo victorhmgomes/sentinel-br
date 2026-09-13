@@ -1,0 +1,49 @@
+name: ci-smoke
+
+# Roda a cada push que toque no source do dashboard ou nos scripts:
+# builda o index.html com os dados já commitados e executa o smoke test
+# jsdom. NÃO commita nada — é só feedback rápido (≈1 min) no Actions.
+# Os workflows refresh/refresh-daily rodam o mesmo teste antes de publicar.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+      - "scripts/**"
+      - ".github/workflows/ci-smoke.yml"
+  pull_request:
+    paths:
+      - "dashboard/**"
+      - "scripts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build dashboard (dados do repo)
+        run: python3 scripts/build_dashboard.py
+
+      - name: Smoke test do dashboard (jsdom)
+        run: |
+          npm install --no-save --no-audit --no-fund --no-package-lock jsdom@24
+          node scripts/test_dashboard.mjs index.html

@@ -53,6 +53,19 @@ jobs:
       - name: Rebuild dashboard
         run: python3 scripts/build_dashboard.py
 
+      - name: Setup Node (smoke test)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Smoke test do dashboard (jsdom)
+        # Executa o JS do index.html buildado num DOM headless. Falha o job
+        # (e portanto NÃO commita/publica) se algum renderer lançar exceção,
+        # se o i18n não aplicar, ou se painéis-chave ficarem vazios.
+        run: |
+          npm install --no-save --no-audit --no-fund --no-package-lock jsdom@24
+          node scripts/test_dashboard.mjs index.html
+
       - name: Commit & push se houver mudança
         run: |
           git config user.name  "sentinel-br-bot"

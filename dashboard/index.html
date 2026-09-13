@@ -1394,8 +1394,22 @@ body.mode-technical .exec-only{display:none !important}
 <script id="FLIGHT" type="application/json">__FLIGHT__</script>
 <script id="EVENTS" type="application/json">__EVENTS__</script>
 <script>
+// ========== safe renderer wrapper ==========
+// Cada painel roda isolado: se um renderer lançar exceção, o erro é logado no
+// console e registrado em window.__sentinelErrors, mas os painéis seguintes
+// (e o apply() final do i18n) continuam executando. Sem isso, um único
+// `.filter` num objeto errado derruba silenciosamente metade da página.
+window.__sentinelErrors = [];
+function safe(name, fn){
+  try { fn(); }
+  catch (e) {
+    window.__sentinelErrors.push({ name, message: e && e.message, stack: e && e.stack });
+    console.error('[sentinel] renderer "' + name + '" falhou:', e);
+  }
+}
+
 // ========== modo leigo / técnico + glossário ==========
-(function(){
+safe('modo leigo / técnico + glossário', function(){
   const BTNS = document.querySelectorAll('.mode-bar .mode-btn[data-mode]');
   const body = document.body;
   // default = executivo (mais amigável pro leitor leigo)
@@ -1436,7 +1450,7 @@ body.mode-technical .exec-only{display:none !important}
       setTimeout(() => document.getElementById('tron-panel')?.scrollIntoView({behavior:'smooth', block:'start'}), 100);
     });
   }
-})();
+});
 
 // ========== i18n · PT (default) ↔ EN ==========
 // Dicionário centralizado de traduções. 3 mecanismos:
@@ -2304,7 +2318,7 @@ const I18N = (function(){
 window.I18N = I18N;
 
 // toggle UI
-(function(){
+safe('lang toggle UI', function(){
   const btn = document.getElementById('lang-toggle');
   if (!btn) return;
   btn.addEventListener('click', () => {
@@ -2316,7 +2330,7 @@ window.I18N = I18N;
       I18N.setLang(ch.getAttribute('data-lang'));
     });
   });
-})();
+});
 
 // ========== bootstrap ==========
 const DATA = JSON.parse(document.getElementById('DATA').textContent);
@@ -2333,6 +2347,7 @@ Chart.defaults.borderColor = '#232735';
 Chart.defaults.font.family = '-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif';
 
 // header
+safe('bootstrap · header + KPIs', function(){
 document.getElementById('gen').textContent = (DATA.generated_at||'').slice(0,10);
 document.getElementById('window').textContent = DATA.window.from + '  →  ' + DATA.window.to;
 
@@ -2341,9 +2356,10 @@ document.getElementById('kpi-total').textContent = DATA.kpis.total_alerts_12m;
 document.getElementById('kpi-crit').textContent  = DATA.kpis.alerts_by_severity.critical||0;
 document.getElementById('kpi-high').textContent  = DATA.kpis.alerts_by_severity.high||0;
 document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.medium||0;
+});
 
 // ========== manchete (hit rate dos incidentes) ==========
-(function(){
+safe('manchete (hit rate dos incidentes)', function(){
   const inc = DATA.incidents?.summary;
   if (!inc) return;
   function paint(){
@@ -2364,10 +2380,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
   paint();
   // apply() redesenha innerHTML de data-i18n-html em cada troca → re-pintar
   document.addEventListener('langchange', paint);
-})();
+});
 
 // ========== Binance em evidência (streaming) ==========
-(function(){
+safe('Binance em evidência (streaming)', function(){
   const root = document.getElementById('binance-hero');
   if (!root) return;
 
@@ -2518,10 +2534,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
 
   renderSnapshot();
   renderFeed();
-})();
+});
 
 // ========== Imprensa corrobora (RSS BR → keyword classification) ==========
-(function(){
+safe('Imprensa corrobora (RSS BR → keyword classification)', function(){
   const root = document.getElementById('press-list');
   if (!root) return;
   let payload = null;
@@ -2634,10 +2650,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
   });
 
   render('all');
-})();
+});
 
 // ========== Calibração & FP/FN (backtest rigoroso) ==========
-(function(){
+safe('Calibração & FP/FN (backtest rigoroso)', function(){
   const tbody = document.getElementById('calib-tbody');
   if (!tbody) return;
   let payload = null;
@@ -2715,10 +2731,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
       `${payload.n_baselines} baselines · última calibração ${payload.generated_at.slice(0,16).replace('T',' ')} UTC · ` +
       `runtime ${payload.runtime_sec}s · pipeline: <code>scripts/backtest/run_backtest.py</code>`;
   }
-})();
+});
 
 // ========== stablecoin_flight · calibração provisória ==========
-(function(){
+safe('stablecoin_flight · calibração provisória', function(){
   const tbody = document.querySelector('#tbl-flight tbody');
   if (!tbody) return;
   let fd = null;
@@ -2748,10 +2764,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
       <td>${SEV_TOP(s.alerts)}</td>
     </tr>`).join('');
   tbody.innerHTML = rows || '<tr><td colspan="7" class="press-empty" style="border:0">Sem cenários.</td></tr>';
-})();
+});
 
 // ========== Eventos correlacionados (correlator) ==========
-(function(){
+safe('Eventos correlacionados (correlator)', function(){
   const listEl = document.getElementById('events-list');
   if (!listEl) return;
 
@@ -2860,10 +2876,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
     });
   }
   render('all');
-})();
+});
 
 // ========== semáforo (3 cards · risco hoje, atividade 30d, cobertura) ==========
-(function(){
+safe('semáforo (3 cards · risco hoje, atividade 30d, cobertura)', function(){
   const wrap = document.getElementById('semaforo');
   if (!wrap) return;
 
@@ -2956,10 +2972,10 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
 
   render();
   document.addEventListener('langchange', render);
-})();
+});
 
 // ========== Caso Motriz — hero do incidente mais recente ==========
-(function(){
+safe('Caso Motriz — hero do incidente mais recente', function(){
   const inc = (DATA.incidents && DATA.incidents.items) || [];
   if (!inc.length) return;
   // pega o mais recente (assumindo ordenado; caso contrário escolhe por data)
@@ -3032,7 +3048,7 @@ document.getElementById('kpi-med').textContent   = DATA.kpis.alerts_by_severity.
 
   render();
   document.addEventListener('langchange', render);
-})();
+});
 
 // ========== main chart — BRL por venue brasileira (empilhado) ==========
 const palette = {
@@ -3127,6 +3143,7 @@ function drawMain(asset='BTC'){
 }
 
 // seletor de par BRL
+safe('main chart · seletor de par', function(){
 const assetCtl = document.getElementById('asset-controls');
 ['BTC','USDT','ETH','SOL'].forEach((a,i)=>{
   const c = document.createElement('span');
@@ -3137,6 +3154,7 @@ const assetCtl = document.getElementById('asset-controls');
     drawMain(a);
   };
   assetCtl.appendChild(c);
+});
 });
 
 // plugin global: marcadores verticais de incidentes (todos os incidentes conhecidos)
@@ -3167,10 +3185,10 @@ function incidentsMarkerPlugin(labels){
   };
 }
 
-drawMain('BTC');
+safe('main chart · init', function(){ drawMain('BTC'); });
 
 // ========== CoinGecko · volume 30d por exchange ==========
-(function(){
+safe('CoinGecko · volume 30d por exchange', function(){
   const CG = JSON.parse(document.getElementById('CG').textContent);
   if (!CG || !CG.series) return;
 
@@ -3238,10 +3256,10 @@ drawMain('BTC');
     `;
     tb.appendChild(tr);
   });
-})();
+});
 
 // ========== stablecoin flight ==========
-(function(){
+safe('stablecoin flight', function(){
   const pts = DATA.stablecoin_flight;
   const labels = pts.map(p=>p.date);
   const ratio = pts.map(p=>p.ratio);
@@ -3261,10 +3279,10 @@ drawMain('BTC');
       }},
     plugins:[sinqiaLinePlugin(labels), incidentsMarkerPlugin(labels)]
   });
-})();
+});
 
 // ========== BR premium ==========
-(function(){
+safe('BR premium', function(){
   const pts = DATA.br_premium;
   const labels = pts.map(p=>p.date);
   const prem = pts.map(p=>p.premium*100);
@@ -3280,10 +3298,10 @@ drawMain('BTC');
       }},
     plugins:[sinqiaLinePlugin(labels), incidentsMarkerPlugin(labels)]
   });
-})();
+});
 
 // ========== concentração ==========
-(function(){
+safe('concentração', function(){
   const pts = DATA.br_concentration;
   const labels = pts.map(p=>p.date);
   new Chart(document.getElementById('chart-conc'),{
@@ -3300,7 +3318,7 @@ drawMain('BTC');
       }},
     plugins:[sinqiaLinePlugin(labels), incidentsMarkerPlugin(labels)]
   });
-})();
+});
 
 // hashrate removido — não é sinal de fraude, era só sanidade on-chain.
 
@@ -3322,6 +3340,7 @@ function sinqiaLinePlugin(labels){
 
 // ========== tabela alertas ==========
 const filters = {sev:'all', src:'all', asset:'all'};
+safe('tabela alertas · filtros', function(){
 document.querySelectorAll('.controls .chip[data-filter]').forEach(chip=>{
   chip.onclick = ()=>{
     const f = chip.dataset.filter;
@@ -3330,6 +3349,7 @@ document.querySelectorAll('.controls .chip[data-filter]').forEach(chip=>{
     filters[f] = chip.dataset.value;
     renderAlerts();
   };
+});
 });
 
 function renderAlerts(){
@@ -3359,10 +3379,10 @@ function renderAlerts(){
   });
   tbody.appendChild(frag);
 }
-renderAlerts();
+safe('tabela alertas · render', function(){ renderAlerts(); });
 
 // ========== livro consolidado (multi-par) ==========
-(function(){
+safe('livro consolidado (multi-par)', function(){
   const OB = JSON.parse(document.getElementById('OB').textContent);
   if (!OB || !OB.pairs) return;
 
@@ -3565,10 +3585,10 @@ renderAlerts();
       wrap.appendChild(row);
     }
   })();
-})();
+});
 
 // ========== resumo executivo · últimas 24h ==========
-(function(){
+safe('resumo executivo · últimas 24h', function(){
   if (!DATA.alerts) return;
   // janela de 7 dias para "últimas 24h" — datas em dashboard.json têm
   // granularidade diária (sem hora), então "últimas 24h" na prática
@@ -3652,10 +3672,10 @@ renderAlerts();
   }
   render();
   document.addEventListener('langchange', render);
-})();
+});
 
 // ========== incidentes (backtest) ==========
-(function(){
+safe('incidentes (backtest)', function(){
   if (!DATA.incidents) return;
   const inc = DATA.incidents;
 
@@ -3730,13 +3750,13 @@ renderAlerts();
   renderSummary();
   renderTable();
   document.addEventListener('langchange', () => { renderSummary(); renderTable(); });
-})();
+});
 
 // (marcadores de incidentes agora são aplicados via incidentsMarkerPlugin
 // diretamente em cada chart relevante — ver drawMain e flight/premium/conc/hash)
 
 // ========== heatmap · 12 séries × 365d ==========
-(function(){
+safe('heatmap · 12 séries × 365d', function(){
   const hm = DATA.heatmap;
   if (!hm || !hm.series?.length) return;
   const root = document.getElementById('heatmap');
@@ -3789,10 +3809,10 @@ renderAlerts();
   });
   outer.appendChild(grid);
   root.appendChild(outer);
-})();
+});
 
 // ========== ring of mules ==========
-(function(){
+safe('ring of mules', function(){
   const r = DATA.ring_of_mules;
   if (!r) return;
   const meta = document.getElementById('ring-meta');
@@ -3822,10 +3842,10 @@ renderAlerts();
     `;
     tb.appendChild(tr);
   });
-})();
+});
 
 // ========== HourlyCorr · cross-venue intraday ==========
-(function(){
+safe('HourlyCorr · cross-venue intraday', function(){
   const HC = DATA.hourly_corr;
   const hcAlerts = (DATA.alerts || []).filter(a => a && a.metric === 'hourly_corr');
   const panel = document.getElementById('hourly-panel');
@@ -3918,10 +3938,10 @@ renderAlerts();
     `;
     tb.appendChild(tr);
   });
-})();
+});
 
 // ========== TRON · USDT TRC-20 ==========
-(function(){
+safe('TRON · USDT TRC-20', function(){
   const TR = JSON.parse(document.getElementById('TRON').textContent);
   if (!TR || !TR.series) return;
 
@@ -4001,10 +4021,10 @@ renderAlerts();
       `;
     tbH.appendChild(tr);
   });
-})();
+});
 
 // ========== funding rates ==========
-(function(){
+safe('funding rates', function(){
   const FR = JSON.parse(document.getElementById('FUNDING').textContent);
   if (!FR || !FR.series) return;
   const sum = FR.summary || {};
@@ -4057,10 +4077,10 @@ renderAlerts();
     };
   });
   draw('BTC');
-})();
+});
 
 // ========== indicadores ==========
-(function(){
+safe('indicadores', function(){
   const wrap = document.getElementById('indicators');
   function render(){
     const L = (window.I18N && window.I18N.lang) || 'pt';
@@ -4084,7 +4104,7 @@ renderAlerts();
   }
   render();
   document.addEventListener('langchange', render);
-})();
+});
 
 // ========== i18n · final pass ==========
 // Aplica tradução sobre elementos que têm data-i18n* tags
