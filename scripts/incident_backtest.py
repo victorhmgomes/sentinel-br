@@ -47,6 +47,22 @@ INCIDENTS = [
         "name_en": "Incident at a payment institution — R$ ~5M"},
     {"date": "2026-05-19", "label": "#16", "name": "Incidente em instituição de pagamento — R$ ~5M",
         "name_en": "Incident at a payment institution — R$ ~5M"},
+    {"date": "2026-05-19", "label": "#17", "name": "Incidente em instituição de pagamento — R$ ~40M",
+        "name_en": "Incident at a payment institution — R$ ~40M"},
+    {"date": "2026-05-27", "label": "#18", "name": "Incidente em instituição de pagamento — R$ ~10M",
+        "name_en": "Incident at a payment institution — R$ ~10M"},
+    {"date": "2026-06-06", "label": "#19", "name": "Incidente em instituição de pagamento de varejista — valor não divulgado",
+        "name_en": "Incident at a retailer's payment institution — amount undisclosed"},
+    {"date": "2026-06-19", "label": "#20", "name": "Incidente em instituição de pagamento — R$ ~5M",
+        "name_en": "Incident at a payment institution — R$ ~5M"},
+    {"date": "2026-07-18", "label": "#21", "name": "Incidente em fintech de pagamentos — R$ ~6M",
+        "name_en": "Incident at a payments fintech — R$ ~6M"},
+    {"date": "2026-08-02", "label": "#22", "name": "Incidente em emissora de benefícios — R$ ~10M",
+        "name_en": "Incident at a benefits card issuer — R$ ~10M"},
+    {"date": "2026-08-21", "label": "#23", "name": "Incidente em sociedade de crédito direto — R$ ~0,5M",
+        "name_en": "Incident at a direct-credit company — R$ ~0.5M"},
+    {"date": "2026-08-27", "label": "#24", "name": "Incidente em instituição de pagamento (plataforma B2B) — R$ ~70M",
+        "name_en": "Incident at a payment institution (B2B platform) — R$ ~70M"},
 ]
 
 def main():
