@@ -267,12 +267,12 @@ h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4
 .imap-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
 .imap-legend i.hit{background:var(--ok)} .imap-legend i.miss{background:var(--bad,#ff4d6d)} .imap-legend i.oow{background:transparent;border:1.5px dashed var(--muted)}
 .imap-legend i.band{border-radius:2px;background:linear-gradient(90deg,#e3c15a,#ff7a4a,#ff4d6d)}
-.imap-wrap{width:100%} .imap-wrap svg{width:100%;height:auto;display:block;aspect-ratio:1000/300}
-.imap svg text{font-family:var(--mono)} .imap svg .lbl{font-size:10.5px;fill:var(--text)} .imap svg .ax{font-size:10px;fill:var(--muted)}
+.imap-wrap{width:100%} .imap-wrap svg{width:100%;display:block}
+.imap svg text{font-family:var(--mono)} .imap svg .lbl{font-size:11px;font-weight:600;fill:var(--text);paint-order:stroke;stroke:var(--panel);stroke-width:3px;stroke-linejoin:round} .imap svg .lbl.miss{fill:#ff8aa0} .imap svg .lbl.oow{fill:var(--muted);font-weight:400} .imap svg .ax{font-size:10.5px;fill:var(--muted)}
 .imap svg .bub{cursor:default;transition:opacity .15s} .imap svg .bub:hover{opacity:1 !important}
 .imap svg:hover .bub{opacity:.45}
 .imap-foot{color:var(--muted);font-size:12px;line-height:1.5;margin-top:8px}
-@media (max-width:640px){.imap-wrap svg{aspect-ratio:1000/380} .imap-legend{gap:10px}}
+@media (max-width:640px){.imap-legend{gap:10px}}
 .chart-wrap{position:relative;height:340px}
 .chart-wrap.small{height:260px}
 .chart-wrap.tall{height:420px}
@@ -2413,82 +2413,101 @@ safe('mapa de incidentes', function(){
   const items = inc.items, s = inc.summary || {};
   const win = DATA.window || {};
   const day = d => Math.round(new Date(d + 'T00:00:00Z').getTime() / 864e5);
-  const W = 1000, H = 300, ML = 50, MR = 14, MT = 30, BAND = 30, MB = 34 + BAND;
-  const x0 = Math.min(day(win.from || items[0].date), ...items.map(i => day(i.date))) - 6;
-  const x1 = day(win.to || items[items.length-1].date) + 6;
-  const X = d => ML + (day(d) - x0) / (x1 - x0) * (W - ML - MR);
-  const yTop = MT, yBot = H - MB, yND = yBot - 10;               // lane "valor n/d"
-  const ymin = Math.log10(0.4), ymax = Math.log10(1200);
-  const Y = m => yBot - 22 - (Math.log10(m) - ymin) / (ymax - ymin) * (yBot - 22 - yTop);
-  // intensidade diária (sev máx) pra faixa inferior
   const sevRank = {medium:1, high:2, critical:3};
   const byDay = {};
   (DATA.alerts || []).forEach(a => { const r = sevRank[a.severity] || 0; if (r > (byDay[a.date] || 0)) byDay[a.date] = r; });
   const bandCol = {1:'#e3c15a', 2:'#ff7a4a', 3:'#ff4d6d'};
   const esc = t => String(t).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+  const x0 = Math.min(day(win.from || items[0].date), ...items.map(i => day(i.date))) - 5;
+  const x1 = day(win.to || items[items.length-1].date) + 5;
 
   function render(){
     const L = I18N.lang;
-    const fmtM = m => m == null ? I18N.tKey('map.y.nd') : (m >= 1000 ? (m/1000).toFixed(1).replace('.', L==='en'?'.':',') + ' bi' : (m < 1 ? (L==='en' ? m.toFixed(1) : m.toFixed(1).replace('.',',')) : String(m)) + ' mi');
-    let g = '';
+    // largura real do container → fontes e bolhas em px reais (nada de esticar viewBox)
+    const W = Math.max(320, Math.round((svg.parentElement && svg.parentElement.clientWidth) || 1000));
+    const narrow = W < 700, mobile = W < 480;
+    const H = mobile ? 330 : 300;
+    const ML = mobile ? 40 : 52, MR = 12, MT = 26, BAND = 26, MB = 30 + BAND;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.style.height = H + 'px';
+    const X = d => ML + (day(d) - x0) / (x1 - x0) * (W - ML - MR);
+    const yTop = MT, yBot = H - MB, yND = yBot - 8;
+    const ymin = Math.log10(0.4), ymax = Math.log10(1200);
+    const Y = m => yBot - 24 - (Math.log10(m) - ymin) / (ymax - ymin) * (yBot - 24 - yTop);
+    const fmtM = m => m == null ? I18N.tKey('map.y.nd')
+      : m >= 1000 ? (m/1000).toFixed(1).replace('.', L==='en'?'.':',') + (L==='en'?' bn':' bi')
+      : (m < 1 ? m.toFixed(1).replace('.', L==='en'?'.':',') : String(m)) + (L==='en'?' M':' mi');
+    const mon = (d) => d.toLocaleString(L==='en'?'en-US':'pt-BR', {month:'short', timeZone:'UTC'}).replace('.','');
+
+    let g = `<defs>
+      <radialGradient id="imapHit" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#9ff3cf"/><stop offset="1" stop-color="#1fb87a"/></radialGradient>
+      <radialGradient id="imapMiss" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ff9fb3"/><stop offset="1" stop-color="#d93a5c"/></radialGradient>
+      <pattern id="imapHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="rgba(255,255,255,.06)" stroke-width="2"/></pattern>
+      <filter id="imapGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+    </defs>`;
     // região sem dados (antes de window.from)
     if (win.from && day(win.from) > x0) {
       const xw = X(win.from);
-      g += `<rect x="${ML}" y="${yTop-14}" width="${(xw-ML).toFixed(1)}" height="${(yBot-yTop+14+BAND+8).toFixed(1)}" fill="rgba(255,255,255,.025)"/>`;
-      g += `<line x1="${xw.toFixed(1)}" y1="${yTop-14}" x2="${xw.toFixed(1)}" y2="${yBot+BAND+8}" stroke="var(--border)" stroke-dasharray="3 3"/>`;
-      g += `<text class="ax" x="${(ML+6)}" y="${yTop-2}">${esc(I18N.tKey('map.nodata'))}</text>`;
+      g += `<rect x="${ML}" y="${yTop-12}" width="${(xw-ML).toFixed(1)}" height="${(yBot-yTop+12+BAND+6).toFixed(1)}" fill="url(#imapHatch)"/>`;
+      g += `<line x1="${xw.toFixed(1)}" y1="${yTop-12}" x2="${xw.toFixed(1)}" y2="${yBot+BAND+6}" stroke="var(--border-2,#2b3547)" stroke-dasharray="3 3"/>`;
+      if (!mobile) g += `<text class="ax" x="${(ML+6)}" y="${yTop-1}">${esc(I18N.tKey('map.nodata'))}</text>`;
     }
     // grade Y (log)
-    [1, 10, 100, 1000].forEach(m => { const y = Y(m); g += `<line x1="${ML}" y1="${y.toFixed(1)}" x2="${W-MR}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1"/><text class="ax" x="${ML-6}" y="${(y+3.5).toFixed(1)}" text-anchor="end">${m>=1000?'1 bi':m+' mi'}</text>`; });
-    g += `<text class="ax" x="${ML-6}" y="${(yND+3.5).toFixed(1)}" text-anchor="end">${esc(I18N.tKey('map.y.nd'))}</text>`;
-    g += `<line x1="${ML}" y1="${yND}" x2="${W-MR}" y2="${yND}" stroke="var(--border)" stroke-dasharray="2 4"/>`;
-    // eixo X: meses
+    [1, 10, 100, 1000].forEach(m => { const y = Y(m);
+      g += `<line x1="${ML}" y1="${y.toFixed(1)}" x2="${W-MR}" y2="${y.toFixed(1)}" stroke="rgba(255,255,255,.06)"/><text class="ax" x="${ML-6}" y="${(y+3.5).toFixed(1)}" text-anchor="end">${m>=1000?(L==='en'?'1 bn':'1 bi'):(m+(L==='en'?' M':' mi'))}</text>`; });
+    g += `<line x1="${ML}" y1="${yND}" x2="${W-MR}" y2="${yND}" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 4"/>`;
+    g += `<text class="ax" x="${ML-6}" y="${(yND+3.5).toFixed(1)}" text-anchor="end">${esc(mobile ? 'n/d' : I18N.tKey('map.y.nd'))}</text>`;
+    // eixo X (mensal; trimestral se estreito)
     const first = new Date(x0 * 864e5), last = new Date(x1 * 864e5);
     for (let d = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth()+1, 1)); d <= last; d.setUTCMonth(d.getUTCMonth()+1)) {
-      const iso = d.toISOString().slice(0,10); const x = X(iso);
-      const lab = d.toLocaleString(L==='en'?'en-US':'pt-BR', {month:'short', timeZone:'UTC'}).replace('.','');
-      g += `<line x1="${x.toFixed(1)}" y1="${yBot}" x2="${x.toFixed(1)}" y2="${yBot+4}" stroke="var(--muted)"/><text class="ax" x="${x.toFixed(1)}" y="${yBot+15}" text-anchor="middle">${lab}${d.getUTCMonth()===0?' '+d.getUTCFullYear():''}</text>`;
+      const m = d.getUTCMonth(); if (narrow && m % 3 !== 0) continue;
+      const x = X(d.toISOString().slice(0,10));
+      g += `<line x1="${x.toFixed(1)}" y1="${yBot}" x2="${x.toFixed(1)}" y2="${yBot+4}" stroke="var(--muted)"/><text class="ax" x="${x.toFixed(1)}" y="${yBot+15}" text-anchor="middle">${mon(d)}${m===0?' '+String(d.getUTCFullYear()).slice(2):''}</text>`;
     }
     // faixa de intensidade diária
-    const bw = (W - ML - MR) / (x1 - x0);
-    const yB = yBot + 22;
+    const bw = (W - ML - MR) / (x1 - x0), yB = yBot + 20;
     for (let dd = x0; dd <= x1; dd++) {
-      const iso = new Date(dd * 864e5).toISOString().slice(0,10); const r = byDay[iso];
-      if (!r) continue;
-      const h = r === 1 ? 8 : r === 2 ? 16 : BAND - 4;
-      g += `<rect x="${(ML + (dd-x0)*bw).toFixed(2)}" y="${(yB + BAND - 4 - h).toFixed(1)}" width="${Math.max(bw-0.3,0.8).toFixed(2)}" height="${h}" fill="${bandCol[r]}" opacity=".85"/>`;
+      const r = byDay[new Date(dd * 864e5).toISOString().slice(0,10)]; if (!r) continue;
+      const h = r === 1 ? 7 : r === 2 ? 14 : BAND - 4;
+      g += `<rect x="${(ML + (dd-x0)*bw).toFixed(2)}" y="${(yB + BAND - 4 - h).toFixed(1)}" width="${Math.max(bw-0.25,0.9).toFixed(2)}" height="${h}" fill="${bandCol[r]}" opacity=".8"/>`;
     }
-    // bolhas (ordena por data; alterna label acima/abaixo quando vizinhos próximos)
+    // bolhas
     const sorted = items.slice().sort((a,b) => a.date.localeCompare(b.date));
-    let lastLabX = -99, lastLabUp = false;
+    const notable = new Set(sorted.filter(i => i.in_window !== false).sort((a,b) => (b.amount_brl_m||0)-(a.amount_brl_m||0)).slice(0,4).map(i=>i.label));
+    if (sorted.length) notable.add(sorted[sorted.length-1].label);
+    let lastLabX = -99, lastLabUp = false, bubbles = '', labels = '';
     sorted.forEach(it => {
       const c = it.counts || {}; const oow = it.in_window === false; const hit = !oow && c.pm3 > 0;
       const x = X(it.date); const y = it.amount_brl_m != null ? Y(it.amount_brl_m) : yND;
-      const r = oow ? 6 : Math.min(18, 5 + 2.4 * Math.log2(1 + (c.pm3 || 0)));
-      const fill = oow ? 'none' : hit ? 'var(--ok)' : 'var(--bad,#ff4d6d)';
-      const stroke = oow ? 'var(--muted)' : (c.pm3_cr > 0 ? '#fff' : 'rgba(0,0,0,.35)');
+      const r = oow ? 5 : Math.min(mobile ? 13 : 17, (mobile ? 4 : 5) + 2.3 * Math.log2(1 + (c.pm3 || 0)));
       const name = L==='en' ? (it.name_en || it.name) : it.name;
       const tip = [`${it.label} · ${it.date}`, name, `${I18N.tKey('map.tip.amount')}: R$ ${fmtM(it.amount_brl_m)}`,
         oow ? I18N.tKey('map.tip.oow') : `${I18N.tKey('map.tip.alerts')}: ${c.pm3} (${c.pm3_cr} crit · ${c.pm3_hi} high+)`,
         oow ? '' : (hit ? I18N.tKey('map.tip.hit') : I18N.tKey('map.tip.miss'))].filter(Boolean).join('\n');
-      const up = !(Math.abs(x - lastLabX) < 26 && lastLabUp); lastLabX = x; lastLabUp = up;
-      const ly = up ? y - r - 5 : y + r + 12;
-      g += `<g class="bub" opacity=".92"><title>${esc(tip)}</title>`
-         + `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${fill}" fill-opacity="${oow?1:.82}" stroke="${stroke}" stroke-width="${oow?1.2:1.5}" ${oow?'stroke-dasharray="2 2"':''}/>`
-         + `<text class="lbl" x="${x.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" ${oow?'fill="var(--muted)"':''}>${esc(it.label)}</text></g>`;
+      const showLabel = !narrow ? true : (!oow && (!hit || notable.has(it.label)));
+      bubbles += `<g class="bub"><title>${esc(tip)}</title>`;
+      if (!oow) bubbles += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r*1.15).toFixed(1)}" fill="${hit?'#3ddc97':'#ff4d6d'}" opacity=".35" filter="url(#imapGlow)"/>`;
+      bubbles += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${oow?'none':hit?'url(#imapHit)':'url(#imapMiss)'}" stroke="${oow?'var(--muted)':(c.pm3_cr>0?'#fff':'rgba(0,0,0,.4)')}" stroke-width="${oow?1.2:c.pm3_cr>0?1.8:1}" ${oow?'stroke-dasharray="2 2"':''}/>`;
+      if (showLabel) {
+        const up = !(Math.abs(x - lastLabX) < 24 && lastLabUp); lastLabX = x; lastLabUp = up;
+        const ly = up ? y - r - 5 : y + r + 12;
+        labels += `<text class="lbl${hit?'':' miss'}${oow?' oow':''}" x="${x.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle">${esc(it.label)}</text>`;
+      }
+      bubbles += `</g>`;
     });
-    svg.innerHTML = g;
-    // subtítulo + legenda
+    svg.innerHTML = g + bubbles + labels;
     const sub = document.getElementById('imap-sub');
     if (sub) sub.textContent = I18N.tTpl('map.sub', {known: s.n_known ?? items.length, tested: s.n_total ?? '', hit: s.n_hit_any_pm3 ?? '', from: win.from || '', to: win.to || ''});
     const leg = document.getElementById('imap-legend');
     const nHit = items.filter(i => i.in_window !== false && (i.counts||{}).pm3 > 0).length;
     const nMiss = items.filter(i => i.in_window !== false && !((i.counts||{}).pm3 > 0)).length;
     const nOow = items.filter(i => i.in_window === false).length;
-    if (leg) leg.innerHTML = `<span><i class="hit"></i>${esc(I18N.tTpl('map.legend.hit',{n:nHit}))}</span><span><i class="miss"></i>${esc(I18N.tTpl('map.legend.miss',{n:nMiss}))}</span><span><i class="oow"></i>${esc(I18N.tTpl('map.legend.oow',{n:nOow}))}</span><span><i class="band"></i>${esc(I18N.tKey('map.legend.band'))}</span>`;
+    if (leg) leg.innerHTML = `<span><i class="hit"></i>${esc(I18N.tTpl('map.legend.hit',{n:nHit}))}</span><span><i class="miss"></i>${esc(I18N.tTpl('map.legend.miss',{n:nMiss}))}</span>${nOow?`<span><i class="oow"></i>${esc(I18N.tTpl('map.legend.oow',{n:nOow}))}</span>`:''}<span><i class="band"></i>${esc(I18N.tKey('map.legend.band'))}</span>`;
   }
   render();
   document.addEventListener('langchange', render);
+  if (typeof ResizeObserver !== 'undefined') {
+    let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(render, 120); }).observe(svg.parentElement);
+  } else { window.addEventListener('resize', () => render()); }
 });
 
 // ========== manchete (hit rate dos incidentes) ==========

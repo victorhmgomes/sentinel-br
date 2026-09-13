@@ -42,6 +42,10 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Incident backtest (local, ~1s — mantém incidentes em sincronia com o código)
+        run: python3 scripts/incident_backtest.py
+        continue-on-error: true
+
       - name: Build dashboard (dados do repo)
         run: python3 scripts/build_dashboard.py
 

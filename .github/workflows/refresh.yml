@@ -55,6 +55,10 @@ jobs:
         run: python3 scripts/watcher/run_correlator.py
         continue-on-error: true
 
+      - name: Incident backtest (local, ~1s — mantém incidentes em sincronia com o código)
+        run: python3 scripts/incident_backtest.py
+        continue-on-error: true
+
       - name: Rebuild dashboard
         run: python3 scripts/build_dashboard.py
 
