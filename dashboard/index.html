@@ -1834,6 +1834,11 @@ const I18N = (function(){
     'inc.holdout.foot':           {pt:'<b>Por que importa:</b> os detectores, thresholds e regras de ensemble foram calibrados sobre incidentes ocorridos antes do cutoff. Os incidentes ≥ cutoff nunca foram vistos durante calibração. Hit rate alto no holdout é evidência de que o sinal generaliza, não de overfit.',
                                     en:'<b>Why this matters:</b> detectors, thresholds and ensemble rules were calibrated on incidents that occurred before the cutoff. Incidents ≥ cutoff were never seen during calibration. High hit rate on the holdout is evidence the signal generalises rather than overfits.'},
     'inc.noalert':                {pt:'— sem alerta em ±3d', en:'— no alert in ±3d'},
+    'inc.oow':                    {pt:'fora da janela de dados · não testável', en:'outside data window · not testable'},
+    'inc.oow.title':              {pt:'Incidente anterior ao início da série de 12 meses; não há alertas para cruzar.',
+                                    en:'Incident predates the 12-month data series; there are no alerts to cross-check.'},
+    'inc.meta.window':            {pt:'{n} incidentes testados · janela ±3 dias · {known} conhecidos, {out} anteriores a {from} (fora da série de dados)',
+                                    en:'{n} incidents tested · ±3-day window · {known} known, {out} predate {from} (outside the data series)'},
     // ring of mules KPIs
     'ring.kpi.flagdays':          {pt:'Dias-flag (12m)', en:'Flag days (12m)'},
     'ring.kpi.baserate':          {pt:'Base rate', en:'Base rate'},
@@ -3686,7 +3691,9 @@ safe('incidentes (backtest)', function(){
 
   function renderSummary(){
     const meta = document.getElementById('inc-meta');
-    if (meta) meta.textContent = I18N.tTpl('inc.meta', {n: s.n_total});
+    if (meta) meta.textContent = (s.n_out_of_window > 0)
+      ? I18N.tTpl('inc.meta.window', {n: s.n_total, known: s.n_known, out: s.n_out_of_window, from: s.window_from})
+      : I18N.tTpl('inc.meta', {n: s.n_total});
     const cta = document.getElementById('motriz-cta-bt');
     if (cta) cta.textContent = I18N.tTpl('motriz.cta.bt', {n: s.n_total});
     const wrap = document.getElementById('inc-summary');
@@ -3721,12 +3728,16 @@ safe('incidentes (backtest)', function(){
     inc.items.forEach(it => {
       const c = it.counts;
       const top = it.top_alert;
-      const topText = top
+      const topText = (it.in_window === false)
+        ? `<span style="color:var(--muted)">${I18N.tKey('inc.oow')}</span>`
+        : top
         ? `${top.date} · ${top.source} / ${top.asset} · ${top.metric.replace(/_/g,' ')} · z=${top.value}`
         : `<span style="color:var(--muted)">${I18N.tKey('inc.noalert')}</span>`;
       const tr = document.createElement('tr');
       const highlightBR = c.pm3_br_usdt > 0;
-      if (c.pm3_cr > 0) tr.className = 'stale-row';
+      const outOfWindow = it.in_window === false;
+      if (outOfWindow) { tr.className = 'out-of-window'; tr.style.opacity = '.45'; tr.title = I18N.tKey('inc.oow.title'); }
+      else if (c.pm3_cr > 0) tr.className = 'stale-row';
       else if (c.pm3_hi > 0) tr.className = 'degraded-row';
       const nameDisplay = L === 'en' ? (it.name_en || it.name) : it.name;
       const nameTrunc = nameDisplay.length > 40 ? nameDisplay.slice(0,40)+'…' : nameDisplay;

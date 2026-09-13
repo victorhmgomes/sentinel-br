@@ -53,6 +53,16 @@ def main():
     d = json.loads(DASH.read_text())
     alerts = d["alerts"]
     total_days = 365
+    # Janela de dados (rolling 12m). Incidentes fora dela NÃO podem ser
+    # testados — não há alertas pra cruzar — então ficam na tabela como
+    # "fora da janela" mas saem do denominador do hit rate. Sem isso, a
+    # cada dia que a janela rola um incidente antigo vira um "miss" falso
+    # (foi o que levou o hero de 18/19 pra 12/19 entre jun e set/2026).
+    w = d.get("window") or {}
+    win_from = w.get("from") or min(a["date"] for a in alerts)
+    win_to   = w.get("to")   or max(a["date"] for a in alerts)
+    def in_window(d0: str) -> bool:
+        return win_from <= d0 <= win_to
 
     def win(d0, days):
         b = dt.date.fromisoformat(d0)
@@ -106,6 +116,7 @@ def main():
         top = w3_ranked[0] if w3_ranked else None
         out.append({
             **inc,
+            "in_window": in_window(inc["date"]),
             "counts": counts,
             "top_alert": top,
             "alerts_in_pm3": w3_ranked[:8],
@@ -130,14 +141,18 @@ def main():
             "n_hit_br_usdt_pm3": sum(1 for x in items if x["counts"]["pm3_br_usdt"] > 0),
         }
 
-    in_sample = [x for x in out if x["date"] <  HOLDOUT_DATE]
-    holdout   = [x for x in out if x["date"] >= HOLDOUT_DATE]
+    tested    = [x for x in out if x["in_window"]]
+    in_sample = [x for x in tested if x["date"] <  HOLDOUT_DATE]
+    holdout   = [x for x in tested if x["date"] >= HOLDOUT_DATE]
 
     d["incidents"] = {
         "items": out,
         "baselines_daily": baselines,
         "random_window_pm3": {k: p_in_window(v, 7) for k, v in baselines.items()},
-        "summary": summarize(out),
+        "summary": {**summarize(tested),
+                    "n_known": len(out),
+                    "n_out_of_window": len(out) - len(tested),
+                    "window_from": win_from, "window_to": win_to},
         "holdout_cutoff": HOLDOUT_DATE,
         "summary_in_sample": summarize(in_sample),
         "summary_holdout":   summarize(holdout),
@@ -145,7 +160,7 @@ def main():
 
     DASH.write_text(json.dumps(d, default=str))
     print(f"incidentes anexados ao dashboard.json — {len(out)} incidentes")
-    print(f"summary total: {d['incidents']['summary']}")
+    print(f"summary (in-window): {d['incidents']['summary']}")
     print(f"summary in_sample (<{HOLDOUT_DATE}): {d['incidents']['summary_in_sample']}")
     print(f"summary holdout (>={HOLDOUT_DATE}):  {d['incidents']['summary_holdout']}")
 
