@@ -57,10 +57,14 @@ BINANCE_PAIRS = {
     "SOL-BRL":  "SOLBRL",
 }
 
+# data-api.binance.vision = espelho público de market-data da Binance, mesma API
+# (/api/v3/depth, /ticker/price) mas SEM o geo-bloqueio 451 que api.binance.com
+# aplica a IPs dos EUA (onde rodam os runners do GitHub Actions). fetch_orderbook.py
+# e fetch_data.py já usavam este host; o watcher ficou 5 meses cego de Binance no CI.
 def fetch_binance() -> dict:
     out = {}
     def one(asset, sym):
-        d = _get(f"https://api.binance.com/api/v3/depth?symbol={sym}&limit=50")
+        d = _get(f"https://data-api.binance.vision/api/v3/depth?symbol={sym}&limit=50")
         if not d: return asset, None
         return asset, _book(d.get("bids"), d.get("asks"))
     with ThreadPoolExecutor(max_workers=4) as ex:
@@ -72,7 +76,7 @@ def fetch_binance() -> dict:
 
 
 def fetch_btc_usdt_global() -> float:
-    d = _get("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT")
+    d = _get("https://data-api.binance.vision/api/v3/ticker/price?symbol=BTCUSDT")
     if not d: return 0.0
     try: return float(d["price"])
     except Exception: return 0.0

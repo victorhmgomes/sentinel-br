@@ -51,6 +51,10 @@ jobs:
         run: python3 scripts/watcher/run_once.py --min-severity medium --telegram-min-severity high
         continue-on-error: true
 
+      - name: Correlator do watcher (alertas → eventos)
+        run: python3 scripts/watcher/run_correlator.py
+        continue-on-error: true
+
       - name: Rebuild dashboard
         run: python3 scripts/build_dashboard.py
 

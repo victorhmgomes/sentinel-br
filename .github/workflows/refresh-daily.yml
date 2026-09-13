@@ -94,6 +94,22 @@ jobs:
         timeout-minutes: 2
         continue-on-error: true
 
+      - name: Calibração FP/FN dos detectores intraday (20 baselines live)
+        # Coleta 20 snapshots ao vivo (~1 min) e varre thresholds → data/calibration.json.
+        # O cache data/backtest/snapshots.jsonl é regenerado aqui e NÃO é commitado.
+        run: python3 scripts/backtest/run_backtest.py --collect 20 --interval 2
+        timeout-minutes: 6
+        continue-on-error: true
+
+      - name: Validação stablecoin_flight (cenários sintéticos)
+        run: python3 scripts/backtest/run_flight_backtest.py
+        timeout-minutes: 3
+        continue-on-error: true
+
+      - name: Correlator do watcher (alertas → eventos)
+        run: python3 scripts/watcher/run_correlator.py
+        continue-on-error: true
+
       - name: Rebuild dashboard
         run: python3 scripts/build_dashboard.py
 

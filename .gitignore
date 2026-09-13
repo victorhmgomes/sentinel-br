@@ -14,3 +14,4 @@ package-lock.json
 index.html
 dashboard/index.built.html
 _site/
+data/backtest/snapshots.jsonl
