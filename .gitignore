@@ -9,3 +9,8 @@ __pycache__/
 .vscode/
 node_modules/
 package-lock.json
+
+# HTML gerado — publicado via actions/deploy-pages, nunca commitado
+index.html
+dashboard/index.built.html
+_site/

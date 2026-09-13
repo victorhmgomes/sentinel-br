@@ -1,24 +1,24 @@
 name: ci-smoke
 
-# Roda a cada push que toque no source do dashboard ou nos scripts:
-# builda o index.html com os dados já commitados e executa o smoke test
-# jsdom. NÃO commita nada — é só feedback rápido (≈1 min) no Actions.
-# Os workflows refresh/refresh-daily rodam o mesmo teste antes de publicar.
+# Roda a cada push que toque no source do dashboard, nos scripts ou nos
+# workflows: builda o index.html com os dados já commitados, executa o smoke
+# test jsdom e — se passou e foi push no main — publica no GitHub Pages.
+# Não commita nada. Feedback em ≈1-2 min no Actions.
+# (Pushes feitos pelo bot dos crons não disparam este workflow — GitHub não
+# encadeia workflows a partir de pushes com GITHUB_TOKEN.)
 on:
   push:
     branches: [main]
     paths:
       - "dashboard/**"
       - "scripts/**"
-      - ".github/workflows/ci-smoke.yml"
+      - ".github/workflows/**"
+      - ".nojekyll"
   pull_request:
     paths:
       - "dashboard/**"
       - "scripts/**"
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
@@ -27,6 +27,8 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     timeout-minutes: 8
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,3 +49,35 @@ jobs:
         run: |
           npm install --no-save --no-audit --no-fund --no-package-lock jsdom@24
           node scripts/test_dashboard.mjs index.html
+
+      - name: Preparar artefato do Pages
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp .nojekyll _site/.nojekyll
+
+      - name: Upload artefato do Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

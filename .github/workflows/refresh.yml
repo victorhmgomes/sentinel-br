@@ -1,16 +1,15 @@
 name: refresh-live
 
 # Atualiza orderbook, funding e alertas do watcher a cada 15 min.
-# Reconstroi o dashboard (index.html na raiz) e commita de volta no main.
-# GitHub Pages (Settings → Pages → Source: Deploy from a branch · main · /)
-# republica automaticamente a cada push.
+#
+# Arquitetura (desde set/2026): o job `refresh` atualiza data/*, builda o
+# index.html, roda o smoke test e commita SÓ data/ no main. O HTML gerado
+# NÃO vai pro git — é publicado direto no GitHub Pages pelo job `deploy`
+# (actions/deploy-pages). Pré-requisito: Settings → Pages → Source = "GitHub Actions".
 on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
@@ -23,6 +22,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -66,15 +67,47 @@ jobs:
           npm install --no-save --no-audit --no-fund --no-package-lock jsdom@24
           node scripts/test_dashboard.mjs index.html
 
-      - name: Commit & push se houver mudança
+      - name: Commit & push (apenas data/)
+        # index.html / dashboard/index.built.html estão no .gitignore — nunca
+        # entram no git. Se outro workflow pushou no meio, rebase mantendo a
+        # nossa versão dos dados (mais fresca) e tenta de novo.
         run: |
           git config user.name  "sentinel-br-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add data/
           if git diff --cached --quiet; then
-            echo "sem mudanças — nada a commitar"
+            echo "sem mudanças em data/ — nada a commitar"
           else
             ts=$(date -u +"%Y-%m-%d %H:%M UTC")
             git commit -m "refresh live · $ts"
-            git push
+            git push || (git pull --rebase -X theirs && git push)
           fi
+
+      - name: Preparar artefato do Pages
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp .nojekyll _site/.nojekyll
+
+      - name: Upload artefato do Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

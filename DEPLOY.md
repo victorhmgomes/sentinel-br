@@ -49,9 +49,16 @@ Para GitHub Pages sem custo e Actions ilimitado:
 ## 3 · Ativar GitHub Pages
 
 1. **Settings** → **Pages** (menu lateral)
-2. **Source**: `Deploy from a branch`
-3. **Branch**: `main` / `/ (root)` → **Save**
-4. Aguarde ~1 min e a URL aparece no topo: `https://victorhmgomes.github.io/sentinel-br/`
+2. **Build and deployment** → **Source**: `GitHub Actions` (não "Deploy from a branch")
+3. Pronto — não tem botão Save; a escolha é aplicada na hora.
+4. O primeiro deploy acontece no próximo run de `ci-smoke`, `refresh-live` ou `refresh-daily`
+   (job `deploy`). A URL aparece no topo: `https://victorhmgomes.github.io/sentinel-br/`
+
+> **Por que "GitHub Actions" e não branch:** o `index.html` gerado (~1,7 MB) **não é commitado**
+> (está no `.gitignore`). Os workflows buildam, rodam o smoke test e publicam o HTML direto
+> como artefato do Pages (`actions/upload-pages-artifact` + `actions/deploy-pages`). O `main`
+> recebe só `data/*`. Isso evita conflitos de rebase a cada push e impede o repo de inchar
+> (antes: ~100 commits/dia × 1,7 MB).
 
 ---
 
