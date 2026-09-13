@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sentinel BR — VASP Fraud Intelligence</title>
-<meta name="description" content="Sentinel BR watches Brazilian and global crypto venues and flags the market signature of bank-fraud cash-out. Public data only.">
+<meta name="description" content="Sentinel BR reads public crypto-market data from 16 venues and flags the pattern of a bank-fraud cash-out in progress — one more signal for prevention teams. Public data only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -58,7 +58,7 @@ footer{padding:36px 0 0;margin-top:40px;border-top:1px solid var(--border);font-
 /* ---------- capa ---------- */
 .cover{padding:48px 0 10px}
 .cover-top{display:grid;grid-template-columns:minmax(0,1.05fr) auto;gap:48px;align-items:center}
-.cover-top .txt{max-width:56ch}
+.cover-top .txt{max-width:60ch}
 .cover h1{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.2vw,40px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 14px;max-width:20ch}
 .cover h1 em{font-style:italic;color:var(--amber)}
 .cover .lede{font-size:15.5px;line-height:1.6;color:var(--text-2);margin:0} .cover .lede b{color:var(--text);font-weight:600}
@@ -163,9 +163,9 @@ table.tb{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:14px} .
   <div class="cover-top">
     <div class="txt">
       <div class="lbl" data-i18n="cover.eyebrow">VASP fraud intelligence · Brazil · public data only</div>
-      <h1 data-i18n-html="cover.h1">Bank attacks this year that left a trace <em>on crypto exchanges</em>.</h1>
-      <p class="lede" data-i18n-html="cover.lede">Sentinel BR reads price and volume across 16 venues every 15 minutes and speaks up when the market moves the way it does when stolen money is being cashed out. In the <b>Sinqia / HSBC case (R$ 420–710M)</b>, it spoke up <b>seven days before</b> the public knew.</p>
-      <blockquote class="quote" data-i18n="cover.quote">Attacks don't announce themselves. But the money has to go somewhere — and the exchanges flinch first.</blockquote>
+      <h1 data-i18n-html="cover.h1">Bank attacks this year that left a signal <em>on crypto exchanges</em>.</h1>
+      <p class="lede" data-i18n-html="cover.lede">Part of the money diverted in bank fraud moves through crypto venues — and because these are public markets, that stretch of the path can be observed from outside. Sentinel BR tracks price and volume across 16 venues every 15 minutes and flags when the market pattern resembles a cash-out in progress. It is <b>one more signal</b> for prevention teams, not a replacement for internal controls. In the <b>Sinqia / HSBC case</b>, that signal appeared <b>seven days before</b> disclosure.</p>
+      <blockquote class="quote" data-i18n="cover.quote">The attack happens inside the bank. One of its echoes shows up in a market anyone can read.</blockquote>
     </div>
     <div class="big"><div class="n" id="big-n">—</div><div class="c" id="big-c">—</div></div>
   </div>
@@ -249,10 +249,10 @@ const I18N = (function(){
     'nav.cover':      {en:'Cover', pt:'Capa'}, 'nav.now':{en:'Now', pt:'Agora'}, 'nav.evidence':{en:'Evidence', pt:'Evidência'}, 'nav.signals':{en:'Signals', pt:'Sinais'},
     'nav.volume':     {en:'Volume', pt:'Volume'}, 'nav.how':{en:'How it works', pt:'Como funciona'}, 'nav.method':{en:'Method', pt:'Método'}, 'nav.method.tech':{en:'Method · tech', pt:'Método · técnico'},
     'cover.eyebrow':  {en:'VASP fraud intelligence · Brazil · public data only', pt:'Inteligência antifraude VASP · Brasil · só dados públicos'},
-    'cover.h1':       {en:'Bank attacks this year that left a trace <em>on crypto exchanges</em>.', pt:'Ataques bancários deste ano que deixaram rastro <em>nas exchanges de cripto</em>.'},
-    'cover.lede':     {en:'Sentinel BR reads price and volume across 16 venues every 15 minutes and speaks up when the market moves the way it does when stolen money is being cashed out. In the <b>Sinqia / HSBC case (R$ 420–710M)</b>, it spoke up <b>seven days before</b> the public knew.',
-                       pt:'O Sentinel BR lê preço e volume em 16 corretoras a cada 15 minutos e avisa quando o mercado se move do jeito que se move quando dinheiro roubado está sendo sacado. No <b>caso Sinqia / HSBC (R$ 420–710M)</b>, avisou <b>sete dias antes</b> de o público saber.'},
-    'cover.quote':    {en:"Attacks don't announce themselves. But the money has to go somewhere — and the exchanges flinch first.", pt:'Ataques não se anunciam. Mas o dinheiro precisa ir pra algum lugar — e as exchanges tremem primeiro.'},
+    'cover.h1':       {en:'Bank attacks this year that left a signal <em>on crypto exchanges</em>.', pt:'Ataques bancários deste ano que deixaram sinal <em>nas exchanges de cripto</em>.'},
+    'cover.lede':     {en:'Part of the money diverted in bank fraud moves through crypto venues — and because these are public markets, that stretch of the path can be observed from outside. Sentinel BR tracks price and volume across 16 venues every 15 minutes and flags when the market pattern resembles a cash-out in progress. It is <b>one more signal</b> for prevention teams, not a replacement for internal controls. In the <b>Sinqia / HSBC case</b>, that signal appeared <b>seven days before</b> disclosure.',
+                       pt:'Parte do dinheiro desviado em fraudes bancárias passa por corretoras de cripto — e, por serem mercados públicos, esse trecho do caminho é observável de fora. O Sentinel BR acompanha preço e volume em 16 corretoras a cada 15 minutos e sinaliza quando o padrão de mercado lembra o de um saque em andamento. É <b>um sinal a mais</b> para as equipes de prevenção, não um substituto dos controles internos. No <b>caso Sinqia / HSBC</b>, esse sinal apareceu <b>sete dias antes</b> da divulgação.'},
+    'cover.quote':    {en:'The attack happens inside the bank. One of its echoes shows up in a market anyone can read.', pt:'O ataque acontece dentro do banco. Um dos ecos aparece num mercado que qualquer um pode ler.'},
     'big.c':          {en:'known attacks · <b>with a signal within ±3 days</b>', pt:'ataques conhecidos · <b>com sinal em ±3 dias</b>'},
     'key.hit':        {en:'hit rate · {h}/{t} · ±3 days', pt:'taxa de acerto · {h}/{t} · ±3 dias'}, 'key.oos':{en:'out-of-sample', pt:'fora da amostra'}, 'key.lead':{en:'best lead time', pt:'melhor antecedência'}, 'key.fp':{en:'false positives · intraday', pt:'falsos positivos · intraday'},
     'map.title':      {en:'The year in incidents', pt:'O ano em incidentes'},
@@ -348,9 +348,11 @@ const SEVR = {medium:1, high:2, critical:3};
 const BAND = {}; (DATA.alerts || []).forEach(a => { const r = SEVR[a.severity] || 0; if (r > (BAND[a.date] || 0)) BAND[a.date] = r; });
 const BAND_MONTH = {}; Object.keys(BAND).forEach(d => { const m = d.slice(0,7); BAND_MONTH[m] = (BAND_MONTH[m] || 0) + 1; });
 const INC = (DATA.incidents && DATA.incidents.items) || [];
+const WIN = DATA.window || {from: '', to: ''};
+// dentro da série de dados: usa a flag do backtest quando existe; senão, a janela de datas
+const inWin = it => it.in_window != null ? it.in_window !== false : (!WIN.from || (it.date >= WIN.from && it.date <= WIN.to));
 const SUM = (DATA.incidents && DATA.incidents.summary) || {n_total:0, n_hit_any_pm3:0};
 const HO = (DATA.incidents && DATA.incidents.summary_holdout) || {n_total:0, n_hit_any_pm3:0, n_hit_high_pm3:0};
-const WIN = DATA.window || {from: '', to: ''};
 const RING = (DATA.ring_of_mules && DATA.ring_of_mules.days) || [];
 const HOURLY = (DATA.alerts || []).filter(a => a.metric === 'hourly_corr');
 const isPT = () => I18N.lang === 'pt';
@@ -381,7 +383,7 @@ safe('capa · chaves', function(){
 safe('mapa de incidentes', function(){
   const svg = document.getElementById('imap');
   function render(){
-    const items = INC.filter(i => i.in_window !== false);
+    const items = INC.filter(inWin);
     const W = cw(svg), mobile = W < 560;
     const months = []; { const [y, m] = (WIN.from || '2025-01-01').split('-').map(Number); let d = new Date(Date.UTC(y, m-1, 1)); const end = new Date((WIN.to || '2026-01-01') + 'T00:00:00Z'); let guard = 0; while (d <= end && guard++ < 24) { months.push(d.toISOString().slice(0,7)); d.setUTCMonth(d.getUTCMonth()+1); } }
     const N = Math.max(1, months.length), ML = 8, MR = 8, MT = 30, MB = 44; const colw = (W - ML - MR) / N;
@@ -439,7 +441,7 @@ safe('evidência', function(){
       row('ok', h.n_hit_any_pm3, h.n_total, I18N.t('ev.r2.t'), I18N.tpl('ev.r2.s', {cut: (DATA.incidents||{}).holdout_cutoff || '—', hi: h.n_hit_high_pm3, n: h.n_total}), pct(h.n_hit_any_pm3, h.n_total)) +
       row('ok', s.n_hit_br_usdt_pm3, s.n_total, I18N.t('ev.r3.t'), I18N.tpl('ev.r3.s', {rnd}), pct(s.n_hit_br_usdt_pm3, s.n_total)) +
       row('info', s.n_hit_critical_pm3, s.n_total, I18N.t('ev.r4.t'), I18N.t('ev.r4.s'), pct(s.n_hit_critical_pm3, s.n_total)) + `</tbody>`;
-    const rows = INC.slice().sort((a,b) => b.date.localeCompare(a.date)).map(i => { const c = i.counts || {}; const oow = i.in_window === false, hit = !oow && (c.pm3||0) > 0; const top = i.top_alert;
+    const rows = INC.slice().sort((a,b) => b.date.localeCompare(a.date)).map(i => { const c = i.counts || {}; const oow = !inWin(i), hit = !oow && (c.pm3||0) > 0; const top = i.top_alert;
       return `<tr class="${oow ? 'oow' : ''}"><td><b>${esc(i.label)}</b></td><td>${i.date}</td><td>${esc(incName(i))}</td><td class="r">${i.amount_brl_m == null ? '—' : 'R$ ' + fmtM(i.amount_brl_m)}</td><td class="r">${oow ? '—' : (c.pm3||0)}</td><td class="r">${oow ? '—' : (c.pm3_cr||0)}</td><td>${oow || !top ? '—' : esc(String(top.metric||'').replace(/_/g,' '))}</td><td><span class="pill ${oow ? 'oow' : hit ? 'hit' : 'miss'}">${I18N.t(oow ? 'pill.oow' : hit ? 'pill.hit' : 'pill.miss')}</span></td></tr>`; }).join('');
     document.getElementById('inc-table').innerHTML = `<thead><tr><th>#</th><th>${I18N.t('ev.th.date')}</th><th>${I18N.t('ev.th.inc')}</th><th class="r">${I18N.t('ev.th.amount')}</th><th class="r">${I18N.t('ev.th.alerts')}</th><th class="r">${I18N.t('ev.th.crit')}</th><th>${I18N.t('ev.th.top')}</th><th>${I18N.t('ev.th.res')}</th></tr></thead><tbody>${rows}</tbody>`;
   }
@@ -507,7 +509,7 @@ safe('volume', function(){
     [0.25, 0.5, 0.75, 1].forEach(f => { const y = Y(max*f/1.05); g += `<line x1="${ML}" y1="${y}" x2="${W-MR}" y2="${y}" stroke="rgba(255,255,255,.06)"/><text class="ax" x="${ML-6}" y="${y+3.5}" text-anchor="end">R$ ${(max*f/1.05/1e6).toFixed(0)}M</text>`; });
     for (let i = 0; i < N; i++) { let y0 = H - MB; VEN.forEach(x => { const j = x.s.dates[i] === dates[i] ? i : x.s.dates.indexOf(dates[i]); const v = j >= 0 ? (x.s.volume[j] || 0) : 0; const h = (v/max) * (H - MB - MT); if (h <= 0) return; g += `<rect x="${(ML+i*c).toFixed(2)}" y="${(y0-h).toFixed(1)}" width="${Math.max(c-.3,.8).toFixed(2)}" height="${h.toFixed(1)}" fill="${x.c}" opacity=".85"/>`; y0 -= h; }); }
     let lastX = -99, row = 0;
-    INC.filter(i => i.in_window !== false).sort((a,b) => a.date.localeCompare(b.date)).forEach(it => { const i = idx[it.date]; if (i == null) return; const x = ML + i*c + c/2; const hit = ((it.counts||{}).pm3||0) > 0; row = (Math.abs(x - lastX) < 28) ? (row + 1) % 2 : 0; lastX = x;
+    INC.filter(inWin).sort((a,b) => a.date.localeCompare(b.date)).forEach(it => { const i = idx[it.date]; if (i == null) return; const x = ML + i*c + c/2; const hit = ((it.counts||{}).pm3||0) > 0; row = (Math.abs(x - lastX) < 28) ? (row + 1) % 2 : 0; lastX = x;
       g += `<line x1="${x}" y1="${MT-6}" x2="${x}" y2="${H-MB}" stroke="${hit ? '#57d99f' : '#ff5c7a'}" stroke-dasharray="2 3" opacity=".55"/><rect x="${x-9}" y="${6+row*14}" width="18" height="11" rx="3" fill="${hit ? 'rgba(87,217,159,.18)' : 'rgba(255,92,122,.2)'}"/><text class="ax" x="${x}" y="${15+row*14}" text-anchor="middle" font-size="8.5" fill="${hit ? '#9ff3cf' : '#ff8aa0'}"><title>${esc(it.label + ' · ' + it.date + '\n' + incName(it))}</title>${esc(it.label.replace('#',''))}</text>`; });
     for (let i = 0; i < N; i++) { const d = new Date(dates[i] + 'T00:00:00Z'); if (d.getUTCDate() !== 1 || (mobile && d.getUTCMonth() % 3)) continue; const x = ML + i*c; g += `<text class="ax" x="${x}" y="${H-MB+15}">${mon(d)}${d.getUTCMonth() === 0 ? ' ' + String(d.getUTCFullYear()).slice(2) : ''}</text>`; }
     let lx = ML; g += `<g font-size="10.5" fill="#8a93a6">`; VEN.forEach(x => { g += `<rect x="${lx}" y="${H-12}" width="9" height="9" fill="${x.c}"/><text x="${lx+13}" y="${H-4}">${esc(x.v)}</text>`; lx += 14 + 7.2 * x.v.length + 14; }); g += `<text x="${W-MR}" y="${H-4}" text-anchor="end">${esc(I18N.t('vol.legend'))}</text></g>`;

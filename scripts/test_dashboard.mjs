@@ -50,7 +50,8 @@ ok(h1 && /crypto exchanges/i.test(h1.textContent), `h1 não está em EN: "${h1 &
 // 3. dados + painéis
 const DATA = JSON.parse(document.getElementById('DATA').textContent);
 const items = (DATA.incidents && DATA.incidents.items) || [];
-const inWin = items.filter(i => i.in_window !== false).length;
+const W = DATA.window || {};
+const inWin = items.filter(i => i.in_window != null ? i.in_window !== false : (!W.from || (i.date >= W.from && i.date <= W.to))).length;
 const nBub = document.querySelectorAll('#imap .bub').length;
 ok(nBub === inWin && nBub > 0, `#imap: ${nBub} bolhas (esperado ${inWin})`);
 ok(/^\d+\/ \d+$/.test(document.getElementById('big-n').textContent.trim()), `#big-n não pintado: "${document.getElementById('big-n').textContent}"`);
