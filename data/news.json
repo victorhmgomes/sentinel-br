@@ -1,14 +1,14 @@
 {
   "summary": {
-    "n_items": 6,
+    "n_items": 7,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 6,
+      "medium": 7,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 6,
+    "with_watcher_corroboration": 7,
     "top_sources": [
       [
         "Livecoins",
@@ -19,6 +19,10 @@
         2
       ],
       [
+        "G1 Economia",
+        1
+      ],
+      [
         "MoneyTimes",
         1
       ],
@@ -27,267 +31,10 @@
         1
       ]
     ],
-    "generated_at": "2026-09-13T18:43:32+00:00",
-    "runtime_sec": 3.05
+    "generated_at": "2026-09-14T08:34:30+00:00",
+    "runtime_sec": 3.92
   },
   "items": [
-    {
-      "source": "MoneyTimes",
-      "bucket": "economia",
-      "title": "PF aponta fraude de R$ 17 bilhões em operações entre Master e BRB",
-      "link": "https://www.moneytimes.com.br/pf-aponta-fraude-de-r-17-bilhoes-em-operacoes-entre-master-e-brb/",
-      "summary": "A Polícia Federal concluiu que as fraudes praticadas entre o Banco Master e o Banco de Brasília (BRB) somaram cerca de R$ 17 bilhões e foram &#8220;estruturadas mediante produção massiva de documentos falsos&#8221; e utilização de uma empresa de fachada. A conclusão aparece no conjunto de arquivos cujo sigilo foi derrubado pelo ministro André Mendonça, [&#8230;]",
-      "ts_iso": "2026-09-13T14:43:53+00:00",
-      "hash": "9127801694b252f9",
-      "_score": {
-        "cyber": 0,
-        "attack": 6,
-        "launder": 6,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 14,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "fraude",
-          "fraudes"
-        ],
-        "launder": [
-          "estruturadas",
-          "pf",
-          "polícia federal"
-        ],
-        "value": [
-          "r$ 1",
-          "bilhões"
-        ],
-        "named_fi": [
-          "brb",
-          "banco de brasília",
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 17 bilh"
-        ]
-      },
-      "_total": 32,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 18,
-        "neg": 0,
-        "score": 18,
-        "named_fi_bump": 4
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-12T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-13T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        }
-      ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Augusto Lima criou carteiras fraudulentas repassadas pelo Master ao BRB, diz PF",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/09/augusto-lima-criou-carteiras-fraudulentas-repassadas-pelo-master-ao-brb-diz-pf.shtml",
-      "summary": "A PF (Polícia Federal) atribui a Augusto Lima, ex-sócio do Master, a elaboração de carteiras fraudulentas repassadas pelo Master ao BRB, banco do governo do Distrito Federal . Segundo a PF, o BRB comprou R$ 12,2 bilhões em CCBs (Cédulas de Crédito Bancário) consideradas falsas. Leia mais (09/12/2026 - 12h00)",
-      "ts_iso": "2026-09-12T15:00:00+00:00",
-      "hash": "a51ffe4c4f57c6af",
-      "_score": {
-        "cyber": 0,
-        "attack": 3,
-        "launder": 5,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 6,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 2
-      },
-      "_hits": {
-        "attack": [
-          "fraudulentas"
-        ],
-        "launder": [
-          "pf",
-          "polícia federal"
-        ],
-        "value": [
-          "r$ 1",
-          "bilhões"
-        ],
-        "named_fi": [
-          "brb",
-          "master"
-        ],
-        "incident_verbs": [
-          "r$ 12,2 bilh"
-        ]
-      },
-      "_total": 20,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 15,
-        "neg": 0,
-        "score": 15,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-12T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-13T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        }
-      ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Brasileiro que movimenta Depix todo dia: “nunca mais a Liquid recupera a confiança do mercado”",
-      "link": "https://livecoins.com.br/brasileiro-que-movimenta-depix-todo-dia-nunca-mais-a-liquid-recupera-a-confianca-do-mercado/",
-      "summary": "A reportagem do Livecoins conversou com Felipe Ojeda para entender melhor sobre o último ataque hacker na sidechain do Bitcoin, a Liquid. Como um usuário ativo da rede, ele mostrou sua opinião atual sobre o assunto dias do ataque hacker que levou 4 mil bitcoins que lastreavam tokens. &#8220;Uma falha de segurança grave. A Blockstream, [&#8230;] Fonte: Brasileiro que movimenta Depix todo dia: &#8220;nunca mais a Liquid recupera a confiança do mercado&#8221; Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-09-12T14:20:51+00:00",
-      "hash": "65d7b5f331331e00",
-      "_score": {
-        "cyber": 16,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 2,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "crypto": [
-          "bitcoin"
-        ],
-        "named_fi": [
-          "rede"
-        ]
-      },
-      "_total": 22,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-12T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-13T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        }
-      ],
-      "_n_alerts": 4,
-      "_corroboration_score": 5
-    },
     {
       "source": "Livecoins",
       "bucket": "cripto",
@@ -371,17 +118,9 @@
           "venue": "Mercado Bitcoin",
           "asset": "USDT/BTC",
           "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-13T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 5,
+      "_n_alerts": 4,
       "_corroboration_score": 5
     },
     {
@@ -567,6 +306,312 @@
       ],
       "_n_alerts": 5,
       "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "'Precisamos excluir a data': Banco Master usou Word, PDFs e códigos para fabricar documentos falsos, diz PF",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/09/14/banco-master-usou-word-pdfs-e-codigos-para-fabricar-documentos-falsos-diz-pf.ghtml",
+      "summary": "Camarotti: Queda de sigilo de documentos do caso Master eleva tensão para terça-feira A fraude investigada pela Polícia Federal no Banco Master funcionava como uma espécie de linha de montagem digital. A PF identificou: Dados reais de clientes extraídos de sistemas internos; Documentos produzidos em massa com ferramentas do Microsoft Office; Páginas de assinaturas separadas por programas desenvolvidos pela área de tecnologia; e Peças reunidas em novos arquivos PDF para formar dossiês de contratos que seriam apresentados como créditos legítimos da Tirreno Consultoria ao Banco de Brasília (BRB).",
+      "ts_iso": "2026-09-14T03:00:00+00:00",
+      "hash": "300d8f8d60930280",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 14,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraude"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília",
+          "banco master",
+          "master"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 15,
+        "neg": 0,
+        "score": 15,
+        "named_fi_bump": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-12T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "MoneyTimes",
+      "bucket": "economia",
+      "title": "PF aponta fraude de R$ 17 bilhões em operações entre Master e BRB",
+      "link": "https://www.moneytimes.com.br/pf-aponta-fraude-de-r-17-bilhoes-em-operacoes-entre-master-e-brb/",
+      "summary": "A Polícia Federal concluiu que as fraudes praticadas entre o Banco Master e o Banco de Brasília (BRB) somaram cerca de R$ 17 bilhões e foram &#8220;estruturadas mediante produção massiva de documentos falsos&#8221; e utilização de uma empresa de fachada. A conclusão aparece no conjunto de arquivos cujo sigilo foi derrubado pelo ministro André Mendonça, [&#8230;]",
+      "ts_iso": "2026-09-13T14:43:53+00:00",
+      "hash": "9127801694b252f9",
+      "_score": {
+        "cyber": 0,
+        "attack": 6,
+        "launder": 6,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 4,
+        "named_fi": 14,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "attack": [
+          "fraude",
+          "fraudes"
+        ],
+        "launder": [
+          "estruturadas",
+          "pf",
+          "polícia federal"
+        ],
+        "value": [
+          "r$ 1",
+          "bilhões"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília",
+          "banco master",
+          "master"
+        ],
+        "incident_verbs": [
+          "r$ 17 bilh"
+        ]
+      },
+      "_total": 32,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 18,
+        "neg": 0,
+        "score": 18,
+        "named_fi_bump": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-12T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Augusto Lima criou carteiras fraudulentas repassadas pelo Master ao BRB, diz PF",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/09/augusto-lima-criou-carteiras-fraudulentas-repassadas-pelo-master-ao-brb-diz-pf.shtml",
+      "summary": "A PF (Polícia Federal) atribui a Augusto Lima, ex-sócio do Master, a elaboração de carteiras fraudulentas repassadas pelo Master ao BRB, banco do governo do Distrito Federal . Segundo a PF, o BRB comprou R$ 12,2 bilhões em CCBs (Cédulas de Crédito Bancário) consideradas falsas. Leia mais (09/12/2026 - 12h00)",
+      "ts_iso": "2026-09-12T15:00:00+00:00",
+      "hash": "a51ffe4c4f57c6af",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 5,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 0,
+        "value": 4,
+        "named_fi": 6,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 2
+      },
+      "_hits": {
+        "attack": [
+          "fraudulentas"
+        ],
+        "launder": [
+          "pf",
+          "polícia federal"
+        ],
+        "value": [
+          "r$ 1",
+          "bilhões"
+        ],
+        "named_fi": [
+          "brb",
+          "master"
+        ],
+        "incident_verbs": [
+          "r$ 12,2 bilh"
+        ]
+      },
+      "_total": 20,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 15,
+        "neg": 0,
+        "score": 15,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-12T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Brasileiro que movimenta Depix todo dia: “nunca mais a Liquid recupera a confiança do mercado”",
+      "link": "https://livecoins.com.br/brasileiro-que-movimenta-depix-todo-dia-nunca-mais-a-liquid-recupera-a-confianca-do-mercado/",
+      "summary": "A reportagem do Livecoins conversou com Felipe Ojeda para entender melhor sobre o último ataque hacker na sidechain do Bitcoin, a Liquid. Como um usuário ativo da rede, ele mostrou sua opinião atual sobre o assunto dias do ataque hacker que levou 4 mil bitcoins que lastreavam tokens. &#8220;Uma falha de segurança grave. A Blockstream, [&#8230;] Fonte: Brasileiro que movimenta Depix todo dia: &#8220;nunca mais a Liquid recupera a confiança do mercado&#8221; Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-09-12T14:20:51+00:00",
+      "hash": "65d7b5f331331e00",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 0,
+        "named_fi": 2,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin"
+        ],
+        "named_fi": [
+          "rede"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-11T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-12T12:00:00+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT/BTC",
+          "narrative": "stablecoin_flight"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
