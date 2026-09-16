@@ -1,212 +1,24 @@
 {
   "summary": {
-    "n_items": 3,
+    "n_items": 1,
     "by_severity": {
       "critical": 0,
       "high": 0,
-      "medium": 3,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 3,
+    "with_watcher_corroboration": 1,
     "top_sources": [
-      [
-        "Valor Investe",
-        2
-      ],
       [
         "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-09-15T08:24:19+00:00",
-    "runtime_sec": 4.67
+    "generated_at": "2026-09-16T08:17:52+00:00",
+    "runtime_sec": 3.48
   },
   "items": [
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "Novo golpe do Pix mira pequenas e médias lojas virtuais; veja como se proteger",
-      "link": "https://valorinveste.globo.com/educacao-financeira/noticia/2026/09/08/novo-golpe-do-pix-mira-pequenas-e-medias-lojas-virtuais-veja-como-se-proteger.ghtml",
-      "summary": "Uma nova modalidade de fraude tem alterado de forma imperceptível o QR Code do Pix em páginas de pagamento de lojas virtuais. Até o momento, a empresa de cibersegurança Kapersky detectou 90 comércios online de pequeno e médio porte infectados no Brasil. O programa malicioso, descoberto recentemente pelo pesquisador de segurança independente conhecido como \"eremit4\", substitui o código PIX original gerado pela loja online no momento de pagamento por um fraudulento, desviando o dinheiro da vítima diretamente para a conta de golpistas. A fraude está ativa desde junho de 2025 e registrou um aument",
-      "ts_iso": "2026-09-08T16:49:20+00:00",
-      "hash": "e1c8d52c40eeea49",
-      "_score": {
-        "cyber": 5,
-        "attack": 11,
-        "launder": 0,
-        "cft": 0,
-        "pix": 3,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 2,
-        "political_noise": 2,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "cibersegurança",
-          "malicioso"
-        ],
-        "attack": [
-          "fraude",
-          "fraudulento",
-          "golpe",
-          "desviando"
-        ],
-        "pix": [
-          "pix"
-        ],
-        "named_fi": [
-          "original"
-        ],
-        "political_noise": [
-          "novo"
-        ]
-      },
-      "_total": 23,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 9,
-        "neg": 0,
-        "score": 9
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-09T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 5,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "CVM julga hoje processo sobre suposta fraude em fundo imobiliário com Vorcaro, pai e primo entre acusados",
-      "link": "https://valorinveste.globo.com/produtos/fundos-imobiliarios/noticia/2026/09/08/cvm-julga-hoje-processo-sobre-suposta-fraude-em-fundo-imobilirio-com-vorcaro-pai-e-primo-entre-acusados.ghtml",
-      "summary": "A Comissão de Valores Mobiliários (CVM) julga nesta terça-feira (8) dois processos administrativos sancionadores relacionados ao fundo de investimento imobiliário (FII) Brazil Realty, que tem entre os principais acusados a Sefer Investimentos, seu controlador, Benjamim Botelho de Almeida, o Banco Master e seu então dono, Daniel Vorcaro. Tanto a Sefer quanto o Master foram liquidados pelo Banco Central. O pai de Vorcaro, Henrique Moura Vorcaro, e seu primo Felipe Cançado Vorcaro também estão entre os acusados no processo da CVM. Os três estão presos preventivamente por supostas fraudes financei",
-      "ts_iso": "2026-09-08T15:00:49+00:00",
-      "hash": "01fc8ce0c761366d",
-      "_score": {
-        "cyber": 0,
-        "attack": 6,
-        "launder": 0,
-        "cft": 0,
-        "pix": 2,
-        "crypto": 0,
-        "value": 0,
-        "named_fi": 6,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "attack": [
-          "fraude",
-          "fraudes"
-        ],
-        "pix": [
-          "banco central"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "political_noise": [
-          "vorcaro"
-        ]
-      },
-      "_total": 17,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 8,
-        "neg": 0,
-        "score": 8,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-08T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-09T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Foxbit",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-11T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 5,
-      "_corroboration_score": 5
-    },
     {
       "source": "G1 Economia",
       "bucket": "economia",
@@ -253,6 +65,22 @@
       },
       "_alerts": [
         {
+          "ts": "2026-09-15T23:00:58+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 54% (de 1708665.20 → 784732.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-15T23:00:58+00:00",
+          "rule": "br_pre_spike",
+          "severity": "high",
+          "venue": "Mercado Bitcoin",
+          "asset": "ETH-BRL",
+          "narrative": "1 venue(s) BR movendo em ETH-BRL (QUEDA): Mercado Bitcoin; maior Δ=-0.871% (em Mercado Bitcoin) mas Binance -0.043% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
           "ts": "2026-09-11T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "critical",
@@ -275,10 +103,18 @@
           "venue": "Mercado Bitcoin",
           "asset": "USDT/BTC",
           "narrative": "stablecoin_flight"
+        },
+        {
+          "ts": "2026-09-14T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "USDT",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 3,
-      "_corroboration_score": 4
+      "_n_alerts": 6,
+      "_corroboration_score": 5
     }
   ]
 }
