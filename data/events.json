@@ -1,25 +1,64 @@
 {
-  "generated_at": "2026-09-17T19:00:20.399907+00:00",
+  "generated_at": "2026-09-17T22:03:25.037524+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 5,
+    "n_total": 6,
     "n_correlated": 0,
-    "n_singleton": 5,
+    "n_singleton": 6,
     "max_convergence": 1,
     "by_severity": {
-      "singleton": 5
+      "singleton": 6
     },
     "by_asset": {
+      "SOL-BRL": 2,
       "USDT-BRL": 2,
-      "ETH-BRL": 2,
-      "SOL-BRL": 1
+      "ETH-BRL": 2
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260917_2203_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-09-17T22:03:24+00:00",
+      "closed_at": "2026-09-17T22:03:24+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 22:03 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.0962,
+          "threshold": 0.0746,
+          "narrative": "Spread Binance SOL-BRL em 0.0962% — 1.6× o p95 recente (0.0597%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.09618159084351255,
+            "p95_pct": 0.059683676514475564,
+            "median_pct": 0.038424591738721516,
+            "baseline_pct": 0.059683676514475564,
+            "ratio": 1.6115225545829914,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-17T22:03:24+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260917_0035_usdtbrl",
       "asset": "USDT-BRL",
