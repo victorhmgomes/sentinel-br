@@ -15,8 +15,8 @@
         1
       ]
     ],
-    "generated_at": "2026-09-16T08:17:52+00:00",
-    "runtime_sec": 3.48
+    "generated_at": "2026-09-17T08:24:16+00:00",
+    "runtime_sec": 4.8
   },
   "items": [
     {
@@ -81,6 +81,22 @@
           "narrative": "1 venue(s) BR movendo em ETH-BRL (QUEDA): Mercado Bitcoin; maior Δ=-0.871% (em Mercado Bitcoin) mas Binance -0.043% (quase parada). Pressão local antes do mercado global reagir."
         },
         {
+          "ts": "2026-09-16T19:25:45+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0866% — 1.6× o p95 recente (0.0547%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-17T00:35:19+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1117454.75 → 644400.30 unidades em ±2%)."
+        },
+        {
           "ts": "2026-09-11T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "critical",
@@ -111,9 +127,17 @@
           "venue": "Mercado Bitcoin",
           "asset": "USDT",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-15T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 6,
+      "_n_alerts": 9,
       "_corroboration_score": 5
     }
   ]
