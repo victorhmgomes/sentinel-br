@@ -1,25 +1,64 @@
 {
-  "generated_at": "2026-09-18T13:42:51.286613+00:00",
+  "generated_at": "2026-09-18T17:13:49.721396+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 10,
+    "n_total": 11,
     "n_correlated": 0,
-    "n_singleton": 10,
+    "n_singleton": 11,
     "max_convergence": 1,
     "by_severity": {
-      "singleton": 10
+      "singleton": 11
     },
     "by_asset": {
+      "ETH-BRL": 3,
       "USDT-BRL": 4,
-      "SOL-BRL": 4,
-      "ETH-BRL": 2
+      "SOL-BRL": 4
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260918_1713_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-09-18T17:13:49+00:00",
+      "closed_at": "2026-09-18T17:13:49+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em ETH-BRL às 17:13 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": 0.1243,
+          "threshold": 0.0684,
+          "narrative": "Spread Binance ETH-BRL em 0.1243% — 2.3× o p95 recente (0.0547%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.12425536496087661,
+            "p95_pct": 0.05470536648366451,
+            "median_pct": 0.008604714482174022,
+            "baseline_pct": 0.05470536648366451,
+            "ratio": 2.271356046905934,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-18T17:13:49+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260918_0925_usdtbrl",
       "asset": "USDT-BRL",
