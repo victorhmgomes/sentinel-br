@@ -15,102 +15,58 @@
         2
       ],
       [
-        "InfoMoney",
+        "Olhar Digital",
         1
       ]
     ],
-    "generated_at": "2026-09-21T08:36:32+00:00",
-    "runtime_sec": 12.78
+    "generated_at": "2026-09-22T08:15:56+00:00",
+    "runtime_sec": 4.62
   },
   "items": [
     {
-      "source": "InfoMoney",
-      "bucket": "economia",
-      "title": "Dino manda governo revisar regras da CVM e cita falhas reveladas pelo caso Master",
-      "link": "https://www.infomoney.com.br/mercados/dino-manda-governo-revisar-regras-da-cvm-e-cita-falhas-reveladas-pelo-caso-master/",
-      "summary": "Ministro aponta vulnerabilidades em normas sobre fundos e prevenção à lavagem de dinheiro e dá 90 dias para governo apresentar conclusões The post Dino manda governo revisar regras da CVM e cita falhas reveladas pelo caso Master appeared first on InfoMoney .",
-      "ts_iso": "2026-09-20T20:02:35+00:00",
-      "hash": "30c57164620812c6",
+      "source": "Olhar Digital",
+      "bucket": "seguranca",
+      "title": "Microsoft e Google derrubam marketplace de cibercrime de R$ 350 milhões usado para aplicar golpes em larga escala",
+      "link": "https://olhardigital.com.br/2026/09/21/pro/microsoft-e-google-derrubam-marketplace-de-cibercrime-de-r-350-milhoes-usado-para-aplicar-golpes-em-larga-escala/",
+      "summary": "Operação foi viabilizada em parte pelo compartilhamento de informações entre as empresas O post Microsoft e Google derrubam marketplace de cibercrime de R$ 350 milhões usado para aplicar golpes em larga escala apareceu primeiro em Olhar Digital .",
+      "ts_iso": "2026-09-22T00:03:12+00:00",
+      "hash": "cd8772c2e0f8d82f",
       "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 4,
-        "cft": 4,
+        "cyber": 6,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
         "pix": 0,
         "crypto": 0,
-        "value": 0,
-        "named_fi": 2,
+        "value": 3,
+        "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 0
+        "incident_verbs": 2
       },
       "_hits": {
-        "launder": [
-          "lavagem"
+        "cyber": [
+          "cibercrime"
         ],
-        "cft": [
-          "prevenção à lavagem"
+        "attack": [
+          "golpes"
         ],
-        "named_fi": [
-          "master"
+        "value": [
+          "r$ 3",
+          "milhões"
+        ],
+        "incident_verbs": [
+          "r$ 350 milh"
         ]
       },
-      "_total": 10,
+      "_total": 13,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 4,
+        "pos": 3,
         "neg": 0,
-        "score": 4
+        "score": 3
       },
       "_alerts": [
-        {
-          "ts": "2026-09-17T22:03:24+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0962% — 1.6× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T00:15:44+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0767% — 1.3× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T04:57:55+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.1105% — 1.9× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T04:57:55+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 74% (de 1169459.00 → 300037.50 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-18T09:25:15+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 1124110.65 → 574421.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-18T17:13:49+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Spread Binance ETH-BRL em 0.1243% — 2.3× o p95 recente (0.0547%) e acima do piso de 0.020%."
-        },
         {
           "ts": "2026-09-19T07:44:49+00:00",
           "rule": "binance_depth_drop",
@@ -120,31 +76,47 @@
           "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1251600.00 → 728902.00 unidades em ±2%)."
         },
         {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "hourly_corr",
+          "ts": "2026-09-21T14:07:02+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 36% (de 20.27 → 13.00 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-21T14:07:02+00:00",
+          "rule": "binance_price_burst",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance BTC-BRL: +3.879% (Z=+6.29)."
+        },
+        {
+          "ts": "2026-09-21T19:26:18+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 40% (de 2411629.45 → 1442133.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-21T22:42:25+00:00",
+          "rule": "binance_depth_drop",
           "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 65% (de 2411629.45 → 847202.10 unidades em ±2%)."
         },
         {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "volume_zscore",
+          "ts": "2026-09-22T06:12:35+00:00",
+          "rule": "binance_depth_drop",
           "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 39% (de 2411629.45 → 1478893.70 unidades em ±2%)."
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 6,
       "_corroboration_score": 5
     },
     {
@@ -277,6 +249,22 @@
           "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1251600.00 → 728902.00 unidades em ±2%)."
         },
         {
+          "ts": "2026-09-21T14:07:02+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 36% (de 20.27 → 13.00 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-21T14:07:02+00:00",
+          "rule": "binance_price_burst",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance BTC-BRL: +3.879% (Z=+6.29)."
+        },
+        {
           "ts": "2026-09-16T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
@@ -333,7 +321,7 @@
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 18,
+      "_n_alerts": 20,
       "_corroboration_score": 5
     },
     {
