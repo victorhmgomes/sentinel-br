@@ -1,26 +1,65 @@
 {
-  "generated_at": "2026-09-23T14:45:57.409667+00:00",
+  "generated_at": "2026-09-23T18:47:09.495110+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 23,
+    "n_total": 24,
     "n_correlated": 0,
-    "n_singleton": 23,
+    "n_singleton": 24,
     "max_convergence": 1,
     "by_severity": {
-      "singleton": 23
+      "singleton": 24
     },
     "by_asset": {
+      "BTC-BRL": 2,
       "ETH-BRL": 5,
       "SOL-BRL": 5,
-      "USDT-BRL": 12,
-      "BTC-BRL": 1
+      "USDT-BRL": 12
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260923_1847_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-09-23T18:47:09+00:00",
+      "closed_at": "2026-09-23T18:47:09+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 18:47 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.0323,
+          "threshold": 0.025,
+          "narrative": "Spread Binance BTC-BRL em 0.0323% — 1.6× o p95 recente (0.0050%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.032336149177434874,
+            "p95_pct": 0.004964481392221109,
+            "median_pct": 0.00023877404406553017,
+            "baseline_pct": 0.02,
+            "ratio": 1.6168074588717436,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-23T18:47:09+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260923_0958_ethbrl",
       "asset": "ETH-BRL",
