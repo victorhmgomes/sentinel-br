@@ -15,66 +15,54 @@
         2
       ],
       [
-        "Olhar Digital",
+        "Folha Mercado",
         1
       ]
     ],
-    "generated_at": "2026-09-22T08:15:56+00:00",
-    "runtime_sec": 4.62
+    "generated_at": "2026-09-23T08:18:03+00:00",
+    "runtime_sec": 3.12
   },
   "items": [
     {
-      "source": "Olhar Digital",
-      "bucket": "seguranca",
-      "title": "Microsoft e Google derrubam marketplace de cibercrime de R$ 350 milhões usado para aplicar golpes em larga escala",
-      "link": "https://olhardigital.com.br/2026/09/21/pro/microsoft-e-google-derrubam-marketplace-de-cibercrime-de-r-350-milhoes-usado-para-aplicar-golpes-em-larga-escala/",
-      "summary": "Operação foi viabilizada em parte pelo compartilhamento de informações entre as empresas O post Microsoft e Google derrubam marketplace de cibercrime de R$ 350 milhões usado para aplicar golpes em larga escala apareceu primeiro em Olhar Digital .",
-      "ts_iso": "2026-09-22T00:03:12+00:00",
-      "hash": "cd8772c2e0f8d82f",
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Brasil fica de fora de projetos avançados de OpenAI e Anthropic em meio a série de invasões por agentes de IA",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/ia/2026/09/brasil-fica-de-fora-de-projetos-avancados-de-openai-e-anthropic-em-meio-a-serie-de-invasoes-por-agentes-de-ia.shtml",
+      "summary": "Autoridades de sete países da América Latina , incluindo o Brasil, relatam dificuldade para acessar o modelo Mythos, da Anthropic , cujas capacidades para realizar ataques cibernéticos impressionaram antes mesmo da série de invasões deflagradas por agentes de inteligência artificial . Leia mais (09/23/2026 - 04h00)",
+      "ts_iso": "2026-09-23T07:00:00+00:00",
+      "hash": "5b71cc9783f988a4",
       "_score": {
-        "cyber": 6,
+        "cyber": 5,
         "attack": 2,
-        "launder": 0,
+        "launder": 3,
         "cft": 0,
         "pix": 0,
         "crypto": 0,
-        "value": 3,
+        "value": 0,
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 2
+        "incident_verbs": 0
       },
       "_hits": {
         "cyber": [
-          "cibercrime"
+          "invasões"
         ],
         "attack": [
-          "golpes"
+          "ataques"
         ],
-        "value": [
-          "r$ 3",
-          "milhões"
-        ],
-        "incident_verbs": [
-          "r$ 350 milh"
+        "launder": [
+          "deflagradas"
         ]
       },
-      "_total": 13,
+      "_total": 10,
       "_severity": "medium",
       "_br_focus": {
-        "pos": 3,
+        "pos": 2,
         "neg": 0,
-        "score": 3
+        "score": 2
       },
       "_alerts": [
-        {
-          "ts": "2026-09-19T07:44:49+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1251600.00 → 728902.00 unidades em ±2%)."
-        },
         {
           "ts": "2026-09-21T14:07:02+00:00",
           "rule": "binance_depth_drop",
@@ -114,9 +102,129 @@
           "venue": "Binance",
           "asset": "USDT-BRL",
           "narrative": "Profundidade Binance USDT-BRL caiu 39% (de 2411629.45 → 1478893.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-22T11:38:46+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 70% (de 2411629.45 → 734081.10 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-22T15:42:17+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.234% (em Ripio Trade) mas Binance +0.039% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-22T19:11:44+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 35% (de 2515980.15 → 1624963.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-22T22:08:46+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 81% (de 2515980.15 → 478081.90 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-23T05:10:57+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "SOL-BRL",
+          "narrative": "1 venue(s) BR movendo em SOL-BRL (ALTA): Ripio Trade; maior Δ=+0.288% (em Ripio Trade) mas Binance +0.033% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "high",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 6,
+      "_n_alerts": 20,
       "_corroboration_score": 5
     },
     {
@@ -319,9 +427,89 @@
           "venue": "Mercado Bitcoin",
           "asset": "SOL",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Mercado Bitcoin",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "critical",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "ring_of_mules",
+          "severity": "high",
+          "venue": "BR multi-venue",
+          "asset": "multi",
+          "narrative": "ring_of_mules"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-09-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Mercado Bitcoin",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 20,
+      "_n_alerts": 30,
       "_corroboration_score": 5
     },
     {
