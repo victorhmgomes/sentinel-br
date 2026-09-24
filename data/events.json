@@ -1,26 +1,91 @@
 {
-  "generated_at": "2026-09-24T00:17:36.671505+00:00",
+  "generated_at": "2026-09-24T05:08:19.000839+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 26,
-    "n_correlated": 0,
+    "n_total": 27,
+    "n_correlated": 1,
     "n_singleton": 26,
-    "max_convergence": 1,
+    "max_convergence": 2,
     "by_severity": {
+      "high": 1,
       "singleton": 26
     },
     "by_asset": {
-      "USDT-BRL": 14,
+      "USDT-BRL": 15,
       "BTC-BRL": 2,
       "ETH-BRL": 5,
       "SOL-BRL": 5
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260924_0508_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-09-24T05:08:18+00:00",
+      "closed_at": "2026-09-24T05:08:18+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop",
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop",
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "high",
+      "event_severity": "high",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 05:08-05:08 (~0s): depth_drop, pre_spike. 2 alerta(s) bruto(s). Severidade máxima vista: high.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 825010.1,
+          "threshold": 877762.585,
+          "narrative": "Profundidade Binance USDT-BRL caiu 67% (de 2507893.10 → 825010.10 unidades em ±2%).",
+          "context": {
+            "depth_now": 825010.1000000001,
+            "depth_median": 2507893.0999999996,
+            "drop_pct": 0.6710345827738828
+          },
+          "ts": "2026-09-24T05:08:18+00:00"
+        },
+        {
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "value": 0.2412,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.241% (em Ripio Trade) mas Binance +0.087% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": 0.24121960632958872,
+            "binance_change_pct": 0.08682314126125412,
+            "hits": [
+              {
+                "venue": "Ripio Trade",
+                "local_chg": 0.24121960632958872,
+                "b_chg": 0.08682314126125412,
+                "m_prev": 5.182,
+                "m_now": 5.1945,
+                "b_prev": 5.18295,
+                "b_now": 5.18745
+              }
+            ]
+          },
+          "ts": "2026-09-24T05:08:18+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260924_0017_usdtbrl",
       "asset": "USDT-BRL",
