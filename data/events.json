@@ -1,27 +1,102 @@
 {
-  "generated_at": "2026-09-24T18:41:23.757331+00:00",
+  "generated_at": "2026-09-24T21:49:21.646387+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 29,
+    "n_total": 31,
     "n_correlated": 1,
-    "n_singleton": 28,
+    "n_singleton": 30,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 28,
+      "singleton": 30,
       "high": 1
     },
     "by_asset": {
-      "USDT-BRL": 17,
+      "SOL-BRL": 6,
+      "USDT-BRL": 18,
       "BTC-BRL": 2,
-      "ETH-BRL": 5,
-      "SOL-BRL": 5
+      "ETH-BRL": 5
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260924_2149_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-09-24T21:49:21+00:00",
+      "closed_at": "2026-09-24T21:49:21+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 21:49 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.0492,
+          "threshold": 0.0444,
+          "narrative": "Spread Binance SOL-BRL em 0.0492% — 1.4× o p95 recente (0.0355%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.049248953459731515,
+            "p95_pct": 0.03552397868562086,
+            "median_pct": 0.032811302310767176,
+            "baseline_pct": 0.03552397868562086,
+            "ratio": 1.386358039891127,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-24T21:49:21+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20260924_2149_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-09-24T21:49:21+00:00",
+      "closed_at": "2026-09-24T21:49:21+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "critical",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 21:49 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: critical.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 721637.5,
+          "threshold": 870861.74,
+          "narrative": "Profundidade Binance USDT-BRL caiu 71% (de 2488176.40 → 721637.50 unidades em ±2%).",
+          "context": {
+            "depth_now": 721637.5,
+            "depth_median": 2488176.4,
+            "drop_pct": 0.7099733362956099
+          },
+          "ts": "2026-09-24T21:49:21+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260924_1444_usdtbrl",
       "asset": "USDT-BRL",
