@@ -1,0 +1,1 @@
+{"rule": "binance_depth_drop", "severity": "medium", "venue": "Binance", "asset": "USDT-BRL", "value": 1273779.7, "threshold": 870861.74, "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 2488176.40 → 1273779.70 unidades em ±2%).", "context": {"depth_now": 1273779.6999999997, "depth_median": 2488176.4, "drop_pct": 0.48806696341947464}, "ts": "2026-09-25T04:58:15+00:00"}
