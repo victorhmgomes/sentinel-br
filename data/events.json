@@ -1,27 +1,102 @@
 {
-  "generated_at": "2026-09-25T15:14:46.208528+00:00",
+  "generated_at": "2026-09-25T19:16:50.744657+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 32,
+    "n_total": 34,
     "n_correlated": 1,
-    "n_singleton": 31,
+    "n_singleton": 33,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 31,
+      "singleton": 33,
       "high": 1
     },
     "by_asset": {
+      "ETH-BRL": 6,
+      "BTC-BRL": 3,
       "USDT-BRL": 19,
-      "SOL-BRL": 6,
-      "BTC-BRL": 2,
-      "ETH-BRL": 5
+      "SOL-BRL": 6
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260925_1916_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-09-25T19:16:50+00:00",
+      "closed_at": "2026-09-25T19:16:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em ETH-BRL às 19:16 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": 11.7797,
+          "threshold": 7.153,
+          "narrative": "Profundidade Binance ETH-BRL caiu 42% (de 20.44 → 11.78 unidades em ±2%).",
+          "context": {
+            "depth_now": 11.779699999999995,
+            "depth_median": 20.437049999999992,
+            "drop_pct": 0.42361055044637075
+          },
+          "ts": "2026-09-25T19:16:50+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20260925_1916_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-09-25T19:16:50+00:00",
+      "closed_at": "2026-09-25T19:16:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 19:16 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.0378,
+          "threshold": 0.025,
+          "narrative": "Spread Binance BTC-BRL em 0.0378% — 1.9× o p95 recente (0.0185%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.03781814514604107,
+            "p95_pct": 0.018489108019058006,
+            "median_pct": 0.00023069161193722666,
+            "baseline_pct": 0.02,
+            "ratio": 1.8909072573020536,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-25T19:16:50+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260925_0458_usdtbrl",
       "asset": "USDT-BRL",
