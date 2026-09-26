@@ -1,27 +1,66 @@
 {
-  "generated_at": "2026-09-25T22:36:03.347448+00:00",
+  "generated_at": "2026-09-26T00:53:04.411874+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 34,
+    "n_total": 35,
     "n_correlated": 1,
-    "n_singleton": 33,
+    "n_singleton": 34,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 33,
+      "singleton": 34,
       "high": 1
     },
     "by_asset": {
+      "SOL-BRL": 7,
       "ETH-BRL": 6,
       "BTC-BRL": 3,
-      "USDT-BRL": 19,
-      "SOL-BRL": 6
+      "USDT-BRL": 19
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260926_0053_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-09-26T00:53:04+00:00",
+      "closed_at": "2026-09-26T00:53:04+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 00:53 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.0475,
+          "threshold": 0.0444,
+          "narrative": "Spread Binance SOL-BRL em 0.0475% — 1.3× o p95 recente (0.0355%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.047472110135306306,
+            "p95_pct": 0.03552397868562086,
+            "median_pct": 0.032114445781350864,
+            "baseline_pct": 0.03552397868562086,
+            "ratio": 1.3363399003085688,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-26T00:53:04+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260925_1916_ethbrl",
       "asset": "ETH-BRL",
