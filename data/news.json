@@ -1,28 +1,434 @@
 {
   "summary": {
-    "n_items": 2,
+    "n_items": 3,
     "by_severity": {
       "critical": 0,
-      "high": 0,
+      "high": 1,
       "medium": 2,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 2,
+    "with_watcher_corroboration": 3,
     "top_sources": [
       [
-        "G1 Economia",
+        "Livecoins",
         1
       ],
       [
-        "Valor Investe",
+        "Portal do Bitcoin",
+        1
+      ],
+      [
+        "G1 Economia",
         1
       ]
     ],
-    "generated_at": "2026-09-25T08:32:59+00:00",
-    "runtime_sec": 3.66
+    "generated_at": "2026-09-26T08:20:06+00:00",
+    "runtime_sec": 3.91
   },
   "items": [
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Bitget eleva estimativa de perdas para US$ 387,5 milhões e planeja restaurar saques neste sábado (26)",
+      "link": "https://livecoins.com.br/bitget-eleva-estimativa-de-perdas-para-us-3875-milhoes-e-planeja-restaurar-saques-neste-sabado-26/",
+      "summary": "Em nota publicada nesta sexta-feira (25), a Bitget elevou as estimativas de suas perdas para US$ 387,5 milhões (R$ 2 bilhões). A corretora sofreu um ataque hacker nesta quinta-feira (24), em que diversas carteiras foram esvaziadas. A primeira leitura sugeria que a Bitget havia perdido US$ 183 milhões em Ethereum, USDT, USDT0, USDC, XAUT, BNB [&#8230;] Fonte: Bitget eleva estimativa de perdas para US$ 387,5 milhões e planeja restaurar saques neste sábado (26) Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-09-25T16:08:40+00:00",
+      "hash": "61ca4ab11c618ddc",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 7,
+        "value": 6,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 6
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "usdt",
+          "corretora"
+        ],
+        "value": [
+          "r$ 2",
+          "milhões",
+          "bilhões",
+          "us$ 3"
+        ],
+        "incident_verbs": [
+          "sofreu um ataque",
+          "r$ 2 bilh"
+        ]
+      },
+      "_total": 37,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 3,
+        "neg": 2,
+        "score": 1
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-22T19:11:44+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 35% (de 2515980.15 → 1624963.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-22T22:08:46+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 81% (de 2515980.15 → 478081.90 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-23T05:10:57+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "SOL-BRL",
+          "narrative": "1 venue(s) BR movendo em SOL-BRL (ALTA): Ripio Trade; maior Δ=+0.288% (em Ripio Trade) mas Binance +0.033% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-23T09:58:13+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 37% (de 20.27 → 12.73 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-23T18:47:09+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0323% — 1.6× o p95 recente (0.0050%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-23T21:58:23+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 85% (de 2507893.10 → 377069.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T00:17:35+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 71% (de 2507893.10 → 725650.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T05:08:18+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 67% (de 2507893.10 → 825010.10 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T05:08:18+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.241% (em Ripio Trade) mas Binance +0.087% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-24T09:58:51+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 73% (de 2507893.10 → 675578.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T14:44:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 54% (de 2507893.10 → 1164980.80 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T21:49:21+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0492% — 1.4× o p95 recente (0.0355%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-24T21:49:21+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 71% (de 2488176.40 → 721637.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-25T04:58:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 2488176.40 → 1273779.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0378% — 1.9× o p95 recente (0.0185%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 42% (de 20.44 → 11.78 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-26T00:53:04+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0475% — 1.3× o p95 recente (0.0355%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-23T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 18,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Banco Central recebe novo pedido de autorização cripto; número de empresas chega a 6",
+      "link": "https://portaldobitcoin.uol.com.br/banco-central-recebe-novo-pedido-de-autorizacao-cripto-numero-de-empresas-chega-a-6/",
+      "summary": "Mazzera é a sexta empresa com pedido de autorização no Banco Central para atuar como prestadora de serviços de ativos virtuais no país O post Banco Central recebe novo pedido de autorização cripto; número de empresas chega a 6 apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-09-25T14:46:00+00:00",
+      "hash": "152636cdffb09f63",
+      "_score": {
+        "cyber": 0,
+        "attack": 0,
+        "launder": 0,
+        "cft": 4,
+        "pix": 2,
+        "crypto": 4,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 2,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cft": [
+          "prestadora de serviços de ativos virtuais"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "crypto": [
+          "bitcoin",
+          "cripto"
+        ],
+        "political_noise": [
+          "novo"
+        ]
+      },
+      "_total": 12,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 2,
+        "neg": 0,
+        "score": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-09-22T15:42:17+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.234% (em Ripio Trade) mas Binance +0.039% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-22T19:11:44+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 35% (de 2515980.15 → 1624963.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-22T22:08:46+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 81% (de 2515980.15 → 478081.90 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-23T05:10:57+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "SOL-BRL",
+          "narrative": "1 venue(s) BR movendo em SOL-BRL (ALTA): Ripio Trade; maior Δ=+0.288% (em Ripio Trade) mas Binance +0.033% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-23T09:58:13+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 37% (de 20.27 → 12.73 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-23T18:47:09+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0323% — 1.6× o p95 recente (0.0050%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-23T21:58:23+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 85% (de 2507893.10 → 377069.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T00:17:35+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 71% (de 2507893.10 → 725650.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T05:08:18+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 67% (de 2507893.10 → 825010.10 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T05:08:18+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.241% (em Ripio Trade) mas Binance +0.087% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-09-24T09:58:51+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 73% (de 2507893.10 → 675578.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T14:44:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 54% (de 2507893.10 → 1164980.80 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-24T21:49:21+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0492% — 1.4× o p95 recente (0.0355%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-24T21:49:21+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 71% (de 2488176.40 → 721637.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-25T04:58:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 2488176.40 → 1273779.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0378% — 1.9× o p95 recente (0.0185%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 42% (de 20.44 → 11.78 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-26T00:53:04+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0475% — 1.3× o p95 recente (0.0355%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-23T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "XRP",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 19,
+      "_corroboration_score": 5
+    },
     {
       "source": "G1 Economia",
       "bucket": "economia",
@@ -243,6 +649,30 @@
           "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 2488176.40 → 1273779.70 unidades em ±2%)."
         },
         {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0378% — 1.9× o p95 recente (0.0185%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-09-25T19:16:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 42% (de 20.44 → 11.78 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-09-26T00:53:04+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0475% — 1.3× o p95 recente (0.0355%) e acima do piso de 0.020%."
+        },
+        {
           "ts": "2026-09-21T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "critical",
@@ -339,292 +769,7 @@
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 33,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Valor Investe",
-      "bucket": "economia",
-      "title": "A pouco mais de um mês do final do prazo, só cinco empresas de cripto pediram licença ao BC",
-      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/09/18/a-pouco-mais-de-um-mes-do-final-do-prazo-so-cinco-empresas-de-cripto-pediram-licenca-ao-bc.ghtml",
-      "summary": "Apenas cinco empresas protocolaram até agora pedidos de autorização no Banco Central (BC) para funcionar como prestadoras de serviços de ativos virtuais (PSAVs). Quatro processos continuam em análise e um já foi indeferido por problemas na documentação e no cumprimento das condições para participar do regime de transição, incluindo a comprovação de capital mínimo, segundo apurou reportagem do Valor Econômico. O número ainda está distante das estimativas ouvidas pelo Valor Investe entre participantes do mercado. Profissionais do setor calculam que entre 150 e 200 empresas atuem hoje com criptoa",
-      "ts_iso": "2026-09-18T17:45:27+00:00",
-      "hash": "9dd296cb49b93ff1",
-      "_score": {
-        "cyber": 0,
-        "attack": 0,
-        "launder": 0,
-        "cft": 4,
-        "pix": 3,
-        "crypto": 2,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cft": [
-          "prestadoras de serviços de ativos virtuais"
-        ],
-        "pix": [
-          "banco central",
-          "bc"
-        ],
-        "crypto": [
-          "cripto"
-        ]
-      },
-      "_total": 9,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 2,
-        "neg": 0,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-09-15T23:00:58+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 54% (de 1708665.20 → 784732.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-15T23:00:58+00:00",
-          "rule": "br_pre_spike",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "ETH-BRL",
-          "narrative": "1 venue(s) BR movendo em ETH-BRL (QUEDA): Mercado Bitcoin; maior Δ=-0.871% (em Mercado Bitcoin) mas Binance -0.043% (quase parada). Pressão local antes do mercado global reagir."
-        },
-        {
-          "ts": "2026-09-16T19:25:45+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Spread Binance ETH-BRL em 0.0866% — 1.6× o p95 recente (0.0547%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-17T00:35:19+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1117454.75 → 644400.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-17T22:03:24+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0962% — 1.6× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T00:15:44+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0767% — 1.3× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T04:57:55+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.1105% — 1.9× o p95 recente (0.0597%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-18T04:57:55+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 74% (de 1169459.00 → 300037.50 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-18T09:25:15+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 1124110.65 → 574421.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-18T17:13:49+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Spread Binance ETH-BRL em 0.1243% — 2.3× o p95 recente (0.0547%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-19T07:44:49+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 42% (de 1251600.00 → 728902.00 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-21T14:07:02+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Profundidade Binance ETH-BRL caiu 36% (de 20.27 → 13.00 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-21T14:07:02+00:00",
-          "rule": "binance_price_burst",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Movimento brusco de ALTA em Binance BTC-BRL: +3.879% (Z=+6.29)."
-        },
-        {
-          "ts": "2026-09-16T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-16T12:00:00+00:00",
-          "rule": "ensemble",
-          "severity": "high",
-          "venue": "Mercado Bitcoin",
-          "asset": "multi",
-          "narrative": "ensemble"
-        },
-        {
-          "ts": "2026-09-16T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-16T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "high",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-18T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "ring_of_mules",
-          "severity": "high",
-          "venue": "BR multi-venue",
-          "asset": "multi",
-          "narrative": "ring_of_mules"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BNB",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "ETH",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "SOL",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-21T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 30,
+      "_n_alerts": 36,
       "_corroboration_score": 5
     }
   ]
