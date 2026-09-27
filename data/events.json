@@ -1,27 +1,70 @@
 {
-  "generated_at": "2026-09-27T20:44:03.375615+00:00",
+  "generated_at": "2026-09-27T23:25:13.187894+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 35,
+    "n_total": 36,
     "n_correlated": 1,
-    "n_singleton": 34,
+    "n_singleton": 35,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 34,
+      "singleton": 35,
       "high": 1
     },
     "by_asset": {
+      "USDT-BRL": 20,
       "SOL-BRL": 7,
       "ETH-BRL": 6,
-      "BTC-BRL": 3,
-      "USDT-BRL": 19
+      "BTC-BRL": 3
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260927_2325_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-09-27T23:25:13+00:00",
+      "closed_at": "2026-09-27T23:25:13+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "stablecoin_flight"
+      ],
+      "distinct_rules": [
+        "stablecoin_flight"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 23:25 (stablecoin_flight). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": -0.0061,
+          "threshold": 0.3,
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -0.56% · USDT-BRL bid-heavy (imbalance +0.65). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -0.5598,
+            "usdt_imbalance": 0.648,
+            "usdt_decouple_pct": -0.0061,
+            "conds_met": 2,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -0.3527,
+              "ETH-BRL": -0.552,
+              "SOL-BRL": -0.7747
+            }
+          },
+          "ts": "2026-09-27T23:25:13+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260926_0053_solbrl",
       "asset": "SOL-BRL",
