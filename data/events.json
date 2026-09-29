@@ -1,27 +1,74 @@
 {
-  "generated_at": "2026-09-29T02:08:26.513534+00:00",
+  "generated_at": "2026-09-29T08:27:08.843554+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 44,
+    "n_total": 45,
     "n_correlated": 2,
-    "n_singleton": 42,
+    "n_singleton": 43,
     "max_convergence": 2,
     "by_severity": {
-      "high": 2,
-      "singleton": 42
+      "singleton": 43,
+      "high": 2
     },
     "by_asset": {
-      "USDT-BRL": 24,
+      "USDT-BRL": 25,
       "BTC-BRL": 5,
       "SOL-BRL": 8,
       "ETH-BRL": 7
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260929_0827_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-09-29T08:27:08+00:00",
+      "closed_at": "2026-09-29T08:27:08+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 08:27 (pre_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "value": -0.2001,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.200% (em Ripio Trade) mas Binance -0.013% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": -0.20011435105775488,
+            "binance_change_pct": -0.013377287277247046,
+            "hits": [
+              {
+                "venue": "Ripio Trade",
+                "local_chg": -0.20011435105775488,
+                "b_chg": -0.013377287277247046,
+                "m_prev": 5.247,
+                "m_now": 5.2364999999999995,
+                "b_prev": 5.23275,
+                "b_now": 5.23205
+              }
+            ]
+          },
+          "ts": "2026-09-29T08:27:08+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260929_0208_usdtbrl",
       "asset": "USDT-BRL",
