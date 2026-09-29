@@ -1,27 +1,130 @@
 {
-  "generated_at": "2026-09-28T22:17:05.408949+00:00",
+  "generated_at": "2026-09-29T02:08:26.513534+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 42,
-    "n_correlated": 1,
-    "n_singleton": 41,
+    "n_total": 44,
+    "n_correlated": 2,
+    "n_singleton": 42,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 41,
-      "high": 1
+      "high": 2,
+      "singleton": 42
     },
     "by_asset": {
-      "USDT-BRL": 23,
+      "USDT-BRL": 24,
+      "BTC-BRL": 5,
       "SOL-BRL": 8,
-      "ETH-BRL": 7,
-      "BTC-BRL": 4
+      "ETH-BRL": 7
     }
   },
   "events": [
+    {
+      "event_id": "evt_20260929_0208_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-09-29T02:08:25+00:00",
+      "closed_at": "2026-09-29T02:08:25+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop",
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop",
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "high",
+      "event_severity": "high",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 02:08-02:08 (~0s): depth_drop, pre_spike. 2 alerta(s) bruto(s). Severidade máxima vista: high.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 1065173.6,
+          "threshold": 854014.875,
+          "narrative": "Profundidade Binance USDT-BRL caiu 56% (de 2440042.50 → 1065173.60 unidades em ±2%).",
+          "context": {
+            "depth_now": 1065173.6000000003,
+            "depth_median": 2440042.5,
+            "drop_pct": 0.5634610462727594
+          },
+          "ts": "2026-09-29T02:08:25+00:00"
+        },
+        {
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "value": 0.2292,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.229% (em Ripio Trade) mas Binance +0.013% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": 0.22922636103152733,
+            "binance_change_pct": 0.013379077034817041,
+            "hits": [
+              {
+                "venue": "Ripio Trade",
+                "local_chg": 0.22922636103152733,
+                "b_chg": 0.013379077034817041,
+                "m_prev": 5.234999999999999,
+                "m_now": 5.247,
+                "b_prev": 5.23205,
+                "b_now": 5.23275
+              }
+            ]
+          },
+          "ts": "2026-09-29T02:08:25+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20260929_0208_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-09-29T02:08:25+00:00",
+      "closed_at": "2026-09-29T02:08:25+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 02:08 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.0322,
+          "threshold": 0.0297,
+          "narrative": "Spread Binance BTC-BRL em 0.0322% — 1.4× o p95 recente (0.0238%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.032219386404799766,
+            "p95_pct": 0.023771863256928125,
+            "median_pct": 0.00022872094675793723,
+            "baseline_pct": 0.023771863256928125,
+            "ratio": 1.3553580574046789,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-09-29T02:08:25+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20260928_2217_usdtbrl",
       "asset": "USDT-BRL",
