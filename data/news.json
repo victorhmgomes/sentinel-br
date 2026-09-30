@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-09-29T09:29:10+00:00",
-    "runtime_sec": 3.71
+    "generated_at": "2026-09-30T09:20:18+00:00",
+    "runtime_sec": 3.68
   },
   "items": [
     {
@@ -187,6 +187,14 @@
           "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.200% (em Ripio Trade) mas Binance -0.013% (quase parada). Pressão local antes do mercado global reagir."
         },
         {
+          "ts": "2026-09-29T19:48:06+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Profundidade Binance BTC-BRL caiu 35% (de 0.91 → 0.59 unidades em ±2%)."
+        },
+        {
           "ts": "2026-09-27T12:00:00+00:00",
           "rule": "hourly_corr",
           "severity": "critical",
@@ -195,7 +203,7 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 15,
+      "_n_alerts": 16,
       "_corroboration_score": 5
     },
     {
@@ -404,6 +412,14 @@
           "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.200% (em Ripio Trade) mas Binance -0.013% (quase parada). Pressão local antes do mercado global reagir."
         },
         {
+          "ts": "2026-09-29T19:48:06+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Profundidade Binance BTC-BRL caiu 35% (de 0.91 → 0.59 unidades em ±2%)."
+        },
+        {
           "ts": "2026-09-25T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
@@ -420,7 +436,7 @@
           "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 21,
+      "_n_alerts": 22,
       "_corroboration_score": 5
     }
   ]
