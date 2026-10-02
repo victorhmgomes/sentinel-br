@@ -1,27 +1,63 @@
 {
-  "generated_at": "2026-10-02T09:24:07.176166+00:00",
+  "generated_at": "2026-10-02T13:50:45.187557+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 54,
+    "n_total": 55,
     "n_correlated": 2,
-    "n_singleton": 52,
+    "n_singleton": 53,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 52,
+      "singleton": 53,
       "high": 2
     },
     "by_asset": {
-      "BTC-BRL": 9,
+      "BTC-BRL": 10,
       "USDT-BRL": 30,
       "SOL-BRL": 8,
       "ETH-BRL": 7
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261002_1350_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-10-02T13:50:45+00:00",
+      "closed_at": "2026-10-02T13:50:45+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 13:50 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.5021,
+          "threshold": 0.3131,
+          "narrative": "Profundidade Binance BTC-BRL caiu 44% (de 0.89 → 0.50 unidades em ±2%).",
+          "context": {
+            "depth_now": 0.5021499999999999,
+            "depth_median": 0.8946000000000003,
+            "drop_pct": 0.4386876816454285
+          },
+          "ts": "2026-10-02T13:50:45+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261002_0702_btcbrl",
       "asset": "BTC-BRL",
