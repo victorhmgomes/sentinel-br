@@ -1,27 +1,74 @@
 {
-  "generated_at": "2026-10-02T18:54:33.757658+00:00",
+  "generated_at": "2026-10-02T22:46:37.819004+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 55,
+    "n_total": 56,
     "n_correlated": 2,
-    "n_singleton": 53,
+    "n_singleton": 54,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 53,
+      "singleton": 54,
       "high": 2
     },
     "by_asset": {
+      "USDT-BRL": 31,
       "BTC-BRL": 10,
-      "USDT-BRL": 30,
       "SOL-BRL": 8,
       "ETH-BRL": 7
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261002_2246_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-10-02T22:46:37+00:00",
+      "closed_at": "2026-10-02T22:46:37+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 22:46 (pre_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "value": -0.248,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.248% (em Ripio Trade) mas Binance -0.015% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": -0.24802060478870364,
+            "binance_change_pct": -0.015290958265239102,
+            "hits": [
+              {
+                "venue": "Ripio Trade",
+                "local_chg": -0.24802060478870364,
+                "b_chg": -0.015290958265239102,
+                "m_prev": 5.2415,
+                "m_now": 5.2285,
+                "b_prev": 5.23185,
+                "b_now": 5.23105
+              }
+            ]
+          },
+          "ts": "2026-10-02T22:46:37+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261002_1350_btcbrl",
       "asset": "BTC-BRL",
