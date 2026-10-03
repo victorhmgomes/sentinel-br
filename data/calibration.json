@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-02T09:24:05Z",
-  "runtime_sec": 58.99,
+  "generated_at": "2026-10-03T08:53:51Z",
+  "runtime_sec": 40.71,
   "n_baselines": 20,
   "max_fp_target": 0.02,
   "thresholds_current": {
@@ -47,8 +47,8 @@
     },
     "binance_price_burst": {
       "total": 20,
-      "fires": 11,
-      "fp_rate": 0.55
+      "fires": 5,
+      "fp_rate": 0.25
     },
     "binance_vs_br_divergence": {
       "total": 20,
@@ -154,15 +154,15 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.455
+        "top_value": 0.4137
       },
       {
         "intensity": 0.5,
         "n_alerts": 1,
         "severities": [
-          "high"
+          "medium"
         ],
-        "top_value": 0.35
+        "top_value": 0.3183
       },
       {
         "intensity": 0.6,
@@ -170,7 +170,7 @@
         "severities": [
           "high"
         ],
-        "top_value": 0.28
+        "top_value": 0.2546
       },
       {
         "intensity": 0.7,
@@ -178,7 +178,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 0.21
+        "top_value": 0.1909
       },
       {
         "intensity": 0.8,
@@ -186,7 +186,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 0.14
+        "top_value": 0.1273
       },
       {
         "intensity": 0.9,
@@ -194,7 +194,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 0.07
+        "top_value": 0.0636
       }
     ],
     "price_burst": [
@@ -320,7 +320,7 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.9789
+        "top_value": 1.0175
       },
       {
         "intensity": 1.5,
@@ -328,15 +328,15 @@
         "severities": [
           "high"
         ],
-        "top_value": 1.4788
+        "top_value": 1.5176
       },
       {
         "intensity": 2.0,
         "n_alerts": 1,
         "severities": [
-          "high"
+          "critical"
         ],
-        "top_value": 1.9787
+        "top_value": 2.0176
       }
     ],
     "pre_spike": [
@@ -354,9 +354,11 @@
       },
       {
         "intensity": 0.2,
-        "n_alerts": 0,
-        "severities": [],
-        "top_value": null
+        "n_alerts": 1,
+        "severities": [
+          "medium"
+        ],
+        "top_value": 0.2
       },
       {
         "intensity": 0.4,
@@ -418,15 +420,15 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.3668
+        "top_value": 0.4101
       },
       {
         "intensity": 0.6,
         "n_alerts": 1,
         "severities": [
-          "medium"
+          "high"
         ],
-        "top_value": 0.5667
+        "top_value": 0.6101
       },
       {
         "intensity": 0.8,
@@ -434,7 +436,7 @@
         "severities": [
           "high"
         ],
-        "top_value": 0.7666
+        "top_value": 0.8101
       },
       {
         "intensity": 1.1,
@@ -442,7 +444,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.0665
+        "top_value": 1.1102
       },
       {
         "intensity": 1.5,
@@ -450,7 +452,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.4664
+        "top_value": 1.5102
       },
       {
         "intensity": 2.0,
@@ -458,7 +460,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.9663
+        "top_value": 2.0103
       }
     ]
   },
@@ -467,16 +469,16 @@
       "spread_spike_ratio_p95_med": [
         {
           "threshold": 1.0,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.4,
+          "fp_fires": 8,
           "fp_total": 20,
           "tp_rate": 0.875,
           "tp_fires": 7,
           "tp_total": 8,
           "min_intensity_fired": 0.02,
-          "precision": 0.7777777777777778,
+          "precision": 0.4666666666666667,
           "recall": 0.875,
-          "f1": 0.823529411764706
+          "f1": 0.608695652173913
         },
         {
           "threshold": 1.25,
@@ -496,13 +498,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.625,
-          "tp_fires": 5,
+          "tp_rate": 0.75,
+          "tp_fires": 6,
           "tp_total": 8,
-          "min_intensity_fired": 0.05,
+          "min_intensity_fired": 0.03,
           "precision": 1.0,
-          "recall": 0.625,
-          "f1": 0.7692307692307693
+          "recall": 0.75,
+          "f1": 0.8571428571428571
         },
         {
           "threshold": 2.0,
@@ -578,13 +580,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 1.0,
-          "tp_fires": 7,
+          "tp_rate": 0.8571428571428571,
+          "tp_fires": 6,
           "tp_total": 7,
-          "min_intensity_fired": 0.2,
+          "min_intensity_fired": 0.35,
           "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923
         },
         {
           "threshold": 0.35,
@@ -604,26 +606,26 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.8571428571428571,
-          "tp_fires": 6,
+          "tp_rate": 0.7142857142857143,
+          "tp_fires": 5,
           "tp_total": 7,
-          "min_intensity_fired": 0.35,
+          "min_intensity_fired": 0.5,
           "precision": 1.0,
-          "recall": 0.8571428571428571,
-          "f1": 0.923076923076923
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.45,
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.8571428571428571,
-          "tp_fires": 6,
+          "tp_rate": 0.7142857142857143,
+          "tp_fires": 5,
           "tp_total": 7,
-          "min_intensity_fired": 0.35,
+          "min_intensity_fired": 0.5,
           "precision": 1.0,
-          "recall": 0.8571428571428571,
-          "f1": 0.923076923076923
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.5,
@@ -643,13 +645,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.7142857142857143,
-          "tp_fires": 5,
+          "tp_rate": 0.5714285714285714,
+          "tp_fires": 4,
           "tp_total": 7,
-          "min_intensity_fired": 0.5,
+          "min_intensity_fired": 0.6,
           "precision": 1.0,
-          "recall": 0.7142857142857143,
-          "f1": 0.8333333333333333
+          "recall": 0.5714285714285714,
+          "f1": 0.7272727272727273
         },
         {
           "threshold": 0.6,
@@ -669,13 +671,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5714285714285714,
-          "tp_fires": 4,
+          "tp_rate": 0.42857142857142855,
+          "tp_fires": 3,
           "tp_total": 7,
-          "min_intensity_fired": 0.6,
+          "min_intensity_fired": 0.7,
           "precision": 1.0,
-          "recall": 0.5714285714285714,
-          "f1": 0.7272727272727273
+          "recall": 0.42857142857142855,
+          "f1": 0.6
         },
         {
           "threshold": 0.7,
@@ -709,45 +711,6 @@
       "price_burst_z_med": [
         {
           "threshold": 2.0,
-          "fp_rate": 0.85,
-          "fp_fires": 17,
-          "fp_total": 20,
-          "tp_rate": 1.0,
-          "tp_fires": 9,
-          "tp_total": 9,
-          "min_intensity_fired": 0.05,
-          "precision": 0.34615384615384615,
-          "recall": 1.0,
-          "f1": 0.5142857142857142
-        },
-        {
-          "threshold": 3.0,
-          "fp_rate": 0.8,
-          "fp_fires": 16,
-          "fp_total": 20,
-          "tp_rate": 1.0,
-          "tp_fires": 9,
-          "tp_total": 9,
-          "min_intensity_fired": 0.05,
-          "precision": 0.36,
-          "recall": 1.0,
-          "f1": 0.5294117647058824
-        },
-        {
-          "threshold": 4.0,
-          "fp_rate": 0.8,
-          "fp_fires": 16,
-          "fp_total": 20,
-          "tp_rate": 1.0,
-          "tp_fires": 9,
-          "tp_total": 9,
-          "min_intensity_fired": 0.05,
-          "precision": 0.36,
-          "recall": 1.0,
-          "f1": 0.5294117647058824
-        },
-        {
-          "threshold": 5.0,
           "fp_rate": 0.65,
           "fp_fires": 13,
           "fp_total": 20,
@@ -760,7 +723,20 @@
           "f1": 0.5806451612903226
         },
         {
-          "threshold": 6.0,
+          "threshold": 3.0,
+          "fp_rate": 0.65,
+          "fp_fires": 13,
+          "fp_total": 20,
+          "tp_rate": 1.0,
+          "tp_fires": 9,
+          "tp_total": 9,
+          "min_intensity_fired": 0.05,
+          "precision": 0.4090909090909091,
+          "recall": 1.0,
+          "f1": 0.5806451612903226
+        },
+        {
+          "threshold": 4.0,
           "fp_rate": 0.55,
           "fp_fires": 11,
           "fp_total": 20,
@@ -773,43 +749,69 @@
           "f1": 0.6206896551724138
         },
         {
-          "threshold": 7.0,
-          "fp_rate": 0.5,
-          "fp_fires": 10,
+          "threshold": 5.0,
+          "fp_rate": 0.55,
+          "fp_fires": 11,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.47368421052631576,
+          "precision": 0.45,
           "recall": 1.0,
-          "f1": 0.6428571428571429
+          "f1": 0.6206896551724138
+        },
+        {
+          "threshold": 6.0,
+          "fp_rate": 0.25,
+          "fp_fires": 5,
+          "fp_total": 20,
+          "tp_rate": 1.0,
+          "tp_fires": 9,
+          "tp_total": 9,
+          "min_intensity_fired": 0.05,
+          "precision": 0.6428571428571429,
+          "recall": 1.0,
+          "f1": 0.782608695652174
+        },
+        {
+          "threshold": 7.0,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
+          "tp_rate": 1.0,
+          "tp_fires": 9,
+          "tp_total": 9,
+          "min_intensity_fired": 0.05,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
         },
         {
           "threshold": 8.0,
-          "fp_rate": 0.5,
-          "fp_fires": 10,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.47368421052631576,
+          "precision": 1.0,
           "recall": 1.0,
-          "f1": 0.6428571428571429
+          "f1": 1.0
         },
         {
           "threshold": 10.0,
-          "fp_rate": 0.05,
-          "fp_fires": 1,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.9,
+          "precision": 1.0,
           "recall": 1.0,
-          "f1": 0.9473684210526316
+          "f1": 1.0
         },
         {
           "threshold": 12.0,
@@ -833,13 +835,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.75,
-          "tp_fires": 6,
+          "tp_rate": 0.875,
+          "tp_fires": 7,
           "tp_total": 8,
-          "min_intensity_fired": 0.35,
+          "min_intensity_fired": 0.2,
           "precision": 1.0,
-          "recall": 0.75,
-          "f1": 0.8571428571428571
+          "recall": 0.875,
+          "f1": 0.9333333333333333
         },
         {
           "threshold": 0.3,
@@ -872,13 +874,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5,
-          "tp_fires": 4,
+          "tp_rate": 0.625,
+          "tp_fires": 5,
           "tp_total": 8,
-          "min_intensity_fired": 0.7,
+          "min_intensity_fired": 0.5,
           "precision": 1.0,
-          "recall": 0.5,
-          "f1": 0.6666666666666666
+          "recall": 0.625,
+          "f1": 0.7692307692307693
         },
         {
           "threshold": 0.75,
@@ -898,13 +900,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.25,
-          "tp_fires": 2,
+          "tp_rate": 0.375,
+          "tp_fires": 3,
           "tp_total": 8,
-          "min_intensity_fired": 1.5,
+          "min_intensity_fired": 1.0,
           "precision": 1.0,
-          "recall": 0.25,
-          "f1": 0.4
+          "recall": 0.375,
+          "f1": 0.5454545454545454
         },
         {
           "threshold": 1.25,
@@ -924,6 +926,19 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
+          "tp_rate": 0.25,
+          "tp_fires": 2,
+          "tp_total": 8,
+          "min_intensity_fired": 1.5,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        {
+          "threshold": 2.0,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
           "tp_rate": 0.125,
           "tp_fires": 1,
           "tp_total": 8,
@@ -931,19 +946,6 @@
           "precision": 1.0,
           "recall": 0.125,
           "f1": 0.2222222222222222
-        },
-        {
-          "threshold": 2.0,
-          "fp_rate": 0.0,
-          "fp_fires": 0,
-          "fp_total": 20,
-          "tp_rate": 0.0,
-          "tp_fires": 0,
-          "tp_total": 8,
-          "min_intensity_fired": null,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0
         },
         {
           "threshold": 2.5,
@@ -967,13 +969,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.7142857142857143,
-          "tp_fires": 5,
+          "tp_rate": 0.8571428571428571,
+          "tp_fires": 6,
           "tp_total": 7,
-          "min_intensity_fired": 0.4,
+          "min_intensity_fired": 0.2,
           "precision": 1.0,
-          "recall": 0.7142857142857143,
-          "f1": 0.8333333333333333
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923
         },
         {
           "threshold": 0.3,
@@ -993,13 +995,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5714285714285714,
-          "tp_fires": 4,
+          "tp_rate": 0.7142857142857143,
+          "tp_fires": 5,
           "tp_total": 7,
-          "min_intensity_fired": 0.6,
+          "min_intensity_fired": 0.4,
           "precision": 1.0,
-          "recall": 0.5714285714285714,
-          "f1": 0.7272727272727273
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.5,
@@ -1019,13 +1021,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5714285714285714,
-          "tp_fires": 4,
+          "tp_rate": 0.42857142857142855,
+          "tp_fires": 3,
           "tp_total": 7,
-          "min_intensity_fired": 0.6,
+          "min_intensity_fired": 0.8,
           "precision": 1.0,
-          "recall": 0.5714285714285714,
-          "f1": 0.7272727272727273
+          "recall": 0.42857142857142855,
+          "f1": 0.6
         },
         {
           "threshold": 0.75,
@@ -1140,6 +1142,19 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
+          "tp_rate": 0.2857142857142857,
+          "tp_fires": 2,
+          "tp_total": 7,
+          "min_intensity_fired": 1.5,
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1": 0.4444444444444445
+        },
+        {
+          "threshold": 2.0,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
           "tp_rate": 0.14285714285714285,
           "tp_fires": 1,
           "tp_total": 7,
@@ -1147,19 +1162,6 @@
           "precision": 1.0,
           "recall": 0.14285714285714285,
           "f1": 0.25
-        },
-        {
-          "threshold": 2.0,
-          "fp_rate": 0.0,
-          "fp_fires": 0,
-          "fp_total": 20,
-          "tp_rate": 0.0,
-          "tp_fires": 0,
-          "tp_total": 7,
-          "min_intensity_fired": null,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0
         },
         {
           "threshold": 2.5,
@@ -1190,12 +1192,12 @@
       "threshold": 0.3,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
-      "tp_rate": 1.0,
-      "f1": 1.0,
+      "tp_rate": 0.8571428571428571,
+      "f1": 0.923076923076923,
       "current": 0.35
     },
     "price_burst_z_med": {
-      "threshold": 12.0,
+      "threshold": 7.0,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
       "tp_rate": 1.0,
@@ -1206,16 +1208,16 @@
       "threshold": 0.2,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
-      "tp_rate": 0.75,
-      "f1": 0.8571428571428571,
+      "tp_rate": 0.875,
+      "f1": 0.9333333333333333,
       "current": 0.75
     },
     "pre_spike_local_pct_med": {
       "threshold": 0.2,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
-      "tp_rate": 0.7142857142857143,
-      "f1": 0.8333333333333333,
+      "tp_rate": 0.8571428571428571,
+      "f1": 0.923076923076923,
       "current": 0.2
     },
     "decouple_gap_pct_med": {
@@ -1250,18 +1252,18 @@
       "threshold_current": 0.35,
       "threshold_recommended": 0.3,
       "fp_recommended": 0.0,
-      "tp_recommended": 1.0,
-      "f1_recommended": 1.0,
+      "tp_recommended": 0.8571428571428571,
+      "f1_recommended": 0.923076923076923,
       "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
       "detector": "binance_price_burst",
-      "fp_current": 0.55,
-      "fp_fires": 11,
+      "fp_current": 0.25,
+      "fp_fires": 5,
       "fp_total": 20,
       "threshold_key": "price_burst_z_med",
       "threshold_current": 6.0,
-      "threshold_recommended": 12.0,
+      "threshold_recommended": 7.0,
       "fp_recommended": 0.0,
       "tp_recommended": 1.0,
       "f1_recommended": 1.0,
@@ -1276,8 +1278,8 @@
       "threshold_current": 0.75,
       "threshold_recommended": 0.2,
       "fp_recommended": 0.0,
-      "tp_recommended": 0.75,
-      "f1_recommended": 0.8571428571428571,
+      "tp_recommended": 0.875,
+      "f1_recommended": 0.9333333333333333,
       "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
@@ -1289,8 +1291,8 @@
       "threshold_current": 0.2,
       "threshold_recommended": 0.2,
       "fp_recommended": 0.0,
-      "tp_recommended": 0.7142857142857143,
-      "f1_recommended": 0.8333333333333333,
+      "tp_recommended": 0.8571428571428571,
+      "f1_recommended": 0.923076923076923,
       "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
