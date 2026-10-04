@@ -15,8 +15,8 @@
         1
       ]
     ],
-    "generated_at": "2026-10-03T08:53:10+00:00",
-    "runtime_sec": 3.1
+    "generated_at": "2026-10-04T09:22:22+00:00",
+    "runtime_sec": 4.5
   },
   "items": [
     {
@@ -248,9 +248,17 @@
           "venue": "cross-venue",
           "asset": "multi",
           "narrative": "hourly_corr"
+        },
+        {
+          "ts": "2026-10-02T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 23,
+      "_n_alerts": 24,
       "_corroboration_score": 5
     }
   ]
