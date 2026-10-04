@@ -1,27 +1,110 @@
 {
-  "generated_at": "2026-10-04T17:46:19.582503+00:00",
+  "generated_at": "2026-10-04T20:47:12.079048+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 58,
+    "n_total": 60,
     "n_correlated": 2,
-    "n_singleton": 56,
+    "n_singleton": 58,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 56,
+      "singleton": 58,
       "high": 2
     },
     "by_asset": {
-      "USDT-BRL": 33,
+      "USDT-BRL": 34,
+      "ETH-BRL": 8,
       "BTC-BRL": 10,
-      "SOL-BRL": 8,
-      "ETH-BRL": 7
+      "SOL-BRL": 8
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261004_2047_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-10-04T20:47:10+00:00",
+      "closed_at": "2026-10-04T20:47:10+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 20:47 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 809608.4,
+          "threshold": 697172.945,
+          "narrative": "Profundidade Binance USDT-BRL caiu 59% (de 1991922.70 → 809608.40 unidades em ±2%).",
+          "context": {
+            "depth_now": 809608.3999999999,
+            "depth_median": 1991922.7000000002,
+            "drop_pct": 0.5935543081064341
+          },
+          "ts": "2026-10-04T20:47:10+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261004_2047_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-10-04T20:47:10+00:00",
+      "closed_at": "2026-10-04T20:47:10+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em ETH-BRL às 20:47 (pre_spike). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "br_pre_spike",
+          "severity": "high",
+          "venue": "Ripio Trade",
+          "asset": "ETH-BRL",
+          "value": 0.6406,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em ETH-BRL (ALTA): Ripio Trade; maior Δ=+0.641% (em Ripio Trade) mas Binance -0.001% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": 0.6406217181264441,
+            "binance_change_pct": -0.0007005442878870204,
+            "hits": [
+              {
+                "venue": "Ripio Trade",
+                "local_chg": 0.6406217181264441,
+                "b_chg": -0.0007005442878870204,
+                "m_prev": 14283.0,
+                "m_now": 14374.5,
+                "b_prev": 14274.615,
+                "b_now": 14274.515
+              }
+            ]
+          },
+          "ts": "2026-10-04T20:47:10+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261004_1746_usdtbrl",
       "asset": "USDT-BRL",
