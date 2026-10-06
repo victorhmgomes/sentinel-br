@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T10:02:57Z",
-  "runtime_sec": 40.21,
+  "generated_at": "2026-10-06T09:48:16Z",
+  "runtime_sec": 41.62,
   "n_baselines": 20,
   "max_fp_target": 0.02,
   "thresholds_current": {
@@ -57,8 +57,8 @@
     },
     "br_pre_spike": {
       "total": 20,
-      "fires": 2,
-      "fp_rate": 0.1
+      "fires": 0,
+      "fp_rate": 0.0
     },
     "usdt_brl_decouple": {
       "total": 20,
@@ -88,15 +88,17 @@
       },
       {
         "intensity": 0.03,
-        "n_alerts": 0,
-        "severities": [],
-        "top_value": null
+        "n_alerts": 1,
+        "severities": [
+          "medium"
+        ],
+        "top_value": 0.03
       },
       {
         "intensity": 0.05,
         "n_alerts": 1,
         "severities": [
-          "medium"
+          "high"
         ],
         "top_value": 0.05
       },
@@ -148,9 +150,11 @@
       },
       {
         "intensity": 0.35,
-        "n_alerts": 0,
-        "severities": [],
-        "top_value": null
+        "n_alerts": 1,
+        "severities": [
+          "medium"
+        ],
+        "top_value": 0.5291
       },
       {
         "intensity": 0.5,
@@ -158,7 +162,7 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.3844
+        "top_value": 0.407
       },
       {
         "intensity": 0.6,
@@ -166,15 +170,15 @@
         "severities": [
           "high"
         ],
-        "top_value": 0.3075
+        "top_value": 0.3256
       },
       {
         "intensity": 0.7,
         "n_alerts": 1,
         "severities": [
-          "high"
+          "critical"
         ],
-        "top_value": 0.2306
+        "top_value": 0.2442
       },
       {
         "intensity": 0.8,
@@ -182,7 +186,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 0.1537
+        "top_value": 0.1628
       },
       {
         "intensity": 0.9,
@@ -190,7 +194,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 0.0769
+        "top_value": 0.0814
       }
     ],
     "price_burst": [
@@ -204,7 +208,7 @@
         "intensity": 0.05,
         "n_alerts": 1,
         "severities": [
-          "high"
+          "critical"
         ],
         "top_value": 0.05
       },
@@ -316,7 +320,7 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.987
+        "top_value": 1.0248
       },
       {
         "intensity": 1.5,
@@ -324,15 +328,15 @@
         "severities": [
           "high"
         ],
-        "top_value": 1.487
+        "top_value": 1.5249
       },
       {
         "intensity": 2.0,
         "n_alerts": 1,
         "severities": [
-          "high"
+          "critical"
         ],
-        "top_value": 1.9869
+        "top_value": 2.025
       }
     ],
     "pre_spike": [
@@ -414,15 +418,15 @@
         "severities": [
           "medium"
         ],
-        "top_value": 0.3951
+        "top_value": 0.402
       },
       {
         "intensity": 0.6,
         "n_alerts": 1,
         "severities": [
-          "medium"
+          "high"
         ],
-        "top_value": 0.5951
+        "top_value": 0.602
       },
       {
         "intensity": 0.8,
@@ -430,7 +434,7 @@
         "severities": [
           "high"
         ],
-        "top_value": 0.7951
+        "top_value": 0.802
       },
       {
         "intensity": 1.1,
@@ -438,7 +442,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.0951
+        "top_value": 1.102
       },
       {
         "intensity": 1.5,
@@ -446,7 +450,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.4951
+        "top_value": 1.502
       },
       {
         "intensity": 2.0,
@@ -454,7 +458,7 @@
         "severities": [
           "critical"
         ],
-        "top_value": 1.9951
+        "top_value": 2.002
       }
     ]
   },
@@ -463,29 +467,29 @@
       "spread_spike_ratio_p95_med": [
         {
           "threshold": 1.0,
-          "fp_rate": 1.0,
-          "fp_fires": 20,
+          "fp_rate": 0.2,
+          "fp_fires": 4,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 8,
           "tp_total": 8,
           "min_intensity_fired": 0.015,
-          "precision": 0.2857142857142857,
+          "precision": 0.6666666666666666,
           "recall": 1.0,
-          "f1": 0.4444444444444445
+          "f1": 0.8
         },
         {
           "threshold": 1.25,
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.625,
-          "tp_fires": 5,
+          "tp_rate": 0.75,
+          "tp_fires": 6,
           "tp_total": 8,
-          "min_intensity_fired": 0.05,
+          "min_intensity_fired": 0.03,
           "precision": 1.0,
-          "recall": 0.625,
-          "f1": 0.7692307692307693
+          "recall": 0.75,
+          "f1": 0.8571428571428571
         },
         {
           "threshold": 1.5,
@@ -505,13 +509,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5,
-          "tp_fires": 4,
+          "tp_rate": 0.625,
+          "tp_fires": 5,
           "tp_total": 8,
-          "min_intensity_fired": 0.1,
+          "min_intensity_fired": 0.05,
           "precision": 1.0,
-          "recall": 0.5,
-          "f1": 0.6666666666666666
+          "recall": 0.625,
+          "f1": 0.7692307692307693
         },
         {
           "threshold": 2.5,
@@ -544,13 +548,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.375,
-          "tp_fires": 3,
+          "tp_rate": 0.5,
+          "tp_fires": 4,
           "tp_total": 8,
-          "min_intensity_fired": 0.2,
+          "min_intensity_fired": 0.1,
           "precision": 1.0,
-          "recall": 0.375,
-          "f1": 0.5454545454545454
+          "recall": 0.5,
+          "f1": 0.6666666666666666
         },
         {
           "threshold": 5.0,
@@ -587,13 +591,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.7142857142857143,
-          "tp_fires": 5,
+          "tp_rate": 0.8571428571428571,
+          "tp_fires": 6,
           "tp_total": 7,
-          "min_intensity_fired": 0.5,
+          "min_intensity_fired": 0.35,
           "precision": 1.0,
-          "recall": 0.7142857142857143,
-          "f1": 0.8333333333333333
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923
         },
         {
           "threshold": 0.4,
@@ -626,13 +630,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5714285714285714,
-          "tp_fires": 4,
+          "tp_rate": 0.7142857142857143,
+          "tp_fires": 5,
           "tp_total": 7,
-          "min_intensity_fired": 0.6,
+          "min_intensity_fired": 0.5,
           "precision": 1.0,
-          "recall": 0.5714285714285714,
-          "f1": 0.7272727272727273
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.55,
@@ -652,13 +656,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.42857142857142855,
-          "tp_fires": 3,
+          "tp_rate": 0.5714285714285714,
+          "tp_fires": 4,
           "tp_total": 7,
-          "min_intensity_fired": 0.7,
+          "min_intensity_fired": 0.6,
           "precision": 1.0,
-          "recall": 0.42857142857142855,
-          "f1": 0.6
+          "recall": 0.5714285714285714,
+          "f1": 0.7272727272727273
         },
         {
           "threshold": 0.65,
@@ -678,6 +682,19 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
+          "tp_rate": 0.42857142857142855,
+          "tp_fires": 3,
+          "tp_total": 7,
+          "min_intensity_fired": 0.7,
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1": 0.6
+        },
+        {
+          "threshold": 0.8,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
           "tp_rate": 0.2857142857142857,
           "tp_fires": 2,
           "tp_total": 7,
@@ -685,19 +702,6 @@
           "precision": 1.0,
           "recall": 0.2857142857142857,
           "f1": 0.4444444444444445
-        },
-        {
-          "threshold": 0.8,
-          "fp_rate": 0.0,
-          "fp_fires": 0,
-          "fp_total": 20,
-          "tp_rate": 0.14285714285714285,
-          "tp_fires": 1,
-          "tp_total": 7,
-          "min_intensity_fired": 0.9,
-          "precision": 1.0,
-          "recall": 0.14285714285714285,
-          "f1": 0.25
         }
       ]
     },
@@ -705,55 +709,55 @@
       "price_burst_z_med": [
         {
           "threshold": 2.0,
-          "fp_rate": 0.5,
-          "fp_fires": 10,
+          "fp_rate": 0.85,
+          "fp_fires": 17,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.47368421052631576,
+          "precision": 0.34615384615384615,
           "recall": 1.0,
-          "f1": 0.6428571428571429
+          "f1": 0.5142857142857142
         },
         {
           "threshold": 3.0,
-          "fp_rate": 0.4,
-          "fp_fires": 8,
+          "fp_rate": 0.85,
+          "fp_fires": 17,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.5294117647058824,
+          "precision": 0.34615384615384615,
           "recall": 1.0,
-          "f1": 0.6923076923076924
+          "f1": 0.5142857142857142
         },
         {
           "threshold": 4.0,
-          "fp_rate": 0.25,
-          "fp_fires": 5,
+          "fp_rate": 0.85,
+          "fp_fires": 17,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.6428571428571429,
+          "precision": 0.34615384615384615,
           "recall": 1.0,
-          "f1": 0.782608695652174
+          "f1": 0.5142857142857142
         },
         {
           "threshold": 5.0,
-          "fp_rate": 0.15,
-          "fp_fires": 3,
+          "fp_rate": 0.1,
+          "fp_fires": 2,
           "fp_total": 20,
           "tp_rate": 1.0,
           "tp_fires": 9,
           "tp_total": 9,
           "min_intensity_fired": 0.05,
-          "precision": 0.75,
+          "precision": 0.8181818181818182,
           "recall": 1.0,
-          "f1": 0.8571428571428571
+          "f1": 0.9
         },
         {
           "threshold": 6.0,
@@ -799,26 +803,26 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.8888888888888888,
-          "tp_fires": 8,
+          "tp_rate": 1.0,
+          "tp_fires": 9,
           "tp_total": 9,
-          "min_intensity_fired": 0.1,
+          "min_intensity_fired": 0.05,
           "precision": 1.0,
-          "recall": 0.8888888888888888,
-          "f1": 0.9411764705882353
+          "recall": 1.0,
+          "f1": 1.0
         },
         {
           "threshold": 12.0,
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.8888888888888888,
-          "tp_fires": 8,
+          "tp_rate": 1.0,
+          "tp_fires": 9,
           "tp_total": 9,
-          "min_intensity_fired": 0.1,
+          "min_intensity_fired": 0.05,
           "precision": 1.0,
-          "recall": 0.8888888888888888,
-          "f1": 0.9411764705882353
+          "recall": 1.0,
+          "f1": 1.0
         }
       ]
     },
@@ -826,29 +830,29 @@
       "divergence_gap_pct_med": [
         {
           "threshold": 0.2,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.75,
-          "tp_fires": 6,
+          "tp_rate": 0.875,
+          "tp_fires": 7,
           "tp_total": 8,
-          "min_intensity_fired": 0.35,
-          "precision": 0.75,
-          "recall": 0.75,
-          "f1": 0.75
+          "min_intensity_fired": 0.2,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333
         },
         {
           "threshold": 0.3,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.75,
           "tp_fires": 6,
           "tp_total": 8,
           "min_intensity_fired": 0.35,
-          "precision": 0.75,
+          "precision": 1.0,
           "recall": 0.75,
-          "f1": 0.75
+          "f1": 0.8571428571428571
         },
         {
           "threshold": 0.4,
@@ -868,13 +872,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.5,
-          "tp_fires": 4,
+          "tp_rate": 0.625,
+          "tp_fires": 5,
           "tp_total": 8,
-          "min_intensity_fired": 0.7,
+          "min_intensity_fired": 0.5,
           "precision": 1.0,
-          "recall": 0.5,
-          "f1": 0.6666666666666666
+          "recall": 0.625,
+          "f1": 0.7692307692307693
         },
         {
           "threshold": 0.75,
@@ -894,13 +898,13 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.25,
-          "tp_fires": 2,
+          "tp_rate": 0.375,
+          "tp_fires": 3,
           "tp_total": 8,
-          "min_intensity_fired": 1.5,
+          "min_intensity_fired": 1.0,
           "precision": 1.0,
-          "recall": 0.25,
-          "f1": 0.4
+          "recall": 0.375,
+          "f1": 0.5454545454545454
         },
         {
           "threshold": 1.25,
@@ -920,6 +924,19 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
+          "tp_rate": 0.25,
+          "tp_fires": 2,
+          "tp_total": 8,
+          "min_intensity_fired": 1.5,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        {
+          "threshold": 2.0,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
           "tp_rate": 0.125,
           "tp_fires": 1,
           "tp_total": 8,
@@ -927,19 +944,6 @@
           "precision": 1.0,
           "recall": 0.125,
           "f1": 0.2222222222222222
-        },
-        {
-          "threshold": 2.0,
-          "fp_rate": 0.0,
-          "fp_fires": 0,
-          "fp_total": 20,
-          "tp_rate": 0.0,
-          "tp_fires": 0,
-          "tp_total": 8,
-          "min_intensity_fired": null,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0
         },
         {
           "threshold": 2.5,
@@ -960,107 +964,107 @@
       "pre_spike_local_pct_med": [
         {
           "threshold": 0.2,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.7142857142857143,
           "tp_fires": 5,
           "tp_total": 7,
           "min_intensity_fired": 0.4,
-          "precision": 0.7142857142857143,
+          "precision": 1.0,
           "recall": 0.7142857142857143,
-          "f1": 0.7142857142857143
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.3,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.7142857142857143,
           "tp_fires": 5,
           "tp_total": 7,
           "min_intensity_fired": 0.4,
-          "precision": 0.7142857142857143,
+          "precision": 1.0,
           "recall": 0.7142857142857143,
-          "f1": 0.7142857142857143
+          "f1": 0.8333333333333333
         },
         {
           "threshold": 0.4,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
-          "tp_rate": 0.7142857142857143,
-          "tp_fires": 5,
+          "tp_rate": 0.5714285714285714,
+          "tp_fires": 4,
           "tp_total": 7,
-          "min_intensity_fired": 0.4,
-          "precision": 0.7142857142857143,
-          "recall": 0.7142857142857143,
-          "f1": 0.7142857142857143
+          "min_intensity_fired": 0.6,
+          "precision": 1.0,
+          "recall": 0.5714285714285714,
+          "f1": 0.7272727272727273
         },
         {
           "threshold": 0.5,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.5714285714285714,
           "tp_fires": 4,
           "tp_total": 7,
           "min_intensity_fired": 0.6,
-          "precision": 0.6666666666666666,
+          "precision": 1.0,
           "recall": 0.5714285714285714,
-          "f1": 0.6153846153846153
+          "f1": 0.7272727272727273
         },
         {
           "threshold": 0.6,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.5714285714285714,
           "tp_fires": 4,
           "tp_total": 7,
           "min_intensity_fired": 0.6,
-          "precision": 0.6666666666666666,
+          "precision": 1.0,
           "recall": 0.5714285714285714,
-          "f1": 0.6153846153846153
+          "f1": 0.7272727272727273
         },
         {
           "threshold": 0.75,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.42857142857142855,
           "tp_fires": 3,
           "tp_total": 7,
           "min_intensity_fired": 0.8,
-          "precision": 0.6,
+          "precision": 1.0,
           "recall": 0.42857142857142855,
-          "f1": 0.5
+          "f1": 0.6
         },
         {
           "threshold": 1.0,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.2857142857142857,
           "tp_fires": 2,
           "tp_total": 7,
           "min_intensity_fired": 1.2,
-          "precision": 0.5,
+          "precision": 1.0,
           "recall": 0.2857142857142857,
-          "f1": 0.36363636363636365
+          "f1": 0.4444444444444445
         },
         {
           "threshold": 1.25,
-          "fp_rate": 0.1,
-          "fp_fires": 2,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
           "fp_total": 20,
           "tp_rate": 0.14285714285714285,
           "tp_fires": 1,
           "tp_total": 7,
           "min_intensity_fired": 1.8,
-          "precision": 0.3333333333333333,
+          "precision": 1.0,
           "recall": 0.14285714285714285,
-          "f1": 0.2
+          "f1": 0.25
         }
       ]
     },
@@ -1136,6 +1140,19 @@
           "fp_rate": 0.0,
           "fp_fires": 0,
           "fp_total": 20,
+          "tp_rate": 0.2857142857142857,
+          "tp_fires": 2,
+          "tp_total": 7,
+          "min_intensity_fired": 1.5,
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1": 0.4444444444444445
+        },
+        {
+          "threshold": 2.0,
+          "fp_rate": 0.0,
+          "fp_fires": 0,
+          "fp_total": 20,
           "tp_rate": 0.14285714285714285,
           "tp_fires": 1,
           "tp_total": 7,
@@ -1143,19 +1160,6 @@
           "precision": 1.0,
           "recall": 0.14285714285714285,
           "f1": 0.25
-        },
-        {
-          "threshold": 2.0,
-          "fp_rate": 0.0,
-          "fp_fires": 0,
-          "fp_total": 20,
-          "tp_rate": 0.0,
-          "tp_fires": 0,
-          "tp_total": 7,
-          "min_intensity_fired": null,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0
         },
         {
           "threshold": 2.5,
@@ -1178,8 +1182,8 @@
       "threshold": 1.25,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
-      "tp_rate": 0.625,
-      "f1": 0.7692307692307693,
+      "tp_rate": 0.75,
+      "f1": 0.8571428571428571,
       "current": 1.25
     },
     "depth_drop_pct_med": {
@@ -1199,19 +1203,19 @@
       "current": 6.0
     },
     "divergence_gap_pct_med": {
-      "threshold": 0.4,
+      "threshold": 0.2,
       "reason": "menor threshold com fp_rate <= 2.00%",
       "fp_rate": 0.0,
-      "tp_rate": 0.625,
-      "f1": 0.7692307692307693,
+      "tp_rate": 0.875,
+      "f1": 0.9333333333333333,
       "current": 0.75
     },
     "pre_spike_local_pct_med": {
       "threshold": 0.2,
-      "reason": "nenhum ponto <= max_fp; usando maior F1 (0.714)",
-      "fp_rate": 0.1,
+      "reason": "menor threshold com fp_rate <= 2.00%",
+      "fp_rate": 0.0,
       "tp_rate": 0.7142857142857143,
-      "f1": 0.7142857142857143,
+      "f1": 0.8333333333333333,
       "current": 0.2
     },
     "decouple_gap_pct_med": {
@@ -1233,8 +1237,8 @@
       "threshold_current": 1.25,
       "threshold_recommended": 1.25,
       "fp_recommended": 0.0,
-      "tp_recommended": 0.625,
-      "f1_recommended": 0.7692307692307693,
+      "tp_recommended": 0.75,
+      "f1_recommended": 0.8571428571428571,
       "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
@@ -1270,24 +1274,24 @@
       "fp_total": 20,
       "threshold_key": "divergence_gap_pct_med",
       "threshold_current": 0.75,
-      "threshold_recommended": 0.4,
+      "threshold_recommended": 0.2,
       "fp_recommended": 0.0,
-      "tp_recommended": 0.625,
-      "f1_recommended": 0.7692307692307693,
+      "tp_recommended": 0.875,
+      "f1_recommended": 0.9333333333333333,
       "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
       "detector": "br_pre_spike",
-      "fp_current": 0.1,
-      "fp_fires": 2,
+      "fp_current": 0.0,
+      "fp_fires": 0,
       "fp_total": 20,
       "threshold_key": "pre_spike_local_pct_med",
       "threshold_current": 0.2,
       "threshold_recommended": 0.2,
-      "fp_recommended": 0.1,
+      "fp_recommended": 0.0,
       "tp_recommended": 0.7142857142857143,
-      "f1_recommended": 0.7142857142857143,
-      "reason": "nenhum ponto <= max_fp; usando maior F1 (0.714)"
+      "f1_recommended": 0.8333333333333333,
+      "reason": "menor threshold com fp_rate <= 2.00%"
     },
     {
       "detector": "usdt_brl_decouple",

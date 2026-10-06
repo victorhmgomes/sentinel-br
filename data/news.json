@@ -15,8 +15,8 @@
         1
       ]
     ],
-    "generated_at": "2026-10-05T10:02:16+00:00",
-    "runtime_sec": 3.38
+    "generated_at": "2026-10-06T09:47:33+00:00",
+    "runtime_sec": 3.09
   },
   "items": [
     {
@@ -256,17 +256,9 @@
           "venue": "Binance",
           "asset": "BTC",
           "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-10-04T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "medium",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
         }
       ],
-      "_n_alerts": 25,
+      "_n_alerts": 24,
       "_corroboration_score": 5
     }
   ]
