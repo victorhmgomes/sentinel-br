@@ -1,28 +1,81 @@
 {
-  "generated_at": "2026-10-05T10:51:19.390596+00:00",
+  "generated_at": "2026-10-06T00:54:52.856567+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 65,
-    "n_correlated": 4,
+    "n_total": 66,
+    "n_correlated": 5,
     "n_singleton": 61,
     "max_convergence": 2,
     "by_severity": {
+      "high": 3,
       "critical": 2,
-      "singleton": 61,
-      "high": 2
+      "singleton": 61
     },
     "by_asset": {
-      "USDT-BRL": 37,
+      "USDT-BRL": 38,
       "ETH-BRL": 10,
       "BTC-BRL": 10,
       "SOL-BRL": 8
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261006_0054_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-10-06T00:54:52+00:00",
+      "closed_at": "2026-10-06T00:54:52+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop",
+        "price_burst"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop",
+        "binance_price_burst"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "high",
+      "event_severity": "high",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 00:54-00:54 (~0s): depth_drop, price_burst. 2 alerta(s) bruto(s). Severidade máxima vista: high.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 543646.9,
+          "threshold": 605017.3675,
+          "narrative": "Profundidade Binance USDT-BRL caiu 69% (de 1728621.05 → 543646.90 unidades em ±2%).",
+          "context": {
+            "depth_now": 543646.9,
+            "depth_median": 1728621.0499999998,
+            "drop_pct": 0.6855025570815535
+          },
+          "ts": "2026-10-06T00:54:52+00:00"
+        },
+        {
+          "rule": "binance_price_burst",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": -2.2992,
+          "threshold": 1.854,
+          "narrative": "Movimento brusco de QUEDA em Binance USDT-BRL: -2.299% (Z=-7.37).",
+          "context": {
+            "pct_change": -2.299185381530789,
+            "z": -7.367167805794083,
+            "n_history": 39
+          },
+          "ts": "2026-10-06T00:54:52+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261005_1051_usdtbrl",
       "asset": "USDT-BRL",
