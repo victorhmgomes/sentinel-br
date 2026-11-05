@@ -8,7 +8,7 @@
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 0,
+    "with_watcher_corroboration": 12,
     "top_sources": [
       [
         "Valor Investe",
@@ -35,8 +35,8 @@
         1
       ]
     ],
-    "generated_at": "2026-11-05T09:50:29+00:00",
-    "runtime_sec": 3.35
+    "generated_at": "2026-11-05T10:22:26+00:00",
+    "runtime_sec": 6.17
   },
   "items": [
     {
@@ -96,9 +96,34 @@
         "score": 7,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 5
     },
     {
       "source": "Livecoins",
@@ -145,9 +170,34 @@
         "score": 6,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 5
     },
     {
       "source": "G1 Economia",
@@ -201,9 +251,34 @@
         "score": 8,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 5
     },
     {
       "source": "MoneyTimes Cripto",
@@ -264,9 +339,34 @@
         "score": 4,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 2
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 5
     },
     {
       "source": "Livecoins",
@@ -312,9 +412,34 @@
         "neg": 0,
         "score": 1
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -365,9 +490,34 @@
         "score": 6,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Portal do Bitcoin",
@@ -410,9 +560,34 @@
         "score": 6,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -460,9 +635,34 @@
         "score": 6,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -514,9 +714,34 @@
         "score": 4,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -574,9 +799,34 @@
         "score": 4,
         "named_fi_bump": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "MoneyTimes Cripto",
@@ -618,9 +868,34 @@
         "neg": 0,
         "score": 4
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-10-29T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-10-29T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-10-30T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     },
     {
       "source": "Valor Investe",
@@ -669,9 +944,34 @@
         "neg": 2,
         "score": 2
       },
-      "_alerts": [],
-      "_n_alerts": 0,
-      "_corroboration_score": 1
+      "_alerts": [
+        {
+          "ts": "2026-10-29T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-10-29T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-10-30T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BNB",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 3,
+      "_corroboration_score": 4
     }
   ]
 }
