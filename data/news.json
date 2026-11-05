@@ -1,38 +1,597 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 12,
     "by_severity": {
       "critical": 0,
-      "high": 0,
-      "medium": 1,
+      "high": 4,
+      "medium": 8,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 0,
     "top_sources": [
       [
+        "Valor Investe",
+        5
+      ],
+      [
+        "Livecoins",
+        2
+      ],
+      [
         "MoneyTimes Cripto",
+        2
+      ],
+      [
+        "Folha Mercado",
+        1
+      ],
+      [
+        "G1 Economia",
+        1
+      ],
+      [
+        "Portal do Bitcoin",
         1
       ]
     ],
-    "generated_at": "2026-10-06T09:47:33+00:00",
-    "runtime_sec": 3.09
+    "generated_at": "2026-11-05T09:50:29+00:00",
+    "runtime_sec": 3.35
   },
   "items": [
     {
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "Mercado Bitcoin afirma ter bloqueado US$ 15 milhões em criptomoedas após ataque hacker",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/mercado-bitcoin-afirma-ter-bloqueado-us-15-milhoes-em-criptomoedas-apos-ataque-hacker.shtml",
+      "summary": "A corretora de criptomoedas Mercado Bitcoin bloqueou, até esta tarça-feira (4), cerca de US$ 15 milhões (quase R$ 82 milhões) em criptoativos depois de sofrer um ataque hacker na madrugada da última segunda-feira (2) , de acordo com a atualização mais recente da empresa. Leia mais (11/04/2026 - 19h43)",
+      "ts_iso": "2026-11-04T22:43:00+00:00",
+      "hash": "053041843f4f1547",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 9,
+        "value": 4,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 6
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "corretora",
+          "mercado bitcoin"
+        ],
+        "value": [
+          "r$ 8",
+          "milhões",
+          "us$ 1"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ],
+        "incident_verbs": [
+          "sofrer um ataque",
+          "r$ 82 milh"
+        ]
+      },
+      "_total": 41,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 9,
+        "neg": 2,
+        "score": 7,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "“Nós também fomos hackeados”, diz fundador da BitMart, que travou saques há três meses",
+      "link": "https://livecoins.com.br/nos-tambem-fomos-hackeados-diz-fundador-da-bitmart-que-travou-saques-ha-tres-meses/",
+      "summary": "Executivo afirma que a BitMart foi atacada pelos mesmos hackers que atacaram o Mercado Bitcoin Fonte: “Nós também fomos hackeados”, diz fundador da BitMart, que travou saques há três meses Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-11-04T14:33:04+00:00",
+      "hash": "54737ae2c6e2335f",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "hackeados",
+          "hackers"
+        ],
+        "crypto": [
+          "bitcoin",
+          "mercado bitcoin"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ],
+        "incident_verbs": [
+          "foi atacada"
+        ]
+      },
+      "_total": 23,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 0,
+        "score": 6,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "G1 Economia",
+      "bucket": "economia",
+      "title": "Mercado Bitcoin sofre ataque e suspende saques dias após roubo bilionário na Binance",
+      "link": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/02/mercado-bitcoin-incidente-seguranca.ghtml",
+      "summary": "Representação do Bitcoin em ilustração produzida em 10 de setembro de 2025 REUTERS/Dado Ruvic/Ilustração/Foto de arquivo Criptomoedas são ativos digitais que não são emitidos por governos, como ocorre com moedas oficiais como o real e o dólar. As transações são registradas e validadas por tecnologias como o blockchain. dfndf, ksdfls oi sdf,mnsllsd fo aiofn,m dfog a oinsdmg o dfljbxlcm sjdf lm xon df ff O Mercado Bitcoin, corretora brasileira de criptoativos, informou ter registrado um incidente de segurança nesta segunda-feira (2) e suspendeu temporariamente saques e depósitos. Procurada pelo ",
+      "ts_iso": "2026-11-02T15:07:21+00:00",
+      "hash": "412f0ac72eb65648",
+      "_score": {
+        "cyber": 5,
+        "attack": 4,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 13,
+        "value": 0,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 4
+      },
+      "_hits": {
+        "cyber": [
+          "incidente de segurança"
+        ],
+        "attack": [
+          "ataque",
+          "roubo"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "corretora",
+          "mercado bitcoin",
+          "binance",
+          "blockchain"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ],
+        "incident_verbs": [
+          "sofre ataque"
+        ]
+      },
+      "_total": 30,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 0,
+        "score": 8,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
       "source": "MoneyTimes Cripto",
       "bucket": "cripto",
-      "title": "Criptomoedas: Essas duas regras do Banco Central passam a valer hoje; veja",
-      "link": "https://www.moneytimes.com.br/criptomoedas-essas-duas-regras-do-banco-central-passam-a-valer-hoje-veja-rens/",
-      "summary": "As resoluções BCB nº 588 e nº 575 passam a valer a partir desta quinta-feira (1º) e alteram alguns aspectos do mercado de criptomoedas nacional. A primeira delas, a Resolução BCB nº 588, altera as regras de prevenção à lavagem de dinheiro e ao financiamento do terrorismo aplicáveis às instituições supervisionadas pelo Banco Central. A [&#8230;]",
-      "ts_iso": "2026-10-01T17:35:34+00:00",
-      "hash": "c7098725b9767904",
+      "title": "Ataque hacker: Mercado Bitcoin (MB) sofre incidente de US$ 40 milhões",
+      "link": "https://www.moneytimes.com.br/ataque-hacker-mercado-bitcoin-mb-sofre-incidente-de-us-40-milhoes-rens/",
+      "summary": "O Mercado Bitcoin (MB) comunicou os investidores e o mercado em geral um incidente de segurança na manhã desta segunda-feira (2). &#8220;Como medida preventiva de proteção, depósitos e saques foram temporariamente suspensos&#8221;, diz o comunicado da empresa. O montante oficial não foi divulgado. Entretanto, trackers autônomos e não oficiais de movimentações de criptomoedas on-chain apontam [&#8230;]",
+      "ts_iso": "2026-11-02T13:23:37+00:00",
+      "hash": "3e3882deea56663a",
+      "_score": {
+        "cyber": 21,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 9,
+        "value": 2,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 1,
+        "incident_verbs": 3
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker",
+          "incidente de segurança"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "mercado bitcoin",
+          "on-chain"
+        ],
+        "value": [
+          "milhões",
+          "us$ 4"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ],
+        "commentary": [
+          "diz o"
+        ],
+        "incident_verbs": [
+          "sofre incidente"
+        ]
+      },
+      "_total": 42,
+      "_severity": "high",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 2,
+        "score": 4,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 2
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "STF nega recurso de hacker que pediu 0,15 bitcoin para parar ataque contra empresa",
+      "link": "https://livecoins.com.br/stf-nega-recurso-de-hacker-que-pediu-015-bitcoin-para-parar-ataque-contra-empresa/",
+      "summary": "Decisão assinada pela ministra Cármen Lúcia nesta terça-feira (3) mantém pena de seis anos e quatro meses de reclusão por extorsão Fonte: STF nega recurso de hacker que pediu 0,15 bitcoin para parar ataque contra empresa Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-11-05T09:29:30+00:00",
+      "hash": "be0acb3af0a509a9",
+      "_score": {
+        "cyber": 10,
+        "attack": 5,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 2,
+        "value": 0,
+        "named_fi": 0,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker"
+        ],
+        "attack": [
+          "ataque",
+          "extorsão"
+        ],
+        "crypto": [
+          "bitcoin"
+        ],
+        "political_noise": [
+          "stf"
+        ]
+      },
+      "_total": 20,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 1,
+        "neg": 0,
+        "score": 1
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "A IA acabou com a segurança em cripto?",
+      "link": "https://valorinveste.globo.com/blogs/gustavo-cunha/coluna/a-ia-acabou-com-a-seguranca-em-cripto.ghtml",
+      "summary": "Em menos de uma semana, o mercado cripto viveu dois grandes hacks. Em 29 de outubro, um hacker tirou cerca de US$ 6,36 bilhões de carteiras da Binance, a imensa maioria em menos de 20 minutos. Isso foi mais de quatro vezes o hack da Bybit de 2025, que até o momento era o maior que já vimos. Bem, quatro dias depois, foi a vez do Mercado Bitcoin, aqui no Brasil, onde os hackers retiraram algo como US$ 35 milhões. São só coincidências ou ter cripto está ficando mais arriscado do que era? O caso da Binance já está no rescaldo e eles foram bem transparentes ao dividir as conclusões, que descreve a ",
+      "ts_iso": "2026-11-05T09:20:00+00:00",
+      "hash": "37c024b29bbea812",
+      "_score": {
+        "cyber": 10,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 10,
+        "value": 4,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacks",
+          "hacker"
+        ],
+        "crypto": [
+          "bitcoin",
+          "cripto",
+          "mercado bitcoin",
+          "binance"
+        ],
+        "value": [
+          "milhões",
+          "bilhões",
+          "us$ 6"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 28,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 2,
+        "score": 6,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Mercado Bitcoin anuncia data para reabrir plataforma após hack e garante que ninguém perderá ativos",
+      "link": "https://portaldobitcoin.uol.com.br/mercado-bitcoin-anuncia-data-para-reabrir-plataforma-apos-hack-e-garante-que-ninguem-perdera-ativos/",
+      "summary": "MB retomará acesso pelo site a partir de 9 de novembro, mas saques e negociações continuarão suspensos inicialmente O post Mercado Bitcoin anuncia data para reabrir plataforma após hack e garante que ninguém perderá ativos apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-11-04T23:07:29+00:00",
+      "hash": "866c7ecdb3e7ad6e",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hack"
+        ],
+        "crypto": [
+          "bitcoin",
+          "mercado bitcoin"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 14,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 0,
+        "score": 6,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Mercado Bitcoin anuncia retomada gradual do acesso às contas a partir de segunda-feira",
+      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/11/04/mercado-bitcoin-anuncia-retomada-gradual-do-acesso-as-contas-a-partir-de-segunda-feira.ghtml",
+      "summary": "O Mercado Bitcoin (MB) anunciou que seus clientes poderão voltar a acessar suas contas a partir de segunda-feira (9), uma semana após o ataque hacker que atingiu a plataforma de negociação de criptoativos. A retomada será gradual e, inicialmente, o acesso estará disponível apenas pelo site da empresa, para consulta de saldos, extratos, patrimônio e investimentos. Segundo comunicado, nesta primeira etapa, os clientes ainda não poderão realizar saques, transferências ou negociações de ativos. Essas funcionalidades serão restabelecidas nas próximas fases, cujas datas ainda não foram informadas. A",
+      "ts_iso": "2026-11-04T22:49:51+00:00",
+      "hash": "ce5a438de0813c37",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 5,
+        "value": 0,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "mercado bitcoin"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 27,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 0,
+        "score": 6,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Mercado Bitcoin diz que clientes não perderão criptoativos após ataque hacker",
+      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/11/03/mercado-bitcoin-diz-que-clientes-nao-perderao-criptoativos-apos-ataque-hacker.ghtml",
+      "summary": "O Mercado Bitcoin (MB) informou, por meio de comunicado, que os clientes não perderão seus criptoativos em decorrência do ataque hacker sofrido pela plataforma. O incidente envolveu cerca de US$ 49 milhões em ativos, dos quais US$ 11,2 milhões já foram bloqueados com a ajuda de empresas parceiras, segundo a empresa. Segundo o MB, estão sendo tomadas todas as medidas necessárias para preservar os recursos dos investidores. A empresa, no entanto, ainda não informou quando a plataforma será totalmente restabelecida e os clientes poderão voltar a movimentar normalmente seus ativos. O ataque atingi",
+      "ts_iso": "2026-11-03T15:41:36+00:00",
+      "hash": "a55aee7f9780cc48",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 5,
+        "value": 2,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "mercado bitcoin"
+        ],
+        "value": [
+          "milhões",
+          "us$ 4"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 29,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 2,
+        "score": 4,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Mercado Bitcoin bloqueia US$ 11,2 milhões de US$ 49 milhões envolvidos em ataque hacker",
+      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/11/02/mercado-bitcoin-suspende-depositos-e-saques-por-incidente-de-seguranca.ghtml",
+      "summary": "O Mercado Bitcoin atualizou há pouco as informações sobre o incidente de segurança sofrido pela sua plataforma nesta segunda-feira e diz ter bloqueado US$ 11,2 milhões de criptoativos transferidos para endereços suspeitos. LEIA TAMBÉM: - Binance diz que clientes sacaram US$ 4,7 bilhões após ataque hacker Segundo a exchange, o valor dos ativos envolvidos no incidente é de cerca de US$ 49 milhões, mas parte disso já foi bloqueada com o apoio da comunidade cripto, de emissores de ativos e de parceiros especializados em recuperação, como Tether, Circle, BRL1, Paxos e Chainalysis, que atuaram rapid",
+      "ts_iso": "2026-11-02T20:48:26+00:00",
+      "hash": "80bd3f9e874d06d1",
+      "_score": {
+        "cyber": 21,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 15,
+        "value": 4,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker",
+          "incidente de segurança"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "cripto",
+          "tether",
+          "exchange",
+          "mercado bitcoin",
+          "binance"
+        ],
+        "value": [
+          "milhões",
+          "bilhões",
+          "us$ 1"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 46,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 2,
+        "score": 4,
+        "named_fi_bump": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "MoneyTimes Cripto",
+      "bucket": "cripto",
+      "title": "Empresas cripto se preparam para nova regulação do Banco Central e mercado se consolida",
+      "link": "https://www.moneytimes.com.br/empresas-cripto-se-preparam-para-nova-regulacao-do-banco-central-e-mercado-se-consolida-lmrs/",
+      "summary": "As empresas de ativos virtuais se preparam para atuar em um mercado mais regulado. Terminou na sexta-feira (30) o prazo para solicitarem autorização ao Banco Central (BC) e continuar em atividade no Brasil. As companhias enquadradas como Prestadoras de Serviços de Ativos Virtuais (PSAVs) podem fazer compra, venda, troca, custódia ou intermediação de criptoativos. No [&#8230;]",
+      "ts_iso": "2026-10-31T14:45:35+00:00",
+      "hash": "905f771acd00dc2d",
       "_score": {
         "cyber": 0,
         "attack": 0,
-        "launder": 4,
-        "cft": 12,
-        "pix": 4,
+        "launder": 0,
+        "cft": 4,
+        "pix": 3,
         "crypto": 2,
         "value": 0,
         "named_fi": 0,
@@ -41,225 +600,78 @@
         "incident_verbs": 0
       },
       "_hits": {
-        "launder": [
-          "lavagem"
-        ],
         "cft": [
-          "prevenção à lavagem",
-          "financiamento do terrorismo",
-          "terrorismo"
+          "prestadoras de serviços de ativos virtuais"
         ],
         "pix": [
           "banco central",
-          "bcb"
+          "bc"
         ],
         "crypto": [
-          "criptomoedas"
+          "cripto"
         ]
       },
-      "_total": 22,
+      "_total": 9,
       "_severity": "medium",
       "_br_focus": {
         "pos": 4,
         "neg": 0,
         "score": 4
       },
-      "_alerts": [
-        {
-          "ts": "2026-09-28T22:17:05+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 50% (de 2440042.50 → 1220456.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-29T02:08:25+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Spread Binance BTC-BRL em 0.0322% — 1.4× o p95 recente (0.0238%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-09-29T02:08:25+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 56% (de 2440042.50 → 1065173.60 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-29T02:08:25+00:00",
-          "rule": "br_pre_spike",
-          "severity": "medium",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.229% (em Ripio Trade) mas Binance +0.013% (quase parada). Pressão local antes do mercado global reagir."
-        },
-        {
-          "ts": "2026-09-29T08:27:08+00:00",
-          "rule": "br_pre_spike",
-          "severity": "medium",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.200% (em Ripio Trade) mas Binance -0.013% (quase parada). Pressão local antes do mercado global reagir."
-        },
-        {
-          "ts": "2026-09-29T19:48:06+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 35% (de 0.91 → 0.59 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-30T15:19:11+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 35% (de 2343105.35 → 1511377.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-30T20:11:41+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 51% (de 2343105.35 → 1140693.10 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-30T23:48:29+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 72% (de 2259786.85 → 642286.00 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-01T03:43:00+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 38% (de 2135330.20 → 1326161.90 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-01T17:06:24+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 61% (de 2135330.20 → 834564.50 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-01T21:49:02+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 39% (de 0.90 → 0.55 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-02T01:14:56+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 40% (de 0.90 → 0.54 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-02T07:02:19+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 55% (de 0.90 → 0.40 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-02T13:50:45+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 44% (de 0.89 → 0.50 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-10-02T22:46:37+00:00",
-          "rule": "br_pre_spike",
-          "severity": "medium",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "1 venue(s) BR movendo em USDT-BRL (QUEDA): Ripio Trade; maior Δ=-0.248% (em Ripio Trade) mas Binance -0.015% (quase parada). Pressão local antes do mercado global reagir."
-        },
-        {
-          "ts": "2026-10-03T07:05:49+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 49% (de 2006013.80 → 1029379.30 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-09-29T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-30T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
-        },
-        {
-          "ts": "2026-09-30T12:00:00+00:00",
-          "rule": "stablecoin_flight",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "USDT/BTC",
-          "narrative": "stablecoin_flight"
-        },
-        {
-          "ts": "2026-09-30T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-09-30T12:00:00+00:00",
-          "rule": "ensemble",
-          "severity": "critical",
-          "venue": "Mercado Bitcoin",
-          "asset": "multi",
-          "narrative": "ensemble"
-        },
-        {
-          "ts": "2026-10-02T12:00:00+00:00",
-          "rule": "hourly_corr",
-          "severity": "critical",
-          "venue": "cross-venue",
-          "asset": "multi",
-          "narrative": "hourly_corr"
-        },
-        {
-          "ts": "2026-10-02T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC",
-          "narrative": "volume_zscore"
-        }
-      ],
-      "_n_alerts": 24,
-      "_corroboration_score": 5
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
+    },
+    {
+      "source": "Valor Investe",
+      "bucket": "economia",
+      "title": "Tenho criptomoedas na Binance. O que acontece com meu dinheiro?",
+      "link": "https://valorinveste.globo.com/mercados/cripto/noticia/2026/10/30/tenho-criptomoedas-na-binance-o-que-acontece-com-meu-dinheiro.ghtml",
+      "summary": "Quem tem Bitcoin, Ethereum ou outras moedas digitais guardadas na Binance não precisa, por enquanto, se preocupar com a perda desses recursos, segundo a própria empresa. Após confirmar um ataque hacker que provocou um prejuízo estimado em US$ 6,3 bilhões, a maior plataforma de negociação de criptomoedas do mundo garantiu que vai cobrir integralmente as perdas e reservou mais de US$ 6 bilhões de recursos próprios para isso. No Brasil, o braço brasileiro da Binance, a BBrasil SPSAV, também assegurou que os ativos dos investidores permanecem protegidos. A empresa, porém, suspendeu temporariamente",
+      "ts_iso": "2026-10-30T14:57:32+00:00",
+      "hash": "59ac60f7a8920f76",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 7,
+        "value": 3,
+        "named_fi": 0,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "binance"
+        ],
+        "value": [
+          "bilhões",
+          "us$ 6"
+        ]
+      },
+      "_total": 28,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 4,
+        "neg": 2,
+        "score": 2
+      },
+      "_alerts": [],
+      "_n_alerts": 0,
+      "_corroboration_score": 1
     }
   ]
 }
