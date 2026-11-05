@@ -1,28 +1,142 @@
 {
-  "generated_at": "2026-11-05T10:23:06.884022+00:00",
+  "generated_at": "2026-11-05T15:48:50.556127+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 69,
+    "n_total": 72,
     "n_correlated": 6,
-    "n_singleton": 63,
+    "n_singleton": 66,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 63,
+      "singleton": 66,
       "critical": 3,
       "high": 3
     },
     "by_asset": {
-      "SOL-BRL": 9,
-      "USDT-BRL": 40,
-      "ETH-BRL": 10,
-      "BTC-BRL": 10
+      "SOL-BRL": 10,
+      "USDT-BRL": 41,
+      "BTC-BRL": 11,
+      "ETH-BRL": 10
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261105_1548_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-11-05T15:48:50+00:00",
+      "closed_at": "2026-11-05T15:48:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 15:48 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.0803,
+          "threshold": 0.0599,
+          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.08032128514055768,
+            "p95_pct": 0.04793480866021483,
+            "median_pct": 0.031793975242606555,
+            "baseline_pct": 0.04793480866021483,
+            "ratio": 1.675635876840855,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-05T15:48:50+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261105_1548_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-05T15:48:50+00:00",
+      "closed_at": "2026-11-05T15:48:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 15:48 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 971458.6,
+          "threshold": 576634.8,
+          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%).",
+          "context": {
+            "depth_now": 971458.6000000001,
+            "depth_median": 1647528.0,
+            "drop_pct": 0.4103538149275763
+          },
+          "ts": "2026-11-05T15:48:50+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261105_1548_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-11-05T15:48:50+00:00",
+      "closed_at": "2026-11-05T15:48:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 15:48 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.0387,
+          "threshold": 0.0312,
+          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.03870921494366854,
+            "p95_pct": 0.02495004421949801,
+            "median_pct": 0.00022796118866084085,
+            "baseline_pct": 0.02495004421949801,
+            "ratio": 1.5514687911221408,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-05T15:48:50+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261105_0949_solbrl",
       "asset": "SOL-BRL",
