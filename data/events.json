@@ -1,28 +1,67 @@
 {
-  "generated_at": "2026-11-06T10:26:01.811504+00:00",
+  "generated_at": "2026-11-06T16:32:48.041093+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 75,
+    "n_total": 76,
     "n_correlated": 7,
-    "n_singleton": 68,
+    "n_singleton": 69,
     "max_convergence": 2,
     "by_severity": {
+      "singleton": 69,
       "critical": 4,
-      "singleton": 68,
       "high": 3
     },
     "by_asset": {
+      "ETH-BRL": 11,
       "USDT-BRL": 43,
       "BTC-BRL": 12,
-      "SOL-BRL": 10,
-      "ETH-BRL": 10
+      "SOL-BRL": 10
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261106_1632_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-11-06T16:32:47+00:00",
+      "closed_at": "2026-11-06T16:32:47+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em ETH-BRL às 16:32 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": 0.0792,
+          "threshold": 0.0643,
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.07921482074288166,
+            "p95_pct": 0.051473653997480356,
+            "median_pct": 0.02374108046527691,
+            "baseline_pct": 0.051473653997480356,
+            "ratio": 1.5389391385884368,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-06T16:32:47+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261106_0149_usdtbrl",
       "asset": "USDT-BRL",
