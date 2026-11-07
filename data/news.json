@@ -3,8 +3,8 @@
     "n_items": 12,
     "by_severity": {
       "critical": 0,
-      "high": 2,
-      "medium": 10,
+      "high": 1,
+      "medium": 11,
       "low": 0,
       "noise": 0
     },
@@ -15,7 +15,7 @@
         4
       ],
       [
-        "Folha Mercado",
+        "Portal do Bitcoin",
         3
       ],
       [
@@ -23,103 +23,18 @@
         2
       ],
       [
-        "G1 Economia",
-        1
+        "Folha Mercado",
+        2
       ],
       [
         "Livecoins",
         1
-      ],
-      [
-        "Portal do Bitcoin",
-        1
       ]
     ],
-    "generated_at": "2026-11-06T10:25:21+00:00",
-    "runtime_sec": 3.34
+    "generated_at": "2026-11-07T09:39:15+00:00",
+    "runtime_sec": 3.5
   },
   "items": [
-    {
-      "source": "G1 Economia",
-      "bucket": "economia",
-      "title": "Mercado Bitcoin sofre ataque e suspende saques dias após roubo bilionário na Binance",
-      "link": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/02/mercado-bitcoin-incidente-seguranca.ghtml",
-      "summary": "Representação do Bitcoin em ilustração produzida em 10 de setembro de 2025 REUTERS/Dado Ruvic/Ilustração/Foto de arquivo Criptomoedas são ativos digitais que não são emitidos por governos, como ocorre com moedas oficiais como o real e o dólar. As transações são registradas e validadas por tecnologias como o blockchain. dfndf, ksdfls oi sdf,mnsllsd fo aiofn,m dfog a oinsdmg o dfljbxlcm sjdf lm xon df ff O Mercado Bitcoin, corretora brasileira de criptoativos, informou ter registrado um incidente de segurança nesta segunda-feira (2) e suspendeu temporariamente saques e depósitos. Procurada pelo ",
-      "ts_iso": "2026-11-02T15:07:21+00:00",
-      "hash": "412f0ac72eb65648",
-      "_score": {
-        "cyber": 5,
-        "attack": 4,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 13,
-        "value": 0,
-        "named_fi": 4,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 4
-      },
-      "_hits": {
-        "cyber": [
-          "incidente de segurança"
-        ],
-        "attack": [
-          "ataque",
-          "roubo"
-        ],
-        "crypto": [
-          "bitcoin",
-          "criptomoedas",
-          "corretora",
-          "mercado bitcoin",
-          "binance",
-          "blockchain"
-        ],
-        "named_fi": [
-          "mercado bitcoin"
-        ],
-        "incident_verbs": [
-          "sofre ataque"
-        ]
-      },
-      "_total": 30,
-      "_severity": "high",
-      "_br_focus": {
-        "pos": 8,
-        "neg": 0,
-        "score": 8,
-        "named_fi_bump": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
-        }
-      ],
-      "_n_alerts": 3,
-      "_corroboration_score": 5
-    },
     {
       "source": "MoneyTimes Cripto",
       "bucket": "cripto",
@@ -206,6 +121,424 @@
         }
       ],
       "_n_alerts": 3,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Hack do Mercado Bitcoin afetou menos de 3% das criptomoedas sob custódia na corretora",
+      "link": "https://portaldobitcoin.uol.com.br/hack-do-mercado-bitcoin-afetou-menos-de-3-das-criptomoedas-sob-custodia-na-corretora/",
+      "summary": "Exchange já bloqueou US$ 16 milhões dos ativos desviados e reabre o site para consulta de saldos na segunda (9) O post Hack do Mercado Bitcoin afetou menos de 3% das criptomoedas sob custódia na corretora apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-11-06T16:09:07+00:00",
+      "hash": "77cf8c3de4664eec",
+      "_score": {
+        "cyber": 5,
+        "attack": 3,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 11,
+        "value": 2,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hack"
+        ],
+        "attack": [
+          "desviados"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas",
+          "exchange",
+          "corretora",
+          "mercado bitcoin"
+        ],
+        "value": [
+          "milhões",
+          "us$ 1"
+        ],
+        "named_fi": [
+          "mercado bitcoin"
+        ]
+      },
+      "_total": 25,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 6,
+        "neg": 2,
+        "score": 4,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Profundidade Binance BTC-BRL caiu 46% (de 0.73 → 0.39 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 89% (de 1601584.00 → 183227.80 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 84% (de 1538310.50 → 247402.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
+        }
+      ],
+      "_n_alerts": 11,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Mercado Pago e Nubank travam saques e depósitos de criptomoedas com rumor de ataque hacker em provedor",
+      "link": "https://livecoins.com.br/mercado-pago-e-nubank-travam-saques-e-depositos-de-criptomoedas-com-rumor-de-ataque-hacker-em-provedor/",
+      "summary": "Paxos é a empresa que o Nubank e o banco do Mercado Livre utilizam para operar com criptomoedas Fonte: Mercado Pago e Nubank travam saques e depósitos de criptomoedas com rumor de ataque hacker em provedor Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-11-06T14:16:26+00:00",
+      "hash": "65f92efcdbe41367",
+      "_score": {
+        "cyber": 16,
+        "attack": 2,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 0,
+        "named_fi": 8,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "hacker",
+          "hacker",
+          "ataque hacker"
+        ],
+        "attack": [
+          "ataque"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "named_fi": [
+          "nubank",
+          "mercado pago"
+        ]
+      },
+      "_total": 30,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 8,
+        "neg": 0,
+        "score": 8,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Profundidade Binance BTC-BRL caiu 46% (de 0.73 → 0.39 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 89% (de 1601584.00 → 183227.80 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 84% (de 1538310.50 → 247402.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
+        }
+      ],
+      "_n_alerts": 11,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "Portal do Bitcoin",
+      "bucket": "cripto",
+      "title": "Nubank suspende depósitos e saques de criptomoedas",
+      "link": "https://portaldobitcoin.uol.com.br/nubank-suspende-depositos-e-saques-de-criptomoedas/",
+      "summary": "Banco não explicou a interrupção, que ocorre após incidente de segurança na Chainalysis, fornecedora de tecnologia das transferências de criptomoedas O post Nubank suspende depósitos e saques de criptomoedas apareceu primeiro em Portal do Bitcoin .",
+      "ts_iso": "2026-11-06T13:28:43+00:00",
+      "hash": "ba6b699c63cfe0d8",
+      "_score": {
+        "cyber": 5,
+        "attack": 0,
+        "launder": 0,
+        "cft": 0,
+        "pix": 0,
+        "crypto": 4,
+        "value": 0,
+        "named_fi": 4,
+        "political_noise": 0,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "cyber": [
+          "incidente de segurança"
+        ],
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
+        ],
+        "named_fi": [
+          "nubank"
+        ]
+      },
+      "_total": 13,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 5,
+        "neg": 0,
+        "score": 5,
+        "named_fi_bump": 2
+      },
+      "_alerts": [
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
+        },
+        {
+          "ts": "2026-11-05T09:49:15+00:00",
+          "rule": "binance_price_burst",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-05T15:48:50+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Profundidade Binance BTC-BRL caiu 46% (de 0.73 → 0.39 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-05T21:44:11+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 89% (de 1601584.00 → 183227.80 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 84% (de 1538310.50 → 247402.60 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-06T01:49:56+00:00",
+          "rule": "br_pre_spike",
+          "severity": "medium",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
+        }
+      ],
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -327,9 +660,17 @@
           "venue": "Ripio Trade",
           "asset": "USDT-BRL",
           "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -453,270 +794,17 @@
           "venue": "Ripio Trade",
           "asset": "USDT-BRL",
           "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
         }
       ],
-      "_n_alerts": 10,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Folha Mercado",
-      "bucket": "economia",
-      "title": "Banco francês sofre ataque hacker de 100 milhões de euros",
-      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://c-level.folha.uol.com.br/financas/2026/11/banco-frances-sofre-ataque-hacker-de-100-milhoes-de-euros.shtml",
-      "summary": "O banco francês Crédit Mutuel Arkéa informou na noite desta quarta-feira (4) que foi alvo de um ataque hacker estimado em cerca de 100 milhões de euros (R$ 615 milhões). Leia mais (11/05/2026 - 11h25)",
-      "ts_iso": "2026-11-05T14:25:00+00:00",
-      "hash": "dc92a9182aef52e6",
-      "_score": {
-        "cyber": 16,
-        "attack": 2,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 0,
-        "value": 3,
-        "named_fi": 0,
-        "political_noise": 0,
-        "commentary": 0,
-        "incident_verbs": 10
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker",
-          "ataque hacker"
-        ],
-        "attack": [
-          "ataque"
-        ],
-        "value": [
-          "r$ 6",
-          "milhões"
-        ],
-        "incident_verbs": [
-          "sofre ataque",
-          "foi alvo",
-          "r$ 615 milh"
-        ]
-      },
-      "_total": 31,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 3,
-        "neg": 1,
-        "score": 2
-      },
-      "_alerts": [
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T21:44:11+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 46% (de 0.73 → 0.39 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T21:44:11+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 89% (de 1601584.00 → 183227.80 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-06T01:49:56+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 84% (de 1538310.50 → 247402.60 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-06T01:49:56+00:00",
-          "rule": "br_pre_spike",
-          "severity": "medium",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
-        }
-      ],
-      "_n_alerts": 10,
-      "_corroboration_score": 5
-    },
-    {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "STF nega recurso de hacker que pediu 0,15 bitcoin para parar ataque contra empresa",
-      "link": "https://livecoins.com.br/stf-nega-recurso-de-hacker-que-pediu-015-bitcoin-para-parar-ataque-contra-empresa/",
-      "summary": "Decisão assinada pela ministra Cármen Lúcia nesta terça-feira (3) mantém pena de seis anos e quatro meses de reclusão por extorsão Fonte: STF nega recurso de hacker que pediu 0,15 bitcoin para parar ataque contra empresa Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-11-05T09:29:30+00:00",
-      "hash": "be0acb3af0a509a9",
-      "_score": {
-        "cyber": 10,
-        "attack": 5,
-        "launder": 0,
-        "cft": 0,
-        "pix": 0,
-        "crypto": 2,
-        "value": 0,
-        "named_fi": 0,
-        "political_noise": 3,
-        "commentary": 0,
-        "incident_verbs": 0
-      },
-      "_hits": {
-        "cyber": [
-          "hacker",
-          "hacker"
-        ],
-        "attack": [
-          "ataque",
-          "extorsão"
-        ],
-        "crypto": [
-          "bitcoin"
-        ],
-        "political_noise": [
-          "stf"
-        ]
-      },
-      "_total": 20,
-      "_severity": "medium",
-      "_br_focus": {
-        "pos": 1,
-        "neg": 0,
-        "score": 1
-      },
-      "_alerts": [
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "high",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 57% (de 1660492.45 → 715555.70 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Movimento brusco de ALTA em Binance USDT-BRL: +9.817% (Z=+20.27)."
-        },
-        {
-          "ts": "2026-11-05T09:49:15+00:00",
-          "rule": "binance_price_burst",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Movimento brusco de QUEDA em Binance SOL-BRL: -12.104% (Z=-10.43)."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Spread Binance BTC-BRL em 0.0387% — 1.6× o p95 recente (0.0250%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_spread_spike",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "SOL-BRL",
-          "narrative": "Spread Binance SOL-BRL em 0.0803% — 1.7× o p95 recente (0.0479%) e acima do piso de 0.020%."
-        },
-        {
-          "ts": "2026-11-05T15:48:50+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 41% (de 1647528.00 → 971458.60 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T21:44:11+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "BTC-BRL",
-          "narrative": "Profundidade Binance BTC-BRL caiu 46% (de 0.73 → 0.39 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-05T21:44:11+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 89% (de 1601584.00 → 183227.80 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-06T01:49:56+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 84% (de 1538310.50 → 247402.60 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-06T01:49:56+00:00",
-          "rule": "br_pre_spike",
-          "severity": "medium",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
-        }
-      ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -848,9 +936,17 @@
           "venue": "Ripio Trade",
           "asset": "USDT-BRL",
           "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -974,9 +1070,17 @@
           "venue": "Ripio Trade",
           "asset": "USDT-BRL",
           "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
@@ -1105,9 +1209,17 @@
           "venue": "Ripio Trade",
           "asset": "USDT-BRL",
           "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): Ripio Trade; maior Δ=+0.208% (em Ripio Trade) mas Binance +0.098% (quase parada). Pressão local antes do mercado global reagir."
+        },
+        {
+          "ts": "2026-11-06T16:32:47+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.0792% — 1.5× o p95 recente (0.0515%) e acima do piso de 0.020%."
         }
       ],
-      "_n_alerts": 10,
+      "_n_alerts": 11,
       "_corroboration_score": 5
     },
     {
