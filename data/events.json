@@ -1,29 +1,72 @@
 {
-  "generated_at": "2026-11-11T00:03:30.923588+00:00",
+  "generated_at": "2026-11-11T06:10:10.824679+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 93,
+    "n_total": 94,
     "n_correlated": 9,
-    "n_singleton": 84,
+    "n_singleton": 85,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 84,
+      "singleton": 85,
       "medium": 2,
       "critical": 4,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 53,
+      "USDT-BRL": 54,
       "SOL-BRL": 13,
       "ETH-BRL": 13,
       "BTC-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261111_0610_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-11T06:10:10+00:00",
+      "closed_at": "2026-11-11T06:10:10+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "stablecoin_flight"
+      ],
+      "distinct_rules": [
+        "stablecoin_flight"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 06:10 (stablecoin_flight). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 0.0113,
+          "threshold": 0.3,
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -0.76% · USDT-BRL bid-heavy (imbalance +0.80). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -0.7596,
+            "usdt_imbalance": 0.7975,
+            "usdt_decouple_pct": 0.0113,
+            "conds_met": 2,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -0.245,
+              "ETH-BRL": -0.7625,
+              "SOL-BRL": -1.2714
+            }
+          },
+          "ts": "2026-11-11T06:10:10+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261111_0003_usdtbrl",
       "asset": "USDT-BRL",
