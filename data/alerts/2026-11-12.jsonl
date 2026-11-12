@@ -1,0 +1,1 @@
+{"rule": "binance_depth_drop", "severity": "medium", "venue": "Binance", "asset": "ETH-BRL", "value": 15.7071, "threshold": 9.2118, "narrative": "Profundidade Binance ETH-BRL caiu 40% (de 26.32 → 15.71 unidades em ±2%).", "context": {"depth_now": 15.707100000000004, "depth_median": 26.319449999999996, "drop_pct": 0.4032132130420656}, "ts": "2026-11-12T02:24:37+00:00"}
