@@ -1,0 +1,1 @@
+{"rule": "binance_depth_drop", "severity": "high", "venue": "Binance", "asset": "BTC-BRL", "value": 0.2921, "threshold": 0.2646, "narrative": "Profundidade Binance BTC-BRL caiu 61% (de 0.76 → 0.29 unidades em ±2%).", "context": {"depth_now": 0.29211000000000004, "depth_median": 0.7561199999999997, "drop_pct": 0.613672432947151}, "ts": "2026-11-13T03:37:20+00:00"}
