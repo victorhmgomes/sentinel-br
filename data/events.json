@@ -1,29 +1,109 @@
 {
-  "generated_at": "2026-11-15T10:26:13.874359+00:00",
+  "generated_at": "2026-11-15T16:36:44.778971+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 104,
+    "n_total": 106,
     "n_correlated": 10,
-    "n_singleton": 94,
+    "n_singleton": 96,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 94,
+      "singleton": 96,
       "medium": 3,
       "critical": 4,
       "high": 3
     },
     "by_asset": {
+      "SOL-BRL": 14,
+      "ETH-BRL": 18,
       "USDT-BRL": 58,
-      "ETH-BRL": 17,
-      "BTC-BRL": 16,
-      "SOL-BRL": 13
+      "BTC-BRL": 16
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261115_1636_solbrl",
+      "asset": "SOL-BRL",
+      "opened_at": "2026-11-15T16:36:44+00:00",
+      "closed_at": "2026-11-15T16:36:44+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em SOL-BRL às 16:36 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "SOL-BRL",
+          "value": 0.1221,
+          "threshold": 0.1084,
+          "narrative": "Spread Binance SOL-BRL em 0.1221% — 1.4× o p95 recente (0.0867%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.12211503236048357,
+            "p95_pct": 0.08671146759158406,
+            "median_pct": 0.05976105636833895,
+            "baseline_pct": 0.08671146759158406,
+            "ratio": 1.4082916106973569,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-15T16:36:44+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261115_1636_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-11-15T16:36:44+00:00",
+      "closed_at": "2026-11-15T16:36:44+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em ETH-BRL às 16:36 (divergence). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": -1.4028,
+          "threshold": 0.75,
+          "narrative": "Binance ETH-BRL está -1.403% abaixo da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 10390.259999999998,
+            "local_mids": {
+              "Foxbit": 10372.95,
+              "BitPreço": 10703.224999999999
+            },
+            "avg_local": 10538.0875,
+            "gap_pct": -1.4027924896239592,
+            "n_br_venues": 2
+          },
+          "ts": "2026-11-15T16:36:44+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261115_0219_usdtbrl",
       "asset": "USDT-BRL",
