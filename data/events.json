@@ -1,29 +1,65 @@
 {
-  "generated_at": "2026-11-17T19:24:23.368527+00:00",
+  "generated_at": "2026-11-18T01:44:51.564697+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 109,
+    "n_total": 110,
     "n_correlated": 10,
-    "n_singleton": 99,
+    "n_singleton": 100,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 99,
+      "singleton": 100,
       "medium": 3,
       "critical": 4,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 61,
+      "USDT-BRL": 62,
       "SOL-BRL": 14,
       "ETH-BRL": 18,
       "BTC-BRL": 16
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261118_0144_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-18T01:44:50+00:00",
+      "closed_at": "2026-11-18T01:44:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 01:44 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 410255.2,
+          "threshold": 368389.8575,
+          "narrative": "Profundidade Binance USDT-BRL caiu 61% (de 1052542.45 → 410255.20 unidades em ±2%).",
+          "context": {
+            "depth_now": 410255.20000000007,
+            "depth_median": 1052542.45,
+            "drop_pct": 0.6102245567387804
+          },
+          "ts": "2026-11-18T01:44:50+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261117_0205_usdtbrl",
       "asset": "USDT-BRL",
