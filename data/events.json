@@ -1,29 +1,124 @@
 {
-  "generated_at": "2026-11-19T23:22:58.056997+00:00",
+  "generated_at": "2026-11-20T04:07:51.411054+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 116,
-    "n_correlated": 11,
-    "n_singleton": 105,
+    "n_total": 118,
+    "n_correlated": 12,
+    "n_singleton": 106,
     "max_convergence": 2,
     "by_severity": {
-      "singleton": 105,
-      "critical": 5,
+      "critical": 6,
+      "singleton": 106,
       "medium": 3,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 66,
+      "USDT-BRL": 67,
+      "BTC-BRL": 17,
       "ETH-BRL": 20,
-      "SOL-BRL": 14,
-      "BTC-BRL": 16
+      "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261120_0407_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-20T04:07:50+00:00",
+      "closed_at": "2026-11-20T04:07:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop",
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop",
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "critical",
+      "event_severity": "critical",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 04:07-04:07 (~0s): depth_drop, divergence. 2 alerta(s) bruto(s). Severidade máxima vista: critical.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 547273.8,
+          "threshold": 349613.1625,
+          "narrative": "Profundidade Binance USDT-BRL caiu 45% (de 998894.75 → 547273.80 unidades em ±2%).",
+          "context": {
+            "depth_now": 547273.7999999999,
+            "depth_median": 998894.7500000002,
+            "drop_pct": 0.4521206563554371
+          },
+          "ts": "2026-11-20T04:07:50+00:00"
+        },
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 3.2695,
+          "threshold": 0.75,
+          "narrative": "Binance USDT-BRL está +3.269% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 5.98135,
+            "local_mids": {
+              "Foxbit": 5.983549999999999,
+              "BitPreço": 5.4139,
+              "Ripio Trade": 5.9785
+            },
+            "avg_local": 5.7919833333333335,
+            "gap_pct": 3.2694615258446267,
+            "n_br_venues": 3
+          },
+          "ts": "2026-11-20T04:07:50+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261120_0407_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-11-20T04:07:50+00:00",
+      "closed_at": "2026-11-20T04:07:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 04:07 (depth_drop). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.4498,
+          "threshold": 0.2559,
+          "narrative": "Profundidade Binance BTC-BRL caiu 38% (de 0.73 → 0.45 unidades em ±2%).",
+          "context": {
+            "depth_now": 0.4498399999999999,
+            "depth_median": 0.73108,
+            "drop_pct": 0.3846911418722986
+          },
+          "ts": "2026-11-20T04:07:50+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261119_2322_usdtbrl",
       "asset": "USDT-BRL",
