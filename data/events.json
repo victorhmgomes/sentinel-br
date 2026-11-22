@@ -1,29 +1,76 @@
 {
-  "generated_at": "2026-11-22T10:45:35.373822+00:00",
+  "generated_at": "2026-11-22T17:23:34.749594+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 125,
+    "n_total": 126,
     "n_correlated": 13,
-    "n_singleton": 112,
+    "n_singleton": 113,
     "max_convergence": 3,
     "by_severity": {
-      "singleton": 112,
+      "singleton": 113,
       "critical": 7,
       "medium": 3,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 72,
+      "USDT-BRL": 73,
       "BTC-BRL": 18,
       "ETH-BRL": 21,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261122_1723_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-22T17:23:34+00:00",
+      "closed_at": "2026-11-22T17:23:34+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 17:23 (pre_spike). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "br_pre_spike",
+          "severity": "high",
+          "venue": "BitPreço",
+          "asset": "USDT-BRL",
+          "value": 11.7227,
+          "threshold": 0.2,
+          "narrative": "1 venue(s) BR movendo em USDT-BRL (ALTA): BitPreço; maior Δ=+11.723% (em BitPreço) mas Binance +0.029% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 1,
+            "max_local_chg_pct": 11.722679886272513,
+            "binance_change_pct": 0.02937504589851323,
+            "hits": [
+              {
+                "venue": "BitPreço",
+                "local_chg": 11.722679886272513,
+                "b_chg": 0.02937504589851323,
+                "m_prev": 5.4868,
+                "m_now": 6.13,
+                "b_prev": 6.12765,
+                "b_now": 6.12945
+              }
+            ]
+          },
+          "ts": "2026-11-22T17:23:34+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261122_0933_usdtbrl",
       "asset": "USDT-BRL",
