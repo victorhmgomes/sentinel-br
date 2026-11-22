@@ -1,29 +1,71 @@
 {
-  "generated_at": "2026-11-22T17:23:34.749594+00:00",
+  "generated_at": "2026-11-22T22:39:51.142755+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 126,
+    "n_total": 127,
     "n_correlated": 13,
-    "n_singleton": 113,
+    "n_singleton": 114,
     "max_convergence": 3,
     "by_severity": {
-      "singleton": 113,
+      "singleton": 114,
       "critical": 7,
       "medium": 3,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 73,
+      "USDT-BRL": 74,
       "BTC-BRL": 18,
       "ETH-BRL": 21,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261122_2239_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-22T22:39:50+00:00",
+      "closed_at": "2026-11-22T22:39:50+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "critical",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 22:39 (divergence). 1 alerta(s) bruto(s). Severidade máxima: critical.",
+      "alerts": [
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 3.4558,
+          "threshold": 0.75,
+          "narrative": "Binance USDT-BRL está +3.456% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 6.09665,
+            "local_mids": {
+              "Foxbit": 6.1000499999999995,
+              "BitPreço": 5.47995,
+              "Ripio Trade": 6.099
+            },
+            "avg_local": 5.893,
+            "gap_pct": 3.4557950110300455,
+            "n_br_venues": 3
+          },
+          "ts": "2026-11-22T22:39:50+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261122_1723_usdtbrl",
       "asset": "USDT-BRL",
