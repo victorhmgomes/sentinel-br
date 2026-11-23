@@ -19,8 +19,8 @@
         1
       ]
     ],
-    "generated_at": "2026-11-22T10:44:54+00:00",
-    "runtime_sec": 3.94
+    "generated_at": "2026-11-23T11:50:14+00:00",
+    "runtime_sec": 3.19
   },
   "items": [
     {
@@ -234,9 +234,25 @@
           "venue": "Binance",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 21,
+      "_n_alerts": 23,
       "_corroboration_score": 5
     },
     {
@@ -456,9 +472,25 @@
           "venue": "Binance",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 21,
+      "_n_alerts": 23,
       "_corroboration_score": 5
     },
     {
@@ -689,9 +721,25 @@
           "venue": "Binance",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 23,
+      "_n_alerts": 25,
       "_corroboration_score": 5
     },
     {
@@ -930,9 +978,25 @@
           "venue": "Binance",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC",
+          "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-21T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Binance BRL",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 23,
+      "_n_alerts": 25,
       "_corroboration_score": 5
     }
   ]
