@@ -1,29 +1,94 @@
 {
-  "generated_at": "2026-11-23T11:50:54.223237+00:00",
+  "generated_at": "2026-11-23T12:29:57.782761+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 129,
+    "n_total": 130,
     "n_correlated": 13,
-    "n_singleton": 116,
+    "n_singleton": 117,
     "max_convergence": 3,
     "by_severity": {
-      "singleton": 116,
+      "singleton": 117,
       "critical": 7,
       "medium": 3,
       "high": 3
     },
     "by_asset": {
-      "USDT-BRL": 75,
+      "USDT-BRL": 76,
       "ETH-BRL": 22,
       "BTC-BRL": 18,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261123_1229_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-23T12:29:57+00:00",
+      "closed_at": "2026-11-23T12:29:57+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "pre_spike"
+      ],
+      "distinct_rules": [
+        "br_pre_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "high",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em USDT-BRL às 12:29 (pre_spike). 1 alerta(s) bruto(s). Severidade máxima: high.",
+      "alerts": [
+        {
+          "rule": "br_pre_spike",
+          "severity": "high",
+          "venue": "Ripio Trade",
+          "asset": "USDT-BRL",
+          "value": -0.3061,
+          "threshold": 0.2,
+          "narrative": "3 venue(s) BR movendo em USDT-BRL (QUEDA): Foxbit, BitPreço, Ripio Trade; maior Δ=-0.306% (em Ripio Trade) mas Binance -0.089% (quase parada). Pressão local antes do mercado global reagir.",
+          "context": {
+            "n_venues_br": 3,
+            "max_local_chg_pct": -0.3060633633881962,
+            "binance_change_pct": -0.08948620006794074,
+            "hits": [
+              {
+                "venue": "Foxbit",
+                "local_chg": -0.24176388279418978,
+                "b_chg": -0.08948620006794074,
+                "m_prev": 6.03895,
+                "m_now": 6.02435,
+                "b_prev": 6.03445,
+                "b_now": 6.02905
+              },
+              {
+                "venue": "BitPreço",
+                "local_chg": -0.20035268696134884,
+                "b_chg": -0.08948620006794074,
+                "m_prev": 6.039350000000001,
+                "m_now": 6.02725,
+                "b_prev": 6.03445,
+                "b_now": 6.02905
+              },
+              {
+                "venue": "Ripio Trade",
+                "local_chg": -0.3060633633881962,
+                "b_chg": -0.08948620006794074,
+                "m_prev": 6.044499999999999,
+                "m_now": 6.026,
+                "b_prev": 6.03445,
+                "b_now": 6.02905
+              }
+            ]
+          },
+          "ts": "2026-11-23T12:29:57+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261123_0307_usdtbrl",
       "asset": "USDT-BRL",
