@@ -1,29 +1,95 @@
 {
-  "generated_at": "2026-11-26T14:28:23.639785+00:00",
+  "generated_at": "2026-11-26T23:11:52.216496+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 137,
-    "n_correlated": 14,
+    "n_total": 138,
+    "n_correlated": 15,
     "n_singleton": 123,
     "max_convergence": 3,
     "by_severity": {
+      "critical": 8,
       "singleton": 123,
       "high": 4,
-      "critical": 7,
       "medium": 3
     },
     "by_asset": {
+      "USDT-BRL": 79,
       "ETH-BRL": 27,
-      "USDT-BRL": 78,
       "BTC-BRL": 18,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261126_2311_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-26T23:11:51+00:00",
+      "closed_at": "2026-11-26T23:11:51+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "divergence",
+        "stablecoin_flight"
+      ],
+      "distinct_rules": [
+        "binance_vs_br_divergence",
+        "stablecoin_flight"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "critical",
+      "event_severity": "critical",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 23:11-23:11 (~0s): divergence, stablecoin_flight. 2 alerta(s) bruto(s). Severidade máxima vista: critical.",
+      "alerts": [
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 2.0416,
+          "threshold": 0.75,
+          "narrative": "Binance USDT-BRL está +2.042% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 5.65615,
+            "local_mids": {
+              "Foxbit": 5.65695,
+              "BitPreço": 5.313,
+              "Ripio Trade": 5.659000000000001
+            },
+            "avg_local": 5.542983333333334,
+            "gap_pct": 2.041620186482004,
+            "n_br_venues": 3
+          },
+          "ts": "2026-11-26T23:11:51+00:00"
+        },
+        {
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 0.0087,
+          "threshold": 0.3,
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -2.96% · USDT-BRL bid-heavy (imbalance +0.71). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering.",
+          "context": {
+            "risk_drop_pct": -2.9574,
+            "usdt_imbalance": 0.7111,
+            "usdt_decouple_pct": 0.0087,
+            "conds_met": 2,
+            "lookback_snaps": 3,
+            "risk_drops_by_asset": {
+              "BTC-BRL": -2.9009,
+              "ETH-BRL": -3.2815,
+              "SOL-BRL": -2.6899
+            }
+          },
+          "ts": "2026-11-26T23:11:51+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261126_0439_ethbrl",
       "asset": "ETH-BRL",
