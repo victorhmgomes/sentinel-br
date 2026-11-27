@@ -1,29 +1,130 @@
 {
-  "generated_at": "2026-11-27T11:47:47.523326+00:00",
+  "generated_at": "2026-11-27T15:01:30.423301+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 140,
-    "n_correlated": 16,
-    "n_singleton": 124,
+    "n_total": 142,
+    "n_correlated": 17,
+    "n_singleton": 125,
     "max_convergence": 3,
     "by_severity": {
+      "high": 5,
+      "singleton": 125,
       "critical": 9,
-      "singleton": 124,
-      "high": 4,
       "medium": 3
     },
     "by_asset": {
+      "ETH-BRL": 28,
+      "BTC-BRL": 20,
       "USDT-BRL": 80,
-      "BTC-BRL": 19,
-      "ETH-BRL": 27,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261127_1501_ethbrl",
+      "asset": "ETH-BRL",
+      "opened_at": "2026-11-27T15:01:29+00:00",
+      "closed_at": "2026-11-27T15:01:29+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike",
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike",
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "high",
+      "event_severity": "high",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em ETH-BRL entre 15:01-15:01 (~0s): spread_spike, divergence. 2 alerta(s) bruto(s). Severidade máxima vista: high.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": 0.204,
+          "threshold": 0.123,
+          "narrative": "Spread Binance ETH-BRL em 0.2040% — 2.1× o p95 recente (0.0984%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.204049719896377,
+            "p95_pct": 0.09838694649498203,
+            "median_pct": 0.04461809217842052,
+            "baseline_pct": 0.09838694649498203,
+            "ratio": 2.0739511405284237,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-27T15:01:29+00:00"
+        },
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "value": -1.3878,
+          "threshold": 0.75,
+          "narrative": "Binance ETH-BRL está -1.388% abaixo da média BR (Mercado+Foxbit+BitPreço; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 9144.83,
+            "local_mids": {
+              "Mercado Bitcoin": 9500.5,
+              "Foxbit": 9146.95,
+              "BitPreço": 9173.14
+            },
+            "avg_local": 9273.53,
+            "gap_pct": -1.3878210347084736,
+            "n_br_venues": 3
+          },
+          "ts": "2026-11-27T15:01:29+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261127_1501_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-11-27T15:01:29+00:00",
+      "closed_at": "2026-11-27T15:01:29+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "spread_spike"
+      ],
+      "distinct_rules": [
+        "binance_spread_spike"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 15:01 (spread_spike). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": 0.0612,
+          "threshold": 0.0489,
+          "narrative": "Spread Binance BTC-BRL em 0.0612% — 1.6× o p95 recente (0.0391%) e acima do piso de 0.020%.",
+          "context": {
+            "spread_pct": 0.06116180034780068,
+            "p95_pct": 0.03913931301058246,
+            "median_pct": 0.0002798768557237051,
+            "baseline_pct": 0.03913931301058246,
+            "ratio": 1.56266923569312,
+            "floor_pct": 0.02
+          },
+          "ts": "2026-11-27T15:01:29+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261127_0502_usdtbrl",
       "asset": "USDT-BRL",
