@@ -1,86 +1,77 @@
 {
   "summary": {
-    "n_items": 1,
+    "n_items": 2,
     "by_severity": {
-      "critical": 0,
-      "high": 1,
-      "medium": 0,
+      "critical": 1,
+      "high": 0,
+      "medium": 1,
       "low": 0,
       "noise": 0
     },
-    "with_watcher_corroboration": 1,
+    "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "MoneyTimes",
+        "Livecoins",
+        1
+      ],
+      [
+        "G1 Política",
         1
       ]
     ],
-    "generated_at": "2026-11-26T11:55:27+00:00",
-    "runtime_sec": 4.9
+    "generated_at": "2026-11-27T11:47:06+00:00",
+    "runtime_sec": 5.0
   },
   "items": [
     {
-      "source": "MoneyTimes",
-      "bucket": "economia",
-      "title": "Grupo Fictor é alvo de operação por suspeita de fraude; Justiça bloqueia R$ 4,3 bilhões, diz fonte",
-      "link": "https://www.moneytimes.com.br/grupo-fictor-e-alvo-de-operacao-por-suspeita-de-fraude-justica-bloqueia-r-43-bilhoes-diz-fonte-mlem/",
-      "summary": "O Grupo Fictor, que tentou comprar o banco Master em novembro do ano passado antes de a instituição ser liquidada pelo Banco Central, é alvo de uma operação da Polícia Civil e do Ministério Público do Estado de São Paulo nesta quinta-feira (26) por suspeita de fraude financeira, lavagem de dinheiro e desvio de recursos [&#8230;]",
-      "ts_iso": "2026-11-26T11:16:53+00:00",
-      "hash": "e1ec6f0516793100",
+      "source": "Livecoins",
+      "bucket": "cripto",
+      "title": "Alerta do Reino Unido leva PF a investigar furto de R$ 350 mil em criptomoedas no Mato Grosso",
+      "link": "https://livecoins.com.br/alerta-do-reino-unido-leva-pf-a-investigar-furto-de-r-350-mil-em-criptomoedas-no-mato-grosso/",
+      "summary": "Ação em Colíder teve apoio da agência britânica NCA após invasão de e-mail, tentativa de extorsão e lavagem no sistema bancário Fonte: Alerta do Reino Unido leva PF a investigar furto de R$ 350 mil em criptomoedas no Mato Grosso Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
+      "ts_iso": "2026-11-26T21:27:05+00:00",
+      "hash": "060ce8afb6215e9e",
       "_score": {
-        "cyber": 0,
-        "attack": 6,
-        "launder": 4,
+        "cyber": 5,
+        "attack": 5,
+        "launder": 6,
         "cft": 0,
-        "pix": 2,
-        "crypto": 0,
-        "value": 4,
-        "named_fi": 6,
+        "pix": 0,
+        "crypto": 4,
+        "value": 2,
+        "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
-        "incident_verbs": 6
+        "incident_verbs": 0
       },
       "_hits": {
+        "cyber": [
+          "invasão"
+        ],
         "attack": [
-          "fraude",
-          "desvio"
+          "furto",
+          "extorsão"
         ],
         "launder": [
-          "lavagem"
+          "lavagem",
+          "pf"
         ],
-        "pix": [
-          "banco central"
+        "crypto": [
+          "bitcoin",
+          "criptomoedas"
         ],
         "value": [
-          "r$ 4",
-          "bilhões"
-        ],
-        "named_fi": [
-          "banco master",
-          "master"
-        ],
-        "incident_verbs": [
-          "é alvo de",
-          "r$ 4,3 bilh"
+          "r$ 3"
         ]
       },
-      "_total": 28,
-      "_severity": "high",
+      "_total": 22,
+      "_severity": "critical",
       "_br_focus": {
-        "pos": 10,
+        "pos": 5,
         "neg": 0,
-        "score": 10,
-        "named_fi_bump": 2
+        "score": 5
       },
       "_alerts": [
-        {
-          "ts": "2026-11-23T12:29:57+00:00",
-          "rule": "br_pre_spike",
-          "severity": "high",
-          "venue": "Ripio Trade",
-          "asset": "USDT-BRL",
-          "narrative": "3 venue(s) BR movendo em USDT-BRL (QUEDA): Foxbit, BitPreço, Ripio Trade; maior Δ=-0.306% (em Ripio Trade) mas Binance -0.089% (quase parada). Pressão local antes do mercado global reagir."
-        },
         {
           "ts": "2026-11-24T00:15:19+00:00",
           "rule": "binance_depth_drop",
@@ -146,23 +137,202 @@
           "narrative": "Binance ETH-BRL está +2.322% acima da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
         },
         {
-          "ts": "2026-11-23T12:00:00+00:00",
-          "rule": "volume_zscore",
-          "severity": "medium",
-          "venue": "Binance BRL",
-          "asset": "USDT",
-          "narrative": "volume_zscore"
+          "ts": "2026-11-26T23:11:51+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Binance USDT-BRL está +2.042% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
         },
         {
-          "ts": "2026-11-23T12:00:00+00:00",
+          "ts": "2026-11-26T23:11:51+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -2.96% · USDT-BRL bid-heavy (imbalance +0.71). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 70% (de 752255.60 → 224152.10 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Binance BTC-BRL está -1.200% abaixo da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Binance USDT-BRL está +1.705% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-25T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Foxbit",
-          "asset": "USDT",
+          "asset": "ETH",
           "narrative": "volume_zscore"
         }
       ],
-      "_n_alerts": 11,
+      "_n_alerts": 14,
+      "_corroboration_score": 5
+    },
+    {
+      "source": "G1 Política",
+      "bucket": "policia",
+      "title": "Advogados relatam demora do BRB para liberar depósitos judiciais; OAB da Paraíba cogita acionar órgãos de controle",
+      "link": "https://g1.globo.com/politica/noticia/2026/11/27/advogados-relatam-demora-do-brb-para-liberar-depositos-judiciais-oab-da-paraiba-cogita-acionar-orgaos-de-controle.ghtml",
+      "summary": "Depósitos judiciais sob responsabilidade do Banco de Brasília (BRB) têm gerado preocupação em advogados, que relatam demora do banco para liberar o dinheiro. O temor é que o BRB não tenha liquidez para honrar os compromissos em decorrência do rombo causado pelas transações fraudulentas com o Banco Master, banco de Daniel Vorcaro liquidado pelo Banco Central. Na Paraíba, onde o Tribunal de Justiça faz os depósitos judiciais no BRB desde março de 2025, a OAB abriu nesta semana um canal de denúncias para os advogados registrarem queixas contra o banco. 🔎 Depósitos judiciais são recursos colocados",
+      "ts_iso": "2026-11-27T03:00:00+00:00",
+      "hash": "bfaa06ede41ff122",
+      "_score": {
+        "cyber": 0,
+        "attack": 3,
+        "launder": 0,
+        "cft": 0,
+        "pix": 2,
+        "crypto": 0,
+        "value": 0,
+        "named_fi": 14,
+        "political_noise": 3,
+        "commentary": 0,
+        "incident_verbs": 0
+      },
+      "_hits": {
+        "attack": [
+          "fraudulentas"
+        ],
+        "pix": [
+          "banco central"
+        ],
+        "named_fi": [
+          "brb",
+          "banco de brasília",
+          "banco master",
+          "master"
+        ],
+        "political_noise": [
+          "vorcaro"
+        ]
+      },
+      "_total": 22,
+      "_severity": "medium",
+      "_br_focus": {
+        "pos": 12,
+        "neg": 0,
+        "score": 12,
+        "named_fi_bump": 4
+      },
+      "_alerts": [
+        {
+          "ts": "2026-11-24T09:59:25+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Profundidade Binance ETH-BRL caiu 49% (de 26.13 → 13.29 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-25T03:44:36+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 62% (de 863054.00 → 330000.30 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-25T03:44:36+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Binance ETH-BRL está +2.722% acima da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-25T03:44:36+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -3.55% · USDT-BRL bid-heavy (imbalance +0.46). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering."
+        },
+        {
+          "ts": "2026-11-25T13:32:59+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.2003% — 2.1× o p95 recente (0.0943%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-26T04:39:14+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Binance ETH-BRL está +2.322% acima da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-26T23:11:51+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Binance USDT-BRL está +2.042% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-26T23:11:51+00:00",
+          "rule": "stablecoin_flight",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Fuga para stablecoin: ativos de risco em queda média -2.96% · USDT-BRL bid-heavy (imbalance +0.71). Padrão de laundering pós-hack — conversão de BTC/ETH/SOL em USDT-BRL para preservar valor durante layering."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 70% (de 752255.60 → 224152.10 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Binance BTC-BRL está -1.200% abaixo da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-27T05:02:09+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Binance USDT-BRL está +1.705% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-25T12:00:00+00:00",
+          "rule": "volume_zscore",
+          "severity": "medium",
+          "venue": "Foxbit",
+          "asset": "ETH",
+          "narrative": "volume_zscore"
+        }
+      ],
+      "_n_alerts": 12,
       "_corroboration_score": 5
     }
   ]
