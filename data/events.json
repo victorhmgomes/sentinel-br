@@ -1,29 +1,129 @@
 {
-  "generated_at": "2026-11-26T23:11:52.216496+00:00",
+  "generated_at": "2026-11-27T05:02:11.048667+00:00",
   "params": {
     "dedup_s": 60,
     "cooldown_s": 300,
     "min_distinct_for_event": 2
   },
   "summary": {
-    "n_total": 138,
-    "n_correlated": 15,
-    "n_singleton": 123,
+    "n_total": 140,
+    "n_correlated": 16,
+    "n_singleton": 124,
     "max_convergence": 3,
     "by_severity": {
-      "critical": 8,
-      "singleton": 123,
+      "critical": 9,
+      "singleton": 124,
       "high": 4,
       "medium": 3
     },
     "by_asset": {
-      "USDT-BRL": 79,
+      "USDT-BRL": 80,
+      "BTC-BRL": 19,
       "ETH-BRL": 27,
-      "BTC-BRL": 18,
       "SOL-BRL": 14
     }
   },
   "events": [
+    {
+      "event_id": "evt_20261127_0502_usdtbrl",
+      "asset": "USDT-BRL",
+      "opened_at": "2026-11-27T05:02:09+00:00",
+      "closed_at": "2026-11-27T05:02:09+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "depth_drop",
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_depth_drop",
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 2,
+      "n_alerts": 2,
+      "max_alert_severity": "critical",
+      "event_severity": "critical",
+      "is_correlated": true,
+      "narrative": "2 sinais convergentes em USDT-BRL entre 05:02-05:02 (~0s): depth_drop, divergence. 2 alerta(s) bruto(s). Severidade máxima vista: critical.",
+      "alerts": [
+        {
+          "rule": "binance_depth_drop",
+          "severity": "critical",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 224152.1,
+          "threshold": 263289.46,
+          "narrative": "Profundidade Binance USDT-BRL caiu 70% (de 752255.60 → 224152.10 unidades em ±2%).",
+          "context": {
+            "depth_now": 224152.09999999998,
+            "depth_median": 752255.6000000001,
+            "drop_pct": 0.7020266781663043
+          },
+          "ts": "2026-11-27T05:02:09+00:00"
+        },
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "value": 1.7051,
+          "threshold": 0.75,
+          "narrative": "Binance USDT-BRL está +1.705% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 5.60095,
+            "local_mids": {
+              "Foxbit": 5.6693,
+              "BitPreço": 5.24535,
+              "Ripio Trade": 5.6065000000000005
+            },
+            "avg_local": 5.5070500000000004,
+            "gap_pct": 1.7050871156063525,
+            "n_br_venues": 3
+          },
+          "ts": "2026-11-27T05:02:09+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_20261127_0502_btcbrl",
+      "asset": "BTC-BRL",
+      "opened_at": "2026-11-27T05:02:09+00:00",
+      "closed_at": "2026-11-27T05:02:09+00:00",
+      "duration_s": 0,
+      "distinct_detectors": [
+        "divergence"
+      ],
+      "distinct_rules": [
+        "binance_vs_br_divergence"
+      ],
+      "n_distinct_detectors": 1,
+      "n_alerts": 1,
+      "max_alert_severity": "medium",
+      "event_severity": "singleton",
+      "is_correlated": false,
+      "narrative": "Sinal isolado em BTC-BRL às 05:02 (divergence). 1 alerta(s) bruto(s). Severidade máxima: medium.",
+      "alerts": [
+        {
+          "rule": "binance_vs_br_divergence",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "value": -1.1998,
+          "threshold": 0.75,
+          "narrative": "Binance BTC-BRL está -1.200% abaixo da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out.",
+          "context": {
+            "binance_mid": 344514.5,
+            "local_mids": {
+              "Foxbit": 348657.5,
+              "BitPreço": 348739.0
+            },
+            "avg_local": 348698.25,
+            "gap_pct": -1.1998196148102265,
+            "n_br_venues": 2
+          },
+          "ts": "2026-11-27T05:02:09+00:00"
+        }
+      ]
+    },
     {
       "event_id": "evt_20261126_2311_usdtbrl",
       "asset": "USDT-BRL",
