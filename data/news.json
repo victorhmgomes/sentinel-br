@@ -2,16 +2,16 @@
   "summary": {
     "n_items": 2,
     "by_severity": {
-      "critical": 1,
+      "critical": 0,
       "high": 0,
-      "medium": 1,
+      "medium": 2,
       "low": 0,
       "noise": 0
     },
     "with_watcher_corroboration": 2,
     "top_sources": [
       [
-        "Livecoins",
+        "Folha Mercado",
         1
       ],
       [
@@ -19,26 +19,26 @@
         1
       ]
     ],
-    "generated_at": "2026-11-27T11:47:06+00:00",
-    "runtime_sec": 5.0
+    "generated_at": "2026-11-28T11:22:44+00:00",
+    "runtime_sec": 3.83
   },
   "items": [
     {
-      "source": "Livecoins",
-      "bucket": "cripto",
-      "title": "Alerta do Reino Unido leva PF a investigar furto de R$ 350 mil em criptomoedas no Mato Grosso",
-      "link": "https://livecoins.com.br/alerta-do-reino-unido-leva-pf-a-investigar-furto-de-r-350-mil-em-criptomoedas-no-mato-grosso/",
-      "summary": "Ação em Colíder teve apoio da agência britânica NCA após invasão de e-mail, tentativa de extorsão e lavagem no sistema bancário Fonte: Alerta do Reino Unido leva PF a investigar furto de R$ 350 mil em criptomoedas no Mato Grosso Veja mais notícias sobre Bitcoin. Siga o Livecoins no Facebook , Twitter , Instagram e YouTube .",
-      "ts_iso": "2026-11-26T21:27:05+00:00",
-      "hash": "060ce8afb6215e9e",
+      "source": "Folha Mercado",
+      "bucket": "economia",
+      "title": "'INSS do Reino Unido' tem site retirado do ar após 'incidente cibernético'",
+      "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/tec/2026/11/inss-do-reino-unido-tem-site-retirado-do-ar-apos-incidente-cibernetico.shtml",
+      "summary": "O Departamento de Trabalho e Pensões do Reino Unido informou nesta sexta-feira (27) que retirou alguns serviços do ar após um \"incidente cibernético\", em meio ao aumento de ataques e ameaças cibernéticas em todo o mundo. Leia mais (11/27/2026 - 10h07)",
+      "ts_iso": "2026-11-27T13:07:00+00:00",
+      "hash": "290d0a2d44aae114",
       "_score": {
-        "cyber": 5,
-        "attack": 5,
-        "launder": 6,
+        "cyber": 6,
+        "attack": 3,
+        "launder": 0,
         "cft": 0,
         "pix": 0,
-        "crypto": 4,
-        "value": 2,
+        "crypto": 0,
+        "value": 0,
         "named_fi": 0,
         "political_noise": 0,
         "commentary": 0,
@@ -46,56 +46,21 @@
       },
       "_hits": {
         "cyber": [
-          "invasão"
+          "incidente cibernético"
         ],
         "attack": [
-          "furto",
-          "extorsão"
-        ],
-        "launder": [
-          "lavagem",
-          "pf"
-        ],
-        "crypto": [
-          "bitcoin",
-          "criptomoedas"
-        ],
-        "value": [
-          "r$ 3"
+          "ataques",
+          "ameaças"
         ]
       },
-      "_total": 22,
-      "_severity": "critical",
+      "_total": 9,
+      "_severity": "medium",
       "_br_focus": {
-        "pos": 5,
+        "pos": 2,
         "neg": 0,
-        "score": 5
+        "score": 2
       },
       "_alerts": [
-        {
-          "ts": "2026-11-24T00:15:19+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "USDT-BRL",
-          "narrative": "Profundidade Binance USDT-BRL caiu 75% (de 934502.20 → 231931.90 unidades em ±2%)."
-        },
-        {
-          "ts": "2026-11-24T00:15:19+00:00",
-          "rule": "binance_vs_br_divergence",
-          "severity": "critical",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Binance ETH-BRL está +2.878% acima da média BR (Foxbit+BitPreço; n=2). Arb aberta — possível pressão local de fluxo PIX/cash-out."
-        },
-        {
-          "ts": "2026-11-24T09:59:25+00:00",
-          "rule": "binance_depth_drop",
-          "severity": "medium",
-          "venue": "Binance",
-          "asset": "ETH-BRL",
-          "narrative": "Profundidade Binance ETH-BRL caiu 49% (de 26.13 → 13.29 unidades em ±2%)."
-        },
         {
           "ts": "2026-11-25T03:44:36+00:00",
           "rule": "binance_depth_drop",
@@ -177,15 +142,55 @@
           "narrative": "Binance USDT-BRL está +1.705% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
         },
         {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0612% — 1.6× o p95 recente (0.0391%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.2040% — 2.1× o p95 recente (0.0984%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Binance ETH-BRL está -1.388% abaixo da média BR (Mercado+Foxbit+BitPreço; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-27T23:26:17+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 68% (de 820860.85 → 260207.50 unidades em ±2%)."
+        },
+        {
           "ts": "2026-11-25T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Foxbit",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 14,
+      "_n_alerts": 16,
       "_corroboration_score": 5
     },
     {
@@ -324,15 +329,63 @@
           "narrative": "Binance USDT-BRL está +1.705% acima da média BR (Foxbit+BitPreço+Ripio; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
         },
         {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "medium",
+          "venue": "Binance",
+          "asset": "BTC-BRL",
+          "narrative": "Spread Binance BTC-BRL em 0.0612% — 1.6× o p95 recente (0.0391%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_spread_spike",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Spread Binance ETH-BRL em 0.2040% — 2.1× o p95 recente (0.0984%) e acima do piso de 0.020%."
+        },
+        {
+          "ts": "2026-11-27T15:01:29+00:00",
+          "rule": "binance_vs_br_divergence",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "ETH-BRL",
+          "narrative": "Binance ETH-BRL está -1.388% abaixo da média BR (Mercado+Foxbit+BitPreço; n=3). Arb aberta — possível pressão local de fluxo PIX/cash-out."
+        },
+        {
+          "ts": "2026-11-27T23:26:17+00:00",
+          "rule": "binance_depth_drop",
+          "severity": "high",
+          "venue": "Binance",
+          "asset": "USDT-BRL",
+          "narrative": "Profundidade Binance USDT-BRL caiu 68% (de 820860.85 → 260207.50 unidades em ±2%)."
+        },
+        {
+          "ts": "2026-11-24T12:00:00+00:00",
+          "rule": "br_premium",
+          "severity": "high",
+          "venue": "Arbitragem BR",
+          "asset": "BTC",
+          "narrative": "br_premium"
+        },
+        {
           "ts": "2026-11-25T12:00:00+00:00",
           "rule": "volume_zscore",
           "severity": "medium",
           "venue": "Foxbit",
           "asset": "ETH",
           "narrative": "volume_zscore"
+        },
+        {
+          "ts": "2026-11-26T12:00:00+00:00",
+          "rule": "hourly_corr",
+          "severity": "high",
+          "venue": "cross-venue",
+          "asset": "multi",
+          "narrative": "hourly_corr"
         }
       ],
-      "_n_alerts": 12,
+      "_n_alerts": 18,
       "_corroboration_score": 5
     }
   ]
